@@ -1,0 +1,6 @@
+type: flow
+title: "Cada mudança passa por três áreas antes de entrar no histórico"
+steps:
+  - {text: "Diretório de trabalho", note: "a pasta que você vê e edita", icon: folder-open, kind: start, color: blue, label: "git add"}
+  - {text: "Staging area", note: "o que vai entrar na próxima foto", icon: list-checks, color: orange, label: "git commit"}
+  - {text: "Repositório (.git)", note: "as fotos já guardadas no álbum", icon: database, kind: end, color: green}

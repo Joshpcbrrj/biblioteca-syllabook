@@ -1,0 +1,7 @@
+type: layers
+title: "Quando o mesmo item aparece em dois níveis, vale o mais próximo do repositório"
+layers:
+  - {text: "local: .git/config", note: "só este repositório · git config (sem opção)", icon: folder, color: purple}
+  - {text: "global: ~/.gitconfig", note: "todos os repositórios do seu usuário · --global", icon: user, color: blue}
+  - {text: "system: <pasta do Git>/etc/gitconfig", note: "todos os usuários do computador · --system", icon: monitor, color: gray}
+caption: "O Git lê de baixo para cima; o último valor lido vence. Por isso o local tem prioridade."

@@ -1,0 +1,11 @@
+type: compare
+title: "Git é o programa; GitHub é um serviço que hospeda repositórios Git"
+left: {title: "Git", icon: terminal, color: blue}
+right: {title: "GitHub", icon: cloud, color: green}
+rows:
+  - ["Programa no seu computador", "Site na internet"]
+  - ["Grava e consulta o histórico", "Guarda uma cópia do repositório"]
+  - ["Funciona sem internet", "Exige conexão"]
+  - ["Livre e de código aberto", "Serviço de uma empresa"]
+  - ["Branches, merge, histórico", "Issues, pull requests, Pages"]
+caption: "GitLab e Bitbucket fazem o papel do GitHub com o mesmo Git por baixo."

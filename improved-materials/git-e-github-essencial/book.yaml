@@ -1,0 +1,429 @@
+title: Git e GitHub essencial
+subtitle: Do primeiro commit ao pull request, praticando num projeto real
+slug: git-e-github-essencial
+origin: improved
+language: pt-BR
+conversation_language: pt-BR
+profiles:
+- stem
+level:
+  start: beginner
+  end: intermediate
+audience: Quem programa (ou está começando) e nunca usou Git, ou usa só add, commit e push sem entender
+goal: Versionar um projeto com Git, desfazer erros com segurança, trabalhar com branches e remotos e contribuir
+  no GitHub por fork e pull request
+prerequisites:
+- Usar o terminal no nível básico (cd, ls, mkdir)
+track:
+  name: ferramentas-do-dev
+  order: 1
+reference_version: Git 2.5x, GitHub (interface de 2026)
+review_by: 2027-11
+original:
+  title: 'Udemy - Geek university: Git e GitHub Essencial para o Desenvolvedor (anotações)'
+  kind: notion
+  where: https://app.notion.com/p/7cd4e7395d8d4a2493a6383c926b7c48
+promise:
+  goal: Do zero ao trabalho em equipe com Git e GitHub
+  audience: Desenvolvedores iniciantes em controle de versão (inferido)
+  level: iniciante a intermediário (inferido)
+  sequence: introdução, Git básico, intermediário, avançado com GitHub, open source, projeto GitHub Pages,
+    Markdown e gists
+new_content_pct: 15
+sources:
+- title: Pro Git (2ª ed.), Scott Chacon e Ben Straub
+  url: https://git-scm.com/book/pt-br/v2
+  checked: '2026-11-21'
+- title: Git Reference Manual
+  url: https://git-scm.com/docs
+  checked: '2026-11-21'
+- title: GitHub Docs
+  url: https://docs.github.com/pt
+  checked: '2026-11-21'
+approved_on: '2026-11-21'
+edition: '1.0'
+human_review: false
+choices:
+  images: real
+  reading: large
+concepts:
+- id: version-control
+  name: controle de versão
+  chapter: 1
+  depends: []
+- id: distributed-vcs
+  name: controle de versão distribuído
+  chapter: 1
+  depends:
+  - version-control
+- id: git-vs-github
+  name: Git × GitHub
+  chapter: 1
+  depends:
+  - distributed-vcs
+- id: git-config
+  name: git config e níveis de configuração
+  chapter: 2
+  depends: []
+- id: identity
+  name: identidade do autor
+  chapter: 2
+  depends:
+  - git-config
+- id: credentials
+  name: credenciais (token, GCM, SSH)
+  chapter: 2
+  depends:
+  - git-vs-github
+- id: snapshot
+  name: snapshot
+  chapter: 3
+  depends:
+  - version-control
+- id: three-areas
+  name: diretório de trabalho, staging area e repositório
+  chapter: 3
+  depends:
+  - snapshot
+- id: file-status
+  name: estados dos arquivos
+  chapter: 3
+  depends:
+  - three-areas
+- id: gitignore
+  name: .gitignore
+  chapter: 3
+  depends:
+  - file-status
+- id: commit
+  name: commit
+  chapter: 4
+  depends:
+  - three-areas
+  - identity
+- id: commit-message
+  name: boa mensagem de commit
+  chapter: 4
+  depends:
+  - commit
+- id: history
+  name: histórico (git log, git show, git diff)
+  chapter: 4
+  depends:
+  - commit
+- id: head
+  name: HEAD
+  chapter: 4
+  depends:
+  - commit
+- id: restore
+  name: git restore
+  chapter: 5
+  depends:
+  - file-status
+- id: amend
+  name: git commit --amend
+  chapter: 5
+  depends:
+  - commit
+- id: detached-head
+  name: detached HEAD
+  chapter: 5
+  depends:
+  - head
+- id: reset
+  name: git reset (--soft, --mixed, --hard)
+  chapter: 5
+  depends:
+  - head
+  - three-areas
+- id: revert
+  name: git revert
+  chapter: 5
+  depends:
+  - commit
+- id: reflog
+  name: reflog
+  chapter: 5
+  depends:
+  - reset
+- id: branch
+  name: branch
+  chapter: 6
+  depends:
+  - head
+- id: stash
+  name: stash
+  chapter: 6
+  depends:
+  - branch
+  - file-status
+- id: merge
+  name: merge (fast-forward e de três vias)
+  chapter: 6
+  depends:
+  - branch
+- id: conflict
+  name: conflito de merge
+  chapter: 6
+  depends:
+  - merge
+- id: rebase
+  name: rebase
+  chapter: 7
+  depends:
+  - merge
+- id: interactive-rebase
+  name: rebase interativo
+  chapter: 7
+  depends:
+  - rebase
+- id: remote
+  name: repositório remoto
+  chapter: 8
+  depends:
+  - distributed-vcs
+  - branch
+- id: bare-repo
+  name: bare repository
+  chapter: 8
+  depends:
+  - remote
+- id: push-pull
+  name: clone, push, fetch e pull
+  chapter: 8
+  depends:
+  - remote
+  - merge
+  - credentials
+- id: tracking-branch
+  name: branch de rastreamento
+  chapter: 8
+  depends:
+  - push-pull
+- id: tag
+  name: tag
+  chapter: 8
+  depends:
+  - commit
+- id: collaborator
+  name: colaborador
+  chapter: 9
+  depends:
+  - push-pull
+- id: issue
+  name: issue
+  chapter: 9
+  depends:
+  - git-vs-github
+- id: fork
+  name: fork
+  chapter: 9
+  depends:
+  - remote
+- id: pull-request
+  name: pull request
+  chapter: 9
+  depends:
+  - fork
+  - branch
+- id: team-flow
+  name: GitHub Flow e Git Flow
+  chapter: 9
+  depends:
+  - pull-request
+- id: markdown
+  name: Markdown e README
+  chapter: 10
+  depends: []
+- id: github-pages
+  name: GitHub Pages
+  chapter: 10
+  depends:
+  - push-pull
+- id: gist
+  name: gist
+  chapter: 10
+  depends:
+  - markdown
+chapters:
+- n: 1
+  title: Por que controlar versões
+  goal: Explicar o que é controle de versão, o que o Git faz e por que Git não é GitHub
+  topics:
+  - o problema do projeto_final_v3_agora_vai
+  - centralizado × distribuído
+  - Git × GitHub e outros serviços
+  minutes: 30
+  sources_original:
+  - O que é controle de versão
+  - O que é o Git
+  - Git não é GitHub
+- n: 2
+  title: Instalação, identidade e credenciais
+  goal: Instalar e configurar o Git e autenticar no GitHub sem senha
+  topics:
+  - instalar no Windows, macOS e Linux
+  - 'git config: system, global e local'
+  - identidade × credenciais
+  - Git Credential Manager e SSH
+  minutes: 45
+  sources_original:
+  - Instalando e configurando o Git
+  - Registrando usuários locais e credenciais
+- n: 3
+  title: Como o Git pensa
+  goal: Prever o estado de cada arquivo entre as três áreas do Git
+  topics:
+  - snapshots e hashes
+  - as três áreas
+  - untracked, modified, staged, committed
+  - .gitignore
+  minutes: 45
+  sources_original:
+  - Entendendo como o Git funciona
+  - O ciclo de vida dos status de arquivos no Git
+  - Fazendo uso do .gitignore
+- n: 4
+  title: Commits e histórico
+  goal: Criar commits pequenos e bem descritos e encontrar qualquer mudança no histórico
+  topics:
+  - git add e git commit
+  - mensagens de commit
+  - git log e seus filtros
+  - git show, git diff, git blame
+  - HEAD e HEAD~n
+  minutes: 50
+  sources_original:
+  - Como fazer os commits
+  - Como consultar o histórico do projeto
+  - Conhecendo alguns comandos úteis
+  - Consultando histórico de commits
+- n: 5
+  title: Desfazendo erros com segurança
+  goal: Escolher o comando certo para desfazer cada tipo de erro e recuperar o que parecia perdido
+  topics:
+  - restore
+  - commit --amend
+  - checkout de um commit e detached HEAD
+  - reset --soft/--mixed/--hard
+  - revert
+  - reflog
+  minutes: 60
+  sources_original:
+  - Voltando no tempo com o Git
+  - Desfazendo e refazendo ações no Git
+  - Desfazendo ações com checkout
+  - Desfazendo ações com revert e reset
+- n: 6
+  title: Branches, stash e merge
+  goal: Desenvolver em paralelo com branches, guardar trabalho com stash e integrar resolvendo conflitos
+  topics:
+  - branch como ponteiro
+  - git switch
+  - stash
+  - fast-forward × merge de três vias
+  - resolver conflitos
+  minutes: 60
+  sources_original:
+  - Branches
+  - Guardando trabalho com git stash
+  - Merge
+  - Resolvendo conflitos
+- n: 7
+  title: Rebase e histórico limpo
+  goal: Atualizar uma branch com rebase e arrumar commits locais com rebase interativo
+  topics:
+  - rebase × merge
+  - regra de ouro
+  - conflitos no rebase
+  - 'rebase -i: reword, squash, fixup, drop'
+  minutes: 45
+  sources_original:
+  - Rebase
+- n: 8
+  title: Repositórios remotos
+  goal: Sincronizar um repositório local com um remoto e marcar versões com tags
+  topics:
+  - bare repository como remoto de treino
+  - clone e push
+  - fetch × pull
+  - branches de rastreamento
+  - criar o repositório no GitHub
+  - tags e releases
+  minutes: 60
+  sources_original:
+  - Bare repository
+  - Clone e push
+  - Fetch e pull
+  - Repositório remoto no GitHub
+  - Usando Clone e pull
+  - Trabalhando com tags
+- n: 9
+  title: Colaborando no GitHub
+  goal: Trabalhar em equipe e contribuir com projetos open source por issue, fork e pull request
+  topics:
+  - colaboradores
+  - issues
+  - fork e upstream
+  - pull request e revisão
+  - GitHub Flow e Git Flow
+  minutes: 60
+  sources_original:
+  - Adicionando colaboradores no meu projeto
+  - O que são issues
+  - Trabalhando com fork
+  - Realizando e aceitando pull requests
+  - 'Fluxos de trabalho em equipe: GitHub Flow e Git Flow'
+- n: 10
+  title: 'Projeto: currículo online'
+  goal: Publicar um currículo com GitHub Pages, documentado com README em Markdown, e compartilhar trechos
+    com gists
+  topics:
+  - Markdown
+  - README
+  - GitHub Pages
+  - Git no VS Code
+  - gists
+  minutes: 60
+  sources_original:
+  - 'Projeto: currículo online com GitHub Pages + plugins do Git para VS Code'
+  - Entendendo o markdown
+  - Entendendo gists
+next_steps:
+- GitHub Actions (CI/CD)
+- git bisect e git worktree
+- Commits assinados (GPG/SSH)
+- Conventional Commits e versionamento semântico
+covers:
+- git
+- github
+- version-control
+- branching
+- pull-request
+- github-pages
+progress:
+- n: 1
+  done: '2026-11-21'
+  summary: 'Problema das cópias ''final'' (cardápio da lanchonete) resolvido pelo histórico: commit, autor,
+    data, mensagem, diff lido de um git log real (commits ce3dc3c, cf762e2, 4df55bb). Centralizado (SVN,
+    CVS) × distribuído (Git, Mercurial): onde fica o histórico; origem do Git em 2005 (BitKeeper). Git
+    (programa local) × GitHub (serviço que hospeda; GitLab, Bitbucket), com captura da página de commits
+    do git/git. Prática só de leitura de histórico; sem terminal.'
+- n: 2
+  done: '2026-11-21'
+  summary: 'Instalação (Windows instalador com Git Bash e GCM, macOS brew, Debian apt-get; Git 2.56, mínimo
+    2.23). git config em três níveis (system, global, local; o mais próximo vence), --show-origin, --get-all,
+    --unset; identidade user.name/email (Ana Ribeiro, horta comunitária), init.defaultBranch main, core.editor
+    ''code --wait''. Identidade × credencial; senha recusada desde 13/08/2021; GCM (manager), helpers
+    cache/store/osxkeychain; SSH ed25519 com analogia do cartão de assinatura do banco. Lab: deixar o
+    Git pronto.'
+- n: 3
+  done: '2026-11-21'
+  summary: 'Nasce o projeto receitas (index.html, receitas/bolo-de-cenoura.md): git init e a pasta .git;
+    commit por dentro com git cat-file (tree, blob, hash, pai), snapshot que reaproveita o blob do index.html
+    (9a16b95 → 9b3de16). Três áreas com a analogia do álbum de fotos (mesa = staging area). Estados untracked/staged/unmodified/modified;
+    git status -s com duas colunas; o caso MM. .gitignore (.env, *.log, rascunhos/* com exceção !publicar.md;
+    a armadilha rascunhos/), git check-ignore -v, --ignored, git rm --cached e o aviso de segredo já commitado.
+    4 commits no lab.'
+changes: []
