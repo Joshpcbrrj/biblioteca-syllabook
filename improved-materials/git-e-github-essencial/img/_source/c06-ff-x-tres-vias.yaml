@@ -1,0 +1,9 @@
+type: compare
+title: "Se a main não andou, o merge só avança o ponteiro; se andou, nasce um commit de merge"
+left: {title: "Fast-forward: corrige-pudim", icon: arrow-right, color: blue}
+right: {title: "Três vias: sobremesas", icon: git-merge, color: purple}
+rows:
+  - ["A main não andou desde a branch", "A main e a branch andaram"]
+  - ["A main avança até 7f4893c", "O Git cria o commit 1586c98"]
+  - ["Nenhum commit novo", "Commit com dois pais"]
+  - ["O histórico continua uma linha", "O histórico mostra a bifurcação"]

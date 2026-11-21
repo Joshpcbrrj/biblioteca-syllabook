@@ -1,0 +1,9 @@
+type: flow
+title: "Conflito é quando as duas branches mudaram as mesmas linhas"
+steps:
+  - {text: "git merge forno-eletrico", icon: git-merge, kind: start, color: blue}
+  - {text: "Mudaram as mesmas linhas?", kind: decision, color: orange, label: "sim", side: "Merge automático", side_note: "o commit de merge nasce sozinho", side_color: green, side_label: "não"}
+  - {text: "Edite o arquivo", note: "escolha o texto final e apague <<<<<<< ======= >>>>>>>", icon: pencil, color: red}
+  - {text: "git add receitas/bolo-de-cenoura.md", note: "marca o conflito como resolvido", icon: list-checks, color: orange}
+  - {text: "git commit", note: "conclui o merge", icon: save, kind: end, color: green}
+caption: "Em qualquer ponto antes do commit, git merge --abort desiste e volta ao estado anterior ao merge."

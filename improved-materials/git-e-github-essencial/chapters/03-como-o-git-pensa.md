@@ -284,6 +284,12 @@ Changes not staged for commit:
 
 ```
 
+O VS Code mostra a mesma situação no painel **Source Control** (Controle do Código-Fonte): o arquivo aparece em *Staged Changes* (a staging area) e em *Changes* (o diretório de trabalho), cada um com o seu `M`.
+
+![Painel Source Control do VS Code com bolo-de-cenoura.md listado duas vezes, em Staged Changes e em Changes, ao lado do arquivo aberto com o forno em 45 min e a dica nova nas linhas 8 e 9](../img/c03-vscode-staged-e-modificado.png)
+
+*O mesmo arquivo nas duas listas: a versão com 45 min está preparada; a dica, só no diretório de trabalho. Captura do VS Code (code-server).*
+
 Se você fizer o commit agora, entra só o que está na staging area:
 
 ```bash

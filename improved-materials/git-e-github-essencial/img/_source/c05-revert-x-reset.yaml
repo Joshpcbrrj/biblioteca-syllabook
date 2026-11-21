@@ -1,0 +1,9 @@
+type: compare
+title: "revert desfaz com um commit novo; reset volta o ponteiro e esconde commits"
+left: {title: "git revert 3ea07e1", icon: refresh-cw, color: green}
+right: {title: "git reset --hard HEAD~1", icon: rotate-ccw, color: orange}
+rows:
+  - ["Cria um commit que desfaz o outro", "Move o HEAD para trás"]
+  - ["O commit original continua no histórico", "O commit some do git log"]
+  - ["Desfaz qualquer commit, mesmo antigo", "Desfaz do fim para trás"]
+  - ["Seguro em commits compartilhados", "Só em commits que ninguém mais tem"]

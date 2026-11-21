@@ -426,4 +426,45 @@ progress:
     git status -s com duas colunas; o caso MM. .gitignore (.env, *.log, rascunhos/* com exceção !publicar.md;
     a armadilha rascunhos/), git check-ignore -v, --ignored, git rm --cached e o aviso de segredo já commitado.
     4 commits no lab.'
+- n: 4
+  done: '2026-11-21'
+  summary: 'Commits como unidades de mudança: brigadeiro do Bruno com --author (autor × committer), a
+    armadilha do git commit -am com arquivo novo. Mensagens: título até 50 caracteres no presente, linha
+    em branco, corpo com o porquê (dois -m). git log com --oneline, --stat, -p, -n, --author, --grep,
+    -- arquivo, --format; --since sem hora usa a hora atual. git show (e commit:arquivo), git diff × --staged
+    × entre commits, git blame (-L, ^ de boundary). HEAD → main → commit; HEAD~n e HEAD^ (analogia do
+    marcador de página no álbum). 7 commits: 80f839b brigadeiro, 3ea07e1 título, c33ad78 açúcar.'
+- n: 5
+  done: '2026-11-21'
+  summary: 'Diagrama de decisão ''o que desfazer''. git restore (descarta edição; captura do VS Code com
+    Discard Changes), --staged (lista-de-compras.txt), --source=9a16b95. Pudim: commit ''pudm'' sem o
+    link corrigido com --amend (c8eed78 → 4ae3416). git switch --detach 9b3de16, cat .git/HEAD com hash,
+    checkout antigo; commit solto 9cba308 (forno 200 °C) e aviso ao voltar. reset --soft/--mixed/--hard
+    com estilo.css (A, ??, some) e o perigo do --hard com edição não commitada. git revert 3ea07e1 (título
+    volta a Receitas da Ana; f8f33cf). Analogia: reset arranca fotos para a gaveta, revert cola foto nova.
+    Reflog lido de baixo para cima; estilo.css recuperado com restore --source=38d0ae7 (aacc41a). Prazos
+    90/30 dias.'
+- n: 6
+  done: '2026-11-21'
+  summary: 'Branch como ponteiro (cat .git/refs/heads/sobremesas = hash, 41 bytes); analogia do marcador
+    com etiqueta no álbum. git switch (mousse some da pasta na main), -c; erro ao trocar com edição não
+    commitada. Stash: sem -u a torta fica; -u -m, list, pop, apply, drop. Fast-forward com corrige-pudim
+    (7f4893c) e branch -d; merge de três vias da sobremesas (1586c98, dois pais, ort, --graph --all).
+    git branch forno-200 9cba308 resgata o commit solto do cap. 5; -d recusa, -D apaga. Conflito no forno
+    do bolo (forno-eletrico × palito): marcadores, captura do VS Code (Current/Incoming), resolução com
+    as duas linhas, add, commit (433506c), --abort, git diff --check.'
 changes: []
+handoff:
+- 'Próximo: cap. 7 (rebase), continuando o receitas a partir de 433506c (Merge branch ''forno-eletrico''),
+  só a main, working tree limpa.'
+- 'Laboratório: research/lab/ recria o receitas com os mesmos hashes dos caps. 3 a 6 (SP=<pasta temporária>
+  bash lab3.sh, depois lab4, lab5, lab6); HOME e config isolados, autores Ana Ribeiro e Bruno Lima, datas
+  fixas de 21 a 24/11/2026. Para o cap. 7, escreva lab7.sh no mesmo estilo.'
+- 'Capturas do VS Code: images.py editor funciona (code-server via Docker). Usadas: c03-vscode-staged-e-modificado,
+  c04-vscode-grafico, c05-vscode-descartar (o comando ''Git: Open Changes'' não abriu o diff; ficou a
+  vista normal), c06-vscode-conflito.'
+- 'Avisos de auditoria aceitos: linhas longas em saídas reais do Git (cap. 2, ssh -T; cap. 4, blame e
+  rev-parse; cap. 5, reflog; cap. 6, merge e erro do switch), mantidas sem quebra.'
+- 'Fontes: página do Notion ''Udemy Geek University: Git e GitHub Essencial'' (7cd4e7395d8d4a2493a6383c926b7c48)
+  e o código do curso em D:\01 - DEV\Github\Udemy-Geek_university-Git_GitHub-Essencial_para_o_Desenvolvedor
+  (só leitura).'

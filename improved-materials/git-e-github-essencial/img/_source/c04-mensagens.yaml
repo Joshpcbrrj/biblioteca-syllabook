@@ -1,0 +1,9 @@
+type: compare
+style: wrong-right
+title: "Uma boa mensagem diz o que mudou e, se não for óbvio, por quê"
+left: {title: "Mensagem que não ajuda"}
+right: {title: "Mensagem que ajuda"}
+rows:
+  - ["ajustes", "Reduz o açúcar do bolo para 1 e 1/2 xícara"]
+  - ["várias mudanças no site", "Muda o título do site para Receitas de família"]
+  - ["arrumei o bolo (depois do almoço)", "Corpo: o bolo ficou doce demais no teste"]

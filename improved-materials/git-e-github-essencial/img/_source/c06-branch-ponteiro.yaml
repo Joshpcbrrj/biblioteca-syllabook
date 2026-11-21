@@ -1,0 +1,9 @@
+type: boxes
+title: "Uma branch é só um nome que aponta para um commit"
+name: "commits, do mais antigo ao mais novo"
+cells:
+  - {value: "4ae3416", label: "pudim"}
+  - {value: "f8f33cf", label: "revert"}
+  - {value: "aacc41a", label: "main"}
+  - {value: "eccf476", label: "sobremesas", highlight: true}
+caption: "O HEAD está na sobremesas: o commit novo entrou só nela, e a main continua em aacc41a."

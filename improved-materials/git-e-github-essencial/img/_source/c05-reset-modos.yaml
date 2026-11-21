@@ -1,0 +1,7 @@
+type: layers
+title: "Os três modos do reset movem o HEAD e diferem no que fazem com as mudanças"
+layers:
+  - {text: "--soft", note: "move o HEAD · mudanças ficam na staging area (A  estilo.css)", icon: list-checks, color: green}
+  - {text: "--mixed (o padrão)", note: "move o HEAD · mudanças voltam ao diretório de trabalho (?? estilo.css)", icon: folder-open, color: blue}
+  - {text: "--hard", note: "move o HEAD · mudanças apagadas dos arquivos (estilo.css some)", icon: triangle-alert, color: red}
+caption: "Os três tiram o commit da branch; o reflog ainda guarda o commit por um tempo, mas não guarda edições nunca commitadas."
