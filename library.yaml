@@ -1,7 +1,7 @@
 # Library settings. The skill fills these in the first time it sets up a
 # library; you can change them at any time.
 author: "Josué B. Almeida"       # goes on the cover and in the book metadata
-repository: "Joshpcbrrj/biblioteca"       # <owner>/<name> of this repository
+repository: "Joshpcbrrj/biblioteca-syllabook"       # <owner>/<name> of this repository
 branch: "main"
 commit_name: "Josue"
 commit_email: "joshpcbrrj@users.noreply.github.com"       # GitHub noreply address (<user>@users.noreply.github.com), never a personal one
