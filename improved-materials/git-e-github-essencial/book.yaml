@@ -515,3 +515,13 @@ progress:
     tabela botão × comando, captura do Source Control, Sync Changes = pull + push. Gists: alias lg, público
     × secreto (secreto não é privado), Embed → Clone. Não executado: telas do GitHu'
 changes: []
+handoff:
+- 'Feito em 22/11/2026: comparação com o original (audit --original sem erros), capturas c08 e c09, capa,
+  build (D:/01 - DEV/Github/syllabook-builds/git-e-github-essencial), push no main com workflows verdes,
+  site e EPUB no ar.'
+- 'Notion: página-índice NOVA ''Git e GitHub essencial'' criada em Cursos (https://app.notion.com/p/420345e20443816c9098c3f5bfdd3262),
+  ao lado da original (não tocada). Já copiados: 0 e 1. Falta copiar, sob essa página e nesta ordem: caps.
+  2 a 10, simulado-final.md e glossario.md (notion.py <n>).'
+- 'Uploads do Notion: usar notion-create-attachment com source_url=https://raw.githubusercontent.com/Joshpcbrrj/biblioteca-syllabook/main/improved-materials/git-e-github-essencial/img/<arquivo>.svg
+  e trocar o placeholder UPLOAD:<arquivo> por file-upload://<id>; só SVG (PNG fica fora, como left_out).'
+- 'Depois do Notion: resumo final com os links (GitHub, site, EPUB, Notion) e limpar este bilhete.'
