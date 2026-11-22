@@ -764,3 +764,9 @@ recusado e qual é a forma segura de resolver.
 - Anotações do curso “Git e GitHub Essencial para o Desenvolvedor” (Geek University, Udemy): “Bare repository”, “Clone e push”, “Fetch e pull”, “Repositório remoto no GitHub”, “Usando clone e pull” e “Trabalhando com tags”: estrutura e tópicos.
 
 > 🔁 **Revise hoje:** capítulos 1 (Git × GitHub, centralizado × distribuído), 5 (detached HEAD) e 7 (rebase e regra de ouro).
+
+<!-- nav:start -->
+---
+
+[◀ Capítulo anterior](07-rebase-e-historico-limpo.md) · [Mapa do livro](../README.md) · [Próximo capítulo ▶](09-colaborando-no-github.md)
+<!-- nav:end -->

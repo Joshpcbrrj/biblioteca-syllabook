@@ -635,3 +635,9 @@ Aponte o que não funciona como pedido, sem me dar a versão corrigida.
 - Anotações do curso “Git e GitHub Essencial para o Desenvolvedor” (Geek University, Udemy), aulas 2.1 a 2.3: estrutura e tópicos.
 
 > 🔁 **Revise hoje:** capítulo 2 (níveis de configuração e identidade).
+
+<!-- nav:start -->
+---
+
+[◀ Capítulo anterior](02-instalacao-identidade-e-credenciais.md) · [Mapa do livro](../README.md) · [Próximo capítulo ▶](04-commits-e-historico.md)
+<!-- nav:end -->

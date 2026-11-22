@@ -57,4 +57,51 @@ Cada termo em uma frase, com o termo em inglês quando ele aparece na tela e o c
 - **upstream:** apelido convencional do repositório original, cadastrado como remoto no clone de um fork; também o nome da branch remota ligada à sua com `push -u`. [Capítulos 8](08-repositorios-remotos.md) e [9](09-colaborando-no-github.md)
 
 <!-- index:start -->
+## Índice remissivo
+
+- .gitignore: [3. Como o Git pensa](03-como-o-git-pensa.md)
+- bare repository: [8. Repositórios remotos](08-repositorios-remotos.md)
+- boa mensagem de commit: [4. Commits e histórico](04-commits-e-historico.md)
+- branch: [6. Branches, stash e merge](06-branches-stash-e-merge.md)
+- branch de rastreamento: [8. Repositórios remotos](08-repositorios-remotos.md)
+- clone, push, fetch e pull: [8. Repositórios remotos](08-repositorios-remotos.md)
+- colaborador: [9. Colaborando no GitHub](09-colaborando-no-github.md)
+- commit: [4. Commits e histórico](04-commits-e-historico.md)
+- conflito de merge: [6. Branches, stash e merge](06-branches-stash-e-merge.md)
+- controle de versão: [1. Por que controlar versões](01-por-que-controlar-versoes.md)
+- controle de versão distribuído: [1. Por que controlar versões](01-por-que-controlar-versoes.md)
+- credenciais (token, GCM, SSH): [2. Instalação, identidade e credenciais](02-instalacao-identidade-e-credenciais.md)
+- detached HEAD: [5. Desfazendo erros com segurança](05-desfazendo-erros-com-seguranca.md)
+- diretório de trabalho, staging area e repositório: [3. Como o Git pensa](03-como-o-git-pensa.md)
+- estados dos arquivos: [3. Como o Git pensa](03-como-o-git-pensa.md)
+- fork: [9. Colaborando no GitHub](09-colaborando-no-github.md)
+- gist: [10. Projeto: currículo online](10-projeto-curriculo-online.md)
+- git commit --amend: [5. Desfazendo erros com segurança](05-desfazendo-erros-com-seguranca.md)
+- git config e níveis de configuração: [2. Instalação, identidade e credenciais](02-instalacao-identidade-e-credenciais.md)
+- git reset (--soft, --mixed, --hard): [5. Desfazendo erros com segurança](05-desfazendo-erros-com-seguranca.md)
+- git restore: [5. Desfazendo erros com segurança](05-desfazendo-erros-com-seguranca.md)
+- git revert: [5. Desfazendo erros com segurança](05-desfazendo-erros-com-seguranca.md)
+- Git × GitHub: [1. Por que controlar versões](01-por-que-controlar-versoes.md)
+- GitHub Flow e Git Flow: [9. Colaborando no GitHub](09-colaborando-no-github.md)
+- GitHub Pages: [10. Projeto: currículo online](10-projeto-curriculo-online.md)
+- HEAD: [4. Commits e histórico](04-commits-e-historico.md)
+- histórico (git log, git show, git diff): [4. Commits e histórico](04-commits-e-historico.md)
+- identidade do autor: [2. Instalação, identidade e credenciais](02-instalacao-identidade-e-credenciais.md)
+- issue: [9. Colaborando no GitHub](09-colaborando-no-github.md)
+- Markdown e README: [10. Projeto: currículo online](10-projeto-curriculo-online.md)
+- merge (fast-forward e de três vias): [6. Branches, stash e merge](06-branches-stash-e-merge.md)
+- pull request: [9. Colaborando no GitHub](09-colaborando-no-github.md)
+- rebase: [7. Rebase e histórico limpo](07-rebase-e-historico-limpo.md)
+- rebase interativo: [7. Rebase e histórico limpo](07-rebase-e-historico-limpo.md)
+- reflog: [5. Desfazendo erros com segurança](05-desfazendo-erros-com-seguranca.md)
+- repositório remoto: [8. Repositórios remotos](08-repositorios-remotos.md)
+- snapshot: [3. Como o Git pensa](03-como-o-git-pensa.md)
+- stash: [6. Branches, stash e merge](06-branches-stash-e-merge.md)
+- tag: [8. Repositórios remotos](08-repositorios-remotos.md)
 <!-- index:end -->
+
+<!-- nav:start -->
+---
+
+[◀ Capítulo anterior](simulado-final.md) · [Mapa do livro](../README.md)
+<!-- nav:end -->

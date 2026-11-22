@@ -37,7 +37,7 @@ git log --oneline --graph --all -n 4
 
 É a mesma situação da `sobremesas` no capítulo 6: as duas branches andaram. Um `git merge bebidas` na `main` criaria um terceiro commit de merge. A Ana prefere outra coisa: fazer como se tivesse começado as bebidas **depois** da sugestão do Bruno.
 
-**O `git rebase <base>` pega os commits que só existem na branch atual e os reaplica, um por um, em cima da ponta de `<base>`.** “Rebase” quer dizer “trocar a base”: a `bebidas` saiu do `433506c` e passa a sair do `4983f3f`.
+**O `git rebase <base>` separa os commits que a branch atual tem e `<base>` não tem, e grava cópias deles, na mesma ordem, a partir da ponta de `<base>`.** “Rebase” quer dizer “trocar a base”: a `bebidas` saiu do `433506c` e passa a sair do `4983f3f`.
 
 Você roda o rebase na branch que vai **mudar de lugar**, e indica a nova base:
 
@@ -713,3 +713,9 @@ objetivo e qual commit ficaria errado, sem escrever a lista certa por mim.
 - Anotações do curso “Git e GitHub Essencial para o Desenvolvedor” (Geek University, Udemy): “Rebase”: estrutura e tópicos.
 
 > 🔁 **Revise hoje:** capítulos 4 (`HEAD~n`, autor × committer) e 6 (branches, fast-forward e conflitos de merge).
+
+<!-- nav:start -->
+---
+
+[◀ Capítulo anterior](06-branches-stash-e-merge.md) · [Mapa do livro](../README.md) · [Próximo capítulo ▶](08-repositorios-remotos.md)
+<!-- nav:end -->

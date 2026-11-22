@@ -532,6 +532,21 @@ a resposta antes de eu tentar.
 - GitHub Docs (consultados em 21/11/2026): [What is GitHub Pages?](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages), [Creating a GitHub Pages site](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site), [Configuring a publishing source for your GitHub Pages site](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site), [Managing your profile README](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-profile/customizing-your-profile/managing-your-profile-readme), [About READMEs](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes), [Basic writing and formatting syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax), [Creating gists](https://docs.github.com/en/get-started/writing-on-github/editing-and-sharing-content-with-gists/creating-gists) e [Forking and cloning gists](https://docs.github.com/en/get-started/writing-on-github/editing-and-sharing-content-with-gists/forking-and-cloning-gists)
 - VS Code Docs (consultados em 21/11/2026): [Source Control](https://code.visualstudio.com/docs/sourcecontrol/overview), [Staging and committing](https://code.visualstudio.com/docs/sourcecontrol/staging-commits) e [Repositories and remotes](https://code.visualstudio.com/docs/sourcecontrol/repos-remotes)
 - [git-config](https://git-scm.com/docs/git-config) (`alias.*`) — Git Reference Manual (Git 2.56, consultado em 21/11/2026)
-- Anotações do curso “Git e GitHub Essencial para o Desenvolvedor” (Geek University, Udemy): “Projeto: currículo online com GitHub Pages + plugins do Git para VS Code”, “Entendendo o markdown” e “Entendendo gists”: estrutura e tópicos.
+- Anotações do curso “Git e GitHub Essencial para o Desenvolvedor” (Geek University, Udemy): as aulas do projeto do currículo (Pages e extensões do VS Code), de Markdown e de gists: estrutura e tópicos.
 
 > 🔁 **Revise hoje:** capítulos 3 (`.gitignore` e dados sensíveis), 7 (regra de ouro do rebase) e 9 (pull request e botões de merge).
+
+<!-- next-steps:start -->
+## 🧭 Próximos caminhos
+
+- **GitHub Actions (CI/CD)**: Fazer o GitHub testar e publicar o projeto sozinho a cada push e a cada pull request (workflows em YAML · testes automáticos em pull requests · deploy do GitHub Pages por Actions · segredos do repositório)
+- **git bisect e git worktree**: Achar o commit que introduziu um bug e trabalhar em duas branches ao mesmo tempo sem stash (busca binária com git bisect · git bisect run com um teste · várias pastas de trabalho com git worktree)
+- **Commits assinados (GPG/SSH)**: Provar que os seus commits e tags vieram mesmo de você, com o selo Verified no GitHub (assinatura com chave SSH · assinatura com GPG · git log --show-signature · exigir commits assinados na branch protegida)
+- **Conventional Commits e versionamento semântico**: Padronizar as mensagens da equipe e numerar as versões de um jeito que diz o que mudou (tipos feat, fix e chore · MAJOR.MINOR.PATCH · changelog gerado do histórico · tags e releases por versão)
+<!-- next-steps:end -->
+
+<!-- nav:start -->
+---
+
+[◀ Capítulo anterior](09-colaborando-no-github.md) · [Mapa do livro](../README.md) · [Próximo capítulo ▶](simulado-final.md)
+<!-- nav:end -->

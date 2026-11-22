@@ -681,3 +681,9 @@ uma explicação pronta.
 - Anotações do curso “Git e GitHub Essencial para o Desenvolvedor” (Geek University, Udemy): “Voltando no tempo com o Git”, “Desfazendo e refazendo ações no Git”, “Desfazendo ações com checkout” e “Desfazendo ações com revert e reset”: estrutura e tópicos.
 
 > 🔁 **Revise hoje:** capítulos 2 (identidade do autor) e 4 (HEAD, `git log` e `git show`).
+
+<!-- nav:start -->
+---
+
+[◀ Capítulo anterior](04-commits-e-historico.md) · [Mapa do livro](../README.md) · [Próximo capítulo ▶](06-branches-stash-e-merge.md)
+<!-- nav:end -->

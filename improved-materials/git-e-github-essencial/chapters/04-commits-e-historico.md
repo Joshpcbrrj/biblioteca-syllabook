@@ -807,3 +807,9 @@ git diff ou git blame que usaria. Corrija só depois da minha resposta.
 - Anotações do curso “Git e GitHub Essencial para o Desenvolvedor” (Geek University, Udemy): “Como fazer os commits”, “Como consultar o histórico do projeto”, “Conhecendo alguns comandos úteis” e “Consultando histórico de commits”: estrutura e tópicos.
 
 > 🔁 **Revise hoje:** capítulos 1 (o que o histórico guarda) e 3 (as três áreas e os estados).
+
+<!-- nav:start -->
+---
+
+[◀ Capítulo anterior](03-como-o-git-pensa.md) · [Mapa do livro](../README.md) · [Próximo capítulo ▶](05-desfazendo-erros-com-seguranca.md)
+<!-- nav:end -->

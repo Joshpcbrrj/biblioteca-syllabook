@@ -11,3 +11,9 @@ Livros para estudar sozinho, escritos e aprimorados com o [Syllabook](https://gi
 - 📥 **EPUB** para qualquer leitor digital: nas **Releases** deste repositório, ou ao lado de cada livro nas listas.
 
 Achou um erro? Abra uma issue: toda correção ajuda o próximo leitor.
+
+<!-- tracks:start -->
+## 🧭 Trilhas
+
+- **Ferramentas do dev:** [Git e GitHub essencial](improved-materials/git-e-github-essencial/)
+<!-- tracks:end -->

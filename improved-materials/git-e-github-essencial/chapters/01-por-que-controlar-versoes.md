@@ -234,3 +234,9 @@ Aponte o que está errado ou impreciso, sem reescrever a explicação para mim.
 - [Pro Git, 1.2 — A Short History of Git](https://git-scm.com/book/en/v2/Getting-Started-A-Short-History-of-Git) (consultado em 21/11/2026)
 - [Commits do projeto Git no GitHub](https://github.com/git/git/commits/master) (consultado em 21/11/2026)
 - Anotações do curso “Git e GitHub Essencial para o Desenvolvedor” (Geek University, Udemy), seção 1: estrutura e tópicos.
+
+<!-- nav:start -->
+---
+
+[◀ Capítulo anterior](00-como-estudar-este-livro.md) · [Mapa do livro](../README.md) · [Próximo capítulo ▶](02-instalacao-identidade-e-credenciais.md)
+<!-- nav:end -->

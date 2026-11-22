@@ -144,3 +144,9 @@ O que aparece, e o que cada coluna quer dizer?
 | 24, 26 | capítulo 10 |
 
 Acertou 22 ou mais? Você domina o essencial do Git e do GitHub. Menos que isso: reveja os capítulos da tabela, refaça o 🏋️ **Pratique** deles e repita só as perguntas que errou, daqui a uns dias.
+
+<!-- nav:start -->
+---
+
+[◀ Capítulo anterior](10-projeto-curriculo-online.md) · [Mapa do livro](../README.md) · [Próximo capítulo ▶](glossario.md)
+<!-- nav:end -->

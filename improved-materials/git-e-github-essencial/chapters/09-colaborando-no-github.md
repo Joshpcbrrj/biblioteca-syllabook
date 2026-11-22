@@ -225,6 +225,12 @@ Com o PR aberto, é a vez da Ana. No GitHub, ela:
    - **Request changes**: pede ajustes antes do merge.
 4. Clica em **Submit review**.
 
+Veja como é essa aba num PR real, já mesclado, de um projeto público do autor: no alto, a etiqueta **Merged** e as branches (`main` recebeu a `feat/material-de-estudo`); à esquerda, a lista dos arquivos alterados; à direita, o diff de cada arquivo, com as linhas novas em verde e marcadas com `+`.
+
+![Aba Files changed de um pull request mesclado no GitHub: título do PR com a etiqueta Merged, as abas Conversation, Commits, Checks e Files changed, a árvore de arquivos alterados à esquerda e o diff do CHANGELOG.md à direita, com linhas adicionadas em verde](../img/c09-github-pr.png)
+
+*Captura da aba Files changed do [PR #9 do repositório Joshpcbrrj/projeto-palavras](https://github.com/Joshpcbrrj/projeto-palavras/pull/9/files), feita em 22/11/2026; cabeçalho do site recortado.*
+
 A Ana pede uma mudança: na casa dela, cada um põe o sal a gosto. Para atender, a Carla **não abre outro PR**: faz um commit novo na mesma branch e envia.
 
 ```bash
@@ -301,7 +307,7 @@ Aprovado, o PR é integrado pelo botão de merge da página. O GitHub oferece tr
 * 1597a4d Ensina a desenformar o quindim
 ```
 
-**Squash and merge** junta todos os commits do PR em um só, em cima da base (o equivalente a `git merge --squash` seguido de `git commit`):
+**Squash and merge** condensa o PR inteiro num único commit novo, colocado na ponta da base (o equivalente a `git merge --squash` seguido de `git commit`):
 
 ```text
 * 29e3a0a Acrescenta sal ao pão de queijo
@@ -663,3 +669,9 @@ considerar, sem me dar a resposta pronta antes.
 - Anotações do curso “Git e GitHub Essencial para o Desenvolvedor” (Geek University, Udemy): “Adicionando colaboradores no meu projeto”, “O que são issues”, “Trabalhando com fork”, “Realizando e aceitando pull requests” e “Fluxos de trabalho em equipe: GitHub Flow e Git Flow”: estrutura e tópicos.
 
 > 🔁 **Revise hoje:** capítulos 2 (credenciais), 6 (merge e `branch -d`) e 8 (remotos, `fetch` e `push`).
+
+<!-- nav:start -->
+---
+
+[◀ Capítulo anterior](08-repositorios-remotos.md) · [Mapa do livro](../README.md) · [Próximo capítulo ▶](10-projeto-curriculo-online.md)
+<!-- nav:end -->

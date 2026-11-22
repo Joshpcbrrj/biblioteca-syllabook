@@ -94,3 +94,9 @@ Conte só a sequência a partir da pergunta 1: se errou a 3, comece no capítulo
 > 💡 **Dica:** pulou capítulos? Faça mesmo assim o 🧪 **Laboratório** de cada um deles (sem ler o resto), para o seu projeto `receitas` chegar igual ao do livro. E se o Git ainda não estiver instalado, com nome, e-mail e acesso ao GitHub configurados, faça o capítulo 2 antes de qualquer outro.
 
 > ➡️ **Próximo passo:** o capítulo 1 começa com um problema que você talvez já tenha vivido: a pasta cheia de cópias com nomes como `cardapio-final.txt` e `cardapio-final-2.txt`, sem saber qual é a certa.
+
+<!-- nav:start -->
+---
+
+[Mapa do livro](../README.md) · [Próximo capítulo ▶](01-por-que-controlar-versoes.md)
+<!-- nav:end -->

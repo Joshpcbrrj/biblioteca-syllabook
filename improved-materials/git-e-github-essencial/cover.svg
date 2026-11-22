@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="2560" viewBox="0 0 1600 2560">
+  <!-- Ideia: um histórico de commits que se ramifica e volta a se juntar; cor de destaque: verde-azulado -->
+  <rect width="1600" height="2560" fill="#0f1b2d"/>
+  <rect x="0" y="0" width="1600" height="24" fill="#2bb3a3"/>
+
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- linha principal -->
+    <path d="M800 260 V1240" stroke="#e8eef5" stroke-width="22"/>
+    <!-- branch que sai e volta -->
+    <path d="M800 470 C800 560 1130 560 1130 660 V900 C1130 1000 800 1000 800 1090" stroke="#2bb3a3" stroke-width="22"/>
+    <!-- segunda branch, que sai para a esquerda -->
+    <path d="M800 640 C800 720 520 720 520 800 V860" stroke="#f2b84b" stroke-width="22" stroke-dasharray="0"/>
+  </g>
+  <g stroke="#0f1b2d" stroke-width="14">
+    <circle cx="800" cy="260" r="46" fill="#e8eef5"/>
+    <circle cx="800" cy="470" r="46" fill="#e8eef5"/>
+    <circle cx="800" cy="640" r="46" fill="#e8eef5"/>
+    <circle cx="800" cy="900" r="46" fill="#e8eef5"/>
+    <circle cx="800" cy="1090" r="58" fill="#2bb3a3"/>
+    <circle cx="800" cy="1240" r="46" fill="#e8eef5"/>
+    <circle cx="1130" cy="680" r="46" fill="#2bb3a3"/>
+    <circle cx="1130" cy="880" r="46" fill="#2bb3a3"/>
+    <circle cx="520" cy="860" r="46" fill="#f2b84b"/>
+  </g>
+
+  <g font-family="'Segoe UI', 'DejaVu Sans', Arial, sans-serif" fill="#ffffff">
+    <text x="140" y="1560" font-size="210" font-weight="800" letter-spacing="-4">Git e GitHub</text>
+    <text x="140" y="1780" font-size="210" font-weight="800" letter-spacing="-4" fill="#2bb3a3">essencial</text>
+    <text x="140" y="1920" font-size="62" font-weight="400" fill="#d6dee8">Do primeiro commit ao pull request,</text>
+    <text x="140" y="2000" font-size="62" font-weight="400" fill="#d6dee8">praticando num projeto real</text>
+    <text x="140" y="2090" font-size="40" font-weight="400" fill="#8fa3b8">Baseado em anotações de curso</text>
+    <rect x="140" y="2290" width="120" height="10" fill="#2bb3a3"/>
+    <text x="140" y="2380" font-size="60" font-weight="600">por Josué B. Almeida</text>
+  </g>
+</svg>

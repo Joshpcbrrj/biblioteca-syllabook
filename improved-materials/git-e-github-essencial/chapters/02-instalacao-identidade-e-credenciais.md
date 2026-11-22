@@ -77,7 +77,7 @@ git config --global user.name "Ana Ribeiro"
 git config --global user.email "ana.ribeiro@example.com"
 ```
 
-Use o **mesmo e-mail da sua conta do GitHub**. É por ele que o GitHub liga cada commit ao seu perfil; um commit com um e-mail que não está cadastrado na sua conta não fica ligado ao seu perfil e não entra no seu gráfico de contribuições.
+Escolha um **e-mail cadastrado na sua conta do GitHub**: o site usa esse endereço para saber que o commit é seu; um commit com um e-mail que não está cadastrado na sua conta não fica ligado ao seu perfil e não entra no seu gráfico de contribuições.
 
 > 💡 Se você não quer o seu e-mail visível nos commits públicos, o GitHub oferece um endereço que só serve para isso, no formato `ID+usuario@users.noreply.github.com`. Ele aparece em **Settings → Emails** na sua conta.
 
@@ -435,3 +435,9 @@ Esta é minha resposta ao exercício 4 do capítulo sobre credenciais do Git:
 - [Gerar uma chave SSH](https://docs.github.com/pt/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) e [Testar a conexão SSH](https://docs.github.com/pt/authentication/connecting-to-github-with-ssh/testing-your-ssh-connection) — GitHub Docs (consultados em 21/11/2026)
 - [Definir o endereço de e-mail do commit — GitHub Docs](https://docs.github.com/pt/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-email-preferences/setting-your-commit-email-address) (consultado em 21/11/2026)
 - Anotações do curso “Git e GitHub Essencial para o Desenvolvedor” (Geek University, Udemy), aulas 1.4 e 1.5: estrutura e tópicos.
+
+<!-- nav:start -->
+---
+
+[◀ Capítulo anterior](01-por-que-controlar-versoes.md) · [Mapa do livro](../README.md) · [Próximo capítulo ▶](03-como-o-git-pensa.md)
+<!-- nav:end -->

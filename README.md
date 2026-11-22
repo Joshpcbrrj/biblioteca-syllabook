@@ -10,3 +10,9 @@ Books for studying on my own, written and improved with [Syllabook](https://gith
 - 📥 **EPUB** for any e-reader: in the **Releases** of this repository, or next to each book in the lists.
 
 Found an error? Open an issue: every correction helps the next reader.
+
+<!-- tracks:start -->
+## 🧭 Tracks
+
+- **Ferramentas do dev:** [Git e GitHub essencial](improved-materials/git-e-github-essencial/)
+<!-- tracks:end -->

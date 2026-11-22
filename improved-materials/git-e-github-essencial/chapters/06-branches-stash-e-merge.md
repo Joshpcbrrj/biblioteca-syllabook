@@ -317,7 +317,7 @@ Merge made by the 'ort' strategy.
 
 Antes dessa saída, o Git abre o seu editor com a mensagem `Merge branch 'sobremesas'` já escrita; salve e feche para continuar. (`ort` é o nome do algoritmo de merge padrão do Git.)
 
-**No merge de três vias, o Git compara três versões (o ancestral comum, `aacc41a`, e as pontas das duas branches) e cria um commit de merge, que tem dois pais.**
+**No merge de três vias, o Git olha para o ponto onde as branches se separaram (`aacc41a`) e para a ponta de cada uma, junta as duas mudanças e grava um commit de merge com dois pais.**
 
 ```bash
 git log --oneline --graph -n 6
@@ -741,3 +741,9 @@ ou se eu perdi alguma informação das duas versões, sem reescrever por mim.
 - Anotações do curso “Git e GitHub Essencial para o Desenvolvedor” (Geek University, Udemy): “Branches”, “Guardando trabalho com git stash”, “Merge” e “Resolvendo conflitos”: estrutura e tópicos.
 
 > 🔁 **Revise hoje:** capítulos 3 (as três áreas e os estados) e 5 (detached HEAD, `reset` e reflog).
+
+<!-- nav:start -->
+---
+
+[◀ Capítulo anterior](05-desfazendo-erros-com-seguranca.md) · [Mapa do livro](../README.md) · [Próximo capítulo ▶](07-rebase-e-historico-limpo.md)
+<!-- nav:end -->
