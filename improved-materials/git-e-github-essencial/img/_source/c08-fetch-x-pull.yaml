@@ -1,0 +1,10 @@
+type: compare
+title: "O fetch só baixa; o pull baixa e integra na branch atual"
+left: {title: "git fetch", icon: cloud-download, color: blue}
+right: {title: "git pull", icon: download, color: purple}
+rows:
+  - ["Baixa os commits novos", "Baixa os commits novos"]
+  - ["Atualiza origin/main", "Atualiza origin/main"]
+  - ["Não mexe na main nem nos arquivos", "Integra na branch atual"]
+  - ["Sempre seguro: dá para olhar antes", "Pode criar merge ou parar em conflito"]
+  - ["Depois: git merge ou git rebase", "É o mesmo que fetch + merge (ou rebase)"]

@@ -1,0 +1,13 @@
+type: sequence
+title: "No fork, a Carla envia para a própria cópia e pede, por pull request, que o original receba"
+participants:
+  - {name: "receitas (upstream)", icon: server}
+  - {name: "carla-fork (origin)", icon: server}
+  - {name: "Carla (local)", icon: user}
+messages:
+  - {from: "receitas (upstream)", to: "carla-fork (origin)", text: "Fork: cópia no servidor"}
+  - {from: "carla-fork (origin)", to: "Carla (local)", text: "git clone do fork"}
+  - {from: "Carla (local)", to: "carla-fork (origin)", text: "git push -u origin <branch>"}
+  - {from: "carla-fork (origin)", to: "receitas (upstream)", text: "pull request", dashed: true}
+  - {from: "receitas (upstream)", to: "Carla (local)", text: "git fetch upstream"}
+caption: "A Carla não tem permissão de push no receitas: tudo o que chega lá passa pelo pull request."

@@ -1,0 +1,8 @@
+type: flow
+title: "Os comandos movem cada arquivo de um estado para outro"
+steps:
+  - {text: "Untracked", note: "novo: o Git ainda não acompanha", icon: file, kind: start, color: gray, label: "git add"}
+  - {text: "Staged", note: "marcado para o próximo commit", icon: list-checks, color: orange, label: "git commit"}
+  - {text: "Unmodified", note: "igual à versão do último commit", icon: circle-check, color: green, label: "você edita"}
+  - {text: "Modified", note: "diferente do último commit", icon: pencil, color: blue, label: "git add"}
+  - {text: "Staged de novo", note: "e o ciclo recomeça no commit", icon: repeat, kind: end, color: orange}

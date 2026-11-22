@@ -1,0 +1,12 @@
+type: boxes
+title: "HEAD é o commit atual; HEAD~n é n commits para trás"
+name: "histórico do receitas (mais antigo à esquerda)"
+cells:
+  - {value: "9a16b95", label: "HEAD~6"}
+  - {value: "9b3de16", label: "HEAD~5"}
+  - {value: "52fb7d1", label: "HEAD~4"}
+  - {value: "89108b9", label: "HEAD~3"}
+  - {value: "80f839b", label: "HEAD~2"}
+  - {value: "3ea07e1", label: "HEAD~1"}
+  - {value: "c33ad78", label: "HEAD", highlight: true}
+caption: "HEAD~1 também se escreve HEAD^, e HEAD~2, HEAD^^. Cada commit guarda o hash do pai."

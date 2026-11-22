@@ -1,0 +1,10 @@
+type: compare
+title: "No modelo distribuído, cada computador guarda o histórico inteiro"
+left: {title: "Centralizado (SVN, CVS)", icon: server, color: gray}
+right: {title: "Distribuído (Git, Mercurial)", icon: network, color: purple}
+rows:
+  - ["Histórico só no servidor", "Histórico completo em cada cópia"]
+  - ["Sem servidor, não há commit", "Commit offline, no seu disco"]
+  - ["Ver o histórico exige rede", "git log responde na hora"]
+  - ["Servidor perdido, histórico perdido", "Qualquer cópia restaura o projeto"]
+caption: "O servidor continua existindo no modelo distribuído: ele só deixa de ser o único lugar com o histórico."

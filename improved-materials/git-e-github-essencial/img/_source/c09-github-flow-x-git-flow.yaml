@@ -1,0 +1,10 @@
+type: compare
+title: "GitHub Flow para entrega contínua; Git Flow para versões numeradas e planejadas"
+left: {title: "GitHub Flow", icon: workflow, color: green}
+right: {title: "Git Flow", icon: layers, color: blue}
+rows:
+  - ["Uma branch fixa: main", "Duas fixas: main e develop"]
+  - ["Branch curta para cada tarefa", "feature, release e hotfix"]
+  - ["Tudo entra por pull request", "Cada tipo volta para um lugar"]
+  - ["Sites e sistemas no ar", "Programas com versões e calendário"]
+  - ["Comece por este", "O autor sugere o GitHub Flow para entrega contínua"]

@@ -1,0 +1,30 @@
+type: cards
+title: "Parte 2: no seu computador, você registra, consulta, desfaz e ramifica o histórico"
+cards:
+  - icon: save
+    title: "Commit"
+    items: ["Pequeno, um assunto só", "Título ≤ 50, no presente", "Corpo explica o porquê"]
+    code: ['git commit -m "..."']
+  - icon: search
+    title: "Histórico"
+    items: ["log --oneline --graph", "show, blame, log --grep", "diff × diff --staged"]
+  - icon: target
+    title: "HEAD"
+    items: ["HEAD → branch → commit", "HEAD~1 = o pai", "Detached: HEAD num hash"]
+  - icon: rotate-ccw
+    title: "Desfazer"
+    items: ["restore: o arquivo", "commit --amend: o último", "revert: commit inverso"]
+  - icon: triangle-alert
+    title: "reset e reflog"
+    items: ["--soft: fica na staging", "--mixed: fica na pasta", "--hard: apaga (cuidado)"]
+    code: ["git reflog"]
+  - icon: git-branch
+    title: "Branch e stash"
+    items: ["Branch: ponteiro", "switch -c cria e troca", "stash -u guarda rascunho"]
+  - icon: git-merge
+    title: "Merge"
+    items: ["Fast-forward: só avança", "Três vias: commit de merge", "Conflito: edite, add, commit"]
+  - icon: repeat
+    title: "Rebase"
+    items: ["Reaplica sobre a base", "Gera hashes novos", "Nunca em branch pública"]
+    code: ["git rebase -i HEAD~3"]

@@ -1,0 +1,9 @@
+type: flow
+title: "GitHub Flow: a main está sempre pronta, e tudo chega a ela por pull request"
+steps:
+  - {text: "Crie uma branch", note: "git switch -c sal-no-pao-de-queijo", icon: git-branch, kind: start, color: blue}
+  - {text: "Faça commits", note: "e envie com git push -u origin", icon: save, color: blue}
+  - {text: "Abra o pull request", note: "Closes #1 na descrição", icon: git-pull-request, color: purple}
+  - {text: "Responda à revisão", note: "commits novos na mesma branch", icon: message-square, color: orange}
+  - {text: "Faça o merge", note: "merge commit, squash ou rebase", icon: git-merge, color: green}
+  - {text: "Apague a branch", note: "no GitHub e no seu computador", icon: circle-check, kind: end, color: green}

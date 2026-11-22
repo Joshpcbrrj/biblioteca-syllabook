@@ -1,0 +1,9 @@
+type: compare
+style: wrong-right
+title: "Para abrir uma exceção dentro de uma pasta, ignore o conteúdo, não a pasta"
+left: {title: "rascunhos/  +  !rascunhos/publicar.md"}
+right: {title: "rascunhos/*  +  !rascunhos/publicar.md"}
+rows:
+  - ["Ignora a pasta inteira", "Ignora cada item da pasta"]
+  - ["O Git nem olha dentro dela", "O Git olha dentro e aplica a exceção"]
+  - ["publicar.md continua ignorado", "publicar.md volta a aparecer"]

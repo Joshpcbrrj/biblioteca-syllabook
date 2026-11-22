@@ -1,0 +1,11 @@
+type: sequence
+title: "Com SSH, a chave privada nunca sai do seu computador"
+participants:
+  - {name: "Seu computador", icon: monitor}
+  - {name: "GitHub", icon: cloud}
+messages:
+  - {from: "Seu computador", to: "GitHub", text: "1. Você cadastra a chave pública (uma vez)"}
+  - {from: "Seu computador", to: "GitHub", text: "2. Pedido de conexão com a chave pública"}
+  - {from: "GitHub", to: "Seu computador", text: "3. Desafio: prove que tem a chave privada", dashed: true}
+  - {from: "Seu computador", to: "GitHub", text: "4. Resposta assinada com a chave privada"}
+  - {from: "GitHub", to: "Seu computador", text: "5. Assinatura confere: acesso liberado", dashed: true}

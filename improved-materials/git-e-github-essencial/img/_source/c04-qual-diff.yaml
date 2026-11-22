@@ -1,0 +1,8 @@
+type: flow
+title: "Cada git diff compara duas áreas diferentes"
+subtitle: "a seta diz qual comando mostra a diferença entre as duas caixas"
+steps:
+  - {text: "Diretório de trabalho", note: "o que está no editor", icon: folder-open, kind: start, color: blue, label: "git diff"}
+  - {text: "Staging area", note: "o que vai entrar no próximo commit", icon: list-checks, color: orange, label: "git diff --staged"}
+  - {text: "Último commit (HEAD)", note: "a última foto do álbum", icon: save, kind: end, color: green}
+caption: "Se o git diff não mostra nada depois de um git add, a mudança está na staging area: use --staged."

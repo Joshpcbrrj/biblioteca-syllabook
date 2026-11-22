@@ -1,0 +1,9 @@
+type: flow
+title: "Para escolher o comando, pergunte onde o erro está"
+steps:
+  - {text: "O que você quer desfazer?", icon: circle-help, kind: start, color: purple}
+  - {text: "A mudança já está num commit?", kind: decision, color: orange, label: "sim", side: "git restore <arquivo>", side_note: "na staging area: git restore --staged", side_color: green, side_label: "não"}
+  - {text: "O commit já foi compartilhado?", kind: decision, color: orange, label: "não", side: "git revert <commit>", side_note: "cria um commit que desfaz o outro", side_color: green, side_label: "sim"}
+  - {text: "O erro está no último commit?", kind: decision, color: orange, label: "não", side: "git commit --amend", side_note: "corrige mensagem ou arquivos", side_color: green, side_label: "sim"}
+  - {text: "git reset", note: "--soft, --mixed ou --hard (cuidado)", icon: rotate-ccw, kind: end, color: blue}
+caption: "Na dúvida, prefira o comando que cria histórico novo (revert) ao que reescreve o histórico (amend, reset)."

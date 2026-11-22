@@ -1,0 +1,9 @@
+type: compare
+title: "Cada commit é uma foto completa, mas o que não mudou é reaproveitado"
+left: {title: "Commit 9a16b95", icon: save, color: gray}
+right: {title: "Commit 9b3de16", icon: save, color: purple}
+rows:
+  - ["pai: nenhum (primeiro commit)", "pai: 9a16b95"]
+  - ["index.html: blob c29df30", "index.html: blob c29df30 (o mesmo)"]
+  - ["receitas/: tree 332bd66", "receitas/: tree bb70833 (mudou)"]
+caption: "O index.html não mudou, então o segundo commit aponta para o mesmo conteúdo já guardado."

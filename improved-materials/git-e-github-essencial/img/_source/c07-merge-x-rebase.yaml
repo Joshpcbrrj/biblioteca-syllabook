@@ -1,0 +1,10 @@
+type: compare
+title: "O merge guarda a bifurcação; o rebase recria os seus commits em cima da main"
+left: {title: "git merge bebidas (na main)", icon: git-merge, color: blue}
+right: {title: "git rebase main (na bebidas)", icon: refresh-cw, color: purple}
+rows:
+  - ["Os commits 4f9e111 e 172b51d ficam", "Viram 748e984 e 036c36f: outro hash"]
+  - ["Nasce um commit de merge", "Nenhum commit de merge"]
+  - ["O --graph mostra duas linhas", "O --graph mostra uma linha só"]
+  - ["Conflito resolvido uma vez", "Conflito resolvido commit a commit"]
+  - ["Seguro em commits já compartilhados", "Só em commits que só você tem"]

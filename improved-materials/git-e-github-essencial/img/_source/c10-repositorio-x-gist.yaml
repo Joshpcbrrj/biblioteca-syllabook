@@ -1,0 +1,10 @@
+type: compare
+title: "Repositório guarda um projeto; gist guarda um trecho para compartilhar"
+left: {title: "Repositório", icon: folder, color: blue}
+right: {title: "Gist", icon: file, color: purple}
+rows:
+  - ["Um projeto inteiro, com pastas", "Um ou poucos arquivos, sem pastas"]
+  - ["Issues, pull requests, Pages", "Comentários e revisões"]
+  - ["Público ou privado", "Público ou secreto (secreto não é privado)"]
+  - ["Colaboradores e forks", "Fork e clone, sem colaboradores"]
+  - ["Ex.: o currículo da Ana", "Ex.: o alias de log da Ana"]

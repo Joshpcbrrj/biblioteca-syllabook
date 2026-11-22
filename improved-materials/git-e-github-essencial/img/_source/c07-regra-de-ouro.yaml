@@ -1,0 +1,12 @@
+type: sequence
+title: "Rebase em commits que outra pessoa já tem deixa duas versões do mesmo trabalho"
+participants:
+  - {name: "Ana", icon: user}
+  - {name: "Cópia compartilhada", icon: server}
+  - {name: "Bruno", icon: user}
+messages:
+  - {from: "Ana", to: "Cópia compartilhada", text: "envia 4f9e111 (suco)"}
+  - {from: "Cópia compartilhada", to: "Bruno", text: "Bruno copia 4f9e111 e commita"}
+  - {from: "Ana", to: "Cópia compartilhada", text: "rebase; envia 748e984"}
+  - {from: "Cópia compartilhada", to: "Bruno", text: "suco duplicado: dois hashes", dashed: true}
+caption: "Na sua branch local, ninguém mais tem os commits antigos: ali o rebase é seguro."

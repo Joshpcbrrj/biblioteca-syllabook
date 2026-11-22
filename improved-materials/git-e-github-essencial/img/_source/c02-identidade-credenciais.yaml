@@ -1,0 +1,9 @@
+type: compare
+title: "Identidade assina o commit; credencial abre a porta do servidor"
+left: {title: "Identidade", icon: user, color: blue}
+right: {title: "Credencial", icon: key, color: orange}
+rows:
+  - ["user.name e user.email", "token, login no navegador ou chave SSH"]
+  - ["Gravada dentro de cada commit", "Apresentada ao servidor no push"]
+  - ["Ninguém confere: aceita qualquer nome", "O servidor recusa se for inválida"]
+  - ["Necessária para commitar", "Necessária para enviar e baixar privados"]

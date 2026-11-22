@@ -1,0 +1,32 @@
+type: cards
+title: "Parte 3: com um remoto, você sincroniza, colabora por pull request e publica"
+cards:
+  - icon: server
+    title: "Remoto"
+    items: ["origin: apelido do endereço", "clone traz o histórico", "-u liga o rastreamento"]
+    code: ["git push -u origin main"]
+  - icon: cloud-download
+    title: "fetch × pull"
+    items: ["fetch: só baixa", "pull: fetch + integra", "Recusado? pull antes"]
+  - icon: star
+    title: "Tags"
+    items: ["Anotada: -a -m", "Push explícito da tag", "Release no GitHub"]
+    code: ["git push origin v1.0"]
+  - icon: users
+    title: "Colaborar"
+    items: ["Colaborador: push direto", "Issue: #n cita", "Closes #n fecha"]
+  - icon: git-pull-request
+    title: "Fork e PR"
+    items: ["Fork: cópia na sua conta", "upstream = original", "PR: revisão e merge"]
+  - icon: workflow
+    title: "Fluxos"
+    items: ["GitHub Flow: main pronta", "Branch curta + PR", "Git Flow: develop, release"]
+  - icon: file-text
+    title: "Markdown"
+    items: ["# título, - lista", "- [ ] tarefa", "> [!TIP] alerta"]
+  - icon: globe
+    title: "GitHub Pages"
+    items: ["<usuario>.github.io", "Settings → Pages", "Push atualiza (≤ 10 min)"]
+  - icon: file-code
+    title: "Gist"
+    items: ["Trecho com link próprio", "É um repositório Git", "Secreto não é privado"]

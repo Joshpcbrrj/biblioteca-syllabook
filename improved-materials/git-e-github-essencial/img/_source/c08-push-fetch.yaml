@@ -1,0 +1,12 @@
+type: sequence
+title: "O remoto é o ponto de encontro: cada um envia com push e recebe com fetch"
+participants:
+  - {name: "Ana (receitas)", icon: user}
+  - {name: "Remoto (receitas.git)", icon: server}
+  - {name: "Bruno (clone)", icon: user}
+messages:
+  - {from: "Ana (receitas)", to: "Remoto (receitas.git)", text: "git push -u origin main"}
+  - {from: "Remoto (receitas.git)", to: "Bruno (clone)", text: "git clone: cópia completa"}
+  - {from: "Bruno (clone)", to: "Remoto (receitas.git)", text: "git push: 38b2299 pão de queijo"}
+  - {from: "Remoto (receitas.git)", to: "Ana (receitas)", text: "git fetch: origin/main = 38b2299", dashed: true}
+caption: "O fetch só atualiza origin/main; a main da Ana avança no merge (ou no pull, que faz os dois)."

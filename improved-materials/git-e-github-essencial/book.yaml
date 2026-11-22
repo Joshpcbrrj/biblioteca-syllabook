@@ -1,0 +1,534 @@
+title: Git e GitHub essencial
+subtitle: Do primeiro commit ao pull request, praticando num projeto real
+slug: git-e-github-essencial
+origin: improved
+language: pt-BR
+conversation_language: pt-BR
+profiles:
+- stem
+level:
+  start: beginner
+  end: intermediate
+audience: Quem programa (ou está começando) e nunca usou Git, ou usa só add, commit e push sem entender
+goal: Versionar um projeto com Git, desfazer erros com segurança, trabalhar com branches e remotos e contribuir
+  no GitHub por fork e pull request
+prerequisites:
+- Usar o terminal no nível básico (cd, ls, mkdir)
+track:
+  name: ferramentas-do-dev
+  order: 1
+reference_version: Git 2.5x, GitHub (interface de 2026)
+review_by: 2027-11
+original:
+  title: 'Udemy - Geek university: Git e GitHub Essencial para o Desenvolvedor (anotações)'
+  kind: notion
+  where: https://app.notion.com/p/7cd4e7395d8d4a2493a6383c926b7c48
+promise:
+  goal: Do zero ao trabalho em equipe com Git e GitHub
+  audience: Desenvolvedores iniciantes em controle de versão (inferido)
+  level: iniciante a intermediário (inferido)
+  sequence: introdução, Git básico, intermediário, avançado com GitHub, open source, projeto GitHub Pages,
+    Markdown e gists
+new_content_pct: 15
+sources:
+- title: Pro Git (2ª ed.), Scott Chacon e Ben Straub
+  url: https://git-scm.com/book/pt-br/v2
+  checked: '2026-11-21'
+- title: Git Reference Manual
+  url: https://git-scm.com/docs
+  checked: '2026-11-21'
+- title: GitHub Docs
+  url: https://docs.github.com/pt
+  checked: '2026-11-21'
+approved_on: '2026-11-21'
+edition: '1.0'
+human_review: false
+choices:
+  images: real
+  reading: large
+concepts:
+- id: version-control
+  name: controle de versão
+  chapter: 1
+  depends: []
+- id: distributed-vcs
+  name: controle de versão distribuído
+  chapter: 1
+  depends:
+  - version-control
+- id: git-vs-github
+  name: Git × GitHub
+  chapter: 1
+  depends:
+  - distributed-vcs
+- id: git-config
+  name: git config e níveis de configuração
+  chapter: 2
+  depends: []
+- id: identity
+  name: identidade do autor
+  chapter: 2
+  depends:
+  - git-config
+- id: credentials
+  name: credenciais (token, GCM, SSH)
+  chapter: 2
+  depends:
+  - git-vs-github
+- id: snapshot
+  name: snapshot
+  chapter: 3
+  depends:
+  - version-control
+- id: three-areas
+  name: diretório de trabalho, staging area e repositório
+  chapter: 3
+  depends:
+  - snapshot
+- id: file-status
+  name: estados dos arquivos
+  chapter: 3
+  depends:
+  - three-areas
+- id: gitignore
+  name: .gitignore
+  chapter: 3
+  depends:
+  - file-status
+- id: commit
+  name: commit
+  chapter: 4
+  depends:
+  - three-areas
+  - identity
+- id: commit-message
+  name: boa mensagem de commit
+  chapter: 4
+  depends:
+  - commit
+- id: history
+  name: histórico (git log, git show, git diff)
+  chapter: 4
+  depends:
+  - commit
+- id: head
+  name: HEAD
+  chapter: 4
+  depends:
+  - commit
+- id: restore
+  name: git restore
+  chapter: 5
+  depends:
+  - file-status
+- id: amend
+  name: git commit --amend
+  chapter: 5
+  depends:
+  - commit
+- id: detached-head
+  name: detached HEAD
+  chapter: 5
+  depends:
+  - head
+- id: reset
+  name: git reset (--soft, --mixed, --hard)
+  chapter: 5
+  depends:
+  - head
+  - three-areas
+- id: revert
+  name: git revert
+  chapter: 5
+  depends:
+  - commit
+- id: reflog
+  name: reflog
+  chapter: 5
+  depends:
+  - reset
+- id: branch
+  name: branch
+  chapter: 6
+  depends:
+  - head
+- id: stash
+  name: stash
+  chapter: 6
+  depends:
+  - branch
+  - file-status
+- id: merge
+  name: merge (fast-forward e de três vias)
+  chapter: 6
+  depends:
+  - branch
+- id: conflict
+  name: conflito de merge
+  chapter: 6
+  depends:
+  - merge
+- id: rebase
+  name: rebase
+  chapter: 7
+  depends:
+  - merge
+- id: interactive-rebase
+  name: rebase interativo
+  chapter: 7
+  depends:
+  - rebase
+- id: remote
+  name: repositório remoto
+  chapter: 8
+  depends:
+  - distributed-vcs
+  - branch
+- id: bare-repo
+  name: bare repository
+  chapter: 8
+  depends:
+  - remote
+- id: push-pull
+  name: clone, push, fetch e pull
+  chapter: 8
+  depends:
+  - remote
+  - merge
+  - credentials
+- id: tracking-branch
+  name: branch de rastreamento
+  chapter: 8
+  depends:
+  - push-pull
+- id: tag
+  name: tag
+  chapter: 8
+  depends:
+  - commit
+- id: collaborator
+  name: colaborador
+  chapter: 9
+  depends:
+  - push-pull
+- id: issue
+  name: issue
+  chapter: 9
+  depends:
+  - git-vs-github
+- id: fork
+  name: fork
+  chapter: 9
+  depends:
+  - remote
+- id: pull-request
+  name: pull request
+  chapter: 9
+  depends:
+  - fork
+  - branch
+- id: team-flow
+  name: GitHub Flow e Git Flow
+  chapter: 9
+  depends:
+  - pull-request
+- id: markdown
+  name: Markdown e README
+  chapter: 10
+  depends: []
+- id: github-pages
+  name: GitHub Pages
+  chapter: 10
+  depends:
+  - push-pull
+- id: gist
+  name: gist
+  chapter: 10
+  depends:
+  - markdown
+chapters:
+- n: 1
+  title: Por que controlar versões
+  goal: Explicar o que é controle de versão, o que o Git faz e por que Git não é GitHub
+  topics:
+  - o problema do projeto_final_v3_agora_vai
+  - centralizado × distribuído
+  - Git × GitHub e outros serviços
+  minutes: 30
+  sources_original:
+  - O que é controle de versão
+  - O que é o Git
+  - Git não é GitHub
+- n: 2
+  title: Instalação, identidade e credenciais
+  goal: Instalar e configurar o Git e autenticar no GitHub sem senha
+  topics:
+  - instalar no Windows, macOS e Linux
+  - 'git config: system, global e local'
+  - identidade × credenciais
+  - Git Credential Manager e SSH
+  minutes: 45
+  sources_original:
+  - Instalando e configurando o Git
+  - Registrando usuários locais e credenciais
+- n: 3
+  title: Como o Git pensa
+  goal: Prever o estado de cada arquivo entre as três áreas do Git
+  topics:
+  - snapshots e hashes
+  - as três áreas
+  - untracked, modified, staged, committed
+  - .gitignore
+  minutes: 45
+  sources_original:
+  - Entendendo como o Git funciona
+  - O ciclo de vida dos status de arquivos no Git
+  - Fazendo uso do .gitignore
+- n: 4
+  title: Commits e histórico
+  goal: Criar commits pequenos e bem descritos e encontrar qualquer mudança no histórico
+  topics:
+  - git add e git commit
+  - mensagens de commit
+  - git log e seus filtros
+  - git show, git diff, git blame
+  - HEAD e HEAD~n
+  minutes: 50
+  sources_original:
+  - Como fazer os commits
+  - Como consultar o histórico do projeto
+  - Conhecendo alguns comandos úteis
+  - Consultando histórico de commits
+- n: 5
+  title: Desfazendo erros com segurança
+  goal: Escolher o comando certo para desfazer cada tipo de erro e recuperar o que parecia perdido
+  topics:
+  - restore
+  - commit --amend
+  - checkout de um commit e detached HEAD
+  - reset --soft/--mixed/--hard
+  - revert
+  - reflog
+  minutes: 60
+  sources_original:
+  - Voltando no tempo com o Git
+  - Desfazendo e refazendo ações no Git
+  - Desfazendo ações com checkout
+  - Desfazendo ações com revert e reset
+- n: 6
+  title: Branches, stash e merge
+  goal: Desenvolver em paralelo com branches, guardar trabalho com stash e integrar resolvendo conflitos
+  topics:
+  - branch como ponteiro
+  - git switch
+  - stash
+  - fast-forward × merge de três vias
+  - resolver conflitos
+  minutes: 60
+  sources_original:
+  - Branches
+  - Guardando trabalho com git stash
+  - Merge
+  - Resolvendo conflitos
+- n: 7
+  title: Rebase e histórico limpo
+  goal: Atualizar uma branch com rebase e arrumar commits locais com rebase interativo
+  topics:
+  - rebase × merge
+  - regra de ouro
+  - conflitos no rebase
+  - 'rebase -i: reword, squash, fixup, drop'
+  minutes: 45
+  sources_original:
+  - Rebase
+- n: 8
+  title: Repositórios remotos
+  goal: Sincronizar um repositório local com um remoto e marcar versões com tags
+  topics:
+  - bare repository como remoto de treino
+  - clone e push
+  - fetch × pull
+  - branches de rastreamento
+  - criar o repositório no GitHub
+  - tags e releases
+  minutes: 60
+  sources_original:
+  - Bare repository
+  - Clone e push
+  - Fetch e pull
+  - Repositório remoto no GitHub
+  - Usando Clone e pull
+  - Trabalhando com tags
+- n: 9
+  title: Colaborando no GitHub
+  goal: Trabalhar em equipe e contribuir com projetos open source por issue, fork e pull request
+  topics:
+  - colaboradores
+  - issues
+  - fork e upstream
+  - pull request e revisão
+  - GitHub Flow e Git Flow
+  minutes: 60
+  sources_original:
+  - Adicionando colaboradores no meu projeto
+  - O que são issues
+  - Trabalhando com fork
+  - Realizando e aceitando pull requests
+  - 'Fluxos de trabalho em equipe: GitHub Flow e Git Flow'
+- n: 10
+  title: 'Projeto: currículo online'
+  goal: Publicar um currículo com GitHub Pages, documentado com README em Markdown, e compartilhar trechos
+    com gists
+  topics:
+  - Markdown
+  - README
+  - GitHub Pages
+  - Git no VS Code
+  - gists
+  minutes: 60
+  sources_original:
+  - 'Projeto: currículo online com GitHub Pages + plugins do Git para VS Code'
+  - Entendendo o markdown
+  - Entendendo gists
+next_steps:
+- title: GitHub Actions (CI/CD)
+  why: Fazer o GitHub testar e publicar o projeto sozinho a cada push e a cada pull request
+  topics:
+  - workflows em YAML
+  - testes automáticos em pull requests
+  - deploy do GitHub Pages por Actions
+  - segredos do repositório
+- title: git bisect e git worktree
+  why: Achar o commit que introduziu um bug e trabalhar em duas branches ao mesmo tempo sem stash
+  topics:
+  - busca binária com git bisect
+  - git bisect run com um teste
+  - várias pastas de trabalho com git worktree
+- title: Commits assinados (GPG/SSH)
+  why: Provar que os seus commits e tags vieram mesmo de você, com o selo Verified no GitHub
+  topics:
+  - assinatura com chave SSH
+  - assinatura com GPG
+  - git log --show-signature
+  - exigir commits assinados na branch protegida
+- title: Conventional Commits e versionamento semântico
+  why: Padronizar as mensagens da equipe e numerar as versões de um jeito que diz o que mudou
+  topics:
+  - tipos feat, fix e chore
+  - MAJOR.MINOR.PATCH
+  - changelog gerado do histórico
+  - tags e releases por versão
+covers:
+- git
+- github
+- version-control
+- branching
+- pull-request
+- github-pages
+progress:
+- n: 1
+  done: '2026-11-21'
+  summary: 'Problema das cópias ''final'' (cardápio da lanchonete) resolvido pelo histórico: commit, autor,
+    data, mensagem, diff lido de um git log real (commits ce3dc3c, cf762e2, 4df55bb). Centralizado (SVN,
+    CVS) × distribuído (Git, Mercurial): onde fica o histórico; origem do Git em 2005 (BitKeeper). Git
+    (programa local) × GitHub (serviço que hospeda; GitLab, Bitbucket), com captura da página de commits
+    do git/git. Prática só de leitura de histórico; sem terminal.'
+- n: 2
+  done: '2026-11-21'
+  summary: 'Instalação (Windows instalador com Git Bash e GCM, macOS brew, Debian apt-get; Git 2.56, mínimo
+    2.23). git config em três níveis (system, global, local; o mais próximo vence), --show-origin, --get-all,
+    --unset; identidade user.name/email (Ana Ribeiro, horta comunitária), init.defaultBranch main, core.editor
+    ''code --wait''. Identidade × credencial; senha recusada desde 13/08/2021; GCM (manager), helpers
+    cache/store/osxkeychain; SSH ed25519 com analogia do cartão de assinatura do banco. Lab: deixar o
+    Git pronto.'
+- n: 3
+  done: '2026-11-21'
+  summary: 'Nasce o projeto receitas (index.html, receitas/bolo-de-cenoura.md): git init e a pasta .git;
+    commit por dentro com git cat-file (tree, blob, hash, pai), snapshot que reaproveita o blob do index.html
+    (9a16b95 → 9b3de16). Três áreas com a analogia do álbum de fotos (mesa = staging area). Estados untracked/staged/unmodified/modified;
+    git status -s com duas colunas; o caso MM. .gitignore (.env, *.log, rascunhos/* com exceção !publicar.md;
+    a armadilha rascunhos/), git check-ignore -v, --ignored, git rm --cached e o aviso de segredo já commitado.
+    4 commits no lab.'
+- n: 4
+  done: '2026-11-21'
+  summary: 'Commits como unidades de mudança: brigadeiro do Bruno com --author (autor × committer), a
+    armadilha do git commit -am com arquivo novo. Mensagens: título até 50 caracteres no presente, linha
+    em branco, corpo com o porquê (dois -m). git log com --oneline, --stat, -p, -n, --author, --grep,
+    -- arquivo, --format; --since sem hora usa a hora atual. git show (e commit:arquivo), git diff × --staged
+    × entre commits, git blame (-L, ^ de boundary). HEAD → main → commit; HEAD~n e HEAD^ (analogia do
+    marcador de página no álbum). 7 commits: 80f839b brigadeiro, 3ea07e1 título, c33ad78 açúcar.'
+- n: 5
+  done: '2026-11-21'
+  summary: 'Diagrama de decisão ''o que desfazer''. git restore (descarta edição; captura do VS Code com
+    Discard Changes), --staged (lista-de-compras.txt), --source=9a16b95. Pudim: commit ''pudm'' sem o
+    link corrigido com --amend (c8eed78 → 4ae3416). git switch --detach 9b3de16, cat .git/HEAD com hash,
+    checkout antigo; commit solto 9cba308 (forno 200 °C) e aviso ao voltar. reset --soft/--mixed/--hard
+    com estilo.css (A, ??, some) e o perigo do --hard com edição não commitada. git revert 3ea07e1 (título
+    volta a Receitas da Ana; f8f33cf). Analogia: reset arranca fotos para a gaveta, revert cola foto nova.
+    Reflog lido de baixo para cima; estilo.css recuperado com restore --source=38d0ae7 (aacc41a). Prazos
+    90/30 dias.'
+- n: 6
+  done: '2026-11-21'
+  summary: 'Branch como ponteiro (cat .git/refs/heads/sobremesas = hash, 41 bytes); analogia do marcador
+    com etiqueta no álbum. git switch (mousse some da pasta na main), -c; erro ao trocar com edição não
+    commitada. Stash: sem -u a torta fica; -u -m, list, pop, apply, drop. Fast-forward com corrige-pudim
+    (7f4893c) e branch -d; merge de três vias da sobremesas (1586c98, dois pais, ort, --graph --all).
+    git branch forno-200 9cba308 resgata o commit solto do cap. 5; -d recusa, -D apaga. Conflito no forno
+    do bolo (forno-eletrico × palito): marcadores, captura do VS Code (Current/Incoming), resolução com
+    as duas linhas, add, commit (433506c), --abort, git diff --check.'
+- n: 7
+  done: '2026-11-21'
+  summary: 'Rebase × merge com a branch bebidas (4f9e111/172b51d viram 748e984/036c36f; author × committer;
+    ORIG_HEAD; merge fast-forward); analogia das fotos tiradas de novo no álbum. Regra de ouro com diagrama
+    de sequência (Ana, cópia compartilhada, Bruno). Conflito no rebase na branch porcoes (ovos): HEAD
+    = nova base, detached HEAD, needs merge sem add, --continue, --abort, --skip; erro de usar git commit.
+    rebase -i HEAD~4 no quindim: reword, squash, fixup, drop; apagar linha = drop; reset --hard ORIG_HEAD;
+    --fixup/--autosquash em Para ir além. Main termina em 254d2d2, linear.'
+- n: 8
+  done: '2026-11-21'
+  summary: 'Remoto de treino com git init --bare receitas.git (recusa de push em repositório normal).
+    remote add/-v/set-url/rename; push -u (upstream); clone do Bruno com identidade local; status -sb
+    ahead/behind. fetch × pull: [behind 1], main..origin/main, merge; push recusado (fetch first), pull
+    sem configuração (divergent branches), pull --rebase (Ana 1597a4d). --force-with-lease na branch tortas
+    (stale info, armadilha do fetch antes). Branches de rastreamento com analogia do bilhete do álbum
+    da casa da avó. GitHub: criar repositório vazio, rename origin→treino, token fora da URL (não executado:
+    push ao GitHub). Tags anotada × leve (cat-file -t), push origin v1.0, fetch traz [new tag]; releases
+    pelos passos da documentação (não executado).'
+- n: 9
+  done: '2026-11-21'
+  summary: 'Colaboradores (Settings → Collaborators → Add people; conta pessoal: mesmo acesso; só gente
+    de confiança). Issue #1 da Carla (pão de queijo sem sal): Submit new issue, #n cita, Closes/Fixes/Resolves
+    fecham na branch principal. Fork simulado com git clone --bare (carla-fork.git); origin = fork, upstream
+    = original. Branch sal-no-pao-de-queijo, push no fork, PR (Compare & pull request, Allow edits from
+    maintainers), analogia do bilhete à avó; revisão (Files changed, Comment/Approve/Request changes),
+    commit novo atualiza o PR; teste local com fetch origem:destino e diff main...pr-1 (três pontos).
+    Três botões de merge com saídas reais (no-ff bb2ae29, squash 29e3a0a, rebase c004c84); squash final
+    com --author Carla. Sync do fork (fetch upstream, merge, push origin main); -d recusa após squash, '
+- n: 10
+  done: '2026-11-21'
+  summary: 'Projeto novo: currículo da Ana em ana-ribeiro.github.io (index.html, estilo.css, README.md;
+    commits 2d3855c e 82ecf4a, remoto bare no lugar do GitHub). Markdown essencial + tabelas, listas de
+    tarefas e alertas do GitHub; erro do Enter que não quebra linha. README (ordem .github/raiz/docs,
+    Outline; o que é, como ver, como contribuir) e README de perfil em Para ir além. GitHub Pages: site
+    de usuário × projeto, Free exige público, Settings → Pages → Deploy from a branch, até 10 min, index.html/index.md/README.md,
+    Jekyll e .nojekyll; analogia do porta-retrato na janela; captura do currículo no navegador. VS Code:
+    tabela botão × comando, captura do Source Control, Sync Changes = pull + push. Gists: alias lg, público
+    × secreto (secreto não é privado), Embed → Clone. Não executado: telas do GitHu'
+changes: []
+handoff:
+- 'Feito: 10 capítulos, cap. 0 com teste de nivelamento, simulado final (26 perguntas), glossário, README
+  (sem capa) e next_steps completos; auditoria do livro inteiro sem erros em 22/11/2026.'
+- 'Próximo (nesta ordem): comparação com o original (audit.py --original), capa (COVER.md), build.py para
+  uma pasta fora do repositório e publicação (GitHub e Notion, modes/PUBLISH.md). Depois, resumo final.'
+- 'Original: as seções do Notion não estão salvas localmente. Salvar o texto de cada seção (página 7cd4e7395d8d4a2493a6383c926b7c48,
+  só leitura) numa pasta fora do repositório e rodar audit.py --original <pasta>. Código do curso em D:\01
+  - DEV\Github\Udemy-Geek_university-Git_GitHub-Essencial_para_o_Desenvolvedor (só leitura).'
+- 'Laboratório: research/lab/ recria tudo com os mesmos hashes (SP=<pasta temporária> bash lab3.sh, depois
+  lab4 a lab10); HOME e config isolados.'
+- 'Não executado nos caps. 8 a 10 (marcado no texto): telas e push do GitHub (criar repositório, push,
+  releases, colaboradores, issue, fork, PR, merge pelo site, Pages, gists). Se o usuário autorizar usar
+  a conta dele, fazer uma execução guiada.'
+- 'Capturas do GitHub opcionais a pedir ao usuário: img/c08-github-repositorio.png, img/c09-github-issue.png,
+  img/c09-github-pr.png; registrar em img/CREDITS.md.'
+- 'Avisos de auditoria aceitos: linhas longas em saídas reais do Git (caps. 2, 4, 5, 6, 7, 9); img/c00-cola-do-livro.svg
+  fica só no README (a auditoria só olha os capítulos).'
