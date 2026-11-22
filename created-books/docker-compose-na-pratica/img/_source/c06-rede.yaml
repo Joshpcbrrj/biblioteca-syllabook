@@ -1,0 +1,16 @@
+type: sequence
+title: "Uma visita, do terminal ao banco e de volta"
+subtitle: "Do host, a API está em localhost:8000; dentro da rede, o banco está em db:5432"
+participants:
+  - {name: "Seu terminal", icon: terminal}
+  - {name: "api (contêiner)", icon: server}
+  - {name: "DNS da rede", icon: network}
+  - {name: "db (contêiner)", icon: database}
+messages:
+  - {from: "Seu terminal", to: "api (contêiner)", text: "curl localhost:8000 (porta publicada)"}
+  - {from: "api (contêiner)", to: "DNS da rede", text: "qual o endereço de db?"}
+  - {from: "DNS da rede", to: "api (contêiner)", text: "172.20.0.2", dashed: true}
+  - {from: "api (contêiner)", to: "db (contêiner)", text: "conecta na porta 5432 (a do contêiner)"}
+  - {from: "db (contêiner)", to: "api (contêiner)", text: "id 3", dashed: true}
+  - {from: "api (contêiner)", to: "Seu terminal", text: "Visita número 3", dashed: true}
+caption: "O db não publica porta: só quem está na rede do projeto chega até ele"

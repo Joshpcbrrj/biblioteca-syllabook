@@ -1,0 +1,10 @@
+services:
+  web:
+    image: nginx:1.27-alpine
+    ports:
+      # só a porta do host varia; a 80 é a do nginx
+      - "127.0.0.1:${PORTA_SITE:-8080}:80"
+    volumes:
+      - ./site:/usr/share/nginx/html:ro
+    environment:
+      TZ: ${FUSO:-America/Sao_Paulo}

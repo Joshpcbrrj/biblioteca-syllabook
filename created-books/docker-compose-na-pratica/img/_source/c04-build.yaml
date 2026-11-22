@@ -1,0 +1,11 @@
+type: flow
+title: "Do código ao contêiner com build"
+subtitle: "O que o docker compose up faz com a chave build"
+steps:
+  - {text: "build: .", note: "no serviço api do compose.yaml", icon: file-code, kind: start}
+  - {text: "Envia o contexto", note: "a pasta indicada, com o app.py", icon: folder-open, kind: step}
+  - {text: "Segue o Dockerfile", note: "FROM, WORKDIR, COPY, CMD", icon: list-ordered, kind: step}
+  - {text: "Já existe a imagem?", icon: circle-help, kind: decision, label: "não (ou --build)", side: "Usa a imagem que já existe", side_note: "o código novo fica de fora", side_icon: triangle-alert, side_color: orange, side_label: "sim"}
+  - {text: "Imagem ola-api-api", note: "nome: <projeto>-<serviço>", icon: package, kind: step}
+  - {text: "Contêiner ola-api-api-1", note: "criado a partir dessa imagem", icon: container, kind: end, color: green}
+caption: "Sem --build, o up só constrói quando a imagem ainda não existe"

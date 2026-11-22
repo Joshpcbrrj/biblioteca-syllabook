@@ -1,0 +1,15 @@
+# produção: docker compose -f compose.yaml -f compose.prod.yaml ...
+services:
+  proxy:
+    restart: unless-stopped
+    ports:
+      # 0.0.0.0 por extenso: no servidor, o público chega pela porta 80
+      - "0.0.0.0:80:80"
+  api:
+    # o nome diz para onde a imagem vai: o registro em localhost:5000
+    image: localhost:5000/stack-api:1.0
+    restart: unless-stopped
+    deploy:
+      replicas: 3
+  db:
+    restart: unless-stopped

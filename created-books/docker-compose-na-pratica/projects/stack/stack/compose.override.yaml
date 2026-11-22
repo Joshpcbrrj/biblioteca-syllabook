@@ -1,0 +1,22 @@
+# desenvolvimento: lido sozinho pelo docker compose up
+services:
+  proxy:
+    ports:
+      # desenvolvimento: as portas ficam presas a esta máquina
+      - "127.0.0.1:8080:80"
+  api:
+    # em desenvolvimento, o estágio dev do Dockerfile
+    build:
+      target: dev
+    develop:
+      watch:
+        # código novo: copia e reinicia a API, sem build
+        - path: ./api/app.py
+          action: sync+restart
+          target: /app/app.py
+        # dependências mudaram: só um build resolve
+        - path: ./api/Dockerfile
+          action: rebuild
+  db:
+    ports:
+      - "127.0.0.1:15432:5432"

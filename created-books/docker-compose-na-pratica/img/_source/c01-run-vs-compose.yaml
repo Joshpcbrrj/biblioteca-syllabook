@@ -1,0 +1,11 @@
+type: compare
+title: "O mesmo contêiner, dito de dois jeitos"
+subtitle: "docker run dá ordens; o compose.yaml descreve o resultado"
+left: {title: "docker run (imperativo)", icon: terminal, color: gray}
+right: {title: "compose.yaml (declarativo)", icon: file-code, color: purple}
+rows:
+  - ["Uma linha longa digitada", "Um arquivo salvo no projeto"]
+  - ["Some no histórico do terminal", "Vai para o Git com o código"]
+  - ["Um comando por contêiner", "Todos os serviços num lugar"]
+  - ["Repetir = redigitar tudo", "Repetir = docker compose up"]
+caption: "As opções são as mesmas: -p vira ports, -v vira volumes, -e vira environment"

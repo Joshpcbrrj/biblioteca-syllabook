@@ -1,0 +1,16 @@
+type: sequence
+title: "Um pedido atravessa a stack"
+subtitle: "Só o proxy tem porta publicada; o resto conversa pela rede do projeto, pelo nome do serviço"
+participants:
+  - {name: "navegador", icon: globe}
+  - {name: "proxy", icon: server}
+  - {name: "api (réplica)", icon: container}
+  - {name: "db", icon: database}
+messages:
+  - {from: "navegador", to: "proxy", text: "GET localhost:80"}
+  - {from: "proxy", to: "api (réplica)", text: "proxy_pass http://api:8000"}
+  - {from: "api (réplica)", to: "db", text: "INSERT em visitas (db:5432)"}
+  - {from: "db", to: "api (réplica)", text: "id 7", dashed: true}
+  - {from: "api (réplica)", to: "proxy", text: "Visita número 7 (réplica ...)", dashed: true}
+  - {from: "proxy", to: "navegador", text: "a mesma resposta", dashed: true}
+caption: "Em desenvolvimento, a porta do proxy é a 8080; em produção, a 80"

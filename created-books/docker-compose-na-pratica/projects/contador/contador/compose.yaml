@@ -1,0 +1,44 @@
+services:
+  api:
+    build: .
+    ports:
+      - "127.0.0.1:8000:8000"
+    environment:
+      DB_HOST: db
+      # o caminho do arquivo, nunca a senha
+      DB_SENHA_FILE: /run/secrets/db_senha
+    secrets:
+      - db_senha
+    depends_on:
+      db:
+        condition: service_healthy
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import urllib.request as u; u.urlopen('http://localhost:8000/saude')"
+      interval: 2s
+      timeout: 3s
+      retries: 10
+  db:
+    image: postgres:17
+    environment:
+      POSTGRES_PASSWORD_FILE: /run/secrets/db_senha
+    secrets:
+      - db_senha
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    healthcheck:
+      # -h localhost: testa pela rede, o mesmo caminho que a API usa
+      test: ["CMD-SHELL", "pg_isready -h localhost -U postgres"]
+      interval: 2s
+      timeout: 3s
+      retries: 10
+
+volumes:
+  db-data:
+
+secrets:
+  db_senha:
+    file: ./db_senha.txt

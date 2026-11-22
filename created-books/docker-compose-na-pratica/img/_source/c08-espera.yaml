@@ -1,0 +1,11 @@
+type: flow
+title: "Quem espera quem no up -d --wait"
+subtitle: "healthcheck diz se o serviço está pronto; depends_on decide quem espera"
+steps:
+  - {text: "docker compose up -d --wait", icon: terminal, kind: start}
+  - {text: "db inicia", note: "o PostgreSQL ainda prepara os dados", icon: database, kind: step}
+  - {text: "pg_isready respondeu?", icon: circle-help, kind: decision, label: "sim: healthy", side: "Testa de novo em 2 s", side_note: "unhealthy depois de 10 falhas", side_icon: timer, side_color: orange, side_label: "não"}
+  - {text: "api inicia", note: "depends_on: service_healthy", icon: server, kind: step}
+  - {text: "/saude respondeu?", icon: circle-help, kind: decision, label: "sim: healthy", side: "Testa de novo em 2 s", side_note: "o --wait continua esperando", side_icon: timer, side_color: orange, side_label: "não"}
+  - {text: "O terminal volta", note: "o primeiro curl já funciona", icon: circle-check, kind: end, color: green}
+caption: "Sem healthcheck, Started quer dizer só que o processo começou"

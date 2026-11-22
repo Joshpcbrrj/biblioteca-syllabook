@@ -1,0 +1,11 @@
+# produção: reinício automático e a API na porta 80
+services:
+  api:
+    restart: unless-stopped
+    ports:
+      # 0.0.0.0 por extenso: no servidor, o público chega pela porta 80
+      - "0.0.0.0:80:8000"
+    environment:
+      MODO: producao
+  db:
+    restart: unless-stopped

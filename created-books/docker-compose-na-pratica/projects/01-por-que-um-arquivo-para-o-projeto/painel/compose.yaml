@@ -1,0 +1,14 @@
+# dois serviços, a mesma imagem, portas diferentes no host
+services:
+  site:
+    image: nginx:1.27-alpine
+    ports:
+      - "127.0.0.1:8080:80"
+    volumes:
+      - ./site:/usr/share/nginx/html:ro
+  docs:
+    image: nginx:1.27-alpine
+    ports:
+      - "127.0.0.1:8081:80"
+    volumes:
+      - ./docs:/usr/share/nginx/html:ro

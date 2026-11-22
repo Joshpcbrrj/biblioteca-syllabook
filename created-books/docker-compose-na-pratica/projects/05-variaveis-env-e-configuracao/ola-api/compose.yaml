@@ -1,0 +1,8 @@
+services:
+  api:
+    build: .
+    ports:
+      # porta do host vem de PORTA; sem ela, 8000
+      - "127.0.0.1:${PORTA:-8000}:8000"
+    environment:
+      SAUDACAO: ${SAUDACAO:-Olá}

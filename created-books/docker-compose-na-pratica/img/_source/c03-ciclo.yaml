@@ -1,0 +1,10 @@
+type: flow
+title: "O ciclo de um projeto em quatro comandos"
+subtitle: "O compose.yaml fica; rede e contêineres vão e voltam"
+steps:
+  - {text: "compose.yaml", note: "a descrição do projeto", icon: file-code, kind: start}
+  - {text: "docker compose up -d", note: "cria a rede e os contêineres", icon: play, kind: step}
+  - {text: "docker compose ps", note: "quem está rodando e em que porta", icon: list, kind: step}
+  - {text: "docker compose logs", note: "o que os contêineres escreveram", icon: file-text, kind: step}
+  - {text: "docker compose down", note: "remove contêineres e rede; o arquivo continua", icon: rotate-ccw, kind: end, color: green}
+caption: "Depois do down, um novo up recria tudo a partir do mesmo arquivo"

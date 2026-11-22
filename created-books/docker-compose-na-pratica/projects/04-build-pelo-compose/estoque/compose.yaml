@@ -1,0 +1,6 @@
+services:
+  api:
+    # atalho: só a pasta, com o Dockerfile de nome padrão
+    build: ./backend
+    ports:
+      - "127.0.0.1:8000:8000"

@@ -1,0 +1,11 @@
+type: compare
+title: "Entrar no que roda ou criar um contêiner novo"
+subtitle: "exec usa o contêiner do serviço; run cria um avulso a partir do mesmo serviço"
+left: {title: "docker compose exec", icon: square-terminal, color: blue}
+right: {title: "docker compose run", icon: play, color: purple}
+rows:
+  - ["Usa o contêiner que já roda", "Cria um contêiner novo"]
+  - ["Falha se o serviço estiver parado", "Sobe as dependências antes"]
+  - ["Vê os mesmos arquivos e processos", "Não publica as portas do serviço"]
+  - ["Nada para limpar depois", "Sem --rm, o contêiner fica"]
+caption: "Para olhar ou consertar algo no que roda: exec. Para uma tarefa avulsa: run --rm"

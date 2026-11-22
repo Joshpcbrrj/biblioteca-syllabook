@@ -1,0 +1,13 @@
+type: tree
+title: "Um arquivo mudou: o que o watch faz?"
+subtitle: "Cada regra do develop.watch escolhe uma ação para um caminho"
+root:
+  text: "Arquivo salvo no editor"
+  icon: save
+  color: purple
+  children:
+    - {text: "sync", note: "copia para o contêiner; nada reinicia", icon: copy, color: green}
+    - {text: "sync+exec", note: "copia e roda um comando, como nginx -s reload", icon: square-terminal, color: teal}
+    - {text: "sync+restart", note: "copia e reinicia o contêiner", icon: refresh-cw, color: blue}
+    - {text: "rebuild", note: "reconstrói a imagem e recria o contêiner", icon: package, color: orange}
+caption: "Da esquerda para a direita, cada ação é mais lenta e mais completa"

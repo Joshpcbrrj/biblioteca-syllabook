@@ -1,0 +1,11 @@
+# a única chave obrigatória no topo: os serviços
+services:
+  # dentro de services, um bloco por serviço, com o nome que você escolhe
+  web:
+    # chave: valor, um texto simples
+    image: nginx:1.27-alpine
+    # chave seguida de uma lista: cada item começa com "- "
+    ports:
+      - "127.0.0.1:8080:80"
+    volumes:
+      - ./site:/usr/share/nginx/html:ro

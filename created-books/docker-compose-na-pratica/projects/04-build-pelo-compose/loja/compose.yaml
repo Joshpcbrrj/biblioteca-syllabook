@@ -1,0 +1,10 @@
+services:
+  api:
+    build:
+      # pasta enviada ao build, relativa ao compose.yaml
+      context: ./api
+      # relativo ao contexto: é api/Dockerfile.dev
+      dockerfile: Dockerfile.dev
+    image: loja-api:1.0
+    ports:
+      - "127.0.0.1:8000:8000"

@@ -1,0 +1,6 @@
+# só na máquina de desenvolvimento: o banco acessível pelo host
+services:
+  db:
+    ports:
+      # preso ao 127.0.0.1, como a API (capítulo 6)
+      - "127.0.0.1:15432:5432"

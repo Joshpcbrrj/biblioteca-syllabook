@@ -10,3 +10,6 @@ content_license: "CC BY-SA 4.0"
 code_license: "MIT"
 epub_release: "epubs"            # release tag that holds the EPUBs
 notion_page: "https://app.notion.com/p/d7e93f537cfa49d6a160aeff28cccc5b"                  # Notion page where books are copied (the skill asks and fills it in)
+tracks:                              # display names of the tracks on the front page
+  devops: "DevOps"
+  ferramentas-do-dev: "Ferramentas do dev"

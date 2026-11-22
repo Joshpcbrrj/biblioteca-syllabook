@@ -10,7 +10,7 @@ Cada material fica numa pasta própria (`improved-materials/<nome-do-material>/`
 <!-- list:start -->
 | Livro | Nível | Capítulos | Edição | EPUB |
 | --- | --- | --- | --- | --- |
-| [Git e GitHub essencial](git-e-github-essencial/) (pt-BR) | beginner → intermediate | 10 | 1.0 · 2026-11-21 | [Baixar EPUB](https://github.com/Joshpcbrrj/biblioteca-syllabook/releases/download/epubs/git-e-github-essencial.epub) |
+| [Git e GitHub essencial](git-e-github-essencial/) (pt-BR) | iniciante → intermediário | 10 | 1.0 · 2026-11-21 | [Baixar EPUB](https://github.com/Joshpcbrrj/biblioteca-syllabook/releases/download/epubs/git-e-github-essencial.epub) |
 <!-- list:end -->
 
 > A lista acima é gerada pelos scripts da skill. Não edite à mão.

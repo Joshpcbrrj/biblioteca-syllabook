@@ -1,0 +1,622 @@
+title: Docker Compose na prática
+subtitle: Do primeiro compose.yaml a uma stack completa
+slug: docker-compose-na-pratica
+origin: created
+language: pt-BR
+conversation_language: pt-BR
+profiles:
+- stem
+level:
+  start: iniciante
+  end: intermediário
+audience: Quem já roda contêineres com docker run e quer subir um projeto com vários serviços
+goal: Descrever uma aplicação com API, banco e proxy num compose.yaml e subi-la, desenvolvê-la e configurá-la
+  com um comando
+prerequisites:
+- docker-do-zero
+track:
+  name: devops
+  order: 1
+reference_version: Docker Compose v5.7.0, Docker Engine 29.9.3
+review_by: 2027-05
+sources:
+- title: How Compose works
+  url: https://docs.docker.com/compose/intro/compose-application-model/
+  checked: '2026-11-20'
+- title: Overview of installing Docker Compose
+  url: https://docs.docker.com/compose/install/
+  checked: '2026-11-20'
+- title: Install Docker Engine on Ubuntu
+  url: https://docs.docker.com/engine/install/ubuntu/
+  checked: '2026-11-20'
+- title: Docker Compose releases
+  url: https://github.com/docker/compose/releases
+  checked: '2026-11-20'
+- title: Install the Docker Compose plugin
+  url: https://docs.docker.com/compose/install/linux/
+  checked: '2026-11-20'
+- title: docker compose up (CLI reference)
+  url: https://docs.docker.com/reference/cli/docker/compose/up/
+  checked: '2026-11-20'
+- title: docker compose ps (CLI reference)
+  url: https://docs.docker.com/reference/cli/docker/compose/ps/
+  checked: '2026-11-20'
+- title: docker compose logs (CLI reference)
+  url: https://docs.docker.com/reference/cli/docker/compose/logs/
+  checked: '2026-11-20'
+- title: docker compose down (CLI reference)
+  url: https://docs.docker.com/reference/cli/docker/compose/down/
+  checked: '2026-11-20'
+- title: Compose Build Specification
+  url: https://docs.docker.com/reference/compose-file/build/
+  checked: '2026-11-20'
+- title: Variable interpolation
+  url: https://docs.docker.com/compose/how-tos/environment-variables/variable-interpolation/
+  checked: '2026-11-20'
+- title: Set environment variables within your container's environment
+  url: https://docs.docker.com/compose/how-tos/environment-variables/set-environment-variables/
+  checked: '2026-11-20'
+- title: Environment variables precedence
+  url: https://docs.docker.com/compose/how-tos/environment-variables/envvars-precedence/
+  checked: '2026-11-20'
+- title: Networking in Compose
+  url: https://docs.docker.com/compose/how-tos/networking/
+  checked: '2026-11-20'
+- title: postgres (Docker Official Image)
+  url: https://hub.docker.com/_/postgres
+  checked: '2026-11-21'
+- title: Volumes (Compose file reference)
+  url: https://docs.docker.com/reference/compose-file/volumes/
+  checked: '2026-11-20'
+- title: Control startup order
+  url: https://docs.docker.com/compose/how-tos/startup-order/
+  checked: '2026-11-20'
+- title: docker compose exec (CLI reference)
+  url: https://docs.docker.com/reference/cli/docker/compose/exec/
+  checked: '2026-11-21'
+- title: docker compose run (CLI reference)
+  url: https://docs.docker.com/reference/cli/docker/compose/run/
+  checked: '2026-11-21'
+- title: docker compose restart (CLI reference)
+  url: https://docs.docker.com/reference/cli/docker/compose/restart/
+  checked: '2026-11-21'
+- title: Services (Compose file reference)
+  url: https://docs.docker.com/reference/compose-file/services/
+  checked: '2026-11-20'
+- title: Use Compose Watch
+  url: https://docs.docker.com/compose/how-tos/file-watch/
+  checked: '2026-11-20'
+- title: Using profiles with Compose
+  url: https://docs.docker.com/compose/how-tos/profiles/
+  checked: '2026-11-20'
+- title: Merge Compose files
+  url: https://docs.docker.com/compose/how-tos/multiple-compose-files/merge/
+  checked: '2026-11-20'
+- title: Merge (Compose file reference)
+  url: https://docs.docker.com/reference/compose-file/merge/
+  checked: '2026-11-21'
+- title: Manage secrets securely in Docker Compose
+  url: https://docs.docker.com/compose/how-tos/use-secrets/
+  checked: '2026-11-20'
+- title: Compose Develop Specification
+  url: https://docs.docker.com/reference/compose-file/develop/
+  checked: '2026-11-21'
+- title: Compose Deploy Specification
+  url: https://docs.docker.com/reference/compose-file/deploy/
+  checked: '2026-11-20'
+- title: 'Compose Specification: container_spec (command, entrypoint)'
+  url: https://github.com/compose-spec/compose-spec/blob/main/container_spec.md
+  checked: '2026-11-21'
+- title: docker compose cp (CLI reference)
+  url: https://docs.docker.com/reference/cli/docker/compose/cp/
+  checked: '2026-11-21'
+- title: docker compose push (CLI reference)
+  url: https://docs.docker.com/reference/cli/docker/compose/push/
+  checked: '2026-11-21'
+- title: Multi-stage builds
+  url: https://docs.docker.com/build/building/multi-stage/
+  checked: '2026-11-21'
+- title: Port publishing and mapping
+  url: https://docs.docker.com/engine/network/port-publishing/
+  checked: '2026-11-21'
+- title: WSL 2 best practices for Docker Desktop on Windows
+  url: https://docs.docker.com/desktop/features/wsl/best-practices/
+  checked: '2026-11-21'
+approved_on: '2026-11-20'
+edition: 1.3.1
+human_review: false
+choices:
+  images: svg
+  reading: large
+concepts:
+- id: declarative
+  name: configuração declarativa
+  chapter: 1
+  depends: []
+- id: service
+  name: serviço
+  chapter: 1
+  depends:
+  - declarative
+- id: project
+  name: projeto do Compose
+  chapter: 1
+  depends:
+  - service
+- id: compose-plugin
+  name: plugin do Compose
+  chapter: 2
+  depends: []
+- id: compose-yaml
+  name: compose.yaml
+  chapter: 3
+  depends:
+  - service
+  - project
+- id: lifecycle
+  name: up, ps, logs e down
+  chapter: 3
+  depends:
+  - compose-yaml
+- id: build
+  name: build pelo Compose
+  chapter: 4
+  depends:
+  - compose-yaml
+- id: interpolation
+  name: interpolação de variáveis
+  chapter: 5
+  depends:
+  - compose-yaml
+- id: env-file
+  name: arquivo .env
+  chapter: 5
+  depends:
+  - interpolation
+- id: project-network
+  name: rede do projeto
+  chapter: 6
+  depends:
+  - service
+  - project
+- id: service-dns
+  name: nome do serviço como endereço
+  chapter: 6
+  depends:
+  - project-network
+- id: named-volume
+  name: volume nomeado
+  chapter: 7
+  depends:
+  - compose-yaml
+- id: healthcheck
+  name: healthcheck
+  chapter: 8
+  depends:
+  - service
+- id: depends-on
+  name: depends_on
+  chapter: 8
+  depends:
+  - healthcheck
+- id: exec-run
+  name: exec e run
+  chapter: 9
+  depends:
+  - lifecycle
+- id: restart-policy
+  name: política de reinício
+  chapter: 9
+  depends:
+  - service
+- id: command-entrypoint
+  name: command e entrypoint
+  chapter: 9
+  depends:
+  - build
+- id: compose-cp
+  name: docker compose cp
+  chapter: 9
+  depends:
+  - exec-run
+- id: watch
+  name: compose watch
+  chapter: 10
+  depends:
+  - build
+- id: profiles
+  name: perfis
+  chapter: 11
+  depends:
+  - service
+- id: override
+  name: arquivos sobrepostos
+  chapter: 11
+  depends:
+  - compose-yaml
+- id: secrets
+  name: secrets
+  chapter: 12
+  depends:
+  - env-file
+- id: resource-limits
+  name: limites de CPU e memória
+  chapter: 13
+  depends:
+  - service
+- id: scale
+  name: réplicas e scale
+  chapter: 13
+  depends:
+  - service-dns
+- id: reverse-proxy
+  name: proxy reverso
+  chapter: 14
+  depends:
+  - service-dns
+  - override
+- id: multi-stage
+  name: build multi-stage
+  chapter: 14
+  depends:
+  - build
+  - override
+- id: image-push
+  name: publicar a imagem com push
+  chapter: 14
+  depends:
+  - build
+chapters:
+- n: 1
+  title: Por que um arquivo para o projeto
+  goal: Explicar o que o Compose substitui e reconstruir um docker run longo
+  topics:
+  - imperativo vs declarativo
+  - serviços
+  - projeto
+  minutes: 35
+  sources_original: []
+- n: 2
+  title: Instalar e conferir o Compose
+  goal: Verificar o plugin no Docker Desktop e no Linux
+  topics:
+  - Docker Desktop
+  - plugin no Linux
+  - docker compose version
+  minutes: 25
+  sources_original: []
+- n: 3
+  title: Primeiro compose.yaml
+  goal: Subir, listar, ver logs e derrubar com up, ps, logs e down
+  topics:
+  - estrutura do arquivo
+  - up -d
+  - ps
+  - logs
+  - down
+  minutes: 40
+  sources_original: []
+- n: 4
+  title: Build pelo Compose
+  goal: Construir a imagem a partir de um Dockerfile e reconstruí-la
+  topics:
+  - build
+  - context e dockerfile
+  - up --build
+  minutes: 40
+  sources_original: []
+- n: 5
+  title: Variáveis, .env e configuração
+  goal: Trocar valores por variáveis do .env sem editar o arquivo
+  topics:
+  - interpolação
+  - .env
+  - environment e env_file
+  - docker compose config
+  minutes: 40
+  sources_original: []
+- n: 6
+  title: Vários serviços e a rede do projeto
+  goal: Fazer a API achar o banco pelo nome do serviço
+  topics:
+  - rede padrão
+  - DNS por nome
+  - ports vs rede interna
+  - porta presa a 127.0.0.1
+  minutes: 50
+  sources_original: []
+- n: 7
+  title: Volumes no Compose
+  goal: Declarar volume nomeado e entender a diferença entre down e down -v
+  topics:
+  - volume nomeado
+  - bind mount
+  - down -v
+  minutes: 40
+  sources_original: []
+- n: 8
+  title: Ordem de início e saúde
+  goal: Fazer a API esperar o banco com healthcheck e depends_on
+  topics:
+  - healthcheck
+  - depends_on com condition
+  - service_healthy
+  minutes: 45
+  sources_original: []
+- n: 9
+  title: Comandos do dia a dia
+  goal: Executar com exec e run, reiniciar com restart policy, trocar o comando com command e entrypoint
+    e copiar arquivos com cp
+  topics:
+  - exec
+  - run --rm
+  - restart
+  - stop e start
+  - command e entrypoint
+  - docker compose cp
+  minutes: 55
+  sources_original: []
+- n: 10
+  title: Desenvolvimento com watch
+  goal: Ver mudanças do código refletidas sem reconstruir tudo
+  topics:
+  - develop.watch
+  - sync
+  - rebuild
+  - sync+restart
+  - sync+exec
+  minutes: 45
+  sources_original: []
+- n: 11
+  title: Perfis e arquivos sobrepostos
+  goal: Separar ferramentas com profiles e configurar dev e produção com override
+  topics:
+  - profiles
+  - compose.override.yaml
+  - -f múltiplos
+  - merge
+  minutes: 45
+  sources_original: []
+- n: 12
+  title: Segredos e dados sensíveis
+  goal: Tirar a senha do compose.yaml e entregá-la com secrets
+  topics:
+  - secrets de arquivo
+  - /run/secrets
+  - _FILE nas imagens
+  minutes: 40
+  sources_original: []
+- n: 13
+  title: Recursos e escala
+  goal: Limitar CPU e memória e subir réplicas com scale
+  topics:
+  - deploy.resources
+  - docker stats
+  - --scale
+  - portas e réplicas
+  minutes: 40
+  sources_original: []
+- n: 14
+  title: 'Projeto final: stack completa'
+  goal: Subir API, banco e proxy com dev e produção em um comando, com uma imagem por estágio publicada
+    num registro
+  topics:
+  - proxy reverso
+  - dev e produção
+  - build multi-stage com target
+  - image + build e push
+  - revisão geral
+  minutes: 80
+  sources_original: []
+next_steps:
+- Docker Swarm
+- Kubernetes
+- Segurança de imagens
+- Build multiplataforma
+covers:
+- compose
+- compose-yaml
+- compose-build
+- compose-networks
+- compose-volumes
+- compose-healthcheck
+- compose-watch
+- compose-profiles
+- compose-secrets
+- compose-scale
+- compose-multi-stage
+- compose-push
+progress:
+- n: 1
+  done: '2026-11-20'
+  summary: 'Mostrou o problema do docker run longo (imperativo) e o compose.yaml como configuração declarativa.
+    Ensinou serviço (receita) x contêiner (instância, nome <projeto>-<serviço>-<n>) e projeto (nome padrão
+    = pasta, chave name, rede <projeto>_default). Exemplo: nginx:1.27-alpine em meu-site, porta 8080,
+    volume ./site, TZ, restart. Exercícios: redis (cache), adminer, blog, painel com dois serviços; erros:
+    no configuration file provided, No such container, port is already allocated.'
+- n: 2
+  done: '2026-11-20'
+  summary: 'Ensinou o plugin do Compose (programa docker-compose que o docker acha em cli-plugins; erro
+    ''docker: unknown command: docker compose'' quando falta). Docker Desktop já traz o Compose (About
+    Docker Desktop); no Linux, pacote docker-compose-plugin (apt/yum), recomendado pelo docker-ce-cli,
+    versão fixa 5.7.0-1~ubuntu.24.04~noble. docker compose version (--short) x docker version --format
+    para o Engine; referência v5.7.0 / 29.9.3. Lab: Ubuntu 24.04 num contêiner, do erro à instalação.
+    Erro comum: docker-compose com hífen (avulso, legado; existe no Desktop, não no servidor).'
+- n: 3
+  done: '2026-11-21'
+  summary: 'Ensinou a estrutura do compose.yaml (services no topo, mapa, bloco aninhado, lista com ''-
+    '', espaços e nunca Tab; erros reais: services.image must be a mapping, found character that cannot
+    start any token, additional properties ''web'' not allowed, ports must be a array; version obsoleta)
+    e o ciclo up (sem -d prende o terminal; Ctrl+C para sem remover) / up -d, ps (-a, --format), logs
+    (-n, -f, nome do serviço, no such service) e down (remove contêineres e rede; arquivo, imagens e volumes
+    ficam). Exemplos: meu-site com nginx 1.27.5, acesso a /nada com 404; cache com Redis.'
+- n: 4
+  done: '2026-11-21'
+  summary: 'Ensinou a chave build: build: . (imagem <projeto>-<serviço>, ex. ola-api-api), image + build
+    para nomear (pull access denied esperado antes do build), formato longo com context (relativo ao compose.yaml)
+    e dockerfile (relativo ao contexto; erros failed to read dockerfile, unable to prepare context, api/api).
+    up -d só constrói se a imagem não existe (Running, versão antiga); up -d --build reconstrói e recria
+    (Recreate); docker compose build; down não remove imagens. Projeto: ola-api em Python (http.server,
+    porta 8000, VERSAO 1→2); exercícios loja, vendas, estoque.'
+- n: 5
+  done: '2026-11-21'
+  summary: 'Ensinou interpolação (${VAR}, ${VAR:-padrão}, ${VAR-padrão}, ${VAR:?msg}; aviso ''variable
+    is not set. Defaulting to a blank string''), o .env ao lado do compose.yaml (prioridade: terminal
+    > --env-file > .env; mudar valor + up -d recria sem --build), environment x env_file (environment
+    vence; .env não chega sozinho ao contêiner) e docker compose config / --environment para conferir.
+    Projeto: ola-api com SAUDACAO lida de os.environ e porta ${PORTA:-8000}; exercícios meu-site (PORTA_SITE,
+    FUSO), cache (PORTA_CACHE=6380).'
+- n: 6
+  done: '2026-11-21'
+  summary: 'Projeto contador: API Python (http.server + psycopg 3.3.9, uma conexão por acesso, responde
+    ''Visita número N'' ou ''Sem banco: <erro>'') e db postgres:17 sem ports, senha DB_SENHA no .env.
+    Ensinou a rede <projeto>_default (network inspect), o nome do serviço como endereço (DB_HOST: db;
+    erros failed to resolve host ''banco'' e localhost -> Connection refused) e ports x rede interna (ps
+    mostra 5432/tcp sem seta; entre serviços vale a porta do contêiner; erro com 15432). Exercícios: cache
+    Redis, Adminer com servidor db, publicar o banco em 15432.'
+- n: 7
+  done: '2026-11-21'
+  summary: 'Mostrou o volume anônimo do postgres:17 (docker inspect; por que o contador voltava a 1; sobras
+    do down) e ensinou o volume nomeado (uso no serviço + declaração no topo; nome contador_db-data; erro
+    undefined volume), o bind mount (./site, mudança na hora, :ro, pasta inexistente criada vazia -> 403)
+    e down -v (apaga nomeados e anônimos; sem desfazer). Exercícios: caminho errado /var/lib/postgresql,
+    volume dados-banco, meu-site com :ro, pasta renomeada (visitas-app) resolvida com name: contador.'
+- n: 8
+  done: '2026-11-21'
+  summary: 'Mostrou o problema (Started não é pronto: Empty reply, Sem banco, depois Visita 1). Ensinou
+    healthcheck (test CMD/CMD-SHELL, interval, timeout, retries; healthy/unhealthy/health: starting; docker
+    inspect .State.Health), depends_on curto = service_started x condition service_healthy (e service_completed_successfully),
+    e up -d --wait. Contador ganhou rota /saude; db com pg_isready -h localhost; api com python urllib.
+    Erros: curl ausente na imagem, dependency failed to start, CMD com comando e argumento juntos. Exercícios:
+    Redis com redis-cli ping, nginx com wget --spider.'
+- n: 9
+  done: '2026-11-21'
+  summary: 'Ensinou exec (psql no db, printenv, sh; -T para scripts; erro service is not running), run
+    --rm (contador-api-run-<código>, respeita depends_on, --no-deps, --service-ports; sem --rm o down
+    falha com Resource is still in use -> down --remove-orphans), políticas restart (queda simulada com
+    SIGINT, Exited 130, RestartCount 1) e stop/start/restart (restart não aplica mudanças; use up -d).
+    Acréscimo: command troca o CMD e mantém o ENTRYPOINT (postgres -c log_statement=all), entrypoint troca
+    o ENTRYPOINT e ignora o CMD (python -u sem command -> exited 0; erro root execution com entrypoint
+    postgres); docker compose cp nos dois sentidos (pg_dump + cp db:/tmp/visitas.sql; nota.txt some após
+    down; erro no container found for service).'
+- n: 10
+  done: '2026-11-21'
+  summary: 'Projeto vitrine (web nginx com build: site + default.conf com add_header X-Config; api = ola-api).
+    Ensinou develop.watch (path, action, target; up --watch x docker compose watch, que no Ctrl+C deixa
+    os contêineres rodando) e as ações: sync (páginas), sync+restart (app.py), sync+exec (nginx -s reload;
+    target obrigatório e do mesmo tipo do path — testado: sem target recusa, pasta dá cannot overwrite
+    directory, caminho errado copia sem erro), rebuild (Dockerfile; exige build). Exercícios: target-pasta,
+    requirements com rebuild, meu-site com sync e image, target errado diagnosticado com exec ls.'
+- n: 11
+  done: '2026-11-21'
+  summary: 'Ensinou perfis (adminer com profiles: [ferramentas]; --profile, COMPOSE_PROFILES, "*", serviço
+    citado pelo nome; down sem o perfil deixa o adminer e a rede: Resource is still in use), compose.override.yaml
+    (lido sozinho; db em 15432 só em desenvolvimento), -f múltiplos (compose.prod.yaml com restart e porta
+    80; -f desliga o override; caminhos partem do primeiro -f) e merge (valor único trocado, mapa por
+    chave, lista somada: api com 8000 e 80; !override e !reset). Exercícios: perfil testes com serviço
+    carga, override com profiles: !reset [], porta dobrada em produção.'
+- n: 12
+  done: '2026-11-21'
+  summary: 'Mostrou a senha vazando em config, docker inspect (Env) e printenv. Ensinou secrets no topo
+    (file: ./db_senha.txt, ou environment: DB_SENHA) e no serviço; erro refers to undefined secret; .gitignore;
+    /run/secrets/<nome> somente leitura (bind, RW false; Read-only file system); arquivo ausente vira
+    pasta (IsADirectoryError); convenção _FILE da imagem (POSTGRES_PASSWORD_FILE) e DB_SENHA_FILE lido
+    pelo app.py com strip() (echo põe quebra: 17 bytes, password authentication failed). Trocar o arquivo
+    não troca a senha do volume: ALTER USER. Exercícios: notas com senha_notas, quebra de linha, secret
+    de environment no CI.'
+- n: 13
+  done: '2026-11-21'
+  summary: 'Ensinou deploy.resources.limits (cpus "0.50", memory 64M; inspect NanoCpus 500000000 e Memory
+    67108864): memória acima do limite mata o processo (exit 137, OOMKilled true com 6M, logs vazios),
+    CPU acima fica lenta (~50%); erros range of CPUs, invalid suffix, must be a string. docker stats /
+    docker compose stats --no-stream (100% = um núcleo). --scale api=3 (port is already allocated com
+    8000:8000; nomes contador-api-n; scale para baixo remove), deploy.replicas (--scale vence), container_name
+    impede réplicas. Portas: faixa 8000-8002:8000 ou só "8000"; nome api responde com todos os IPs; banco
+    não escala. Exercícios: cache Redis com limites, 5 réplicas, db com réplicas.'
+- n: 14
+  done: '2026-11-21'
+  summary: 'Projeto final stack: proxy nginx com proxy_pass http://api:8000 (única porta), healthcheck
+    em 127.0.0.1, erros 502 com localhost e host not found com --no-deps, reload para réplicas novas.
+    Três arquivos sem ports na base (override 8080/15432/watch; prod 80, unless-stopped, 3 réplicas).
+    Acréscimo: Dockerfile multi-stage base/dev/prod (prod por último, USER app) com build.target prod
+    na base e dev no override; erro: prod sem --build usa a imagem dev de mesmo nome; target inexistente.
+    Publicação: image localhost:5000/stack-api:1.0 no prod, registro local registry:2, build + push (Pushed),
+    catálogo /v2, up sem a imagem faz Pulling; push em dev = Skipped. Exercícios: Dockerfile de estágios,
+    Skipped, versão 1.1 com ${VERSAO:-1.0} e reload.'
+changes:
+- date: '2026-11-20'
+  what: Versão de referência passou de Docker Compose v5.6 / Engine 29.9 para Docker Compose v5.7.0 /
+    Engine 29.9.3; saídas do capítulo 1 reexecutadas e a do docker compose up -d refeita
+  why: São as versões instaladas na máquina do autor; a v5.8.0 ainda não chegou ao Docker Desktop (atualizar
+    quando chegar, a pedido do autor)
+- date: '2026-11-21'
+  what: Capítulo 10 ganhou o tópico sync+exec
+  why: Pedido do autor; o recurso existe desde o Compose 2.32.0 e está dentro da referência v5.7.0
+- date: '2026-11-21'
+  what: 'Ementa ampliada: o capítulo 9 ganhou command e entrypoint e docker compose cp; o capítulo 14
+    ganhou build multi-stage com build.target (estágios dev e prod) e a publicação da imagem com image
+    + build e docker compose push, testada num registro local (registry:2)'
+  why: Pedido do autor, depois de comparar a ementa com um curso de Docker e um livro do tema; os três
+    assuntos estão dentro da referência v5.7.0
+- date: '2026-11-21'
+  what: 'Edição 1.1. Capítulo 6: seção nova sobre publicar a porta presa a 127.0.0.1, com docker compose
+    port e docker port mostrando a diferença (testado também pelo IP da rede local); o contador passa
+    a usar "127.0.0.1:8000:8000" nos capítulos 6, 7, 8, 11, 12 e 13 (e o banco do override do capítulo
+    11, "127.0.0.1:15432:5432"), com as saídas dos capítulos 11 e 13 reexecutadas. Capítulos 7 e 10: nota
+    para Windows com WSL (bind mounts e watch com os arquivos em ~/projetos, não em /mnt/c), com testes
+    de velocidade e de notificações no WSL; o teste com o Docker pelo próprio WSL ficou marcado como não
+    feito. Capítulos 1, 6 e 8: uma analogia só (a loja: quadro de funcionários, ramais e o gerente que
+    liga para os ramais), cada uma com a linha de onde deixa de valer'
+  why: Pedido do autor, depois de comparar com outro livro da trilha; a documentação do Docker avisa que
+    publicar portas é inseguro por padrão e recomenda, no Docker Desktop com WSL, os arquivos no disco
+    do Linux
+- date: '2026-11-21'
+  what: 'Edição 1.2. Portas presas a 127.0.0.1 também no vitrine (capítulo 10, inclusive o exercício do
+    meu-site) e nas portas de desenvolvimento do stack (capítulo 14: proxy 8080 e banco 15432 no override,
+    Adminer 8081), com as saídas reexecutadas. Capítulos 7 e 10: os testes pelo próprio WSL, antes marcados
+    como não feitos, foram rodados (bind mount e docker compose watch com o projeto em ~/projetos e em
+    /mnt/c) e as marcas viraram tabelas com os resultados'
+  why: Pedido do autor; a integração do Docker Desktop com o Ubuntu-26.04 foi ligada
+- date: '2026-11-21'
+  what: 'Edição 1.3 (revisão). Portas: capítulos 1 a 5 passam a publicar com 127.0.0.1 desde o primeiro
+    exemplo (nota de correção no capítulo 1); o capítulo 6 passa a explicar o que o 127.0.0.1 evita, mostrando
+    o teste sem endereço da edição 1.2 sem pedir que o leitor abra a porta; portas de produção escritas
+    como 0.0.0.0:80 com o porquê (capítulos 11 e 14, simulado questão 19); no capítulo 11, a junção de
+    produção é conferida com o config, sem subir; registro de testes do capítulo 14 em 127.0.0.1:5000
+    (com nota de correção); exercícios do Adminer, do cache e do proxy da loja com 127.0.0.1. Saídas de
+    ps, port e config refeitas'
+  why: 'Auditoria com as regras atuais: portas publicadas em todos os endereços antes de o livro ensinar
+    o 127.0.0.1; testes da revisão feitos só com portas em 127.0.0.1, a pedido do autor'
+- date: '2026-11-21'
+  what: 'Capítulo 12: o arquivo db_senha.txt com troque-esta-senha tem 17 bytes, não 16 (linhas do texto
+    e do lab, com nota de correção)'
+  why: 'Erro encontrado na revisão: printf e Set-Content -NoNewline geraram 17 bytes no teste'
+- date: '2026-11-21'
+  what: Linhas com mais de 80 caracteres nos blocos de código dos capítulos 3 a 10, 12 e 13 quebradas,
+    com aviso de que a saída foi quebrada para caber na página
+  why: Perfil de leitura large (limite de 80 caracteres) da auditoria atual
+- date: '2026-11-21'
+  what: 'Marcadores de projeto: contador (capítulos 6, 7, 8, 11 e 12) e vitrine (capítulo 10, que ganhou
+    os arquivos da API num bloco recolhível); projects.py monta e confere os dois. Apagadas as pastas
+    de projeto que sobraram de montagens antigas (projects/14-projeto-final-stack-completa e as por capítulo
+    de 6 a 12)'
+  why: Pedido do autor na revisão; os projetos desses capítulos não subiam sozinhos sem os arquivos dos
+    capítulos anteriores
+- date: '2026-11-21'
+  what: 'Edição 1.3.1. Capítulo 14: a divisão dos 30 pedidos entre as três réplicas passa a ser a real
+    (13, 7 e 10, variando a cada rodada), com a explicação dos processos de trabalho do nginx e nota de
+    correção. Capítulo 13, exercício Sozinho: portas abertas para a rede escritas como "0.0.0.0::8000"
+    e "0.0.0.0:8000-8004:8000", com o porquê, a alternativa 127.0.0.1 e nota de correção'
+  why: 'Achados da revisão 1.3: quatro rodadas deram 13/7/10, 13/10/7, 9/12/9 e 8/12/10 (nginx com 6 processos
+    de trabalho); a regra de segurança pede o 0.0.0.0 explícito quando a porta precisa ficar aberta'
+reviewed_on: '2026-11-21'
+editions:
+- edition: '1.3'
+  date: '2026-11-21'
+  summary: Portas presas a 127.0.0.1 desde o capítulo 1 e portas de produção com 0.0.0.0 explicado; tamanho
+    do db_senha.txt corrigido para 17 bytes; registro de testes só local; linhas longas quebradas; projetos
+    contador e vitrine montáveis
+- edition: 1.3.1
+  date: '2026-11-21'
+  summary: 'Erratas: distribuição real dos pedidos entre as réplicas (cap. 14) e porta aberta explicada
+    no exercício do cap. 13.'

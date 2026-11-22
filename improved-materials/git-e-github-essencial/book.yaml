@@ -7,8 +7,8 @@ conversation_language: pt-BR
 profiles:
 - stem
 level:
-  start: beginner
-  end: intermediate
+  start: iniciante
+  end: intermediário
 audience: Quem programa (ou está começando) e nunca usou Git, ou usa só add, commit e push sem entender
 goal: Versionar um projeto com Git, desfazer erros com segurança, trabalhar com branches e remotos e contribuir
   no GitHub por fork e pull request

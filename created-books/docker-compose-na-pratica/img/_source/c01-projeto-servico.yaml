@@ -1,0 +1,15 @@
+type: tree
+title: "Um projeto agrupa serviços; cada serviço vira contêineres"
+root:
+  text: "Projeto meu-site"
+  note: "nome da pasta"
+  icon: folder
+  color: purple
+  children:
+    - text: "Serviço web"
+      note: "chave em services:"
+      icon: settings
+      color: blue
+      children:
+        - {text: "Contêiner meu-site-web-1", note: "projeto-serviço-número", icon: container, color: green}
+    - {text: "Rede meu-site_default", note: "criada pelo Compose", icon: network, color: gray}

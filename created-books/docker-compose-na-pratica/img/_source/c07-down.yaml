@@ -1,0 +1,11 @@
+type: compare
+title: "O que cada down leva embora"
+subtitle: "A diferença está toda nos volumes"
+left: {title: "docker compose down", icon: rotate-ccw, color: green}
+right: {title: "docker compose down -v", icon: triangle-alert, color: red}
+rows:
+  - ["Remove contêineres e rede", "Remove contêineres e rede"]
+  - ["Volume nomeado fica: dados salvos", "Volume nomeado apagado: dados perdidos"]
+  - ["Volume anônimo fica, como sobra", "Volume anônimo apagado"]
+  - ["Próximo up: Visita número 3", "Próximo up: Visita número 1"]
+caption: "Use down no dia a dia; deixe o -v para quando quiser começar do zero"

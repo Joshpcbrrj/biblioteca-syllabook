@@ -1,0 +1,6 @@
+services:
+  cache:
+    image: redis:7-alpine
+    ports:
+      # a porta de dentro continua 6379: é a do Redis
+      - "127.0.0.1:${PORTA_CACHE:-6379}:6379"

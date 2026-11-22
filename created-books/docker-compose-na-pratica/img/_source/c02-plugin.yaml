@@ -1,0 +1,10 @@
+type: flow
+title: "O que acontece quando você digita docker compose"
+subtitle: "O comando docker procura o plugin antes de falar com o Engine"
+steps:
+  - {text: "docker compose up -d", note: "você digita no terminal", icon: terminal, kind: start}
+  - {text: "O docker procura o plugin", note: "na pasta cli-plugins", icon: search, kind: step}
+  - {text: "Achou docker-compose?", icon: puzzle, kind: decision, label: "sim", side: "docker: unknown command", side_note: "o plugin não está instalado", side_icon: circle-x, side_label: "não"}
+  - {text: "O plugin lê o compose.yaml", note: "e monta os pedidos", icon: file-code, kind: step}
+  - {text: "O Docker Engine cria tudo", note: "rede, contêineres, volumes", icon: server, kind: end, color: green}
+caption: "O plugin é só o tradutor: quem cria os contêineres continua sendo o Engine"

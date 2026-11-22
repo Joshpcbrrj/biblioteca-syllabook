@@ -1,0 +1,13 @@
+services:
+  # o nome diz o papel do componente; o contêiner herda esse nome
+  web:
+    image: nginx:1.27-alpine
+    # endereço, porta do host e porta do contêiner (como no -p)
+    ports:
+      - "127.0.0.1:8080:80"
+    # caminho relativo à pasta do arquivo: dispensa o $(pwd)
+    volumes:
+      - ./site:/usr/share/nginx/html:ro
+    environment:
+      TZ: America/Sao_Paulo
+    restart: unless-stopped

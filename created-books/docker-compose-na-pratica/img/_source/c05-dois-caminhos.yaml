@@ -1,0 +1,11 @@
+type: compare
+title: "Dois caminhos para uma variável"
+subtitle: "O .env preenche o compose.yaml; env_file e environment chegam ao contêiner"
+left: {title: ".env (interpolação)", icon: file-text, color: blue}
+right: {title: "environment e env_file", icon: container, color: purple}
+rows:
+  - ["Quem lê: o Compose", "Quem lê: o programa no contêiner"]
+  - ["Quando: antes de criar qualquer coisa", "Quando: o contêiner já rodando"]
+  - ["Preenche ${PORTA} no arquivo", "Vira variável de ambiente, como SAUDACAO"]
+  - ["Fica ao lado do compose.yaml", "Declarado no serviço"]
+caption: "Uma variável do .env só chega ao contêiner se o serviço a citar em environment"

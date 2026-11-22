@@ -1,0 +1,8 @@
+type: layers
+title: "O mesmo projeto em duas camadas"
+subtitle: "Cada arquivo acrescenta ou troca chaves do anterior"
+layers:
+  - {text: "compose.yaml", note: "a base: serviços, rede, volume; vale em todo lugar", icon: file-code, color: purple}
+  - {text: "compose.override.yaml", note: "desenvolvimento: lido sozinho no docker compose up", icon: wrench, color: blue}
+  - {text: "compose.prod.yaml", note: "produção: só com -f compose.yaml -f compose.prod.yaml", icon: server, color: orange}
+caption: "Com -f, o override automático deixa de ser lido: só entram os arquivos citados"

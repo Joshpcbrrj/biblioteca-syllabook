@@ -1,0 +1,13 @@
+type: tree
+title: "Um serviço, três contêineres"
+subtitle: "docker compose up -d --scale api=3: cada réplica tem o próprio IP e a própria porta no host"
+root:
+  text: "serviço api"
+  note: "nome na rede: api → 3 endereços"
+  icon: server
+  color: purple
+  children:
+    - {text: "contador-api-1", note: "172.21.0.3 · host 8000", icon: container, color: blue}
+    - {text: "contador-api-2", note: "172.21.0.4 · host 8001", icon: container, color: blue}
+    - {text: "contador-api-3", note: "172.21.0.5 · host 8002", icon: container, color: blue}
+caption: "Cada réplica tem o limite de 64M só para ela; o banco é um só para as três"

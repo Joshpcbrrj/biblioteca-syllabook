@@ -1,0 +1,33 @@
+services:
+  web:
+    build: ./web
+    ports:
+      # 127.0.0.1: só esta máquina chega às portas (capítulo 6)
+      - "127.0.0.1:8080:80"
+    develop:
+      watch:
+        # páginas: copiar basta, o nginx lê o arquivo a cada acesso
+        - path: ./web/site
+          action: sync
+          target: /usr/share/nginx/html
+        # configuração: copiar e pedir ao nginx para recarregá-la
+        - path: ./web/default.conf
+          action: sync+exec
+          target: /etc/nginx/conf.d/default.conf
+          exec:
+            command: nginx -s reload
+        # a receita da imagem mudou: só um build resolve
+        - path: ./web/Dockerfile
+          action: rebuild
+  api:
+    build: ./api
+    ports:
+      - "127.0.0.1:8000:8000"
+    develop:
+      watch:
+        # o Python lê o código na partida: copiar e reiniciar
+        - path: ./api/app.py
+          action: sync+restart
+          target: /app/app.py
+        - path: ./api/Dockerfile
+          action: rebuild

@@ -8,7 +8,9 @@ Livros feitos pela skill a partir de um tema, com a ementa discutida e aprovada 
 Cada livro fica numa pasta própria (`created-books/<nome-do-livro>/`) e pode ser lido aqui no GitHub, no [site](../site/README.pt-BR.md) com busca ou baixado como EPUB.
 
 <!-- list:start -->
-*Nenhum livro ainda.*
+| Livro | Nível | Capítulos | Edição | EPUB |
+| --- | --- | --- | --- | --- |
+| [Docker Compose na prática](docker-compose-na-pratica/) (pt-BR) | iniciante → intermediário | 14 | 1.3.1 · 2026-11-21 | [Baixar EPUB](https://github.com/Joshpcbrrj/biblioteca-syllabook/releases/download/epubs/docker-compose-na-pratica.epub) |
 <!-- list:end -->
 
 > A lista acima é gerada pelos scripts da skill. Não edite à mão.

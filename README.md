@@ -15,5 +15,6 @@ Found an error? Open an issue: every correction helps the next reader.
 <!-- tracks:start -->
 ## 🧭 Tracks
 
+- **DevOps:** [Docker Compose na prática](created-books/docker-compose-na-pratica/)
 - **Ferramentas do dev:** [Git e GitHub essencial](improved-materials/git-e-github-essencial/)
 <!-- tracks:end -->
