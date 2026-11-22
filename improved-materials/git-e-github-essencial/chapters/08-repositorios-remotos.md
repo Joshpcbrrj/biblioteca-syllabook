@@ -397,6 +397,12 @@ git remote set-url origin git@github.com:seu-usuario/receitas.git
 
 Por fim, `git push -u origin main`. Com HTTPS, o Git Credential Manager abre o login do GitHub no navegador na primeira vez; com SSH, a chave é usada sem perguntar nada. Atualize a página do repositório no GitHub: os arquivos e o histórico aparecem lá.
 
+Veja como fica a página de um repositório depois de um push real, o da biblioteca onde este livro é publicado: no alto, o nome e a visibilidade (**Public**); abaixo, a branch (`main`), o último commit com o hash curto (`c21c9d1`) e o contador de commits; no meio, as pastas e arquivos, cada um com a mensagem do último commit que mexeu nele; à direita, a descrição e as **Releases**, que você verá mais adiante neste capítulo.
+
+![Página de um repositório público no GitHub logo depois de um push: nome biblioteca-syllabook com a etiqueta Public, seletor da branch main, último commit c21c9d1 "Publica Git e GitHub essencial", botão verde Code, lista de pastas e arquivos com a mensagem do último commit de cada um e, à direita, a descrição e a seção Releases](../img/c08-github-repositorio.png)
+
+*Captura da página do [repositório Joshpcbrrj/biblioteca-syllabook](https://github.com/Joshpcbrrj/biblioteca-syllabook), feita em 22/11/2026 logo após o push; cabeçalho do site e parte da coluna lateral recortados.*
+
 | Comando | O que faz |
 | --- | --- |
 | `git remote -v` | lista os remotos e os endereços |

@@ -8,3 +8,4 @@
 - c10-vscode-source-control.png: captura do VS Code (code-server 4.146.0, configurações padrão) com a pasta ana-ribeiro.github.io do laboratório do capítulo 10, feita em 21/11/2026 durante a escrita do livro.
 - c10-curriculo-no-navegador.png: captura do currículo do laboratório do capítulo 10 aberto no navegador, servido localmente em http://127.0.0.1:8765/, feita em 21/11/2026 durante a escrita do livro.
 - c09-github-pr.png: captura da aba Files changed do pull request #9, já mesclado, do repositório público Joshpcbrrj/projeto-palavras (https://github.com/Joshpcbrrj/projeto-palavras/pull/9/files), feita em 22/11/2026 durante a escrita do livro; cabeçalho do site recortado.
+- c08-github-repositorio.png: captura da página do repositório público Joshpcbrrj/biblioteca-syllabook (https://github.com/Joshpcbrrj/biblioteca-syllabook), feita em 22/11/2026 logo após o push deste livro; cabeçalho do site e parte da coluna lateral recortados.

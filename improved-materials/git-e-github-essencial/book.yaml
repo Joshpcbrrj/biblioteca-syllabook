@@ -515,20 +515,3 @@ progress:
     tabela botão × comando, captura do Source Control, Sync Changes = pull + push. Gists: alias lg, público
     × secreto (secreto não é privado), Embed → Clone. Não executado: telas do GitHu'
 changes: []
-handoff:
-- 'Feito: 10 capítulos, cap. 0 com teste de nivelamento, simulado final (26 perguntas), glossário, README
-  (sem capa) e next_steps completos; auditoria do livro inteiro sem erros em 22/11/2026.'
-- 'Próximo (nesta ordem): comparação com o original (audit.py --original), capa (COVER.md), build.py para
-  uma pasta fora do repositório e publicação (GitHub e Notion, modes/PUBLISH.md). Depois, resumo final.'
-- 'Original: as seções do Notion não estão salvas localmente. Salvar o texto de cada seção (página 7cd4e7395d8d4a2493a6383c926b7c48,
-  só leitura) numa pasta fora do repositório e rodar audit.py --original <pasta>. Código do curso em D:\01
-  - DEV\Github\Udemy-Geek_university-Git_GitHub-Essencial_para_o_Desenvolvedor (só leitura).'
-- 'Laboratório: research/lab/ recria tudo com os mesmos hashes (SP=<pasta temporária> bash lab3.sh, depois
-  lab4 a lab10); HOME e config isolados.'
-- 'Não executado nos caps. 8 a 10 (marcado no texto): telas e push do GitHub (criar repositório, push,
-  releases, colaboradores, issue, fork, PR, merge pelo site, Pages, gists). Se o usuário autorizar usar
-  a conta dele, fazer uma execução guiada.'
-- 'Capturas do GitHub opcionais a pedir ao usuário: img/c08-github-repositorio.png, img/c09-github-issue.png,
-  img/c09-github-pr.png; registrar em img/CREDITS.md.'
-- 'Avisos de auditoria aceitos: linhas longas em saídas reais do Git (caps. 2, 4, 5, 6, 7, 9); img/c00-cola-do-livro.svg
-  fica só no README (a auditoria só olha os capítulos).'
