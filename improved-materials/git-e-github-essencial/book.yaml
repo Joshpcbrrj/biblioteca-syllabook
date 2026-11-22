@@ -453,18 +453,58 @@ progress:
     git branch forno-200 9cba308 resgata o commit solto do cap. 5; -d recusa, -D apaga. Conflito no forno
     do bolo (forno-eletrico × palito): marcadores, captura do VS Code (Current/Incoming), resolução com
     as duas linhas, add, commit (433506c), --abort, git diff --check.'
+- n: 7
+  done: '2026-11-21'
+  summary: 'Rebase × merge com a branch bebidas (4f9e111/172b51d viram 748e984/036c36f; author × committer;
+    ORIG_HEAD; merge fast-forward); analogia das fotos tiradas de novo no álbum. Regra de ouro com diagrama
+    de sequência (Ana, cópia compartilhada, Bruno). Conflito no rebase na branch porcoes (ovos): HEAD
+    = nova base, detached HEAD, needs merge sem add, --continue, --abort, --skip; erro de usar git commit.
+    rebase -i HEAD~4 no quindim: reword, squash, fixup, drop; apagar linha = drop; reset --hard ORIG_HEAD;
+    --fixup/--autosquash em Para ir além. Main termina em 254d2d2, linear.'
+- n: 8
+  done: '2026-11-21'
+  summary: 'Remoto de treino com git init --bare receitas.git (recusa de push em repositório normal).
+    remote add/-v/set-url/rename; push -u (upstream); clone do Bruno com identidade local; status -sb
+    ahead/behind. fetch × pull: [behind 1], main..origin/main, merge; push recusado (fetch first), pull
+    sem configuração (divergent branches), pull --rebase (Ana 1597a4d). --force-with-lease na branch tortas
+    (stale info, armadilha do fetch antes). Branches de rastreamento com analogia do bilhete do álbum
+    da casa da avó. GitHub: criar repositório vazio, rename origin→treino, token fora da URL (não executado:
+    push ao GitHub). Tags anotada × leve (cat-file -t), push origin v1.0, fetch traz [new tag]; releases
+    pelos passos da documentação (não executado).'
+- n: 9
+  done: '2026-11-21'
+  summary: 'Colaboradores (Settings → Collaborators → Add people; conta pessoal: mesmo acesso; só gente
+    de confiança). Issue #1 da Carla (pão de queijo sem sal): Submit new issue, #n cita, Closes/Fixes/Resolves
+    fecham na branch principal. Fork simulado com git clone --bare (carla-fork.git); origin = fork, upstream
+    = original. Branch sal-no-pao-de-queijo, push no fork, PR (Compare & pull request, Allow edits from
+    maintainers), analogia do bilhete à avó; revisão (Files changed, Comment/Approve/Request changes),
+    commit novo atualiza o PR; teste local com fetch origem:destino e diff main...pr-1 (três pontos).
+    Três botões de merge com saídas reais (no-ff bb2ae29, squash 29e3a0a, rebase c004c84); squash final
+    com --author Carla. Sync do fork (fetch upstream, merge, push origin main); -d recusa após squash, '
 changes: []
 handoff:
-- 'Próximo: cap. 7 (rebase), continuando o receitas a partir de 433506c (Merge branch ''forno-eletrico''),
-  só a main, working tree limpa.'
-- 'Laboratório: research/lab/ recria o receitas com os mesmos hashes dos caps. 3 a 6 (SP=<pasta temporária>
-  bash lab3.sh, depois lab4, lab5, lab6); HOME e config isolados, autores Ana Ribeiro e Bruno Lima, datas
-  fixas de 21 a 24/11/2026. Para o cap. 7, escreva lab7.sh no mesmo estilo.'
+- 'Próximo: cap. 10 (Projeto: currículo online com GitHub Pages), depois as partes fixas (cap. 0, nivelamento,
+  simulado, glossário, próximos caminhos). Rode book.py brief 10.'
+- 'Laboratório: research/lab/ recria tudo com os mesmos hashes (SP=<pasta temporária> bash lab3.sh, depois
+  lab4 a lab9); HOME e config isolados. Fim do lab9: receitas da Ana em 29e3a0a (squash da Carla), remoto
+  receitas.git, clones em bruno/receitas e carla/receitas, fork carla-fork.git; autores Ana Ribeiro, Bruno
+  Lima, Carla Souza; datas fixas até 27/11/2026.'
+- 'Não executado nos caps. 8 e 9 (marcado no texto): telas e push do GitHub (criar repositório, push para
+  o GitHub, releases, colaboradores, issue, fork, pull request, merge pelo site). Todos os comandos git
+  foram rodados com repositórios locais. Se o usuário autorizar usar a conta dele, fazer uma execução
+  guiada desses passos.'
+- 'Capturas do GitHub a pedir ao usuário (opcionais, melhoram os caps. 8 e 9): img/c08-github-repositorio.png
+  (página do repositório receitas logo após o primeiro push), img/c09-github-issue.png (issue ''Pão de
+  queijo sem sal'' aberta), img/c09-github-pr.png (aba Files changed de um pull request com Closes #1).
+  Registrar em img/CREDITS.md.'
 - 'Capturas do VS Code: images.py editor funciona (code-server via Docker). Usadas: c03-vscode-staged-e-modificado,
-  c04-vscode-grafico, c05-vscode-descartar (o comando ''Git: Open Changes'' não abriu o diff; ficou a
-  vista normal), c06-vscode-conflito.'
-- 'Avisos de auditoria aceitos: linhas longas em saídas reais do Git (cap. 2, ssh -T; cap. 4, blame e
-  rev-parse; cap. 5, reflog; cap. 6, merge e erro do switch), mantidas sem quebra.'
-- 'Fontes: página do Notion ''Udemy Geek University: Git e GitHub Essencial'' (7cd4e7395d8d4a2493a6383c926b7c48)
-  e o código do curso em D:\01 - DEV\Github\Udemy-Geek_university-Git_GitHub-Essencial_para_o_Desenvolvedor
+  c04-vscode-grafico, c05-vscode-descartar, c06-vscode-conflito. Nenhuma nos caps. 7 a 9.'
+- 'Avisos de auditoria aceitos: linhas longas em saídas reais do Git (cap. 2 ssh -T; cap. 4 blame e rev-parse;
+  cap. 5 reflog; cap. 6 merge e switch; cap. 7 hint do rebase; cap. 9 hint do branch -D), mantidas sem
+  quebra.'
+- 'Original: as seções do Notion não estão salvas localmente. Antes de publicar, salvar o texto de cada
+  seção (página 7cd4e7395d8d4a2493a6383c926b7c48, só leitura) numa pasta fora do repositório e rodar audit.py
+  --original <pasta>. Código do curso em D:\01 - DEV\Github\Udemy-Geek_university-Git_GitHub-Essencial_para_o_Desenvolvedor
   (só leitura).'
+- 'Antes de terminar o livro: completar next_steps no book.yaml com {title, why, topics} (2 a 4 tópicos
+  cada); hoje só têm o título.'

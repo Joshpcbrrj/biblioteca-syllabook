@@ -1,0 +1,10 @@
+type: compare
+title: "Colaborador envia direto para o repositório; quem é de fora contribui por fork e pull request"
+left: {title: "Colaborador (Bruno)", icon: users, color: blue}
+right: {title: "Fork + pull request (Carla)", icon: git-pull-request, color: purple}
+rows:
+  - ["Convidado pelo dono", "Não precisa de convite"]
+  - ["git push direto no receitas", "git push no próprio fork"]
+  - ["Um remoto: origin", "Dois remotos: origin e upstream"]
+  - ["Para gente de confiança", "Para qualquer pessoa"]
+  - ["Revisão é opcional", "O dono revisa tudo antes do merge"]

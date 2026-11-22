@@ -1,0 +1,9 @@
+type: flow
+title: "No rebase, o conflito aparece no commit que está sendo reaplicado"
+steps:
+  - {text: "git rebase main", note: "reaplica 27b05fd, depois e42d1d6", icon: refresh-cw, kind: start, color: blue}
+  - {text: "Conflito neste commit?", kind: decision, color: orange, label: "sim", side: "Próximo commit", side_note: "ou fim do rebase", side_color: green, side_label: "não"}
+  - {text: "Edite o arquivo", note: "escolha o texto final e apague os marcadores", icon: pencil, color: red}
+  - {text: "git add receitas/bolo-de-cenoura.md", note: "marca o conflito como resolvido", icon: list-checks, color: orange}
+  - {text: "git rebase --continue", note: "grava o commit e segue para o próximo", icon: play, kind: end, color: green}
+caption: "Em qualquer parada: git rebase --skip pula o commit; git rebase --abort volta a branch ao estado de antes."

@@ -1,0 +1,9 @@
+type: compare
+title: "A branch avança a cada commit; a tag fica presa ao commit marcado"
+left: {title: "Branch (main)", icon: git-branch, color: blue}
+right: {title: "Tag anotada (v1.0)", icon: hash, color: green}
+rows:
+  - ["Nome que aponta para um commit", "Nome que aponta para um commit"]
+  - ["Avança a cada commit novo", "Nunca sai do 1597a4d"]
+  - ["Linha de trabalho", "Marca uma versão"]
+  - ["Vai no git push da branch", "Precisa de git push origin v1.0"]
