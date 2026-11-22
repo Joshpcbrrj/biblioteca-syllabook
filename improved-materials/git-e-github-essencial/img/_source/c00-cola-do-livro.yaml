@@ -1,0 +1,39 @@
+type: cards
+title: "O livro numa página: do primeiro commit ao site publicado"
+cards:
+  - icon: clock
+    title: "Por que Git"
+    items: ["Histórico com autor e data", "Cópia completa em cada um", "Git ≠ GitHub"]
+  - icon: settings
+    title: "Configurar"
+    items: ["user.name e user.email", "Token pelo GCM ou SSH", "Nunca token na URL"]
+  - icon: layers
+    title: "Três áreas"
+    items: ["Pasta → staging → .git", "status -s: ??, M , M", ".env no .gitignore"]
+  - icon: save
+    title: "Commits"
+    items: ["Pequenos, um assunto", "Título no presente", "log, show, diff, blame"]
+  - icon: rotate-ccw
+    title: "Desfazer"
+    items: ["restore, --amend", "revert no que foi enviado", "reset só no local"]
+  - icon: git-branch
+    title: "Branches"
+    items: ["switch -c nova", "merge: ff ou três vias", "Conflito: edite e add"]
+  - icon: repeat
+    title: "Rebase"
+    items: ["Histórico em linha reta", "rebase -i arruma commits", "Só em branch local"]
+  - icon: cloud-upload
+    title: "Remotos"
+    items: ["push, fetch, pull", "origin/main rastreia", "--force-with-lease"]
+  - icon: git-pull-request
+    title: "Colaborar"
+    items: ["Issue, fork, PR", "Revisão antes do merge", "GitHub Flow"]
+  - icon: globe
+    title: "Publicar"
+    items: ["README em Markdown", "GitHub Pages", "Gist para trechos"]
+  - icon: search
+    title: "Onde estou?"
+    items: ["git status -sb", "log --oneline --graph --all", "reflog acha o perdido"]
+  - icon: shield-check
+    title: "Segurança"
+    items: ["Segredo commitado: revogue", "Sem --hard sem pensar", "Revise o diff do PR"]

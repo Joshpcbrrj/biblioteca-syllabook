@@ -1,5 +1,13 @@
 # 8. Repositórios remotos
 
+## 📇 Parte 3 de 3: GitHub e trabalho em equipe
+
+![Cola da parte 3, em nove cartões: remoto (origin, clone, push -u); fetch só baixa e pull integra; tags anotadas e push origin v1.0; colaborador, issue e Closes #n; fork, upstream e pull request; GitHub Flow e Git Flow; Markdown (título, lista, tarefa, alerta); GitHub Pages (usuario.github.io, Settings, Pages, até 10 minutos); gist (trecho com link, repositório Git, secreto não é privado)](../img/c08-cola-parte-3.svg)
+
+- [8. Repositórios remotos](08-repositorios-remotos.md)
+- [9. Colaborando no GitHub](09-colaborando-no-github.md)
+- [10. Projeto: currículo online](10-projeto-curriculo-online.md)
+
 > 🗺️ **Neste capítulo:** criar uma segunda cópia do `receitas` para servir de ponto de encontro, enviar e receber commits com `push`, `fetch` e `pull`, entender as branches `origin/...`, publicar o projeto no GitHub e marcar versões com tags. O Bruno passa a trabalhar no projeto a partir do próprio clone. · ⏱️ ~60 min
 
 > 🔥 **Aquecimento:**

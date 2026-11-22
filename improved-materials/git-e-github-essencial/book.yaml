@@ -391,10 +391,33 @@ chapters:
   - Entendendo o markdown
   - Entendendo gists
 next_steps:
-- GitHub Actions (CI/CD)
-- git bisect e git worktree
-- Commits assinados (GPG/SSH)
-- Conventional Commits e versionamento semântico
+- title: GitHub Actions (CI/CD)
+  why: Fazer o GitHub testar e publicar o projeto sozinho a cada push e a cada pull request
+  topics:
+  - workflows em YAML
+  - testes automáticos em pull requests
+  - deploy do GitHub Pages por Actions
+  - segredos do repositório
+- title: git bisect e git worktree
+  why: Achar o commit que introduziu um bug e trabalhar em duas branches ao mesmo tempo sem stash
+  topics:
+  - busca binária com git bisect
+  - git bisect run com um teste
+  - várias pastas de trabalho com git worktree
+- title: Commits assinados (GPG/SSH)
+  why: Provar que os seus commits e tags vieram mesmo de você, com o selo Verified no GitHub
+  topics:
+  - assinatura com chave SSH
+  - assinatura com GPG
+  - git log --show-signature
+  - exigir commits assinados na branch protegida
+- title: Conventional Commits e versionamento semântico
+  why: Padronizar as mensagens da equipe e numerar as versões de um jeito que diz o que mudou
+  topics:
+  - tipos feat, fix e chore
+  - MAJOR.MINOR.PATCH
+  - changelog gerado do histórico
+  - tags e releases por versão
 covers:
 - git
 - github
@@ -481,30 +504,31 @@ progress:
     commit novo atualiza o PR; teste local com fetch origem:destino e diff main...pr-1 (três pontos).
     Três botões de merge com saídas reais (no-ff bb2ae29, squash 29e3a0a, rebase c004c84); squash final
     com --author Carla. Sync do fork (fetch upstream, merge, push origin main); -d recusa após squash, '
+- n: 10
+  done: '2026-11-21'
+  summary: 'Projeto novo: currículo da Ana em ana-ribeiro.github.io (index.html, estilo.css, README.md;
+    commits 2d3855c e 82ecf4a, remoto bare no lugar do GitHub). Markdown essencial + tabelas, listas de
+    tarefas e alertas do GitHub; erro do Enter que não quebra linha. README (ordem .github/raiz/docs,
+    Outline; o que é, como ver, como contribuir) e README de perfil em Para ir além. GitHub Pages: site
+    de usuário × projeto, Free exige público, Settings → Pages → Deploy from a branch, até 10 min, index.html/index.md/README.md,
+    Jekyll e .nojekyll; analogia do porta-retrato na janela; captura do currículo no navegador. VS Code:
+    tabela botão × comando, captura do Source Control, Sync Changes = pull + push. Gists: alias lg, público
+    × secreto (secreto não é privado), Embed → Clone. Não executado: telas do GitHu'
 changes: []
 handoff:
-- 'Próximo: cap. 10 (Projeto: currículo online com GitHub Pages), depois as partes fixas (cap. 0, nivelamento,
-  simulado, glossário, próximos caminhos). Rode book.py brief 10.'
+- 'Feito: 10 capítulos, cap. 0 com teste de nivelamento, simulado final (26 perguntas), glossário, README
+  (sem capa) e next_steps completos; auditoria do livro inteiro sem erros em 22/11/2026.'
+- 'Próximo (nesta ordem): comparação com o original (audit.py --original), capa (COVER.md), build.py para
+  uma pasta fora do repositório e publicação (GitHub e Notion, modes/PUBLISH.md). Depois, resumo final.'
+- 'Original: as seções do Notion não estão salvas localmente. Salvar o texto de cada seção (página 7cd4e7395d8d4a2493a6383c926b7c48,
+  só leitura) numa pasta fora do repositório e rodar audit.py --original <pasta>. Código do curso em D:\01
+  - DEV\Github\Udemy-Geek_university-Git_GitHub-Essencial_para_o_Desenvolvedor (só leitura).'
 - 'Laboratório: research/lab/ recria tudo com os mesmos hashes (SP=<pasta temporária> bash lab3.sh, depois
-  lab4 a lab9); HOME e config isolados. Fim do lab9: receitas da Ana em 29e3a0a (squash da Carla), remoto
-  receitas.git, clones em bruno/receitas e carla/receitas, fork carla-fork.git; autores Ana Ribeiro, Bruno
-  Lima, Carla Souza; datas fixas até 27/11/2026.'
-- 'Não executado nos caps. 8 e 9 (marcado no texto): telas e push do GitHub (criar repositório, push para
-  o GitHub, releases, colaboradores, issue, fork, pull request, merge pelo site). Todos os comandos git
-  foram rodados com repositórios locais. Se o usuário autorizar usar a conta dele, fazer uma execução
-  guiada desses passos.'
-- 'Capturas do GitHub a pedir ao usuário (opcionais, melhoram os caps. 8 e 9): img/c08-github-repositorio.png
-  (página do repositório receitas logo após o primeiro push), img/c09-github-issue.png (issue ''Pão de
-  queijo sem sal'' aberta), img/c09-github-pr.png (aba Files changed de um pull request com Closes #1).
-  Registrar em img/CREDITS.md.'
-- 'Capturas do VS Code: images.py editor funciona (code-server via Docker). Usadas: c03-vscode-staged-e-modificado,
-  c04-vscode-grafico, c05-vscode-descartar, c06-vscode-conflito. Nenhuma nos caps. 7 a 9.'
-- 'Avisos de auditoria aceitos: linhas longas em saídas reais do Git (cap. 2 ssh -T; cap. 4 blame e rev-parse;
-  cap. 5 reflog; cap. 6 merge e switch; cap. 7 hint do rebase; cap. 9 hint do branch -D), mantidas sem
-  quebra.'
-- 'Original: as seções do Notion não estão salvas localmente. Antes de publicar, salvar o texto de cada
-  seção (página 7cd4e7395d8d4a2493a6383c926b7c48, só leitura) numa pasta fora do repositório e rodar audit.py
-  --original <pasta>. Código do curso em D:\01 - DEV\Github\Udemy-Geek_university-Git_GitHub-Essencial_para_o_Desenvolvedor
-  (só leitura).'
-- 'Antes de terminar o livro: completar next_steps no book.yaml com {title, why, topics} (2 a 4 tópicos
-  cada); hoje só têm o título.'
+  lab4 a lab10); HOME e config isolados.'
+- 'Não executado nos caps. 8 a 10 (marcado no texto): telas e push do GitHub (criar repositório, push,
+  releases, colaboradores, issue, fork, PR, merge pelo site, Pages, gists). Se o usuário autorizar usar
+  a conta dele, fazer uma execução guiada.'
+- 'Capturas do GitHub opcionais a pedir ao usuário: img/c08-github-repositorio.png, img/c09-github-issue.png,
+  img/c09-github-pr.png; registrar em img/CREDITS.md.'
+- 'Avisos de auditoria aceitos: linhas longas em saídas reais do Git (caps. 2, 4, 5, 6, 7, 9); img/c00-cola-do-livro.svg
+  fica só no README (a auditoria só olha os capítulos).'

@@ -1,0 +1,25 @@
+type: cards
+title: "Parte 1: o Git guarda o histórico, sabe quem você é e separa o que vai para o próximo commit"
+cards:
+  - icon: clock
+    title: "Por que Git"
+    items: ["Histórico: quem, quando, o quê", "Distribuído: cópia completa", "Git ≠ GitHub"]
+  - icon: settings
+    title: "Configurar"
+    items: ["system < global < local", "user.name e user.email", "init.defaultBranch main"]
+    code: ["git config --global -l"]
+  - icon: key
+    title: "Credenciais"
+    items: ["Senha não vale: token", "GCM guarda o token", "SSH: chave ed25519"]
+  - icon: layers
+    title: "Três áreas"
+    items: ["Diretório de trabalho", "Staging area (a mesa)", "Repositório (.git)"]
+    code: ["git add → git commit"]
+  - icon: list-checks
+    title: "Estados"
+    items: ["?? untracked", "M  staged", " M modified"]
+    code: ["git status -s"]
+  - icon: filter
+    title: ".gitignore"
+    items: [".env e *.log fora", "!exceção depois da regra", "rm --cached: parar de seguir"]
+    code: ["git check-ignore -v .env"]

@@ -1,0 +1,13 @@
+type: sequence
+title: "Com o GitHub Pages, publicar o site é fazer push: o GitHub monta e serve a página"
+participants:
+  - {name: "Ana (local)", icon: user}
+  - {name: "Repositório no GitHub", icon: server}
+  - {name: "GitHub Pages", icon: globe}
+  - {name: "Visitante", icon: users}
+messages:
+  - {from: "Ana (local)", to: "Repositório no GitHub", text: "git push (branch main)"}
+  - {from: "Repositório no GitHub", to: "GitHub Pages", text: "monta o site (até 10 min)"}
+  - {from: "Visitante", to: "GitHub Pages", text: "abre <usuario>.github.io"}
+  - {from: "GitHub Pages", to: "Visitante", text: "index.html", dashed: true}
+caption: "Configuração uma vez só (Settings → Pages); depois, cada push atualiza o site."

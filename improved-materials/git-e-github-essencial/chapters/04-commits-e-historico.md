@@ -1,5 +1,14 @@
 # 4. Commits e histórico
 
+## 📇 Parte 2 de 3: o repositório no seu computador
+
+![Cola da parte 2, em oito cartões: commit (pequeno, título até 50 caracteres no presente, corpo com o porquê); histórico (log, show, blame, diff); HEAD e HEAD~1; desfazer (restore, --amend, revert); reset --soft, --mixed e --hard e o reflog; branch, switch -c e stash -u; merge fast-forward, de três vias e conflito; rebase (hashes novos, nunca em branch pública, rebase -i HEAD~3)](../img/c04-cola-parte-2.svg)
+
+- [4. Commits e histórico](04-commits-e-historico.md)
+- [5. Desfazendo erros com segurança](05-desfazendo-erros-com-seguranca.md)
+- [6. Branches, stash e merge](06-branches-stash-e-merge.md)
+- [7. Rebase e histórico limpo](07-rebase-e-historico-limpo.md)
+
 > 🗺️ **Neste capítulo:** como montar commits pequenos e com mensagens que explicam a mudança, e como encontrar qualquer coisa no histórico: quem mudou, quando, o quê e por quê. O projeto `receitas` ganha uma receita nova e três commits. · ⏱️ ~50 min
 
 > 🔥 **Aquecimento:**

@@ -1,0 +1,12 @@
+/* uma coluna estreita é mais fácil de ler em qualquer tela */
+body {
+  max-width: 40rem;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
+  color: #222;
+}
+h2 {
+  border-bottom: 2px solid #2a7ae2;
+}

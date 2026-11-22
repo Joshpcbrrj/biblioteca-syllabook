@@ -1,5 +1,13 @@
 # 1. Por que controlar versões
 
+## 📇 Parte 1 de 3: primeiros passos
+
+![Cola da parte 1, em seis cartões: por que Git (histórico, distribuído, Git não é GitHub); configurar (níveis system, global e local; user.name e user.email); credenciais (token, GCM, SSH); três áreas (diretório de trabalho, staging area, repositório); estados no git status -s (??, M à esquerda, M à direita); .gitignore (.env e *.log fora, exceção com !, git check-ignore -v)](../img/c01-cola-parte-1.svg)
+
+- [1. Por que controlar versões](01-por-que-controlar-versoes.md)
+- [2. Instalação, identidade e credenciais](02-instalacao-identidade-e-credenciais.md)
+- [3. Como o Git pensa](03-como-o-git-pensa.md)
+
 > 🗺️ **Neste capítulo:** o problema que o controle de versão resolve, a diferença entre o modelo centralizado e o distribuído, e por que Git e GitHub são coisas diferentes. · ⏱️ ~30 min
 
 ## O problema das cópias com nome de “final”
