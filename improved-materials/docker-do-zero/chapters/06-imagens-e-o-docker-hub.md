@@ -464,7 +464,7 @@ Só aquele comando é enviado para o motor do contexto `default`, em vez do ativ
 ## 🤖 Estude com um tutor de IA
 
 1. "Faça 5 perguntas, uma por vez, sobre o nome completo de uma imagem Docker, tags, digests e camadas. Espere a minha resposta antes de dar o retorno e não me dê as respostas antes."
-2. "Aqui está a minha resposta ao exercício 4 do capítulo 6: <minha resposta>. Aponte os meus erros sobre reprodutibilidade de imagens sem me dar a solução pronta."
+2. "Aqui está a minha resposta ao exercício 4 do capítulo 6: [minha resposta]. Aponte os meus erros sobre reprodutibilidade de imagens sem me dar a solução pronta."
 
 > ➡️ **Próximo passo:** no capítulo 7 você para de usar imagens dos outros e escreve o seu primeiro Dockerfile, para empacotar a API de tarefas numa imagem sua.
 

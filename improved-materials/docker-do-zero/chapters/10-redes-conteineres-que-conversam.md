@@ -475,7 +475,7 @@ Porque publica a porta em todas as interfaces do computador, e as regras do Dock
 ## 🤖 Estude com um tutor de IA
 
 1. "Faça 5 perguntas, uma por vez, sobre redes no Docker (bridge padrão, rede própria, DNS por nome e publicação de portas). Espere a minha resposta antes de dar o retorno e não me dê as respostas antes."
-2. "Aqui está a configuração de rede de dois contêineres meus (comandos `docker run`): <meus comandos>. Diga se um acha o outro pelo nome e quais portas estão expostas ao meu computador, sem reescrever os comandos por mim."
+2. "Aqui está a configuração de rede de dois contêineres meus (comandos `docker run`): [meus comandos]. Diga se um acha o outro pelo nome e quais portas estão expostas ao meu computador, sem reescrever os comandos por mim."
 
 > ➡️ **Próximo passo:** no capítulo 11 você sai do seu computador: dá a versão certa à imagem da API, entra no registro com um token (nunca com a senha) e publica a imagem para outras pessoas usarem.
 

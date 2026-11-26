@@ -362,7 +362,7 @@ Porque a porta 8000 só existia dentro do contêiner; no seu computador só exis
 
 > Faça 5 perguntas sobre instalar o Docker Engine no Ubuntu pelo repositório oficial e sobre o grupo `docker`, uma de cada vez. Espere a minha resposta antes de dar o retorno e não me dê as respostas antes.
 
-> Aqui está a saída do meu `apt-cache policy docker-ce`: <saída>. Aponte o que está errado sem me dar o comando pronto.
+> Aqui está a saída do meu `apt-cache policy docker-ce`: [saída]. Aponte o que está errado sem me dar o comando pronto.
 
 > ➡️ **Próximo passo:** com o Docker instalado, é hora de usá-lo. No capítulo **4. Ciclo de vida do contêiner pela linha de comando**, você roda, lista, para e remove contêineres e lê os logs.
 

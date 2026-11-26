@@ -298,7 +298,7 @@ A imagem é o pacote somente leitura; o contêiner é a instância criada a part
 
 > Faça 5 perguntas sobre a instalação do Docker Desktop no Windows (requisitos, WSL 2, backends), uma de cada vez. Espere a minha resposta antes de dar o retorno e não me dê as respostas antes.
 
-> Descrevo o erro que apareceu ao abrir o Docker Desktop: <mensagem>. Liste as causas prováveis em ordem e o comando que testa cada uma, sem pedir que eu reinstale nada antes.
+> Descrevo o erro que apareceu ao abrir o Docker Desktop: [mensagem]. Liste as causas prováveis em ordem e o comando que testa cada uma, sem pedir que eu reinstale nada antes.
 
 > ➡️ **Próximo passo:** com o Docker funcionando, falta conhecer o Linux e o Mac, ou ir direto ao uso: **3. Instalar no Linux e no Mac** (pule se não é o seu caso) e depois **4. Ciclo de vida do contêiner pela linha de comando**.
 

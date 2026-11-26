@@ -401,7 +401,7 @@ Os arquivos da camada gravável somem com ele; só o que está num volume sobrev
 ## 🤖 Estude com um tutor de IA
 
 1. "Faça 5 perguntas, uma por vez, sobre registros, `docker tag`, `docker push` e tags de versão. Espere a minha resposta antes de dar o retorno e não me dê as respostas antes."
-2. "Aqui está o meu Dockerfile: <meu Dockerfile>. Aponte qualquer lugar onde um segredo possa vazar para a imagem (`ENV`, `ARG`, `COPY`) sem reescrever o arquivo por mim. Não vou colar nenhuma senha nem token real."
+2. "Aqui está o meu Dockerfile: [meu Dockerfile]. Aponte qualquer lugar onde um segredo possa vazar para a imagem (`ENV`, `ARG`, `COPY`) sem reescrever o arquivo por mim. Não vou colar nenhuma senha nem token real."
 
 > ➡️ **Próximo passo:** no capítulo 12 você junta tudo: a API 1.1, que passa a gravar as tarefas no PostgreSQL, com volume, rede própria e a imagem enxuta, e uma prévia do arquivo que o próximo livro, sobre Docker Compose, vai ensinar.
 

@@ -591,7 +591,7 @@ Porque a imagem final é o último estágio, nada mais, e o `COPY --from=build` 
 ## 🤖 Estude com um tutor de IA
 
 1. "Faça 5 perguntas, uma por vez, sobre volumes, bind mounts e tmpfs no Docker. Espere a minha resposta antes de dar o retorno e não me dê as respostas antes."
-2. "Aqui está o meu comando `docker run` com volume para o PostgreSQL: <meu comando>. Diga se os dados vão sobreviver à remoção do contêiner e por quê, sem reescrever o comando por mim."
+2. "Aqui está o meu comando `docker run` com volume para o PostgreSQL: [meu comando]. Diga se os dados vão sobreviver à remoção do contêiner e por quê, sem reescrever o comando por mim."
 
 > ➡️ **Próximo passo:** no capítulo 10 o banco já tem onde guardar os dados, mas a API ainda não consegue falar com ele. Você vai criar uma rede própria e ver os contêineres se encontrarem pelo nome.
 

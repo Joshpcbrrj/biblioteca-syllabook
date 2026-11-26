@@ -421,7 +421,7 @@ Cole o texto abaixo num assistente de IA e responda cada pergunta antes de pedir
 
 > Faça 5 perguntas sobre a diferença entre contêiner e máquina virtual, uma de cada vez. Espere a minha resposta antes de dar o retorno e não me dê as respostas antes.
 
-> Esta é a minha resposta ao exercício 4 do capítulo 1 de "Docker do zero": <sua resposta>. Aponte os meus erros sem me dar a solução.
+> Esta é a minha resposta ao exercício 4 do capítulo 1 de "Docker do zero": [sua resposta]. Aponte os meus erros sem me dar a solução.
 
 > ➡️ **Próximo passo:** para refazer o laboratório na sua máquina, falta instalar o Docker. No Windows, antes do instalador é preciso ligar a virtualização e o WSL 2, o que o capítulo 2 explica. No Linux ou no Mac, siga para o capítulo 3.
 

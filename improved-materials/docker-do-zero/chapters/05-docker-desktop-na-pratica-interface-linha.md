@@ -369,7 +369,7 @@ Para escolher quais distribuições do WSL enxergam o Docker, de modo que o coma
 ## 🤖 Estude com um tutor de IA
 
 1. "Faça 5 perguntas, uma por vez, sobre a relação entre o Docker Desktop (janela), a CLI `docker` e o Docker Engine. Espere a minha resposta antes de dar o retorno e não me dê as respostas antes."
-2. "Aqui está a minha resposta ao exercício 2 do capítulo 5: <minha resposta>. Aponte os meus erros sobre o equivalente de cada aba da janela na linha de comando, sem me dar a solução."
+2. "Aqui está a minha resposta ao exercício 2 do capítulo 5: [minha resposta]. Aponte os meus erros sobre o equivalente de cada aba da janela na linha de comando, sem me dar a solução."
 
 > ➡️ **Próximo passo:** no capítulo 6 você deixa de só usar contêineres e passa a olhar de onde eles vêm: as imagens, as camadas e o Docker Hub.
 

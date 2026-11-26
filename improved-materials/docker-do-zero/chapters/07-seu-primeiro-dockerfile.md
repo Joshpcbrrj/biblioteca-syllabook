@@ -709,7 +709,7 @@ Não: a tag pode passar a apontar para outra imagem; o digest identifica sempre 
 ## 🤖 Estude com um tutor de IA
 
 1. "Faça 5 perguntas, uma por vez, sobre as instruções de um Dockerfile (FROM, WORKDIR, COPY, RUN, ENV, ARG, USER, CMD, ENTRYPOINT). Espere a minha resposta antes de dar o retorno e não me dê as respostas antes."
-2. "Aqui está o meu Dockerfile do exercício 1 do capítulo 7: <meu Dockerfile>. Aponte problemas de segurança e de forma exec × shell sem reescrever o arquivo por mim."
+2. "Aqui está o meu Dockerfile do exercício 1 do capítulo 7: [meu Dockerfile]. Aponte problemas de segurança e de forma exec × shell sem reescrever o arquivo por mim."
 
 > ➡️ **Próximo passo:** no capítulo 8 você descobre por que o build às vezes é instantâneo e às vezes demora, usa o cache de camadas a seu favor e deixa a imagem menor com o build em múltiplos estágios.
 

@@ -546,7 +546,7 @@ O `docker build` cria a imagem (o pacote somente leitura); o `docker run` cria o
 ## 🤖 Estude com um tutor de IA
 
 1. "Faça 5 perguntas, uma por vez, sobre cache de camadas e build multi-stage no Docker. Espere a minha resposta antes de dar o retorno e não me dê as respostas antes."
-2. "Aqui está o meu Dockerfile do exercício 1 do capítulo 8: <meu Dockerfile>. Aponte problemas de ordem de instruções e de tamanho da imagem sem reescrever o arquivo por mim."
+2. "Aqui está o meu Dockerfile do exercício 1 do capítulo 8: [meu Dockerfile]. Aponte problemas de ordem de instruções e de tamanho da imagem sem reescrever o arquivo por mim."
 
 > ➡️ **Próximo passo:** no capítulo 9 você resolve o problema que ficou aberto desde o capítulo 7: a lista de tarefas some quando o contêiner é removido. Os volumes guardam dados fora do contêiner, e você vai rodar o PostgreSQL com dados que sobrevivem.
 

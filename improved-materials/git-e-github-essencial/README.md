@@ -46,3 +46,9 @@ Achou um erro, um comando que não funciona como o livro diz ou uma tela do GitH
 <!-- credit:start -->
 📘 *Criado pela skill Claude Syllabook - Joshpcbrrj* · [github.com/Joshpcbrrj/syllabook](https://github.com/Joshpcbrrj/syllabook)
 <!-- credit:end -->
+
+<!-- editions:start -->
+## 🗒️ Edições
+
+- **1.0.1** (2026-11-26): O livro numa página também no começo do capítulo 0, para o EPUB e o Notion
+<!-- editions:end -->

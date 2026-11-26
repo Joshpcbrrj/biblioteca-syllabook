@@ -596,7 +596,7 @@ Em `/var/lib/postgresql`. O caminho `/var/lib/postgresql/data` é o das versões
 ## 🤖 Estude com um tutor de IA
 
 1. "Faça 5 perguntas, uma por vez, sobre a arquitetura do meu projeto: API, PostgreSQL, rede, volume e imagem publicada no Docker. Espere a minha resposta antes de dar o retorno e não me dê as respostas antes."
-2. "Aqui estão os meus comandos `docker run` do projeto final: <meus comandos>. Revise-os com base neste checklist: versão fixa, usuário comum, nenhum segredo na imagem, rede própria, só a API publicada em 127.0.0.1 e volume no banco. Aponte o que falta sem reescrever os comandos por mim. Não vou colar nenhuma senha real."
+2. "Aqui estão os meus comandos `docker run` do projeto final: [meus comandos]. Revise-os com base neste checklist: versão fixa, usuário comum, nenhum segredo na imagem, rede própria, só a API publicada em 127.0.0.1 e volume no banco. Aponte o que falta sem reescrever os comandos por mim. Não vou colar nenhuma senha real."
 
 > ➡️ **Próximo passo:** você terminou o livro. Resta fechar o ciclo: a página "Próximos caminhos" indica o que estudar depois, e o *Docker Compose na prática* continua exatamente de onde a prévia deste capítulo parou.
 
@@ -627,7 +627,7 @@ Em `/var/lib/postgresql`. O caminho `/var/lib/postgresql/data` é o das versões
 <!-- next-steps:start -->
 ## 🧭 Próximos caminhos
 
-- **Docker Compose na prática**: Para descrever API e banco num arquivo e subir tudo com um comando (compose.yaml · serviços · redes e volumes do projeto)
+- **[Docker Compose na prática](../../../created-books/docker-compose-na-pratica/README.md)**: Para descrever API e banco num arquivo e subir tudo com um comando (compose.yaml · serviços · redes e volumes do projeto)
 - **Segurança de imagens**: Para achar e corrigir vulnerabilidades antes de publicar (docker scout · imagens mínimas · assinatura)
 - **Kubernetes do zero**: Para rodar contêineres em vários servidores (pods · deployments · services)
 <!-- next-steps:end -->

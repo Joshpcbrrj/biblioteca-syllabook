@@ -781,7 +781,7 @@ O seu usuário não está no grupo `docker`, e só quem está nele acessa o sock
 ## 🤖 Estude com um tutor de IA
 
 1. "Faça 5 perguntas, uma por vez, sobre os estados de um contêiner Docker (created, running, paused, exited) e os comandos que levam de um para outro. Espere a minha resposta antes de dar o retorno e não me dê as respostas antes."
-2. "Aqui está o meu exercício 3 do capítulo 4: <minha resposta>. Aponte os meus erros sobre `stop`, `exec` e `rm` sem me dar a solução pronta."
+2. "Aqui está o meu exercício 3 do capítulo 4: [minha resposta]. Aponte os meus erros sobre `stop`, `exec` e `rm` sem me dar a solução pronta."
 
 > ➡️ **Próximo passo:** no capítulo 5 você faz as mesmas operações pela interface do Docker Desktop e compara o que ele mostra com o que a linha de comando mostrou, para saber qual usar em cada situação.
 
