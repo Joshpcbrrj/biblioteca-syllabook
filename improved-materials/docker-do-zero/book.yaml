@@ -545,6 +545,15 @@ progress:
     (docker cp executado); quando usar cada um; contextos (ls, show, use, --context, DOCKER_CONTEXT, create/rm
     executados; default e desktop-linux chegam ao mesmo motor nesta máquina); licença do Desktop. Passos
     pela janela não executados (sem capturas). Mesmo servidor dz-web 127.0.0.1:8080.
+- n: 6
+  done: '2026-11-26'
+  summary: 'Imagem = camadas somente leitura + config (docker history/inspect de python:3.14-slim: 4 camadas,
+    Debian trixie 87,7 MB, Python 3.14.10); analogia da biblioteca de receitas (tag = lombada, digest
+    = código do miolo); nome completo registro/namespace/repositório:tag; tag × digest (IMAGE ID = começo
+    do digest no containerd; DISK USAGE 180 MB × CONTENT SIZE 45,7 MB); categorias de confiança do Hub
+    e limite de pull sem login (100/6 h); pull, images --filter reference, tag, rmi (Untagged × Deleted,
+    conflito com contêiner parado); dangling via commit e prune filtrado por label; multi-arquitetura
+    (imagetools); save/load. Alpine 73,9 MB × slim 180 MB. Executado tudo; imagens baixadas removidas.'
 changes: []
 handoff:
 - 'Pedir ao usuário 3 capturas reais (img/CREDITS.md): cap. 2 página Configuration do instalador (opção

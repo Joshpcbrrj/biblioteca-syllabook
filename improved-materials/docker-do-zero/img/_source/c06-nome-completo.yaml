@@ -1,0 +1,8 @@
+type: tree
+title: "O nome completo diz de onde a imagem vem e qual versão ela é"
+root: {text: "docker.io/library/python:3.14-slim", note: "o nome que o Docker enxerga", icon: box, color: purple}
+children:
+  - {text: "docker.io", note: "registro: o Docker Hub", icon: server, color: gray}
+  - {text: "library", note: "namespace das imagens oficiais", icon: shield-check, color: gray}
+  - {text: "python", note: "repositório: o programa", icon: code-xml, color: blue}
+  - {text: "3.14-slim", note: "tag: a versão e a variante", icon: terminal, color: green}

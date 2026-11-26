@@ -1,0 +1,8 @@
+type: layers
+title: "A imagem python:3.14-slim são quatro camadas somente leitura"
+layers:
+  - {text: "Atalhos dos comandos (idle3, pydoc...)", note: "16,4 kB", icon: terminal, color: gray}
+  - {text: "O Python 3.14.10 compilado e instalado", note: "42,1 MB", icon: code-xml, color: purple}
+  - {text: "Pacotes de apoio do sistema (apt)", note: "4,93 MB", icon: box, color: blue}
+  - {text: "Debian trixie (base)", note: "87,7 MB: o sistema de arquivos de partida", icon: server, color: blue}
+caption: "Valores do docker history em 26/11/2026; o contêiner acrescenta por cima uma camada de escrita."

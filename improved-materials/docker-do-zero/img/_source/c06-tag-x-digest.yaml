@@ -1,0 +1,9 @@
+type: compare
+title: "A tag é um apelido que se move; o digest é a impressão digital do conteúdo"
+left: {title: "Tag (python:3.14-slim)", icon: terminal, color: orange}
+right: {title: "Digest (@sha256:22eafb37...)", icon: shield-check, color: green}
+rows:
+  - ["Escolhida por quem publica", "Calculada a partir do conteúdo"]
+  - ["Pode apontar para outra imagem amanhã", "Sempre a mesma imagem"]
+  - ["Fácil de ler e de lembrar", "Longa, difícil de lembrar"]
+  - ["Bom para estudar e acompanhar versões", "Bom para reprodutibilidade"]
