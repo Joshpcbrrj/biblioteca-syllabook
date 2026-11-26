@@ -1,0 +1,7 @@
+type: flow
+title: "O backup de um volume é um arquivo .tar.gz feito por um contêiner descartável"
+steps:
+  - {text: "dz-dados", note: "volume com o banco, com o banco parado", kind: start, icon: database, label: "tar czf (contêiner alpine)"}
+  - {text: "dz-dados.tar.gz", note: "arquivo na sua pasta (bind mount)", icon: folder, color: orange, label: "tar xzf (contêiner alpine)"}
+  - {text: "dz-restaurado", note: "volume novo, com os mesmos dados", kind: end, icon: database}
+caption: "Tamanho do backup do laboratório: 6,9 MB (um banco quase vazio já ocupa alguns megabytes)."

@@ -1,0 +1,10 @@
+type: compare
+title: "O que fica na camada do contêiner some com ele; o que fica no volume sobrevive"
+left: {title: "Camada gravável do contêiner", icon: box, color: orange}
+right: {title: "Volume nomeado", icon: database, color: green}
+rows:
+  - ["Nasce junto com o contêiner", "Existe por conta própria (docker volume create)"]
+  - ["docker rm apaga tudo o que foi escrito", "docker rm não toca nele"]
+  - ["Só esse contêiner enxerga", "Qualquer contêiner pode montá-lo"]
+  - ["Bom para arquivos temporários", "Bom para banco de dados e uploads"]
+caption: "Na metáfora do livro, o volume é a despensa: fica fora da cozinha e continua cheia quando a cozinha é desmontada."

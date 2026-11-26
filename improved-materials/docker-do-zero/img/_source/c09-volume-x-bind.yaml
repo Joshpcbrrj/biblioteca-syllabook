@@ -1,0 +1,10 @@
+type: compare
+title: "Volume: o Docker guarda e cuida. Bind mount: você escolhe a pasta do seu computador"
+left: {title: "Volume nomeado", icon: database, color: green}
+right: {title: "Bind mount", icon: folder, color: blue}
+rows:
+  - ["Fica numa área do Docker", "É uma pasta que você escolhe no host"]
+  - ["Você o cria e o remove pelo nome", "Você mexe nos arquivos com o seu editor"]
+  - ["Mesmo comando em Windows, Mac e Linux", "O caminho muda de sistema para sistema"]
+  - ["Uso típico: banco de dados", "Uso típico: código em desenvolvimento"]
+caption: "Um terceiro tipo, o tmpfs (só no Linux), guarda dados na memória e os descarta ao parar o contêiner."

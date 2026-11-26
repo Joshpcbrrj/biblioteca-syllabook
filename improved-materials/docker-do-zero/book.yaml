@@ -572,6 +572,15 @@ progress:
     requirements.txt + Dockerfile multi-stage (ARG APP_VERSAO=1.0, ENV PORTA, USER app); imagem dz-api:1.0
     197 MB; build frio ~1 min 42 s, só app.py muda ~2 s; trocar requirements refaz o pip (1 min 17 s).
     Tudo executado.'
+- n: 9
+  done: '2026-11-26'
+  summary: 'Camada gravável (docker diff) some com o contêiner; volume nomeado × bind mount × tmpfs; docker
+    volume create/ls/inspect/rm (sempre pelo nome; prune perigoso); PostgreSQL 18: volume em /var/lib/postgresql
+    (erro com /data), dados em 18/docker, dz-db com POSTGRES_DB=tarefas e tabela tarefas (2 linhas) sobrevive
+    a rm -f; volume rm apaga; -v × --mount (--mount em bind inexistente não deu erro no Desktop/Windows),
+    volume anônimo, bind mount readonly, tmpfs, permissões (chown com contêiner root), volume-nocopy,
+    backup com tar (6,9 MB) e restauração, pg_dump. Imagens postgres:18 (676 MB) e alpine:3.23 usadas;
+    postgres:18 mantida para os caps. 10-12. Tudo executado; volumes dz-* removidos.'
 changes: []
 handoff:
 - 'Pedir ao usuário 3 capturas reais (img/CREDITS.md): cap. 2 página Configuration do instalador (opção
