@@ -166,11 +166,15 @@ Agora crie a tabela do projeto, grave duas tarefas e confira onde o PostgreSQL g
 
 ```bash
 docker exec dz-db psql -U postgres -d tarefas \
-  -c "CREATE TABLE tarefas (id serial PRIMARY KEY, titulo text NOT NULL, feita boolean DEFAULT false);" \
-  -c "INSERT INTO tarefas (titulo) VALUES ('Aprender volumes'), ('Fazer backup');" \
+  -c "CREATE TABLE tarefas (id serial PRIMARY KEY,
+      titulo text NOT NULL, feita boolean DEFAULT false);" \
+  -c "INSERT INTO tarefas (titulo)
+      VALUES ('Aprender volumes'), ('Fazer backup');" \
   -c "SELECT * FROM tarefas;" \
   -c "SHOW data_directory;"
-docker inspect dz-db --format '{{range .Mounts}}{{.Type}} {{.Name}} -> {{.Destination}}{{end}}'
+# mostra onde o volume está ligado
+docker inspect dz-db \
+  --format '{{range .Mounts}}{{.Type}} {{.Name}} -> {{.Destination}}{{end}}'
 ```
 
 ```text
@@ -274,7 +278,8 @@ Se você monta um caminho sem dar nome, o Docker cria um volume com um nome long
 ```bash
 # a imagem do PostgreSQL declara VOLUME em /var/lib/postgresql
 docker run -d --name dz-anon --label dz=livro -e POSTGRES_PASSWORD=x postgres:18
-docker inspect dz-anon --format '{{range .Mounts}}{{.Type}} {{.Name}} -> {{.Destination}}{{end}}'
+docker inspect dz-anon \
+  --format '{{range .Mounts}}{{.Type}} {{.Name}} -> {{.Destination}}{{end}}'
 ```
 
 ```text
@@ -310,7 +315,8 @@ echo "<h1>Tarefas v1 (editado no host)</h1>" > index.html
 curl -s http://127.0.0.1:8080
 # o contêiner tenta escrever e não consegue
 docker exec dz-site sh -c 'echo x > /site/novo.txt'
-docker inspect dz-site --format '{{range .Mounts}}{{.Type}} RW={{.RW}} -> {{.Destination}}{{end}}'
+docker inspect dz-site \
+  --format '{{range .Mounts}}{{.Type}} RW={{.RW}} -> {{.Destination}}{{end}}'
 docker rm -f dz-site
 ```
 
