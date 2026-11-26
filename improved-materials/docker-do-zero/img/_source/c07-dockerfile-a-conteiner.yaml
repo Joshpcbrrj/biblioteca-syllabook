@@ -1,0 +1,8 @@
+type: flow
+title: "O Dockerfile vira imagem no build, e a imagem vira contêiner no run"
+steps:
+  - {text: "Dockerfile + app.py", note: "o que você escreve", kind: start, icon: file-text}
+  - {text: "docker build -t dz-api:1.0 .", note: "o ponto é o contexto: a pasta enviada ao Docker", icon: terminal, color: blue}
+  - {text: "Imagem dz-api:1.0", note: "camadas somente leitura", icon: box, color: purple}
+  - {text: "docker run dz-api:1.0", note: "cria o contêiner e inicia o CMD", icon: play, color: green}
+  - {text: "API respondendo na 8080", note: "curl http://127.0.0.1:8080/saude", kind: end, icon: circle-check}

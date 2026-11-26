@@ -1,0 +1,10 @@
+type: compare
+title: "O .dockerignore deixa de fora o que a imagem não precisa"
+left: {title: "Sem .dockerignore (COPY . .)", icon: circle-x, color: red}
+right: {title: "Com .dockerignore", icon: circle-check, color: green}
+rows:
+  - ["Contexto enviado: 31,47 MB", "Contexto enviado: 94 bytes"]
+  - ["Imagem de 210 MB", "Imagem de 178 MB"]
+  - [".env e arquivos grandes dentro da imagem", "só app.py dentro da imagem"]
+  - ["Risco de um segredo ir para a imagem", "Segredos ficam fora do build"]
+caption: "Medido com um arquivo de teste de 30 MB e um .env na pasta, em 26/11/2026."

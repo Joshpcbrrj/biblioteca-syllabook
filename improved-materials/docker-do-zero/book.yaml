@@ -554,6 +554,15 @@ progress:
     e limite de pull sem login (100/6 h); pull, images --filter reference, tag, rmi (Untagged × Deleted,
     conflito com contêiner parado); dangling via commit e prune filtrado por label; multi-arquitetura
     (imagetools); save/load. Alpine 73,9 MB × slim 180 MB. Executado tudo; imagens baixadas removidas.'
+- n: 7
+  done: '2026-11-26'
+  summary: 'API de tarefas (Python stdlib, /saude, /tarefas GET/POST, dados em memória, ENDERECO/PORTA/APP_VERSAO
+    por env, trata SIGTERM); Dockerfile (FROM, RUN useradd, WORKDIR, COPY, ARG+ENV APP_VERSAO, ENV PORTA,
+    USER app, EXPOSE, CMD exec); docker build -t dz-api:1.0 . (ponto = contexto); EXPOSE só documenta;
+    CMD × ENTRYPOINT (dz-eco); forma exec × shell (docker top, stop 3,5 s/137); contexto e .dockerignore
+    (31,47 MB × 94 B; imagem 210 × 178 MB; BuildKit só transfere o que o COPY pede); ARG × ENV (ARG aparece
+    no docker history); boas práticas (versão fixa, exec, não-root, sem segredos, SIGTERM). Arquivos do
+    projeto em ~/api-livro: app.py, Dockerfile, .dockerignore. Imagem dz-api:1.0 178 MB; tudo executado.'
 changes: []
 handoff:
 - 'Pedir ao usuário 3 capturas reais (img/CREDITS.md): cap. 2 página Configuration do instalador (opção
