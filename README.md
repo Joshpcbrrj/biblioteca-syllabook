@@ -4,7 +4,7 @@
 
 Books for studying on my own, written and improved with [Syllabook](https://github.com/Joshpcbrrj/syllabook).
 
-- 🌐 **Read online, with search across every book:** `https://<user>.github.io/<repository>/`
+- 🌐 **Read online, with search across every book:** [https://joshpcbrrj.github.io/biblioteca-syllabook/](https://joshpcbrrj.github.io/biblioteca-syllabook/)
 - 📗 [Created books](created-books/): written from a syllabus, from beginner to intermediate.
 - 🔁 [Improved materials](improved-materials/): study materials made clearer and more complete.
 - 🌐 [Translated books](translated-books/): books from this library adapted to another language.

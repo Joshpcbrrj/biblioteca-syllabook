@@ -42,3 +42,7 @@ Versão de referência: Git 2.5x e a interface do GitHub de 2026. Fontes princip
 ## Errata
 
 Achou um erro, um comando que não funciona como o livro diz ou uma tela do GitHub que mudou? [Abra uma issue](https://github.com/Joshpcbrrj/biblioteca-syllabook/issues/new) dizendo o capítulo, o trecho e o que você viu. As correções entram na próxima edição.
+
+<!-- credit:start -->
+📘 *Criado pela skill Claude Syllabook - Joshpcbrrj* · [github.com/Joshpcbrrj/syllabook](https://github.com/Joshpcbrrj/syllabook)
+<!-- credit:end -->

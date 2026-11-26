@@ -5,7 +5,7 @@
 
 Livros para estudar sozinho, escritos e aprimorados com o [Syllabook](https://github.com/Joshpcbrrj/syllabook).
 
-- 🌐 **Leia online, com busca em todos os livros:** `https://<usuario>.github.io/<repositorio>/`
+- 🌐 **Leia online, com busca em todos os livros:** [https://joshpcbrrj.github.io/biblioteca-syllabook/](https://joshpcbrrj.github.io/biblioteca-syllabook/)
 - 📗 [Livros criados](created-books/README.pt-BR.md): feitos a partir de uma ementa, do básico ao intermediário.
 - 🔁 [Materiais aprimorados](improved-materials/README.pt-BR.md): materiais de estudo mais claros e completos.
 - 🌐 [Livros traduzidos](translated-books/README.pt-BR.md): livros desta biblioteca adaptados para outro idioma.

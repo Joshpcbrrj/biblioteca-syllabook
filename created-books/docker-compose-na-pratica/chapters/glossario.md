@@ -75,6 +75,12 @@ Um termo por linha, em ordem alfabética, com o termo em inglês quando ele é d
 - volume nomeado: [7. Volumes no Compose](07-volumes-no-compose.md)
 <!-- index:end -->
 
+<!-- credit:start -->
+---
+
+📘 *Criado pela skill Claude Syllabook - Joshpcbrrj* · [github.com/Joshpcbrrj/syllabook](https://github.com/Joshpcbrrj/syllabook)
+<!-- credit:end -->
+
 <!-- nav:start -->
 ---
 

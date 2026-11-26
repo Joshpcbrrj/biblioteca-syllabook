@@ -53,3 +53,7 @@ Nenhuma errata registrada até agora. Achou um erro? Anote o capítulo, o trecho
 - **1.3.1** (2026-11-21): Erratas: distribuição real dos pedidos entre as réplicas (cap. 14) e porta aberta explicada no exercício do cap. 13.
 - **1.3** (2026-11-21): Portas presas a 127.0.0.1 desde o capítulo 1 e portas de produção com 0.0.0.0 explicado; tamanho do db_senha.txt corrigido para 17 bytes; registro de testes só local; linhas longas quebradas; projetos contador e vitrine montáveis
 <!-- editions:end -->
+
+<!-- credit:start -->
+📘 *Criado pela skill Claude Syllabook - Joshpcbrrj* · [github.com/Joshpcbrrj/syllabook](https://github.com/Joshpcbrrj/syllabook)
+<!-- credit:end -->

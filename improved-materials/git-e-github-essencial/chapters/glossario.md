@@ -100,6 +100,12 @@ Cada termo em uma frase, com o termo em inglês quando ele aparece na tela e o c
 - tag: [8. Repositórios remotos](08-repositorios-remotos.md)
 <!-- index:end -->
 
+<!-- credit:start -->
+---
+
+📘 *Criado pela skill Claude Syllabook - Joshpcbrrj* · [github.com/Joshpcbrrj/syllabook](https://github.com/Joshpcbrrj/syllabook)
+<!-- credit:end -->
+
 <!-- nav:start -->
 ---
 
