@@ -1,0 +1,8 @@
+type: flow
+title: "A imagem vai do seu computador ao registro com tag e push, e volta com pull"
+steps:
+  - {text: "docker build", note: "imagem dz-api:1.0 no seu computador", kind: start, icon: box, label: "docker tag: nome com repositório"}
+  - {text: "nome publicável", note: "registro/usuário/repositório:versão", icon: file-code, label: "docker push"}
+  - {text: "registro", note: "guarda camadas e tags (Docker Hub, GHCR ou o seu)", icon: server, label: "docker pull / docker run"}
+  - {text: "outra máquina", note: "baixa só as camadas que não tem", kind: end, icon: monitor}
+caption: "No laboratório o registro é um contêiner registry:3 em 127.0.0.1:5050; no Docker Hub só muda o prefixo do nome."

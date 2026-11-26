@@ -591,6 +591,16 @@ progress:
     host (no Desktop é a VM, recurso exige ativar), bridge; host.docker.internal pronto no Desktop, --add-host
     ...:host-gateway no Linux (Engine puro não testado). Tudo executado, exceto Engine Linux puro. Nota:
     a porta 5432 do host já estava ocupada por outro programa na máquina do autor; não publicada nos'
+- n: 11
+  done: '2026-11-26'
+  summary: 'Registro (Docker Hub, GHCR, próprio), repositório; registry:3 local em 127.0.0.1:5050 (porta
+    5000 evitada); docker tag com nome completo (127.0.0.1:5050/dz/tarefas-api:1.0.0, 1.0, latest, mesmo
+    ID); push mostra camadas e digest sha256:a1213192..., segundo push ''Layer already exists''; catálogo
+    e tags/list via curl; rmi de tudo e docker run baixa do registro (versao 1.0), RepoDigests igual;
+    semver e por que não só latest; login com token (--password-stdin), credential store, logout, GHCR
+    (classic PAT write:packages/read:packages): NÃO executados (exigem conta); segredo em ENV/COPY .env
+    aparece em docker history/inspect, correção com .dockerignore e -e (0 linhas). Tudo local executado;
+    dz-api:1.0 e registry:3 removidos ao fim: o cap. 12 reconstrói a imagem em ~/api-livro.'
 changes: []
 handoff:
 - 'Pedir ao usuário 3 capturas reais (img/CREDITS.md): cap. 2 página Configuration do instalador (opção
