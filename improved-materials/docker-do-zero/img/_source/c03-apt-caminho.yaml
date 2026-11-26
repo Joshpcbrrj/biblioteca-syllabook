@@ -1,0 +1,9 @@
+type: flow
+title: "Instalar pelo repositório oficial leva seis passos, do começo ao teste"
+steps:
+  - {text: "Remover pacotes conflitantes", note: "docker.io, containerd, runc do Ubuntu", icon: package, kind: start, color: blue}
+  - {text: "Guardar a chave GPG", note: "/etc/apt/keyrings/docker.asc", icon: key, color: blue}
+  - {text: "Cadastrar o repositório", note: "docker.sources, com Signed-By", icon: list-checks, color: blue}
+  - {text: "Instalar os pacotes", note: "docker-ce, docker-ce-cli, containerd.io...", icon: download, color: purple}
+  - {text: "Testar", note: "systemctl status docker e hello-world", icon: circle-check, color: green}
+  - {text: "Liberar o uso sem sudo", note: "grupo docker (opcional)", icon: users, kind: end, color: orange}

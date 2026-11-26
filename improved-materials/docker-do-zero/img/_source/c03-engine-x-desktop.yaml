@@ -1,0 +1,11 @@
+type: compare
+title: "No Linux, o Engine roda direto no kernel; o Desktop traz uma VM própria"
+left: {title: "Docker Engine", icon: server, color: blue}
+right: {title: "Docker Desktop para Linux", icon: app-window, color: purple}
+rows:
+  - ["Motor direto no kernel da máquina", "Motor dentro de uma VM (usa KVM)"]
+  - ["Sem interface gráfica", "Com interface gráfica"]
+  - ["Contexto da CLI: default", "Contexto da CLI: desktop-linux"]
+  - ["Imagens em /var/lib/docker", "Imagens próprias, na VM"]
+  - ["Bom para servidor, CI e WSL", "Bom para desktop Linux"]
+caption: "Os dois podem coexistir, mas um não enxerga as imagens e os contêineres do outro."

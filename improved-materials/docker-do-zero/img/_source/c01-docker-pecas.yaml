@@ -1,0 +1,12 @@
+type: sequence
+title: "Você digita no cliente; quem cria o processo isolado é o Engine"
+participants:
+  - {name: "docker (CLI)", icon: terminal}
+  - {name: "dockerd (Engine)", icon: server}
+  - {name: "containerd + runc", icon: cpu}
+  - {name: "Contêiner", icon: box}
+messages:
+  - {from: "docker (CLI)", to: "dockerd (Engine)", text: "docker run (pela API)"}
+  - {from: "dockerd (Engine)", to: "containerd + runc", text: "cria o contêiner"}
+  - {from: "containerd + runc", to: "Contêiner", text: "inicia o processo isolado"}
+  - {from: "dockerd (Engine)", to: "docker (CLI)", text: "devolve o id", dashed: true}

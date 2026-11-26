@@ -1,0 +1,7 @@
+type: layers
+title: "Cada contêiner tem a sua visão; o kernel é um só para todos"
+layers:
+  - {text: "Contêiner dz-web1", note: "PID 1, rede, arquivos e hostname próprios", icon: box, color: green}
+  - {text: "Contêiner dz-web2", note: "PID 1, rede, arquivos e hostname próprios", icon: box, color: green}
+  - {text: "Kernel Linux", note: "compartilhado: CPU, memória e disco", icon: cpu, color: purple}
+  - {text: "Docker Desktop (VM Linux) ou seu Linux", note: "onde o kernel roda", icon: server, color: gray}

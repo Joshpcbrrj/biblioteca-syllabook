@@ -1,0 +1,7 @@
+type: flow
+title: "Quatro etapas separam um Windows limpo do primeiro contêiner"
+steps:
+  - {text: "Conferir os requisitos", note: "versão do Windows, RAM e virtualização", icon: list-checks, kind: start, color: blue, label: "tudo certo"}
+  - {text: "Ligar o WSL 2", note: "wsl --install e reiniciar", icon: terminal, color: orange, label: "WSL pronto"}
+  - {text: "Instalar o Docker Desktop", note: "por usuário, backend WSL 2", icon: download, color: purple, label: "aceitar os termos"}
+  - {text: "Testar", note: "docker run --rm hello-world", icon: circle-check, kind: end, color: green}

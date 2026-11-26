@@ -1,0 +1,11 @@
+type: compare
+title: "Uma VM traz um sistema inteiro; o contêiner usa o kernel do host"
+left: {title: "Máquina virtual", icon: server, color: blue}
+right: {title: "Contêiner", icon: box, color: green}
+rows:
+  - ["Simula um computador inteiro", "É um processo isolado"]
+  - ["Kernel próprio em cada VM", "Kernel do host, compartilhado"]
+  - ["Gigabytes; precisa dar boot", "Megabytes; inicia em segundos"]
+  - ["Isolamento mais forte", "Isolamento mais leve"]
+  - ["Pode rodar outro sistema", "Só programas do mesmo kernel"]
+caption: "Na prática, as duas ideias se combinam: o Docker Desktop roda uma VM Linux e, dentro dela, seus contêineres."

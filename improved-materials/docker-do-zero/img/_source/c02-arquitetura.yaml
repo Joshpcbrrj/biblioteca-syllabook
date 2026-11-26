@@ -1,0 +1,8 @@
+type: layers
+title: "No Windows, o Docker Desktop roda o Engine numa VM Linux do WSL 2"
+layers:
+  - {text: "Seu terminal e o comando docker", note: "PowerShell, Git Bash ou o terminal do Ubuntu", icon: terminal, color: blue}
+  - {text: "Docker Desktop", note: "aplicativo do Windows: interface e integração", icon: app-window, color: purple}
+  - {text: "VM Linux do WSL 2", note: "distro docker-desktop com o Docker Engine", icon: server, color: green}
+  - {text: "Seus contêineres", note: "processos isolados dentro dessa VM", icon: box, color: green}
+  - {text: "Windows 11 ou 10", note: "recursos WSL e Plataforma de Máquina Virtual ligados", icon: cpu, color: gray}

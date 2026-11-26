@@ -1,0 +1,12 @@
+type: sequence
+title: "Só quem está no grupo docker consegue falar com o socket do Engine"
+participants:
+  - {name: "Você (grupo docker)", icon: users}
+  - {name: "docker (CLI)", icon: terminal}
+  - {name: "docker.sock", icon: key}
+  - {name: "dockerd (root)", icon: server}
+messages:
+  - {from: "Você (grupo docker)", to: "docker (CLI)", text: "docker ps"}
+  - {from: "docker (CLI)", to: "docker.sock", text: "abre o socket (permissão do grupo)"}
+  - {from: "docker.sock", to: "dockerd (root)", text: "entrega o pedido"}
+  - {from: "dockerd (root)", to: "docker (CLI)", text: "lista de contêineres", dashed: true}
