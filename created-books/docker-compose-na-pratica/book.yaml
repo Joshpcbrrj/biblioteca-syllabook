@@ -14,6 +14,9 @@ goal: Descrever uma aplicação com API, banco e proxy num compose.yaml e subi-l
   com um comando
 prerequisites:
 - docker-do-zero
+continues:
+  book: docker-do-zero
+  step: 1
 track:
   name: devops
   order: 2

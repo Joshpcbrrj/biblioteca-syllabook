@@ -58,7 +58,11 @@ Kernel version: 6.18.58.1-1
 
 O WSL aqui está na versão 3.0.5, bem acima da 2.1.5 exigida, e a coluna `VERSION` mostra `2` nas duas distros: ambas rodam no WSL 2. A distro `docker-desktop` é a que o Docker Desktop cria sozinho para o Engine; ela é criada pela instalação do Docker Desktop.
 
-Para a memória e a versão do Windows, o jeito mais simples é digitar `winver` (versão e build) e abrir o Gerenciador de Tarefas, aba **Desempenho**.
+Para a memória e a versão do Windows, o jeito mais simples é digitar `winver` (versão e build) e abrir o Gerenciador de Tarefas, aba **Desempenho**. Em **CPU**, a linha **Virtualização** (*Virtualization*) deve dizer **Habilitado** (*Enabled*).
+
+![Gerenciador de Tarefas em inglês, aba Performance destacada, com CPU selecionada à esquerda; à direita, o gráfico de uso e, entre os dados do processador, a linha "Virtualization: Enabled" marcada em amarelo](../img/c02-virtualizacao.png)
+
+*Gerenciador de Tarefas do Windows 10, em inglês; no Windows 11 a aba Desempenho fica no menu da esquerda, com os mesmos dados. Imagem: docker/docs contributors, Apache 2.0, via GitHub (docker/docs).*
 
 > ⚠️ **Erro comum:** achar que o campo de virtualização consultado pelo PowerShell é uma prova. Ao testar, o comando `Get-CimInstance Win32_Processor | Select-Object -ExpandProperty VirtualizationFirmwareEnabled` respondeu `False` numa máquina onde o WSL 2 e o Docker funcionam, porque o Windows já usa o hipervisor e esse campo deixa de refletir a BIOS. O teste que vale é outro: se o WSL 2 inicia uma distro, a virtualização está ligada. O `systeminfo` também só diz `A hypervisor has been detected`.
 
@@ -146,6 +150,10 @@ O `winget` também tem o pacote: `winget show --id Docker.DockerDesktop --source
 ## A integração com o WSL
 
 Com o WSL 2, o comando `docker` funciona direto no PowerShell. Para usá-lo também **dentro de uma distro** (por exemplo, o Ubuntu), ligue a integração em **Settings > Resources > WSL integration**, escolhendo a distro. Antes, desinstale qualquer Docker Engine que você tenha instalado dentro dessa distro: os dois juntos causam conflito, e o Docker Desktop recomenda remover o antigo. A distro precisa rodar em WSL 2 (`wsl -l -v` mostra `2` na coluna `VERSION`; para converter, `wsl --set-version <Distro> 2`).
+
+![Docker Desktop em Settings, menu Resources, aba WSL integration destacada: a caixa "Enable integration with my default WSL distro" marcada, a chave da distro Ubuntu e os botões Refetch distros e Apply & restart](../img/c02-integracao-wsl.png)
+
+*A tela da integração com o WSL, na documentação da Microsoft; o visual pode mudar conforme a versão do Docker Desktop (o livro usa a 4.99), mas os nomes das opções são os mesmos. Imagem: MicrosoftDocs/WSL contributors, CC BY 4.0, via GitHub (MicrosoftDocs/WSL).*
 
 Aqui, a integração estava ligada para o Ubuntu 26.04. Do terminal dele, o mesmo contêiner roda:
 

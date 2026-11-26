@@ -92,7 +92,7 @@ O processo principal (PID 1) ignorou o SIGTERM, o prazo acabou e o Docker mandou
 <details>
 <summary>Ver resposta</summary>
 
-Aparece. A janela e a linha de comando são dois clientes do mesmo motor (Engine): o que um cria, o outro vê. Revise no [capítulo 5](05-docker-desktop-na-pratica-interface-linha-de.md).
+Aparece. A janela e a linha de comando são dois clientes do mesmo motor (Engine): o que um cria, o outro vê. Revise no [capítulo 5](05-docker-desktop-na-pratica-interface-linha.md).
 
 </details>
 
@@ -101,7 +101,7 @@ Aparece. A janela e a linha de comando são dois clientes do mesmo motor (Engine
 <details>
 <summary>Ver resposta</summary>
 
-`--context <nome>` vale para um comando; a variável `DOCKER_CONTEXT` vale para o terminal em que foi definida; `docker context use <nome>` muda o padrão para tudo. Revise no [capítulo 5](05-docker-desktop-na-pratica-interface-linha-de.md).
+`--context <nome>` vale para um comando; a variável `DOCKER_CONTEXT` vale para o terminal em que foi definida; `docker context use <nome>` muda o padrão para tudo. Revise no [capítulo 5](05-docker-desktop-na-pratica-interface-linha.md).
 
 </details>
 
@@ -275,7 +275,7 @@ Recrie a rede (se removida), o banco com o mesmo `-v dz-dados:/var/lib/postgresq
 | as perguntas 3 e 4 | [capítulo 2](02-docker-desktop-no-windows-ativar-e-instalar.md) |
 | as perguntas 5 e 6 | [capítulo 3](03-instalar-no-linux-e-no-mac.md) |
 | as perguntas 7, 8 e 9 | [capítulo 4](04-ciclo-de-vida-do-conteiner-pela-linha-de-comando.md) |
-| as perguntas 10 e 11 | [capítulo 5](05-docker-desktop-na-pratica-interface-linha-de.md) |
+| as perguntas 10 e 11 | [capítulo 5](05-docker-desktop-na-pratica-interface-linha.md) |
 | as perguntas 12, 13 e 14 | [capítulo 6](06-imagens-e-o-docker-hub.md) |
 | as perguntas 15, 16 e 17 | [capítulo 7](07-seu-primeiro-dockerfile.md) |
 | as perguntas 18, 19 e 20 | [capítulo 8](08-builds-rapidos-e-imagens-enxutas.md) |

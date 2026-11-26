@@ -10,6 +10,7 @@ Cada material fica numa pasta própria (`improved-materials/<nome-do-material>/`
 <!-- list:start -->
 | Livro | Nível | Capítulos | Edição | EPUB | Site |
 | --- | --- | --- | --- | --- | --- |
+| [Docker do zero](docker-do-zero/) (pt-BR) | iniciante → intermediário | 12 | 2.0 · 2026-11-26 | [Baixar EPUB](https://github.com/Joshpcbrrj/biblioteca-syllabook/releases/download/epubs/docker-do-zero.epub) | [Ler no site](https://joshpcbrrj.github.io/biblioteca-syllabook/improved-materials/docker-do-zero/) |
 | [Git e GitHub essencial](git-e-github-essencial/) (pt-BR) | iniciante → intermediário | 10 | 1.0 · 2026-11-21 | [Baixar EPUB](https://github.com/Joshpcbrrj/biblioteca-syllabook/releases/download/epubs/git-e-github-essencial.epub) | [Ler no site](https://joshpcbrrj.github.io/biblioteca-syllabook/improved-materials/git-e-github-essencial/) |
 <!-- list:end -->
 

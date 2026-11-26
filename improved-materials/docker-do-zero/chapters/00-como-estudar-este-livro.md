@@ -89,7 +89,7 @@ Se você nunca usou o Docker, pule o teste e comece pelo [capítulo 1](01-por-qu
 | menos de 2 perguntas | [capítulo 1](01-por-que-conteineres-existem.md) |
 | as perguntas 1 e 2 | [capítulo 3](03-instalar-no-linux-e-no-mac.md) |
 | as perguntas 1 a 3 | [capítulo 4](04-ciclo-de-vida-do-conteiner-pela-linha-de-comando.md) |
-| as perguntas 1 a 4 | [capítulo 5](05-docker-desktop-na-pratica-interface-linha-de.md) |
+| as perguntas 1 a 4 | [capítulo 5](05-docker-desktop-na-pratica-interface-linha.md) |
 | as perguntas 1 a 5 | [capítulo 7](07-seu-primeiro-dockerfile.md) |
 | as perguntas 1 a 6 | [capítulo 8](08-builds-rapidos-e-imagens-enxutas.md) |
 | as perguntas 1 a 7 | [capítulo 9](09-volumes-dados-que-sobrevivem.md) |

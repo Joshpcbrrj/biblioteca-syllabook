@@ -15,7 +15,7 @@
 
 ![Parte 2, capítulos 5 a 8. Janela × CLI: ambas são clientes do mesmo motor, o que uma cria a outra enxerga, o que se reproduz fica na CLI. Contextos: um nome guarda o endereço de um motor, --context vale para um comando; docker context ls e use. Nome da imagem: registro/ns/repo:tag, sem tag vale latest, o digest sha256 é fixo. Mexer em imagens: pull baixa só o que falta, tag dá outro nome sem copiar, rmi recusa se um contêiner usa. Dockerfile: uma camada por instrução, RUN no build e CMD a cada início, EXPOSE só documenta a porta; docker build -t x:1 . CMD × ENTRYPOINT: programa fixo, padrão que o run troca, forma exec com PID 1 no programa. Build seguro: .dockerignore, ARG e ENV aparecem no history, USER app. Cache: mudou uma camada as seguintes refazem, o que muda menos vem primeiro. Multi-stage: vários FROM, COPY --from= traz só o necessário, --target. Imagem enxuta: limpar no mesmo RUN, Alpine (musl) × slim (glibc).](../img/c05-resumo-parte-2.svg)
 
-- [Capítulo 5: Docker Desktop na prática: interface × linha de comando](05-docker-desktop-na-pratica-interface-linha-de.md)
+- [Capítulo 5: Docker Desktop na prática: interface × linha de comando](05-docker-desktop-na-pratica-interface-linha.md)
 - [Capítulo 6: Imagens e o Docker Hub](06-imagens-e-o-docker-hub.md)
 - [Capítulo 7: Seu primeiro Dockerfile](07-seu-primeiro-dockerfile.md)
 - [Capítulo 8: Builds rápidos e imagens enxutas](08-builds-rapidos-e-imagens-enxutas.md)

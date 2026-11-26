@@ -483,6 +483,7 @@ next_steps:
   - compose.yaml
   - serviços
   - redes e volumes do projeto
+  book: docker-compose-na-pratica
 - title: Segurança de imagens
   why: Para achar e corrigir vulnerabilidades antes de publicar
   topics:
@@ -612,32 +613,11 @@ progress:
     sem version) executada e derrubada com down -v. Login e push ao Docker Hub: não executados.'
 changes: []
 handoff:
-- 'Capturas que dependem de você (img/CREDITS.md): cap. 2 (página Configuration do instalador, com Use
-  WSL 2; Gerenciador de Tarefas > Desempenho > CPU > Virtualização) e cap. 5 (aba Containers do Docker
-  Desktop 4.99 com lista e abas Logs/Files/Stats do dz-web; Settings > Resources > WSL integration). Nenhuma
-  foi inserida; o passo a passo pela janela do cap. 5 (lab, passos 2 a 5) está marcado como não executado:
-  rever depois das capturas.'
-- 'Partes fixas feitas: cap. 0 (livro numa página, ritmos, teste de nivelamento), folhas de revisão nos
-  caps. 1, 5 e 9, simulado (13-simulado-final.md, 29 perguntas), glossário, README e capa (cover.png 1600x2560).
-  build.py gerou EPUB, zip e site Zensical só em pasta temporária (nada na biblioteca, sem build.py lists).
-  Ainda não houve revisão humana nem publicação.'
-- Auditoria com --original apontou texto do original reaproveitado nos caps. 1 a 11 e no simulado (frases
-  com 12+ palavras iguais); foi reescrito com palavras novas. Sobraram só 3 alertas de URL de fonte (cap.
-  1, cap. 11, research/c11.md), falso positivo do audit.py; reportar. O título do cap. 4 passou a 'na
-  linha de comando' (em book.yaml também).
-- 'docker stop: a documentação oficial diz 10 s no Linux (30 s no Windows) quando o contêiner não define
-  prazo; o Engine 29.7.0 acrescentou a opção default-stop-timeout do daemon. Nesta máquina o stop sem
-  opções levou ~3,5 s (StopTimeout nil, daemon.json sem a opção) e não achei o motivo; com -t 10 levou
-  10 s e com --stop-timeout 5, 5 s. Caps. 4 e 7 ajustados.'
-- 'Não executado por exigir conta/ambiente: docker login e push ao Docker Hub/GHCR (cap. 11; só o registry:3
-  local foi rodado); --add-host host-gateway em Engine Linux puro e driver host com o recurso ativado
-  (cap. 10); --mount com bind inexistente no Linux (cap. 9); instalações dos caps. 2 e 3 e Mac.'
-- 'Ambiente: contêineres do autor seguem rodando (portas 3000, 3001, 5433, 8080, 9000, 9001 ocupadas);
-  estado final: nada dz-* sobrando. Usar MSYS_NO_PATHCONV=1 no Git Bash.'
-- 'Problemas da skill a reportar: audit.py --original acusa URL de fonte com 12+ palavras como cópia;
-  projects.py marca como falha (exit 143) projeto de servidor com run: e não lista Dockerfile/.dockerignore
-  em files; o skeleton trunca o nome do arquivo do cap. 5; âncora de título com emoji difere entre GitHub
-  e Zensical.'
-- 'Próximo passo: você ver o site e o EPUB (pastas temporárias, ver resumo), tirar as capturas, decidir
-  revisão humana; depois autorizar a publicação (GitHub, EPUB) e book.py link com o livro Docker Compose
-  na prática.'
+- 'Capturas: Gerenciador de Tarefas e WSL integration (cap. 2) vêm da documentação do Docker e da Microsoft
+  (images.py docs); o instalador e a aba Containers (cap. 5) ficam em texto, sem imagem livre.'
+- 'Não executado por exigir conta ou ambiente: docker login e push ao Docker Hub/GHCR (cap. 11), host-gateway
+  e driver host em Linux puro (cap. 10), --mount com bind inexistente no Linux (cap. 9), instalações dos
+  caps. 2 e 3 e Mac, passos 2 a 5 do lab do cap. 5 pela janela.'
+- 'docker stop: a documentação diz 10 s; nesta máquina levou ~3,5 s sem motivo achado; caps. 4 e 7 dizem
+  as duas coisas.'
+- Âncora de título com emoji difere entre GitHub e Zensical (problema da skill a investigar).

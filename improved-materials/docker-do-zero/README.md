@@ -33,7 +33,7 @@ Nenhuma errata registrada até agora. Achou um erro? Anote o capítulo, o trecho
 - [2. Docker Desktop no Windows: ativar e instalar](chapters/02-docker-desktop-no-windows-ativar-e-instalar.md) · ⏱️ ~45 min
 - [3. Instalar no Linux e no Mac](chapters/03-instalar-no-linux-e-no-mac.md) · ⏱️ ~45 min
 - [4. Ciclo de vida do contêiner na linha de comando](chapters/04-ciclo-de-vida-do-conteiner-pela-linha-de-comando.md) · ⏱️ ~50 min
-- [5. Docker Desktop na prática: interface × linha de comando](chapters/05-docker-desktop-na-pratica-interface-linha-de.md) · ⏱️ ~35 min
+- [5. Docker Desktop na prática: interface × linha de comando](chapters/05-docker-desktop-na-pratica-interface-linha.md) · ⏱️ ~35 min
 - [6. Imagens e o Docker Hub](chapters/06-imagens-e-o-docker-hub.md) · ⏱️ ~45 min
 - [7. Seu primeiro Dockerfile](chapters/07-seu-primeiro-dockerfile.md) · ⏱️ ~50 min
 - [8. Builds rápidos e imagens enxutas](chapters/08-builds-rapidos-e-imagens-enxutas.md) · ⏱️ ~45 min
