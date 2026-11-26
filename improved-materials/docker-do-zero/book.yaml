@@ -1,0 +1,163 @@
+title: Docker do zero
+subtitle: Do primeiro contêiner a uma API com banco, construída e publicada por você
+slug: docker-do-zero
+origin: improved
+language: pt-BR
+conversation_language: pt-BR
+profiles:
+- stem
+level:
+  start: iniciante
+  end: intermediário
+audience: Quem programa, mas nunca usou contêineres
+goal: Empacotar uma aplicação com banco de dados em contêineres, com dados persistentes, e publicar a imagem
+prerequisites:
+- Usar o terminal no nível básico (cd, ls, mkdir, editar um arquivo)
+track:
+  name: devops
+  order: 1
+reference_version: Docker Engine 29.9.3, Docker Desktop 4.99
+review_by: 2027-05
+original:
+  title: Docker do zero (versão anterior da skill)
+  kind: markdown
+  where: C:\Users\joshp\syllabook-pilotos\docker-do-zero-original
+promise:
+  goal: Empacotar uma aplicação com banco de dados em contêineres, com dados persistentes, e publicar a imagem
+  audience: Quem programa, mas nunca usou contêineres
+  level: iniciante
+  sequence: por que contêineres, instalação (Windows; Linux e Mac), ciclo de vida, Docker Desktop, imagens, Dockerfile, builds enxutos, volumes, redes, publicação, projeto final
+new_content_pct: 12
+sources:
+- {title: Docker Desktop release notes, url: "https://docs.docker.com/desktop/release-notes/", checked: "2026-11-26"}
+- {title: Docker Engine 29 release notes, url: "https://docs.docker.com/engine/release-notes/29/", checked: "2026-11-26"}
+- {title: Install Docker Desktop on Windows, url: "https://docs.docker.com/desktop/setup/install/windows-install/", checked: "2026-11-26"}
+- {title: Install Docker Engine on Ubuntu, url: "https://docs.docker.com/engine/install/ubuntu/", checked: "2026-11-26"}
+- {title: Docker workshop, url: "https://docs.docker.com/get-started/workshop/", checked: "2026-11-26"}
+- {title: Docker overview, url: "https://docs.docker.com/get-started/docker-overview/", checked: "2026-11-26"}
+- {title: Linux post-installation steps, url: "https://docs.docker.com/engine/install/linux-postinstall/", checked: "2026-11-26"}
+- {title: Install Docker Desktop on Mac, url: "https://docs.docker.com/desktop/setup/install/mac-install/", checked: "2026-11-26"}
+- {title: Docker Desktop WSL 2 backend, url: "https://docs.docker.com/desktop/features/wsl/", checked: "2026-11-26"}
+- {title: Docker Desktop interface, url: "https://docs.docker.com/desktop/use-desktop/", checked: "2026-11-26"}
+- {title: Docker Hub trusted content, url: "https://docs.docker.com/docker-hub/image-library/trusted-content/", checked: "2026-11-26"}
+- {title: Dockerfile reference, url: "https://docs.docker.com/reference/dockerfile/", checked: "2026-11-26"}
+- {title: Multi-stage builds, url: "https://docs.docker.com/build/building/multi-stage/", checked: "2026-11-26"}
+- {title: Volumes, url: "https://docs.docker.com/engine/storage/volumes/", checked: "2026-11-26"}
+- {title: PostgreSQL official image, url: "https://hub.docker.com/_/postgres", checked: "2026-11-26"}
+- {title: Networking overview, url: "https://docs.docker.com/engine/network/", checked: "2026-11-26"}
+- {title: Docker access tokens, url: "https://docs.docker.com/security/access-tokens/", checked: "2026-11-26"}
+approved_on: "2026-11-26"
+edition: "2.0"
+human_review: false
+choices: {images: real, reading: large}
+concepts:
+- {id: container, name: contêiner, chapter: 1, depends: []}
+- {id: image, name: imagem, chapter: 1, depends: []}
+- {id: isolation, name: isolamento (namespaces e cgroups), chapter: 1, depends: [container]}
+- {id: container-vs-vm, name: contêiner × máquina virtual, chapter: 1, depends: [isolation]}
+- {id: docker-engine, name: Docker Engine (cliente e servidor), chapter: 1, depends: [container]}
+- {id: wsl2-backend, name: backend WSL 2, chapter: 2, depends: [docker-engine]}
+- {id: docker-desktop, name: Docker Desktop, chapter: 2, depends: [docker-engine]}
+- {id: apt-repo, name: repositório oficial do Docker (apt), chapter: 3, depends: [docker-engine]}
+- {id: docker-group, name: grupo docker e o socket, chapter: 3, depends: [apt-repo]}
+- {id: docker-run, name: docker run e suas opções, chapter: 4, depends: [container, image]}
+- {id: port-publish, name: publicar portas (-p), chapter: 4, depends: [docker-run]}
+- {id: container-states, name: estados do contêiner, chapter: 4, depends: [docker-run]}
+- {id: logs-exec, name: logs, exec e inspect, chapter: 4, depends: [docker-run]}
+- {id: docker-context, name: contextos da CLI, chapter: 5, depends: [docker-desktop]}
+- {id: registry, name: registro (Docker Hub), chapter: 6, depends: [image]}
+- {id: tag-digest, name: tag × digest, chapter: 6, depends: [registry]}
+- {id: layers, name: camadas, chapter: 6, depends: [image]}
+- {id: dockerfile, name: Dockerfile, chapter: 7, depends: [layers]}
+- {id: build-context, name: contexto de build e .dockerignore, chapter: 7, depends: [dockerfile]}
+- {id: cmd-entrypoint, name: CMD × ENTRYPOINT, chapter: 7, depends: [dockerfile]}
+- {id: build-cache, name: cache de build, chapter: 8, depends: [layers, dockerfile]}
+- {id: multi-stage, name: build multi-stage, chapter: 8, depends: [dockerfile]}
+- {id: volume, name: volume nomeado, chapter: 9, depends: [container]}
+- {id: bind-mount, name: bind mount, chapter: 9, depends: [volume]}
+- {id: user-network, name: rede definida pelo usuário, chapter: 10, depends: [container, port-publish]}
+- {id: dns-by-name, name: resolução por nome do contêiner, chapter: 10, depends: [user-network]}
+- {id: push-pull, name: docker push e pull, chapter: 11, depends: [registry, tag-digest]}
+- {id: access-token, name: token de acesso pessoal, chapter: 11, depends: [registry]}
+- {id: env-config, name: configuração por variáveis de ambiente, chapter: 12, depends: [dns-by-name, volume, multi-stage]}
+chapters:
+- n: 1
+  title: Por que contêineres existem
+  goal: Rodar a primeira versão do projeto num contêiner e explicar o que o Docker isolou
+  topics: [na minha máquina funciona, contêiner × VM, imagem × contêiner, o que é isolado e o que é dividido, quando não usar]
+  minutes: 40
+  sources_original: [O problema "na minha máquina funciona", Contêiner x máquina virtual, Imagem x contêiner, O que o contêiner isola, e o que ele divide, O que é o Docker, Quando NÃO usar contêineres]
+- n: 2
+  title: "Docker Desktop no Windows: ativar e instalar"
+  goal: Ativar a virtualização e o WSL 2 e instalar o Docker Desktop no Windows
+  topics: [requisitos, WSL 2 × Hyper-V, recursos do Windows, instalador, integração com o WSL, problemas comuns]
+  minutes: 45
+  sources_original: ["Requisitos: o que o seu Windows precisa ter", Backend WSL 2 x Hyper-V, Ativar os recursos do Windows, Instalar o Docker Desktop, A integração com o WSL, Problemas comuns]
+- n: 3
+  title: Instalar no Linux e no Mac
+  goal: Instalar o Docker Engine no Ubuntu pelo repositório oficial e o Docker Desktop no Mac
+  topics: [Engine × Desktop for Linux, repositório apt, pós-instalação sem sudo, Engine no Ubuntu do WSL, Docker Desktop no Mac]
+  minutes: 45
+  sources_original: ["Linux: Docker Engine ou Docker Desktop for Linux?", Instalar o Docker Engine no Ubuntu pelo repositório oficial, "Pós-instalação: usar o docker sem sudo", Docker Engine direto no Ubuntu do WSL, Instalar o Docker Desktop no Mac]
+- n: 4
+  title: Ciclo de vida do contêiner pela linha de comando
+  goal: Rodar, listar, parar, remover e ler os logs do contêiner do projeto, com porta publicada
+  topics: [anatomia do docker run, estados, ps, stop × kill, rm e prune, logs, exec, inspect]
+  minutes: 50
+  sources_original: [A forma nova e o atalho, Anatomia do docker run, Os estados de um contêiner, "Listar: docker ps e ps -a", "Parar: stop x kill", "Remover: rm, rm -f e prune", Ler os logs, "Entrar no contêiner: exec", "Inspecionar: inspect e --format"]
+- n: 5
+  title: "Docker Desktop na prática: interface × linha de comando"
+  goal: Fazer as mesmas tarefas pela interface e pela CLI e saber quando usar cada uma
+  topics: [a janela, aba Containers, terminal integrado, configurações, contextos, licença]
+  minutes: 35
+  sources_original: [Duas portas para o mesmo motor, Um passeio pela janela, A aba Containers por dentro, As mesmas tarefas, lado a lado, "Contextos: para qual motor a CLI está falando", "Licença: quem pode usar de graça"]
+- n: 6
+  title: Imagens e o Docker Hub
+  goal: Escolher, baixar, inspecionar, marcar e remover a imagem base do projeto
+  topics: [nome completo, tag × digest, imagens oficiais, pull/tag/rmi, dangling, multi-arquitetura, save e load]
+  minutes: 45
+  sources_original: [O que é uma imagem, O nome completo de uma imagem, Tag x digest, "Imagens oficiais e verificadas: como escolher", "Baixar, listar, marcar e remover", Imagens dangling e a limpeza, "Multi-arquitetura, em resumo", "Levar uma imagem sem registro: docker save e docker load"]
+- n: 7
+  title: Seu primeiro Dockerfile
+  goal: Construir a imagem da API de tarefas do projeto e rodá-la
+  topics: [a API do projeto, instruções essenciais, ENTRYPOINT × CMD, contexto e .dockerignore, ARG e ENV, boas práticas mínimas]
+  minutes: 50
+  sources_original: [A API do livro, O que é um Dockerfile, As instruções essenciais, ENTRYPOINT x CMD, O contexto de build e o .dockerignore, "ARG e ENV: variáveis no build e no contêiner", Boas práticas mínimas]
+- n: 8
+  title: Builds rápidos e imagens enxutas
+  goal: Medir e reduzir o tempo de build e o tamanho da imagem do projeto
+  topics: [medir, o que invalida o cache, limpar no mesmo RUN, multi-stage, escolher a base, usuário não root]
+  minutes: 45
+  sources_original: [Medir antes de otimizar, "Cache de camadas: o que o invalida", "Imagem enxuta 1: limpe no mesmo RUN", "Imagem enxuta 2: builds multi-stage", Escolher a imagem base]
+- n: 9
+  title: "Volumes: dados que sobrevivem"
+  goal: Manter os dados do PostgreSQL do projeto depois de recriar o contêiner
+  topics: [camada gravável, volume × bind mount × tmpfs, comandos de volume, PostgreSQL 18 com volume, -v × --mount, permissões, backup e restauração]
+  minutes: 55
+  sources_original: [A camada gravável morre com o contêiner, Três jeitos de pôr dados fora do contêiner, "Volumes nomeados: os comandos", "PostgreSQL com volume: os dados sobrevivem", "-v ou --mount?", Volume anônimo, "Bind mount: editar código sem rebuild", "tmpfs: dados que nunca tocam o disco", Permissões e o UID do contêiner, Backup e restauração de um volume, "No Windows com WSL 2: onde guardar os bind mounts"]
+- n: 10
+  title: "Redes: contêineres que conversam"
+  goal: Fazer a API do projeto achar o banco pelo nome numa rede própria
+  topics: [rede padrão, rede própria e DNS, comandos de rede, publicar só o necessário, host e none, host.docker.internal]
+  minutes: 40
+  sources_original: ["A rede padrão: IP sim, nome não", "Rede própria: o Docker vira a lista de nomes", Os comandos de rede, Publicar só o que precisa ser acessado de fora, Os drivers host e none, "Do contêiner para o seu computador: host.docker.internal"]
+- n: 11
+  title: Publicar a imagem
+  goal: Enviar a imagem do projeto ao Docker Hub e rodá-la a partir do registro
+  topics: [registro, repositório, login com token, docker tag, push, tags de versão, GHCR, logout, segredos]
+  minutes: 45
+  sources_original: [O que é um registro, Conta e repositório no Docker Hub, "docker login com token, não com a senha", "Dar um nome publicável: docker tag", "Enviar: docker push", Rodar em outra máquina, Tags de versão e por que não só latest, "GitHub Container Registry, em resumo", "Sair: docker logout", Nunca publique um segredo]
+- n: 12
+  title: "Projeto final: API com banco em contêineres"
+  goal: Entregar a API 1.1 e o banco numa rede própria, com volume e imagem publicada
+  topics: [arquitetura, API 1.1 no PostgreSQL, Dockerfile em dois estágios, banco com volume, checklist, prévia do compose.yaml]
+  minutes: 60
+  sources_original: [O que vamos entregar, A arquitetura, "A API 1.1: tarefas no PostgreSQL", "O Dockerfile da nova versão: dois estágios", "O banco: PostgreSQL num contêiner", "Prévia: o mesmo projeto num compose.yaml"]
+next_steps:
+- {title: Docker Compose na prática, why: Para descrever API e banco num arquivo e subir tudo com um comando, topics: [compose.yaml, serviços, redes e volumes do projeto]}
+- {title: Segurança de imagens, why: Para achar e corrigir vulnerabilidades antes de publicar, topics: [docker scout, imagens mínimas, assinatura]}
+- {title: Kubernetes do zero, why: Para rodar contêineres em vários servidores, topics: [pods, deployments, services]}
+covers: [docker-desktop, instalacao-docker, conteiner, imagem, dockerfile, volumes, redes-basicas, docker-hub]
+progress: []
+changes: []
+handoff: []

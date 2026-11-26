@@ -16,7 +16,7 @@ prerequisites:
 - docker-do-zero
 track:
   name: devops
-  order: 1
+  order: 2
 reference_version: Docker Compose v5.7.0, Docker Engine 29.9.3
 review_by: 2027-05
 sources:
