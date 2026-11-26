@@ -563,6 +563,15 @@ progress:
     (31,47 MB × 94 B; imagem 210 × 178 MB; BuildKit só transfere o que o COPY pede); ARG × ENV (ARG aparece
     no docker history); boas práticas (versão fixa, exec, não-root, sem segredos, SIGTERM). Arquivos do
     projeto em ~/api-livro: app.py, Dockerfile, .dockerignore. Imagem dz-api:1.0 178 MB; tudo executado.'
+- n: 8
+  done: '2026-11-26'
+  summary: 'Medir (time docker build, images, history); cache de camadas e ordem (COPY requirements.txt
+    antes do código: 8,9 s → 1,5 s); limpar no mesmo RUN (apt: 235 MB × 197 MB); multi-stage com psycopg[c]==3.3.9
+    (511 MB → 197 MB; --target build; sem gcc na final; libpq5; COPY --from=build /install /usr/local);
+    Alpine (73,3 MB, musl) × slim (178 MB, glibc); COPY como root deixa /app só leitura para app. Projeto:
+    requirements.txt + Dockerfile multi-stage (ARG APP_VERSAO=1.0, ENV PORTA, USER app); imagem dz-api:1.0
+    197 MB; build frio ~1 min 42 s, só app.py muda ~2 s; trocar requirements refaz o pip (1 min 17 s).
+    Tudo executado.'
 changes: []
 handoff:
 - 'Pedir ao usuário 3 capturas reais (img/CREDITS.md): cap. 2 página Configuration do instalador (opção

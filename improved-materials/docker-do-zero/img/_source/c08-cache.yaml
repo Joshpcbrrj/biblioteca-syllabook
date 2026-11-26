@@ -1,0 +1,9 @@
+type: compare
+title: "Copiar o requirements.txt antes do código faz o pip ficar no cache"
+left: {title: "COPY . . e depois pip install", icon: circle-x, color: red}
+right: {title: "requirements.txt, pip, e só depois o código", icon: circle-check, color: green}
+rows:
+  - ["Mudou uma linha do app.py", "Mudou uma linha do app.py"]
+  - ["A cópia muda e invalida o pip", "Só a cópia do código é refeita"]
+  - ["Reinstala tudo: 8,9 s", "pip em CACHED: 1,5 s"]
+caption: "Tempos medidos em 26/11/2026, com psycopg[binary] como dependência."

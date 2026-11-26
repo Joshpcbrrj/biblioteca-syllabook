@@ -1,0 +1,8 @@
+type: flow
+title: "No multi-stage, o compilador fica no estágio 1 e só os pacotes prontos chegam à imagem"
+steps:
+  - {text: "Estágio 1: build", note: "gcc, libpq-dev e pip install --prefix=/install", kind: start, icon: code-xml, color: orange}
+  - {text: "COPY --from=build /install /usr/local", note: "só a pasta dos pacotes prontos atravessa", icon: box, color: blue}
+  - {text: "Estágio 2: final", note: "libpq5, os pacotes e o app.py; sem compilador", icon: server, color: green}
+  - {text: "Imagem de 197 MB", note: "contra 511 MB com tudo num estágio só", kind: end, icon: circle-check}
+caption: "O estágio 1 não vai para a imagem final: ele só existe durante o build."
