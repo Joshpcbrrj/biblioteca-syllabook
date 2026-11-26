@@ -1,0 +1,10 @@
+type: compare
+title: "Na rede padrão os contêineres só se acham pelo IP; numa rede própria, pelo nome"
+left: {title: "Rede padrão (bridge)", icon: network, color: orange}
+right: {title: "Rede criada por você", icon: network, color: green}
+rows:
+  - ["ping 172.17.0.3 funciona", "ping dz-b funciona"]
+  - ["ping dz-b falha: bad address", "ping apelido (alias) também funciona"]
+  - ["O IP muda quando o contêiner é recriado", "O nome continua o mesmo"]
+  - ["Todos os contêineres sem rede explícita se misturam", "Só entra quem você ligar à rede"]
+caption: "Saídas reais do Docker Engine 29.9.3; o DNS da rede própria é o resolvedor interno do Docker (127.0.0.11)."

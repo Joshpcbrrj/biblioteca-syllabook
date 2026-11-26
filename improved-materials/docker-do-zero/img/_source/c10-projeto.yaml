@@ -1,0 +1,4 @@
+type: tree
+title: "No projeto, só a API aparece para fora; o banco fica atrás dela, na rede dz-net"
+root: {text: "Seu computador", note: "curl http://127.0.0.1:8080", icon: monitor, color: blue, children: [{text: "dz-api", note: "-p 127.0.0.1:8080:8000, rede dz-net", icon: box, color: green, children: [{text: "dz-db (alias: banco)", note: "sem -p: visível só dentro da rede dz-net", icon: database, color: purple}]}]}
+caption: "A API fala com o banco por host=dz-db; o computador não alcança o banco, porque a 5432 não foi publicada."

@@ -581,6 +581,16 @@ progress:
     volume anônimo, bind mount readonly, tmpfs, permissões (chown com contêiner root), volume-nocopy,
     backup com tar (6,9 MB) e restauração, pg_dump. Imagens postgres:18 (676 MB) e alpine:3.23 usadas;
     postgres:18 mantida para os caps. 10-12. Tudo executado; volumes dz-* removidos.'
+- n: 10
+  done: '2026-11-26'
+  summary: 'Rede padrão (bridge): ping por IP funciona, por nome não (bad address); rede própria dz-net
+    com DNS interno 127.0.0.11, --network-alias; comandos network create/ls/inspect/connect/disconnect/rm
+    (rm falha com endpoints ativos); API (dz-api:1.0 com psycopg) acha dz-db e alias banco; verifica.py
+    em ~/api-livro (host por argumento); localhost falha dentro do contêiner; IP do banco muda (172.20.0.2
+    -> .4) e o nome continua; só a API publicada (127.0.0.1:8080), banco sem -p; drivers none (só lo),
+    host (no Desktop é a VM, recurso exige ativar), bridge; host.docker.internal pronto no Desktop, --add-host
+    ...:host-gateway no Linux (Engine puro não testado). Tudo executado, exceto Engine Linux puro. Nota:
+    a porta 5432 do host já estava ocupada por outro programa na máquina do autor; não publicada nos'
 changes: []
 handoff:
 - 'Pedir ao usuário 3 capturas reais (img/CREDITS.md): cap. 2 página Configuration do instalador (opção
