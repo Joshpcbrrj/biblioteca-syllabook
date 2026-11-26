@@ -16,6 +16,6 @@ Achou um erro? Abra uma issue: toda correção ajuda o próximo leitor.
 <!-- tracks:start -->
 ## 🧭 Trilhas
 
-- **DevOps:** [Docker Compose na prática](created-books/docker-compose-na-pratica/)
-- **Ferramentas do dev:** [Git e GitHub essencial](improved-materials/git-e-github-essencial/)
+- **DevOps:** [Docker Compose na prática](created-books/docker-compose-na-pratica/) ([Ler no site](https://joshpcbrrj.github.io/biblioteca-syllabook/created-books/docker-compose-na-pratica/) · [EPUB](https://github.com/Joshpcbrrj/biblioteca-syllabook/releases/download/epubs/docker-compose-na-pratica.epub))
+- **Ferramentas do dev:** [Git e GitHub essencial](improved-materials/git-e-github-essencial/) ([Ler no site](https://joshpcbrrj.github.io/biblioteca-syllabook/improved-materials/git-e-github-essencial/) · [EPUB](https://github.com/Joshpcbrrj/biblioteca-syllabook/releases/download/epubs/git-e-github-essencial.epub))
 <!-- tracks:end -->
