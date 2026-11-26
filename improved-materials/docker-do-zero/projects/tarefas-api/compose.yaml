@@ -1,0 +1,32 @@
+# O projeto inteiro em um arquivo: o mesmo que os docker run do capítulo
+name: dz-tarefas
+
+services:
+  banco:
+    image: postgres:18
+    environment:
+      POSTGRES_PASSWORD: senha-de-teste
+      POSTGRES_DB: tarefas
+    volumes:
+      # o volume vai em /var/lib/postgresql (PostgreSQL 18)
+      - dados:/var/lib/postgresql
+    healthcheck:
+      # só fica "healthy" quando o banco aceita conexões
+      test: ["CMD", "pg_isready", "-U", "postgres", "-d", "tarefas"]
+      interval: 2s
+      timeout: 3s
+      retries: 20
+
+  api:
+    image: dz-api:1.1
+    environment:
+      DB_HOST: banco
+      DB_PASSWORD: senha-de-teste
+    ports:
+      - "127.0.0.1:8080:8000"
+    depends_on:
+      banco:
+        condition: service_healthy
+
+volumes:
+  dados:

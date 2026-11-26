@@ -1,0 +1,12 @@
+type: sequence
+title: "Um GET /tarefas atravessa a API até o banco, e as linhas vêm do volume"
+participants:
+  - {name: "curl (seu computador)", icon: terminal}
+  - {name: "dz-api", icon: box}
+  - {name: "dz-db + volume dz-dados", icon: database}
+messages:
+  - {from: "curl (seu computador)", to: "dz-api", text: "GET /tarefas (porta 8080)"}
+  - {from: "dz-api", to: "dz-db + volume dz-dados", text: "SELECT ... FROM tarefas (host=dz-db)"}
+  - {from: "dz-db + volume dz-dados", to: "dz-api", text: "linhas", dashed: true}
+  - {from: "dz-api", to: "curl (seu computador)", text: "JSON com as tarefas", dashed: true}
+caption: "A mesma ordem vale com o Compose: o nome do banco na rede continua sendo o endereço que a API usa."

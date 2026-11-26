@@ -601,6 +601,16 @@ progress:
     (classic PAT write:packages/read:packages): NÃO executados (exigem conta); segredo em ENV/COPY .env
     aparece em docker history/inspect, correção com .dockerignore e -e (0 linhas). Tudo local executado;
     dz-api:1.0 e registry:3 removidos ao fim: o cap. 12 reconstrói a imagem em ~/api-livro.'
+- n: 12
+  done: '2026-11-26'
+  summary: 'Projeto final: configuração por variáveis de ambiente (DB_HOST, DB_PASSWORD, DB_NAME, DB_USER,
+    DB_PORT, APP_VERSAO); API 1.1 (app.py em <details>, psycopg, retry de 30 s, 503 com banco fora, tabela
+    IF NOT EXISTS); explicação de por que o psycopg já estava no requirements.txt do cap. 8 (dependência
+    real para ensinar cache/multi-stage; requirements e Dockerfile não mudam; build 1.1 em 1,5 s com pip
+    CACHED); ModuleNotFoundError sem psycopg; lab de 9 passos (API antes do banco: Empty reply/Aguardando;
+    banco; POST/GET; destruir contêineres e manter volume; 503; push 1.1.0 e 1.1 ao registry:3 local;
+    uid app e sem gcc; limpeza); checklist; prévia compose.yaml (Compose v5.7.0, name dz-tarefas, healthcheck,
+    sem version) executada e derrubada com down -v. Login e push ao Docker Hub: não executados.'
 changes: []
 handoff:
 - 'Pedir ao usuário 3 capturas reais (img/CREDITS.md): cap. 2 página Configuration do instalador (opção
