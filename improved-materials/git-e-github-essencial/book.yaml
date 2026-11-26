@@ -41,7 +41,7 @@ sources:
   url: https://docs.github.com/pt
   checked: '2026-11-21'
 approved_on: '2026-11-21'
-edition: '1.0'
+edition: 1.0.1
 human_review: false
 choices:
   images: real
@@ -515,3 +515,8 @@ progress:
     tabela botão × comando, captura do Source Control, Sync Changes = pull + push. Gists: alias lg, público
     × secreto (secreto não é privado), Embed → Clone. Não executado: telas do GitHu'
 changes: []
+reviewed_on: '2026-11-26'
+editions:
+- edition: 1.0.1
+  date: '2026-11-26'
+  summary: O livro numa página também no começo do capítulo 0, para o EPUB e o Notion

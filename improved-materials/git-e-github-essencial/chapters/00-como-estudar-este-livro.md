@@ -4,6 +4,10 @@
 >
 > Este livro aprimora as anotações do curso “Git e GitHub Essencial para o Desenvolvedor” (Geek University, Udemy). Do original vieram só a estrutura, os tópicos e os objetivos; o texto, os exemplos e os exercícios são novos.
 
+## 📇 O livro numa página
+
+![Cola do livro inteiro, em doze cartões: por que Git (histórico com autor e data, cópia completa em cada um, Git não é GitHub); configurar (user.name e user.email, token pelo GCM ou SSH, nunca token na URL); três áreas (pasta, staging, .git; status -s; .env no .gitignore); commits (pequenos, título no presente; log, show, diff, blame); desfazer (restore, --amend, revert no que foi enviado, reset só no local); branches (switch -c, merge fast-forward ou de três vias, conflito); rebase (linha reta, rebase -i, só em branch local); remotos (push, fetch, pull, origin/main, --force-with-lease); colaborar (issue, fork, PR, revisão, GitHub Flow); publicar (README em Markdown, GitHub Pages, gist); onde estou (status -sb, log --oneline --graph --all, reflog); segurança (segredo commitado: revogue; cuidado com --hard; revise o diff do PR)](../img/c00-cola-do-livro.svg)
+
 ## Como o livro está organizado
 
 São 10 capítulos em três partes, cada uma aberta por uma cola de uma página (📇):
