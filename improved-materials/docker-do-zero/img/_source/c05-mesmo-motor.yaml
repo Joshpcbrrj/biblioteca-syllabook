@@ -1,0 +1,7 @@
+type: tree
+title: "A janela e a linha de comando falam com o mesmo motor"
+root: {text: "Docker Engine do Desktop", note: "dentro da VM Linux; guarda contêineres e imagens", icon: server, color: purple}
+children:
+  - {text: "Dashboard (janela)", note: "clica e vê", icon: box, color: blue}
+  - {text: "docker CLI, contexto desktop-linux", note: "o contexto ativo", icon: terminal, color: green}
+  - {text: "docker CLI, contexto default", note: "nesta máquina chega ao mesmo motor", icon: terminal, color: gray}

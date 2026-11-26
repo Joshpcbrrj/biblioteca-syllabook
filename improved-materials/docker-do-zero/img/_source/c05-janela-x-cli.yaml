@@ -1,0 +1,12 @@
+type: compare
+title: "Cada tarefa tem um caminho na janela e um comando equivalente"
+left: {title: "Janela (Dashboard)", icon: box, color: blue}
+right: {title: "Linha de comando", icon: terminal, color: green}
+rows:
+  - ["Aba Containers", "docker ps -a"]
+  - ["Aba Logs do contêiner", "docker logs -f"]
+  - ["Aba Exec (terminal)", "docker exec -it"]
+  - ["Aba Files", "docker cp"]
+  - ["Aba Inspect", "docker inspect"]
+  - ["Aba Stats", "docker stats"]
+caption: "Os dois lados mexem no mesmo contêiner; a janela mostra, a CLI se repete em script."

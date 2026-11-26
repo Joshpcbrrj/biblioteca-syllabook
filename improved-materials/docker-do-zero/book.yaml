@@ -537,6 +537,14 @@ progress:
     prune com --filter label; logs (--tail, --since, -t, -f); exec (-it não executado, sem terminal);
     inspect --format (IP em .NetworkSettings.Networks no Engine 29). Servidor dz-web em 127.0.0.1:8080
     com etiqueta dz=livro. Prazo do stop medido ~3,5 s, não 10 s.
+- n: 5
+  done: '2026-11-26'
+  summary: Janela (Dashboard) e CLI são clientes do mesmo Engine; docker desktop status/stop/restart (stop
+    derruba tudo, não executado); menu lateral, configurações (General, Resources/WSL integration), aviso
+    4.100.0/4.100.1 (containerd); aba Containers e abas Logs/Inspect/Exec/Files/Stats/Debug com equivalentes
+    (docker cp executado); quando usar cada um; contextos (ls, show, use, --context, DOCKER_CONTEXT, create/rm
+    executados; default e desktop-linux chegam ao mesmo motor nesta máquina); licença do Desktop. Passos
+    pela janela não executados (sem capturas). Mesmo servidor dz-web 127.0.0.1:8080.
 changes: []
 handoff:
 - 'Pedir ao usuário 3 capturas reais (img/CREDITS.md): cap. 2 página Configuration do instalador (opção
