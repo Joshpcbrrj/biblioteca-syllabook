@@ -4,6 +4,10 @@
 
 Este livro leva você do primeiro `compose.yaml` a uma stack com proxy, API em réplicas e banco, subida com um comando. A referência é o Docker Compose v5.7.0 com o Docker Engine 29.9.3: todos os comandos e saídas foram executados nessas versões.
 
+## 📇 O livro numa página
+
+![O livro numa página, em sete cartões. 1-2, o arquivo e a instalação: serviço é a receita e contêiner a instância; docker compose version; plugin, não docker-compose. 3-4, subir e construir: up -d, ps, logs, down; build: . e image com build; up -d --build recria. 5-6, variáveis e rede: ${VAR:-padrão} e .env; o nome do serviço é o endereço; ports só para fora da rede. 7-8, volumes e saúde: volume nomeado guarda o banco; down -v apaga os dados; service_healthy com --wait. 9-10, dia a dia e watch: exec, run --rm, cp; restart não aplica mudança; develop.watch com sync e rebuild. 11-12, perfis e segredos: --profile e compose.override; -f soma listas e troca valores; secrets em /run/secrets. 13-14, escala e projeto final: limits de cpus e memory; --scale api=3 atrás do proxy; base, override e prod.](../img/c00-o-livro-numa-pagina.svg)
+
 ## Como o livro está organizado
 
 - **Capítulos 1 a 3:** o que o Compose resolve, a instalação e o primeiro arquivo, com `up`, `ps`, `logs` e `down`.

@@ -10,7 +10,7 @@ Cada livro fica numa pasta própria (`created-books/<nome-do-livro>/`) e pode se
 <!-- list:start -->
 | Livro | Nível | Capítulos | Edição | EPUB | Site |
 | --- | --- | --- | --- | --- | --- |
-| [Docker Compose na prática](docker-compose-na-pratica/) (pt-BR) | iniciante → intermediário | 14 | 1.3.1 · 2026-11-21 | [Baixar EPUB](https://github.com/Joshpcbrrj/biblioteca-syllabook/releases/download/epubs/docker-compose-na-pratica.epub) | [Ler no site](https://joshpcbrrj.github.io/biblioteca-syllabook/created-books/docker-compose-na-pratica/) |
+| [Docker Compose na prática](docker-compose-na-pratica/) (pt-BR) | iniciante → intermediário | 14 | 1.3.2 · 2026-11-26 | [Baixar EPUB](https://github.com/Joshpcbrrj/biblioteca-syllabook/releases/download/epubs/docker-compose-na-pratica.epub) | [Ler no site](https://joshpcbrrj.github.io/biblioteca-syllabook/created-books/docker-compose-na-pratica/) |
 <!-- list:end -->
 
 > A lista acima é gerada pelos scripts da skill. Não edite à mão.

@@ -126,7 +126,7 @@ sources:
   url: https://docs.docker.com/desktop/features/wsl/best-practices/
   checked: '2026-11-21'
 approved_on: '2026-11-20'
-edition: 1.3.1
+edition: 1.3.2
 human_review: false
 choices:
   images: svg
@@ -612,7 +612,10 @@ changes:
     e "0.0.0.0:8000-8004:8000", com o porquê, a alternativa 127.0.0.1 e nota de correção'
   why: 'Achados da revisão 1.3: quatro rodadas deram 13/7/10, 13/10/7, 9/12/9 e 8/12/10 (nginx com 6 processos
     de trabalho); a regra de segurança pede o 0.0.0.0 explícito quando a porta precisa ficar aberta'
-reviewed_on: '2026-11-21'
+- date: '2026-11-26'
+  what: 'Edição 1.3.2. Acrescentado "O livro numa página" (sete cartões, um por par de capítulos) no README e no começo do capítulo 0; spec em img/_source/c00-o-livro-numa-pagina.yaml'
+  why: 'Regra nova da skill (BOOK.md §4), apontada pela auditoria da revisão; só acréscimo, nada muda no que o leitor faz'
+reviewed_on: '2026-11-26'
 editions:
 - edition: '1.3'
   date: '2026-11-21'
@@ -623,3 +626,7 @@ editions:
   date: '2026-11-21'
   summary: 'Erratas: distribuição real dos pedidos entre as réplicas (cap. 14) e porta aberta explicada
     no exercício do cap. 13.'
+- edition: 1.3.2
+  date: '2026-11-26'
+  summary: Acrescentado 'O livro numa página' (sete cartões) no README e no capítulo 0; nada mudou no
+    que o leitor faz.

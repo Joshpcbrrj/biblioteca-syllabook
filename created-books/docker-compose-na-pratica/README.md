@@ -11,6 +11,10 @@ Para quem já roda contêineres com `docker run` e quer subir um projeto com vá
 - [Como estudar este livro](chapters/00-como-estudar-este-livro.md): organização, ritmos e hábitos de estudo.
 - [Teste de nivelamento](chapters/00-como-estudar-este-livro.md#-teste-de-nivelamento): descubra por qual capítulo começar, se você já usou o Compose.
 
+## 📇 O livro numa página
+
+![O livro numa página, em sete cartões. 1-2, o arquivo e a instalação: serviço é a receita e contêiner a instância; docker compose version; plugin, não docker-compose. 3-4, subir e construir: up -d, ps, logs, down; build: . e image com build; up -d --build recria. 5-6, variáveis e rede: ${VAR:-padrão} e .env; o nome do serviço é o endereço; ports só para fora da rede. 7-8, volumes e saúde: volume nomeado guarda o banco; down -v apaga os dados; service_healthy com --wait. 9-10, dia a dia e watch: exec, run --rm, cp; restart não aplica mudança; develop.watch com sync e rebuild. 11-12, perfis e segredos: --profile e compose.override; -f soma listas e troca valores; secrets em /run/secrets. 13-14, escala e projeto final: limits de cpus e memory; --scale api=3 atrás do proxy; base, override e prod.](img/c00-o-livro-numa-pagina.svg)
+
 <!-- map:start -->
 ## 🗺️ Mapa do livro
 
@@ -50,6 +54,7 @@ Nenhuma errata registrada até agora. Achou um erro? Anote o capítulo, o trecho
 <!-- editions:start -->
 ## 🗒️ Edições
 
+- **1.3.2** (2026-11-26): Acrescentado 'O livro numa página' (sete cartões) no README e no capítulo 0; nada mudou no que o leitor faz.
 - **1.3.1** (2026-11-21): Erratas: distribuição real dos pedidos entre as réplicas (cap. 14) e porta aberta explicada no exercício do cap. 13.
 - **1.3** (2026-11-21): Portas presas a 127.0.0.1 desde o capítulo 1 e portas de produção com 0.0.0.0 explicado; tamanho do db_senha.txt corrigido para 17 bytes; registro de testes só local; linhas longas quebradas; projetos contador e vitrine montáveis
 <!-- editions:end -->

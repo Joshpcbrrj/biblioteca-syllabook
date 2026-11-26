@@ -1,0 +1,45 @@
+type: cards
+title: "O livro numa página: do primeiro compose.yaml a uma stack completa"
+cards:
+  - icon: file-code
+    title: "1-2. O arquivo e a instalação"
+    items:
+      - "serviço = receita, contêiner = instância"
+      - "docker compose version"
+      - "plugin, não docker-compose"
+  - icon: play
+    title: "3-4. Subir e construir"
+    items:
+      - "up -d, ps, logs, down"
+      - "build: . e image + build"
+      - "up -d --build recria"
+  - icon: variable
+    title: "5-6. Variáveis e rede"
+    items:
+      - "${VAR:-padrão} e .env"
+      - "o nome do serviço é o endereço"
+      - "ports só para fora da rede"
+  - icon: database
+    title: "7-8. Volumes e saúde"
+    items:
+      - "volume nomeado guarda o banco"
+      - "down -v apaga os dados"
+      - "service_healthy + --wait"
+  - icon: terminal
+    title: "9-10. Dia a dia e watch"
+    items:
+      - "exec, run --rm, cp"
+      - "restart não aplica mudança"
+      - "develop.watch: sync e rebuild"
+  - icon: layers
+    title: "11-12. Perfis e segredos"
+    items:
+      - "--profile e compose.override"
+      - "-f soma listas, troca valores"
+      - "secrets em /run/secrets"
+  - icon: rocket
+    title: "13-14. Escala e projeto final"
+    items:
+      - "limits: cpus e memory"
+      - "--scale api=3 atrás do proxy"
+      - "base + override + prod"
