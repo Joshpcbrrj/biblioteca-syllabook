@@ -164,14 +164,14 @@ Todos os nomes do laboratório começam com `dz-` (de *Docker do zero*), para vo
 
 **Objetivo:** subir um servidor web num contêiner, acessá-lo pelo seu computador e ver com os próprios olhos o que ficou isolado.
 
-**Passo 1: rodar o servidor.** O contêiner cria a página e inicia o servidor web embutido do Python na porta 8000. O `-p 127.0.0.1:8080:8000` publica a porta 8000 do contêiner como 8080 do seu computador, **só para você** (o `127.0.0.1` impede que outros aparelhos da rede acessem).
+**Passo 1: rodar o servidor.** O contêiner cria a página e inicia o servidor web embutido do Python na porta 8000. O `-p 127.0.0.1:8080:8000` publica a porta 8000 do contêiner como 8080 do seu computador, **só para você** (o `127.0.0.1` impede que outros aparelhos da rede acessem). O `mkdir -p` cria a pasta sem reclamar se ela já existir; você vai ver no capítulo 4 por que isso importa quando um contêiner é reiniciado.
 
 ```bash
 # -d: segundo plano; --name: um nome fácil de achar
 # -p: porta 8080 do host -> porta 8000 do contêiner
 # exec: o Python vira o processo principal (PID 1)
 docker run -d --name dz-web -p 127.0.0.1:8080:8000 python:3.14-slim \
-  sh -c 'mkdir /site && cd /site
+  sh -c 'mkdir -p /site && cd /site
          echo "<h1>Tarefas v0</h1>" > index.html
          exec python -m http.server 8000'
 ```
@@ -179,7 +179,7 @@ docker run -d --name dz-web -p 127.0.0.1:8080:8000 python:3.14-slim \
 Saída: o id completo do contêiner criado (e, na primeira vez, as linhas do download da imagem).
 
 ```text
-70aa78128556c9ff409bcdd9bcda081ea224a750acac577b926e78595a660a29
+488326804cfcf55b8eec414d79a749656585b26659ecd2d509783e9361b4fbe2
 ```
 
 **Passo 2: ver o contêiner rodando.**
@@ -191,7 +191,7 @@ docker ps --filter name=dz-web
 
 ```text
 CONTAINER ID   IMAGE              COMMAND                  CREATED         STATUS         PORTS                      NAMES
-70aa78128556   python:3.14-slim   "sh -c 'mkdir /site …"   4 seconds ago   Up 3 seconds   127.0.0.1:8080->8000/tcp   dz-web
+488326804cfc   python:3.14-slim   "sh -c 'mkdir -p /si…"   4 seconds ago   Up 3 seconds   127.0.0.1:8080->8000/tcp   dz-web
 ```
 
 A coluna `PORTS` confirma a publicação: o que chega na 8080 do seu computador vai para a 8000 do contêiner.
@@ -250,7 +250,7 @@ docker logs dz-web
 ```
 
 ```text
-70aa78128556
+488326804cfc
 172.17.0.1 - - [26/Nov/2026 13:51:19] "GET / HTTP/1.1" 200 -
 ```
 
@@ -270,7 +270,7 @@ docker rm dz-web
 ```text
 dz-web
 CONTAINER ID   IMAGE              COMMAND                  CREATED          STATUS                                PORTS     NAMES
-70aa78128556   python:3.14-slim   "sh -c 'mkdir /site …"   10 seconds ago   Exited (137) Less than a second ago             dz-web
+488326804cfc   python:3.14-slim   "sh -c 'mkdir -p /si…"   10 seconds ago   Exited (137) Less than a second ago             dz-web
 dz-web
 ```
 
@@ -288,7 +288,7 @@ Repare em duas coisas. O contêiner parado continua na lista até o `docker rm`,
 ```bash
 # só o número da esquerda muda; o servidor segue na 8000
 docker run -d --name dz-web -p 127.0.0.1:9090:8000 python:3.14-slim \
-  sh -c 'mkdir /site && cd /site
+  sh -c 'mkdir -p /site && cd /site
          echo "<h1>Tarefas v0</h1>" > index.html
          exec python -m http.server 8000'
 curl -s http://127.0.0.1:9090
@@ -312,7 +312,7 @@ A 9090 responde e a 8080 não: só existe no seu computador a porta que você pu
 **2. Complete:** suba **dois** contêineres da mesma imagem, `dz-web1` na porta 8081 e `dz-web2` na 8082. Preencha as lacunas e responda: o PID do servidor lá dentro é o mesmo nos dois? E os hostnames?
 
 ```bash
-CMD='mkdir /site && cd /site
+CMD='mkdir -p /site && cd /site
      echo "<h1>Tarefas v0</h1>" > index.html
      exec python -m http.server 8000'
 # o número do meio é a porta do seu computador

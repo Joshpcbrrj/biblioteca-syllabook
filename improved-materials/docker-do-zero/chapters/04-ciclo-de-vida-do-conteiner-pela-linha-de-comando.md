@@ -336,7 +336,7 @@ dz-web
 ficou
 ```
 
-A segunda: o comando de início roda de novo. Foi por isso que usamos `mkdir -p` neste capítulo. O comando do capítulo 1, com `mkdir /site` sem o `-p`, falha no segundo início, porque a pasta já existe:
+A segunda: o comando de início roda de novo. Foi por isso que usamos `mkdir -p` desde o capítulo 1. Veja o que aconteceria sem o `-p`: com um `mkdir /site` simples, o segundo início falha, porque a pasta já existe:
 
 ```bash
 # sobe, para, reinicia e olha o que sobrou
