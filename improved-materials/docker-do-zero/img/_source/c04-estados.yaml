@@ -1,0 +1,8 @@
+type: flow
+title: "Um contêiner nasce, roda, para e só some quando você o remove"
+steps:
+  - {text: "created", note: "docker create: existe, não roda", kind: start, icon: box}
+  - {text: "running", note: "docker start ou docker run", icon: play, color: green, label: "docker stop / o processo termina"}
+  - {text: "exited", note: "parado; logs e arquivos continuam aqui", icon: pause, color: orange, label: "docker rm"}
+  - {text: "removido", note: "o contêiner e seus arquivos somem", kind: end, icon: circle-x}
+caption: "paused (docker pause) congela o running sem encerrar o processo; docker start volta do exited para o running."

@@ -529,6 +529,14 @@ progress:
     com a integração); Docker Desktop no Mac (não executado). Executado num ubuntu:26.04 descartável com
     a usuária ana: repositório, policy (Engine 29.10.1, plugin compose 5.8.0), usermod. systemctl, hello-world
     e Mac NÃO executados. Analogia única: chave do portão (grupo docker).'
+- n: 4
+  done: '2026-11-26'
+  summary: Anatomia do docker run (opções antes da imagem, -p host:contêiner, -d, --rm, -i/-t, --label);
+    estados created/running/paused/exited; ps -a, --filter, --format, -s, stats; stop × kill com SIGTERM/SIGKILL,
+    PID 1, códigos 0/143/137, --init, -t; start/restart rodam o comando de novo (mkdir -p); rm, rm -f,
+    prune com --filter label; logs (--tail, --since, -t, -f); exec (-it não executado, sem terminal);
+    inspect --format (IP em .NetworkSettings.Networks no Engine 29). Servidor dz-web em 127.0.0.1:8080
+    com etiqueta dz=livro. Prazo do stop medido ~3,5 s, não 10 s.
 changes: []
 handoff:
 - 'Pedir ao usuário 3 capturas reais (img/CREDITS.md): cap. 2 página Configuration do instalador (opção

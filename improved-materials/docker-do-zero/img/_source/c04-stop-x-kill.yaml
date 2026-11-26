@@ -1,0 +1,7 @@
+type: flow
+title: "stop pede com educação e espera; kill derruba na hora"
+steps:
+  - {text: "docker stop", note: "envia SIGTERM ao processo principal (PID 1)", kind: start, icon: terminal}
+  - {text: "Ele encerrou dentro do prazo?", kind: decision, label: "sim", side: "Envia SIGKILL: exit 137", side_note: "depois do prazo (-t)", side_color: red, side_label: "não"}
+  - {text: "Saída limpa", note: "exit 0 (ou 143 quando morre pelo sinal)", kind: end, icon: circle-check, color: green}
+caption: "docker kill pula a espera e envia SIGKILL de uma vez (padrão), sem chance de o programa salvar nada."
