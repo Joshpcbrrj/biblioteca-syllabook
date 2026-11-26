@@ -11,6 +11,15 @@
 >
 > </details>
 
+## 📇 A parte 2 numa página
+
+![Parte 2, capítulos 5 a 8. Janela × CLI: ambas são clientes do mesmo motor, o que uma cria a outra enxerga, o que se reproduz fica na CLI. Contextos: um nome guarda o endereço de um motor, --context vale para um comando; docker context ls e use. Nome da imagem: registro/ns/repo:tag, sem tag vale latest, o digest sha256 é fixo. Mexer em imagens: pull baixa só o que falta, tag dá outro nome sem copiar, rmi recusa se um contêiner usa. Dockerfile: uma camada por instrução, RUN no build e CMD a cada início, EXPOSE só documenta a porta; docker build -t x:1 . CMD × ENTRYPOINT: programa fixo, padrão que o run troca, forma exec com PID 1 no programa. Build seguro: .dockerignore, ARG e ENV aparecem no history, USER app. Cache: mudou uma camada as seguintes refazem, o que muda menos vem primeiro. Multi-stage: vários FROM, COPY --from= traz só o necessário, --target. Imagem enxuta: limpar no mesmo RUN, Alpine (musl) × slim (glibc).](../img/c05-resumo-parte-2.svg)
+
+- [Capítulo 5: Docker Desktop na prática: interface × linha de comando](05-docker-desktop-na-pratica-interface-linha-de.md)
+- [Capítulo 6: Imagens e o Docker Hub](06-imagens-e-o-docker-hub.md)
+- [Capítulo 7: Seu primeiro Dockerfile](07-seu-primeiro-dockerfile.md)
+- [Capítulo 8: Builds rápidos e imagens enxutas](08-builds-rapidos-e-imagens-enxutas.md)
+
 ## De onde paramos
 
 No capítulo 4 você conduziu um contêiner só pela linha de comando. Se você instalou o Docker Desktop (Windows ou Mac), existe uma janela que mostra tudo isso com cliques. Agora o objetivo é saber quando usar cada uma, sem achar que são coisas diferentes.
@@ -40,7 +49,7 @@ SessionID           50462a2a-4e45-437b-84cb-b7ca36396907
 
 Os subcomandos são `start`, `stop`, `restart`, `status`, `logs`, `diagnose` e `update`, entre outros. Atenção: `docker desktop stop` e `restart` derrubam **todos** os contêineres da máquina, não só os seus; por isso o livro não os executa.
 
-> ⚠️ **Erro comum:** achar que a janela e o terminal são "motores diferentes", e então estranhar que um contêiner criado de um lado "apareça" do outro. Ou o contrário: abrir o terminal com o Desktop fechado e receber um erro de conexão. A CLI é só o cliente; sem o motor rodando, não há com quem falar.
+> ⚠️ **Erro comum:** achar que a janela e o terminal são "motores diferentes", e então estranhar que um contêiner criado de um lado "apareça" do outro. Ou o contrário: abrir o terminal com o Desktop fechado e receber um erro de conexão. A CLI é apenas o cliente; sem o motor rodando, não há com quem falar.
 
 ## Um passeio pela janela
 
@@ -165,7 +174,7 @@ A regra do livro: **o que precisa ser reproduzido fica na linha de comando**, e 
 
 ## Contextos: para qual motor a CLI está falando
 
-A CLI `docker` é só um cliente. Ela precisa saber **para qual motor** mandar os pedidos, e isso é o trabalho do **contexto**.
+A CLI `docker` é apenas um cliente. Ela precisa saber **para qual motor** mandar os pedidos, e isso é o trabalho do **contexto**.
 
 **Um contexto (*context*) é um nome que guarda o endereço de um motor Docker; o contexto ativo diz para onde a CLI manda os comandos.**
 
@@ -388,3 +397,9 @@ Para escolher quais distribuições do WSL enxergam o Docker, de modo que o coma
 - Execução e saída real dos comandos de terminal: Docker Engine 29.9.3 com Docker Desktop 4.99.0, Windows 11, Git Bash, em 26/11/2026.
 
 > 🔁 **Revise hoje:** capítulos 2 e 4
+
+<!-- nav:start -->
+---
+
+[◀ Capítulo anterior](04-ciclo-de-vida-do-conteiner-pela-linha-de-comando.md) · [Mapa do livro](../README.md) · [Próximo capítulo ▶](06-imagens-e-o-docker-hub.md)
+<!-- nav:end -->

@@ -82,7 +82,7 @@ Por isso `python:3.14-slim`, `python` e `docker.io/library/python:3.14-slim` sã
 
 ## Tag × digest
 
-Você pode baixar `python:3.14-slim` hoje e outra pessoa baixar daqui a um mês, e as duas receberem imagens diferentes. Isso acontece porque a tag é só um rótulo.
+Você pode baixar `python:3.14-slim` hoje e outra pessoa baixar daqui a um mês, e as duas receberem imagens diferentes. Isso acontece porque a tag é um simples rótulo.
 
 **Uma tag é um apelido que o publicador pode mover para outra imagem; um digest (`sha256:...`) é a impressão digital do conteúdo, e por isso identifica sempre exatamente a mesma imagem.**
 
@@ -116,7 +116,7 @@ Aqui a imagem já estava no computador, então o Docker só confirmou. Os dois t
 
 Qual usar? Para estudar, tags com versão (`3.14-slim`) bastam. Para algo que precisa dar o mesmo resultado daqui a meses, fixe o digest. O digest que você vê aqui é um exemplo datado: o seu será outro, porque as imagens oficiais são reconstruídas com frequência.
 
-## Imagens oficiais e verificadas: como escolher
+## Escolher bem: imagens oficiais e verificadas
 
 O Docker Hub tem milhões de imagens, e qualquer pessoa pode publicar uma. Escolher uma imagem é decidir em quem você confia para rodar código no seu computador, e isso vale tanto quanto escolher um pacote do npm ou do pip.
 
@@ -298,7 +298,7 @@ linux/ppc64le, linux/riscv64, linux/s390x
 
 Na prática, o que você precisa saber: se o seu computador é ARM e um dia uma imagem só existir para `amd64`, o Docker avisa sobre a diferença de plataforma e, dependendo do sistema, roda por emulação, bem mais devagar.
 
-## Levar uma imagem sem registro: docker save e docker load
+## Sem registro: docker save e docker load
 
 Às vezes você precisa levar uma imagem para uma máquina sem internet, ou guardá-la num arquivo. Para isso existem o `save` e o `load`.
 
@@ -485,11 +485,17 @@ Só aquele comando é enviado para o motor do contexto `default`, em vez do ativ
 
 ## 📚 Fontes
 
-- Conteúdo confiável no Docker Hub: https://docs.docker.com/docker-hub/image-library/trusted-content/ (conferido em 26/11/2026)
-- Limites de uso do Docker Hub: https://docs.docker.com/docker-hub/usage/ (conferido em 26/11/2026)
-- docker image prune: https://docs.docker.com/reference/cli/docker/image/prune/ (conferido em 26/11/2026)
+- Conteúdo confiável, página oficial: https://docs.docker.com/docker-hub/image-library/trusted-content/ (conferido em 26/11/2026)
+- Limites de download, página oficial: https://docs.docker.com/docker-hub/usage/ (conferido em 26/11/2026)
+- Limpeza de imagens sem tag: https://docs.docker.com/reference/cli/docker/image/prune/ (conferido em 26/11/2026)
 - docker image save: https://docs.docker.com/reference/cli/docker/image/save/ (conferido em 26/11/2026)
 - Imagem oficial do Python: https://hub.docker.com/_/python (conferido em 26/11/2026)
 - Execução e saída real: Docker Engine 29.9.3 com Docker Desktop 4.99.0 (armazenamento containerd), Windows 11, Git Bash, em 26/11/2026.
 
 > 🔁 **Revise hoje:** capítulos 3 e 5
+
+<!-- nav:start -->
+---
+
+[◀ Capítulo anterior](05-docker-desktop-na-pratica-interface-linha-de.md) · [Mapa do livro](../README.md) · [Próximo capítulo ▶](07-seu-primeiro-dockerfile.md)
+<!-- nav:end -->

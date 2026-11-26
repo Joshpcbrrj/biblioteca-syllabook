@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="2560" viewBox="0 0 1600 2560">
+  <!-- Ideia: blocos empilhados (contêineres) sobre um cilindro (volume com os dados). Acento: verde-azulado da trilha devops. -->
+  <rect width="1600" height="2560" fill="#0f1b2d"/>
+  <rect x="120" y="120" width="1360" height="12" fill="#2bb3a3"/>
+
+  <g font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" fill="#ffffff">
+    <text x="120" y="420" font-size="150" font-weight="700">Docker</text>
+    <text x="120" y="590" font-size="150" font-weight="700" fill="#2bb3a3">do zero</text>
+    <text x="120" y="760" font-size="60" fill="#c9d4e3">Do primeiro contêiner a uma API</text>
+    <text x="120" y="840" font-size="60" fill="#c9d4e3">com banco, construída e</text>
+    <text x="120" y="920" font-size="60" fill="#c9d4e3">publicada por você</text>
+    <text x="120" y="1010" font-size="44" fill="#8fa3bd">baseado em um material anterior do autor</text>
+  </g>
+
+  <!-- imagem publicada, no alto; API e banco abaixo -->
+  <g fill="#1e3350" stroke="#2bb3a3" stroke-width="12" stroke-linejoin="round">
+    <rect x="620" y="1120" width="360" height="200" rx="28"/>
+    <rect x="360" y="1480" width="360" height="200" rx="28"/>
+    <rect x="880" y="1480" width="360" height="200" rx="28"/>
+  </g>
+  <g fill="#c9d4e3">
+    <rect x="680" y="1180" width="240" height="24" rx="12"/>
+    <rect x="680" y="1240" width="170" height="24" rx="12"/>
+    <rect x="420" y="1540" width="240" height="24" rx="12"/>
+    <rect x="420" y="1600" width="170" height="24" rx="12"/>
+    <rect x="940" y="1540" width="240" height="24" rx="12"/>
+    <rect x="940" y="1600" width="170" height="24" rx="12"/>
+  </g>
+  <g stroke="#2bb3a3" stroke-width="12" fill="none">
+    <path d="M800 1320 V1400"/>
+    <path d="M540 1400 H1060"/>
+    <path d="M540 1400 V1480 M1060 1400 V1480"/>
+    <path d="M720 1580 H880"/>
+  </g>
+
+  <!-- cilindro: o volume do banco -->
+  <g transform="translate(900,1840)" fill="#1e3350" stroke="#c9d4e3" stroke-width="12" stroke-linejoin="round">
+    <path d="M0 60 V300 A160 60 0 0 0 320 300 V60"/>
+    <ellipse cx="160" cy="60" rx="160" ry="60"/>
+    <path d="M0 180 A160 60 0 0 0 320 180" fill="none"/>
+  </g>
+  <path d="M1060 1680 V1850" stroke="#2bb3a3" stroke-width="12" fill="none" stroke-dasharray="4 28" stroke-linecap="round"/>
+
+  <text x="120" y="2400" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="56" fill="#ffffff">por Josué B. Almeida</text>
+  <text x="1480" y="2400" text-anchor="end" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="44" fill="#c9d4e3">Edição 2.0</text>
+</svg>

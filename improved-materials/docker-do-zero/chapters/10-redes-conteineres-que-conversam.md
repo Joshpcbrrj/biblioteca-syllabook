@@ -1,6 +1,6 @@
 # 10. Redes: contêineres que conversam
 
-> 🗺️ **Neste capítulo:** você descobre por que dois contêineres na rede padrão não se acham pelo nome, cria uma rede própria em que o nome funciona, liga a API ao banco do projeto, publica só a porta que precisa e conhece os drivers `host` e `none` e o `host.docker.internal`. · ⏱️ ~40 min
+> 🗺️ **Neste capítulo:** você descobre por que, na rede padrão, um contêiner não encontra o outro pelo nome, cria uma rede própria em que o nome funciona, liga a API ao banco do projeto, publica só a porta que precisa e conhece os drivers `host` e `none` e o `host.docker.internal`. · ⏱️ ~40 min
 
 > 🔥 **Aquecimento:** (1) Qual comando apaga os dados do banco: `docker rm dz-db` ou `docker volume rm dz-dados`? (2) No Dockerfile do capítulo 8, o que a instrução `EXPOSE 8000` faz?
 >
@@ -427,7 +427,7 @@ No Docker Desktop, `host.docker.internal:9100`. Num Linux com Engine, o mesmo no
 
 ## 🧠 Revisão rápida
 
-**1.** Por que dois contêineres na rede `bridge` padrão não se acham pelo nome?
+**1.** Na rede `bridge` padrão, por que um contêiner não consegue achar o outro pelo nome?
 
 <details>
 <summary>Ver resposta</summary>
@@ -501,3 +501,9 @@ Porque publica a porta em todas as interfaces do computador, e as regras do Dock
 - Execução e saída real: Docker Engine 29.9.3 com Docker Desktop 4.99.0, Windows 11, Git Bash, em 26/11/2026.
 
 > 🔁 **Revise hoje:** capítulos 3, 7 e 9
+
+<!-- nav:start -->
+---
+
+[◀ Capítulo anterior](09-volumes-dados-que-sobrevivem.md) · [Mapa do livro](../README.md) · [Próximo capítulo ▶](11-publicar-a-imagem.md)
+<!-- nav:end -->

@@ -11,6 +11,15 @@
 >
 > </details>
 
+## 📇 A parte 3 numa página
+
+![Parte 3, capítulos 9 a 12. Camada gravável: some com o contêiner, docker diff mostra o que mudou. Volume × bind × tmpfs: volume guardado pelo Docker, bind mount é pasta do seu computador, tmpfs só memória e só em Linux. Volume nomeado: remova sempre pelo nome, docker rm não apaga o volume. PostgreSQL 18: monte em /var/lib/postgresql, a senha vem de -e, senha de laboratório e nunca a real. Backup: tar com o banco parado, pg_dump com o banco em uso, teste a restauração. Rede própria: acha o outro contêiner pelo nome, a padrão só alcança pelo IP, localhost é o próprio contêiner. Portas: só a API leva -p 127.0.0.1, o banco fica sem -p. Publicar: tag com nome completo e versão, push envia só as camadas novas, 1.1.0 e 1.1 e latest só em teste. Login e segredos: token com --password-stdin, segredo nunca em ENV, ARG ou COPY. Configuração: endereço e senha entram por -e. Projeto final: API 1.1 e banco em dz-net, dados em dz-dados, imagem publicada com versão. Prévia do Compose: o mesmo projeto num compose.yaml, healthcheck no banco.](../img/c09-resumo-parte-3.svg)
+
+- [Capítulo 9: Volumes: dados que sobrevivem](09-volumes-dados-que-sobrevivem.md)
+- [Capítulo 10: Redes: contêineres que conversam](10-redes-conteineres-que-conversam.md)
+- [Capítulo 11: Publicar a imagem](11-publicar-a-imagem.md)
+- [Capítulo 12: Projeto final: API com banco em contêineres](12-projeto-final-api-com-banco-em-conteineres.md)
+
 ## De onde paramos
 
 No capítulo 8 você deixou a imagem da API pequena e rápida de reconstruir. Falta resolver um problema que apareceu desde o capítulo 4: **o que o contêiner grava some quando ele é removido.** Para uma página de teste, tudo bem. Para a lista de tarefas, que vai morar num banco de dados, é um desastre.
@@ -611,3 +620,9 @@ Porque a imagem final é o último estágio, nada mais, e o `COPY --from=build` 
 - Execução e saída real: Docker Engine 29.9.3 com Docker Desktop 4.99.0, Windows 11, Git Bash, PostgreSQL 18.7, em 26/11/2026.
 
 > 🔁 **Revise hoje:** capítulos 2, 6 e 8
+
+<!-- nav:start -->
+---
+
+[◀ Capítulo anterior](08-builds-rapidos-e-imagens-enxutas.md) · [Mapa do livro](../README.md) · [Próximo capítulo ▶](10-redes-conteineres-que-conversam.md)
+<!-- nav:end -->

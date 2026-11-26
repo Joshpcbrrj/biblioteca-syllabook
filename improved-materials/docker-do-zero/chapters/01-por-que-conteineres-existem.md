@@ -2,15 +2,24 @@
 
 > 🗺️ **Neste capítulo:** você vê o problema que os contêineres resolvem, descobre o que é (e o que não é) um contêiner e coloca no ar a primeira versão do projeto do livro, uma página de tarefas, dentro de um. · ⏱️ ~40 min
 
+## 📇 A parte 1 numa página
+
+![Parte 1, capítulos 1 a 4. Contêiner × imagem: contêiner é processo isolado, imagem é pacote somente leitura, uma imagem gera vários contêineres. Contêiner × VM: VM tem kernel próprio e boot, contêiner usa o kernel do host, isola processos, rede e arquivos, divide CPU, memória e disco. As peças: a CLI pede, o Engine (dockerd) executa, o Desktop traz Engine e janela. Windows: WSL 2.1.5+ e virtualização ligada, WSL 2 é o backend padrão; wsl --install e docker run hello-world. Linux: repositório oficial do Docker, grupo docker equivale a root, sudo usermod -aG docker $USER. Rodar: opções antes da imagem, -p host:contêiner, 127.0.0.1 só no seu computador. Estados: created, running, paused, exited; depois do rm o contêiner some. Parar: SIGTERM, prazo, SIGKILL; 143 é SIGTERM e 137 é SIGKILL; defina o prazo com -t. Listar e limpar: ps -a mostra os parados, rm apaga e rm -f força. Observar: logs, exec e inspect --format.](../img/c01-resumo-parte-1.svg)
+
+- [Capítulo 1: Por que contêineres existem](01-por-que-conteineres-existem.md)
+- [Capítulo 2: Docker Desktop no Windows: ativar e instalar](02-docker-desktop-no-windows-ativar-e-instalar.md)
+- [Capítulo 3: Instalar no Linux e no Mac](03-instalar-no-linux-e-no-mac.md)
+- [Capítulo 4: Ciclo de vida do contêiner pela linha de comando](04-ciclo-de-vida-do-conteiner-pela-linha-de-comando.md)
+
 ## "Na minha máquina funciona"
 
-Ana escreveu uma API em Python no notebook dela e tudo funciona. Quando ela a leva para o servidor da empresa, a API quebra na primeira requisição. O código é o mesmo, mas o servidor tem outra versão do Python, falta uma biblioteca do sistema e uma variável de ambiente vale outra coisa. O que mudou foi o **ambiente**.
+Ana escreveu uma API em Python no notebook dela e tudo funciona. Quando ela a leva para o servidor da empresa, a API quebra na primeira requisição. O código é o mesmo; o que mudou é o chão em que ele roda: a versão do Python é outra, uma biblioteca do sistema não está instalada e uma variável de configuração tem outro valor. O que mudou foi o **ambiente**.
 
-Você pode entregar só o código e torcer para o outro computador ser igual ao seu, ou entregar o código **junto com o ambiente de que ele precisa**: o interpretador, as bibliotecas, os arquivos de configuração e o comando que inicia o programa. A segunda opção é a ideia dos contêineres.
+Você pode entregar só o código e torcer para o outro computador ser igual ao seu, ou entregá-lo **acompanhado do ambiente de que ele depende**: interpretador, bibliotecas, arquivos de configuração e o comando que dá a partida. A segunda opção é a ideia dos contêineres.
 
-**Um contêiner (*container*) é um processo comum do sistema que roda isolado: ele enxerga só os próprios arquivos, a própria rede e os próprios processos.** Não é um computador inteiro, é um programa com uma visão restrita da máquina.
+**Um contêiner (*container*) é um processo comum do sistema, executado em isolamento: ele só enxerga os arquivos, a rede e os processos que são dele.** Ele não é um computador em miniatura: é um programa comum, só que com uma visão limitada do que existe na máquina.
 
-O pacote que guarda esse ambiente pronto é a **imagem** (*image*). A mesma imagem produz o mesmo ambiente no notebook da Ana, no servidor e na máquina de quem entrar na equipe amanhã.
+O ambiente já montado fica guardado numa **imagem** (*image*). Com a mesma imagem, o notebook da Ana, o servidor e o computador de quem entrar na equipe amanhã obtêm um ambiente idêntico.
 
 > ⚠️ **Erro comum:** achar que o contêiner resolve *toda* diferença entre ambientes. Ele leva o software, mas não leva os dados, as senhas nem as variáveis que você passa na hora de rodar. Se cada máquina passar um valor diferente, o comportamento muda do mesmo jeito.
 
@@ -20,9 +29,9 @@ Para ter algo real para empacotar, o livro constrói uma **API de tarefas**. Nes
 
 ## Contêiner × máquina virtual
 
-Antes dos contêineres, a forma comum de isolar um programa era a **máquina virtual (VM)**. Um software chamado *hipervisor* simula um computador completo, e dentro dele roda um sistema operacional inteiro, com o seu próprio **kernel**: o núcleo do sistema, a parte que conversa com o hardware e agenda os processos. Funciona bem, mas cada VM carrega gigabytes de sistema e precisa dar boot.
+A alternativa mais antiga para isolar um programa é a **máquina virtual (VM)**. Um *hipervisor* finge ser um computador completo, e dentro desse computador de mentira roda um sistema operacional inteiro, com **kernel** próprio: o núcleo que fala com o hardware e decide quem usa o processador a cada instante. Isso funciona, mas cada VM pesa gigabytes e leva tempo para inicializar.
 
-O contêiner faz um corte diferente: **ele não traz kernel**. Todos os contêineres de uma máquina usam o kernel dela, o do **host**.
+O contêiner segue por outro caminho: **ele não traz kernel**. Todos os contêineres de uma máquina usam o kernel dela, o do **host**.
 
 ![Comparação entre máquina virtual e contêiner: a VM tem kernel próprio, o contêiner usa o do host](../img/c01-vm-x-conteiner.svg)
 
@@ -41,7 +50,7 @@ Saída nesta máquina:
 6.18.58.1-microsoft-standard-WSL2
 ```
 
-A resposta é idêntica porque não existe um segundo kernel: o contêiner pergunta ao mesmo kernel, o que está rodando por baixo. Os dois sistemas de arquivos são mesmo diferentes (o primeiro é Alpine, o segundo é Debian 13), e só o kernel é o mesmo:
+Os valores são iguais porque só existe um kernel, o da máquina, e os dois contêineres o consultam. Os sistemas de arquivos, esses sim, diferem (Alpine num, Debian 13 no outro):
 
 ```bash
 # o sistema "de dentro" de cada imagem
@@ -60,37 +69,37 @@ NAME="Debian GNU/Linux"
 
 > 💡 **Analogia:** pense numa cozinha compartilhada (*dark kitchen*), um prédio cheio de cozinhas alugadas. **A imagem é a receita** fechada: ingredientes, utensílios e passo a passo. **O contêiner é uma cozinha em funcionamento**, montada a partir da receita, com bancada, equipe e panelas próprias. Todas as cozinhas do prédio usam a **mesma rede de gás e de luz**, e essa rede é o kernel. Uma VM seria cada restaurante num prédio só dele, com gerador e caixa d'água próprios. Abrir uma cozinha no prédio é rápido, mas uma pane na rede de gás atinge todas. *Onde a analogia falha:* uma cozinha é um lugar físico, enquanto o contêiner é apenas um processo com visão restrita.
 
-Há uma consequência prática: um contêiner Linux precisa de um kernel Linux. No Windows e no Mac não existe esse kernel, e por isso o **Docker Desktop** roda uma VM Linux pequena e coloca seus contêineres dentro dela. No Windows, essa VM usa o WSL 2, e o `6.18.58.1-microsoft-standard-WSL2` da saída acima é o kernel dessa VM. O capítulo 2 mostra como isso se instala.
+Isso tem um efeito prático: contêiner Linux precisa de kernel Linux. Windows e Mac não têm um, então o **Docker Desktop** liga uma VM Linux pequena e roda os seus contêineres lá dentro. No Windows, essa VM usa o WSL 2, e o `6.18.58.1-microsoft-standard-WSL2` da saída acima é o kernel dessa VM. O capítulo 2 mostra como isso se instala.
 
-> ⚠️ **Erro comum:** dizer que "contêiner é uma VM leve". Não é: é um processo isolado, e a diferença muda o que você pode esperar dele (o próximo bloco mostra por quê).
+> ⚠️ **Erro comum:** chamar o contêiner de "VM leve". A imagem engana: ele é um processo isolado, e essa diferença muda o que esperar dele (o próximo bloco mostra por quê).
 
 ## Imagem × contêiner
 
 Os dois termos aparecem juntos em todo tutorial, e confundi-los atrapalha a leitura.
 
-**Uma imagem é um pacote somente leitura com tudo de que um programa precisa para rodar; um contêiner é uma instância criada a partir de uma imagem.**
+**Uma imagem é um pacote somente leitura com tudo de que um programa precisa para rodar; um contêiner é uma execução dessa imagem.**
 
 | | Imagem | Contêiner |
 | --- | --- | --- |
-| O que é | Pacote parado, somente leitura | Processo rodando (ou já parado) |
+| Natureza | Arquivo estático, só para leitura | Processo em execução (ou já encerrado) |
 | Muda? | Não: para mudar, você cria outra imagem | Sim: pode criar e alterar arquivos |
 | Quantos | Uma, por exemplo `python:3.14-slim` | Quantos você quiser, da mesma imagem |
 | Comando para listar | `docker image ls` | `docker ps` |
 
 Na cozinha da analogia: a mesma receita pode abrir várias cozinhas, e uma cozinha que pega fogo não altera a receita. O nome `python:3.14-slim` tem duas partes: `python` é o nome da imagem e `3.14-slim` é a **tag**, que diferencia versões e variantes. O capítulo 6 explica o nome completo e o Docker Hub.
 
-## O que o contêiner isola e o que ele divide
+## O que fica isolado e o que é compartilhado
 
-O isolamento vem de recursos do próprio kernel Linux. Os **namespaces** dão a cada contêiner uma visão própria de processos, rede, nome da máquina e sistema de arquivos. Os **cgroups** (*control groups*) medem e limitam quanto de CPU, memória e disco cada um usa. A documentação do Docker descreve exatamente isso: ao rodar `docker run`, o Docker cria um conjunto de namespaces e de cgroups para o contêiner.
+Quem faz a separação é o próprio kernel Linux, com dois recursos. Os **namespaces** entregam a cada contêiner a sua visão de processos, rede, nome da máquina e arquivos. Os **cgroups** (*control groups*) medem e limitam o consumo de CPU, memória e disco de cada um. A documentação do Docker descreve exatamente isso: ao rodar `docker run`, o Docker cria um conjunto de namespaces e de cgroups para o contêiner.
 
 O contêiner tem só para ele:
 
 - **processos:** o programa principal é o processo número 1 (PID 1) e não enxerga os do host;
-- **rede:** endereço IP e portas próprios; uma porta só aparece no host se você a **publicar**;
+- **rede:** IP e portas só dele; para uma porta ficar visível no host, é preciso **publicá-la**;
 - **arquivos:** o conteúdo da imagem mais o que o contêiner criar;
 - **nome da máquina (*hostname*):** por padrão, o começo do id do contêiner.
 
-E divide com todos os outros o **kernel**, e com ele a CPU, a memória e o disco da máquina.
+O que ele não tem só para si é o **kernel**, e junto com o kernel o processador, a memória e o disco da máquina, usados por todos.
 
 ![Dois contêineres com visão própria sobre um único kernel Linux](../img/c01-isolado-e-dividido.svg)
 
@@ -109,14 +118,14 @@ docker run --rm python:3.14-slim hostname
 
 Os dois valores são o início do id de cada contêiner, e mudam a cada execução.
 
-> ⚠️ **Erro comum:** tratar o contêiner como uma barreira de segurança tão forte quanto uma VM. Como o kernel é compartilhado, uma falha nele (ou um contêiner com privilégios demais) pode alcançar o host. Para separar códigos em que você não confia, a recomendação é uma VM, ou contêineres dentro de VMs separadas.
+> ⚠️ **Erro comum:** supor que o contêiner protege tanto quanto uma VM. Como o kernel é de todos, uma vulnerabilidade nele (ou um contêiner com privilégios em excesso) pode chegar ao host. Para isolar código em que você não confia, use uma VM, ou contêineres dentro de VMs separadas.
 
-## O que é o Docker
+## Docker, a ferramenta
 
-Contêineres existem no Linux há muito tempo, mas montar namespaces e cgroups à mão dá trabalho. **O Docker é o conjunto de ferramentas que empacota um programa numa imagem e cria contêineres a partir dela com um comando.** Você vai usar três peças:
+A tecnologia de contêineres existe no Linux faz bastante tempo, mas configurar namespaces e cgroups manualmente é trabalhoso. **O Docker reúne as ferramentas que empacotam um programa numa imagem e, com um comando, criam contêineres a partir dela.** O livro usa três peças:
 
-- **Docker CLI:** o comando `docker` que você digita. Ele não roda contêineres, só envia pedidos;
-- **Docker Engine:** o serviço `dockerd`, que recebe os pedidos pela API do Docker e cuida de imagens, contêineres, redes e volumes. Por baixo, ele pede ao `containerd` e ao `runc` que criem o processo isolado;
+- **Docker CLI:** o comando `docker` que você digita; ele apenas manda pedidos, não executa contêiner nenhum;
+- **Docker Engine:** o serviço (`dockerd`) que atende esses pedidos pela API do Docker e administra imagens, contêineres, redes e volumes. Para criar o processo isolado, ele aciona o `containerd` e o `runc`;
 - **Docker Desktop:** o aplicativo para Windows, Mac e Linux que instala tudo isso, roda o Engine numa VM Linux e acrescenta uma interface gráfica. No Linux você também pode instalar só o Engine (capítulo 3).
 
 ![Sequência: a CLI envia o pedido ao Engine, que aciona containerd e runc para criar o contêiner](../img/c01-docker-pecas.svg)
@@ -138,33 +147,33 @@ Engine 29.9.3; containerd v2.4.2; runc 1.5.2; docker-init 0.19.0;
 
 O livro foi escrito com o Docker Engine 29.9.3 e o Docker Desktop 4.99. No seu computador os números podem ser maiores, e os conceitos continuam valendo.
 
-> ⚠️ **Erro comum:** achar que "Docker" e "Docker Desktop" são a mesma coisa. Quando o `docker` responde `Cannot connect to the Docker daemon`, o problema não está no comando: o Engine não está rodando. No Windows e no Mac, em geral é porque o Docker Desktop está fechado.
+> ⚠️ **Erro comum:** confundir "Docker" com "Docker Desktop". Se o `docker` responde `Cannot connect to the Docker daemon`, o comando está certo: quem não está de pé é o Engine. No Windows e no Mac, quase sempre é o Docker Desktop fechado.
 
-## Quando não usar contêineres
+## Quando um contêiner não é a melhor escolha
 
-Contêiner é ótimo para serviços: APIs, sites, bancos de dados, filas e ferramentas de linha de comando. Não é a resposta para tudo.
+O contêiner brilha em serviços: APIs, sites, bancos de dados, filas e ferramentas de linha de comando. Mas não serve para tudo.
 
-| Situação | Melhor escolha | Por quê |
+| Caso | O que usar | Motivo |
 | --- | --- | --- |
-| Programa gráfico de desktop | Instalar normalmente | O contêiner foi feito para processos sem janela |
-| Precisa de outro sistema operacional ou outro kernel | Máquina virtual | O contêiner usa o kernel do host |
-| Código de terceiros em que você não confia | VM (ou contêiner dentro de VM) | O kernel compartilhado é uma fronteira mais fraca |
-| Script pequeno que só você roda | Rodar direto | Empacotar custa mais do que resolve |
-| Acesso direto a hardware ou drivers | Rodar no host ou numa VM | Exige configuração extra e enfraquece o isolamento |
+| Programa gráfico de desktop | Instalar normalmente | O contêiner foi pensado para processos sem janela |
+| Exige outro sistema operacional ou kernel | Máquina virtual | O contêiner depende do kernel do host |
+| Código de terceiros em que você não confia | VM (ou contêiner dentro de VM) | Kernel compartilhado é uma fronteira mais frágil |
+| Script pequeno que só você roda | Rodar direto | O trabalho de empacotar supera o ganho |
+| Acesso direto a hardware ou a drivers | Rodar no host ou numa VM | Pede configuração extra e afrouxa o isolamento |
 
 > ⚠️ **Erro comum:** guardar dados importantes só dentro do contêiner e depois apagá-lo. Tudo o que foi gravado lá some junto. Dados que precisam sobreviver ficam num volume, assunto do capítulo 9.
 
 ## 🧪 Laboratório: a página de tarefas num contêiner
 
-Você ainda não precisa ter o Docker instalado: a instalação vem nos capítulos 2 (Windows) e 3 (Linux e Mac). Leia agora e refaça os passos depois. Use um terminal Bash: no Linux e no Mac, o terminal padrão; no Windows, o do Ubuntu no WSL 2 (veja o [guia de WSL da skill](https://github.com/Joshpcbrrj/syllabook/blob/main/docs/integrations/wsl.md)) ou o Git Bash.
+O Docker ainda não precisa estar instalado: a instalação fica para os capítulos 2 (Windows) e 3 (Linux e Mac). Leia agora e refaça os passos depois. Abra um terminal Bash: no Linux e no Mac serve o terminal comum; no Windows, o do Ubuntu no WSL 2 (veja o [guia de WSL da skill](https://github.com/Joshpcbrrj/syllabook/blob/main/docs/integrations/wsl.md)) ou o Git Bash.
 
 > ⚠️ **No Git Bash do Windows**, rode `export MSYS_NO_PATHCONV=1` antes dos comandos. Sem isso, o Git Bash converte um argumento como `/etc/os-release` num caminho do Windows. Aconteceu ao testar: `cat: can't open 'C:/Program Files/Git/etc/os-release'`. No terminal do WSL isso não acontece.
 
 Todos os nomes do laboratório começam com `dz-` (de *Docker do zero*), para você reconhecê-los e remover só o que criou.
 
-**Objetivo:** subir um servidor web num contêiner, acessá-lo pelo seu computador e ver com os próprios olhos o que ficou isolado.
+**Objetivo:** colocar um servidor web num contêiner, acessá-lo do seu computador e conferir na prática o que ficou isolado.
 
-**Passo 1: rodar o servidor.** O contêiner cria a página e inicia o servidor web embutido do Python na porta 8000. O `-p 127.0.0.1:8080:8000` publica a porta 8000 do contêiner como 8080 do seu computador, **só para você** (o `127.0.0.1` impede que outros aparelhos da rede acessem). O `mkdir -p` cria a pasta sem reclamar se ela já existir; você vai ver no capítulo 4 por que isso importa quando um contêiner é reiniciado.
+**Passo 1: rodar o servidor.** O contêiner escreve a página e liga o servidor web que já vem com o Python, na porta 8000. Com `-p 127.0.0.1:8080:8000`, essa porta 8000 aparece como 8080 no seu computador, **só para você** (o `127.0.0.1` impede que outros aparelhos da rede acessem). O `mkdir -p` cria a pasta sem reclamar se ela já existir; você vai ver no capítulo 4 por que isso importa quando um contêiner é reiniciado.
 
 ```bash
 # -d: segundo plano; --name: um nome fácil de achar
@@ -305,11 +314,11 @@ curl: (7) Failed to connect to 127.0.0.1:8080 after 1 ms: Could not connect to s
 dz-web
 ```
 
-A 9090 responde e a 8080 não: só existe no seu computador a porta que você publicou. A ordem do `-p` é sempre `porta-do-host:porta-do-contêiner`.
+A 9090 responde; a 8080 falha, porque do lado de fora só existe a porta publicada. A ordem do `-p` é sempre `porta-do-host:porta-do-contêiner`.
 
 </details>
 
-**2. Complete:** suba **dois** contêineres da mesma imagem, `dz-web1` na porta 8081 e `dz-web2` na 8082. Preencha as lacunas e responda: o PID do servidor lá dentro é o mesmo nos dois? E os hostnames?
+**2. Complete:** crie **dois** contêineres a partir da mesma imagem: `dz-web1` com a 8081 do seu computador e `dz-web2` com a 8082. Preencha as lacunas e responda: o PID do servidor lá dentro é o mesmo nos dois? E os hostnames?
 
 ```bash
 CMD='mkdir -p /site && cd /site
@@ -359,12 +368,12 @@ Serão diferentes (na nossa execução, `5fc86c6383f3` e `1680a93b504f`). Cada `
 
 </details>
 
-**4. Desafio:** para cada situação, diga se você usaria um contêiner ou uma máquina virtual, e por quê: (a) rodar o PostgreSQL para desenvolver uma API no seu notebook; (b) testar um programa que só existe para Windows, estando num Linux; (c) executar códigos enviados por desconhecidos numa plataforma de correção de exercícios.
+**4. Desafio:** em cada caso, escolha entre contêiner e máquina virtual e justifique: (a) manter um PostgreSQL de teste enquanto você desenvolve uma API; (b) executar um aplicativo que só existe para Windows, estando num Linux; (c) rodar trechos de código enviados por desconhecidos numa plataforma de exercícios.
 
 <details>
 <summary>Ver resposta</summary>
 
-(a) **Contêiner:** é um serviço, sobe em segundos e some sem deixar rastro (o capítulo 9 mostra como guardar os dados). (b) **VM:** um contêiner usa o kernel do host, e um programa para Windows precisa do Windows. (c) **VM**, ou contêineres dentro de VMs isoladas: o código não é confiável, e o kernel compartilhado é uma fronteira mais fraca do que a de uma VM.
+(a) **Contêiner**, porque é um serviço que sobe em segundos e desaparece sem deixar rastro (como guardar os dados fica para o capítulo 9). (b) **VM:** o contêiner emprega o kernel do host, e um programa de Windows exige Windows. (c) **VM**, ou contêineres dentro de VMs separadas: o código é desconhecido e o kernel compartilhado é uma barreira mais frágil que a de uma VM.
 
 </details>
 
@@ -379,7 +388,7 @@ Porque o contêiner não tem kernel próprio: todos usam o kernel que roda por b
 
 </details>
 
-**2.** O servidor escuta na porta 8000 dentro do contêiner. Por que `curl http://127.0.0.1:8000` no seu computador falha?
+**2.** Dentro do contêiner o servidor usa a porta 8000. Por que `curl http://127.0.0.1:8000` falha no seu computador?
 
 <details>
 <summary>Ver resposta</summary>
@@ -393,7 +402,7 @@ Porque a rede do contêiner é isolada. Só aparece no seu computador a porta pu
 <details>
 <summary>Ver resposta</summary>
 
-A imagem é o pacote somente leitura. O contêiner é uma instância criada a partir dela, que roda e pode ser parada e removida sem alterar a imagem.
+A imagem é o pacote de leitura apenas; o contêiner é uma execução dela, que pode ser parada e apagada sem tocar na imagem.
 
 </details>
 
@@ -402,7 +411,7 @@ A imagem é o pacote somente leitura. O contêiner é uma instância criada a pa
 <details>
 <summary>Ver resposta</summary>
 
-O comando está certo: é o Engine que não está rodando. No Windows e no Mac, em geral o Docker Desktop está fechado.
+O comando está certo; falta o Engine ligado. No Windows e no Mac, normalmente o Docker Desktop está fechado.
 
 </details>
 
@@ -414,28 +423,34 @@ Cole o texto abaixo num assistente de IA e responda cada pergunta antes de pedir
 
 > Esta é a minha resposta ao exercício 4 do capítulo 1 de "Docker do zero": <sua resposta>. Aponte os meus erros sem me dar a solução.
 
-> ➡️ **Próximo passo:** para repetir este laboratório no seu computador, você precisa do Docker instalado. No Windows, isso exige ativar a virtualização e o WSL 2 antes do instalador: **2. Docker Desktop no Windows: ativar e instalar**. No Linux ou no Mac, vá direto ao capítulo 3.
+> ➡️ **Próximo passo:** para refazer o laboratório na sua máquina, falta instalar o Docker. No Windows, antes do instalador é preciso ligar a virtualização e o WSL 2, o que o capítulo 2 explica. No Linux ou no Mac, siga para o capítulo 3.
 
 ## 📌 Resumo
 
 | Item | Em uma frase |
 | --- | --- |
-| Problema | O código funciona numa máquina e quebra noutra porque o ambiente é diferente |
-| Contêiner | Processo isolado que leva junto o ambiente de que precisa |
-| Contêiner × VM | A VM simula um computador com kernel próprio; o contêiner usa o kernel do host |
-| Imagem | Pacote somente leitura do qual saem os contêineres |
-| Isola | Processos (PID 1 lá dentro), rede, arquivos e hostname |
-| Divide | O kernel, e com ele CPU, memória e disco |
+| Problema | O mesmo código roda aqui e falha ali porque o ambiente muda de uma máquina para outra |
+| Contêiner | Processo isolado, com o ambiente de que precisa embalado junto |
+| Contêiner × VM | A VM simula um computador inteiro, com kernel próprio; o contêiner aproveita o kernel do host |
+| Imagem | Pacote de leitura apenas, a partir do qual nascem os contêineres |
+| Isola | Processos (o PID 1 de dentro), rede, arquivos e nome da máquina |
+| Compartilha | O kernel e, junto dele, o processador, a memória e o disco |
 | Porta publicada | `-p 127.0.0.1:8080:8000` leva a porta 8080 do seu computador à 8000 do contêiner |
-| Docker | A CLI pede, o Engine (`dockerd`) executa, o Desktop empacota tudo com interface |
-| Quando não usar | Apps gráficos, outro SO, código não confiável e scripts triviais |
+| Docker | A CLI faz o pedido, o Engine (`dockerd`) o executa e o Desktop reúne tudo com uma janela |
+| Evitar | Programas gráficos, outro SO, código desconhecido e scripts triviais |
 
 ## 📚 Fontes
 
 Conferido em 26/11/2026.
 
-- [What is a container?](https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-a-container/)
-- [What is an image?](https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-an-image/)
-- [Docker Engine security (namespaces e cgroups)](https://docs.docker.com/engine/security/)
-- [Docker Desktop: WSL 2 backend](https://docs.docker.com/desktop/features/wsl/)
-- [docker container run](https://docs.docker.com/reference/cli/docker/container/run/)
+- [Documentação: o que é um contêiner](https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-a-container/)
+- [Documentação: o que é uma imagem](https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-an-image/)
+- [Segurança do Docker Engine (namespaces e cgroups)](https://docs.docker.com/engine/security/)
+- [Docker Desktop com backend WSL 2](https://docs.docker.com/desktop/features/wsl/)
+- [Referência do comando docker container run](https://docs.docker.com/reference/cli/docker/container/run/)
+
+<!-- nav:start -->
+---
+
+[◀ Capítulo anterior](00-como-estudar-este-livro.md) · [Mapa do livro](../README.md) · [Próximo capítulo ▶](02-docker-desktop-no-windows-ativar-e-instalar.md)
+<!-- nav:end -->

@@ -623,3 +623,17 @@ Em `/var/lib/postgresql`. O caminho `/var/lib/postgresql/data` é o das versões
 - Execução e saída real: Docker Engine 29.9.3, Docker Desktop 4.99.0 e Docker Compose v5.7.0, Windows 11, Git Bash, em 26/11/2026.
 
 > 🔁 **Revise hoje:** capítulos 5, 9 e 11
+
+<!-- next-steps:start -->
+## 🧭 Próximos caminhos
+
+- **Docker Compose na prática**: Para descrever API e banco num arquivo e subir tudo com um comando (compose.yaml · serviços · redes e volumes do projeto)
+- **Segurança de imagens**: Para achar e corrigir vulnerabilidades antes de publicar (docker scout · imagens mínimas · assinatura)
+- **Kubernetes do zero**: Para rodar contêineres em vários servidores (pods · deployments · services)
+<!-- next-steps:end -->
+
+<!-- nav:start -->
+---
+
+[◀ Capítulo anterior](11-publicar-a-imagem.md) · [Mapa do livro](../README.md) · [Próximo capítulo ▶](13-simulado-final.md)
+<!-- nav:end -->

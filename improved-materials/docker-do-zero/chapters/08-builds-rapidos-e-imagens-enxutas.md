@@ -31,7 +31,7 @@ Um cuidado: **meça mais de uma vez e olhe o que foi para o cache.** O primeiro 
 
 ## Cache de camadas: o que o invalida
 
-Cada instrução do Dockerfile vira uma camada (capítulo 6), e o Docker guarda cada camada pronta. Na próxima construção, se a instrução e tudo o que ela usa forem idênticos, ele reaproveita a camada em vez de refazê-la.
+Cada instrução do Dockerfile gera uma camada (capítulo 6), e o Docker a guarda pronta. Na próxima construção, se a instrução e tudo o que ela usa forem idênticos, ele reaproveita a camada em vez de refazê-la.
 
 **O cache de build reaproveita uma camada quando a instrução e os arquivos que ela usa não mudaram; quando uma camada muda, ela e todas as seguintes são refeitas.**
 
@@ -573,3 +573,9 @@ O `docker build` cria a imagem (o pacote somente leitura); o `docker run` cria o
 - Execução e saída real: Docker Engine 29.9.3 com Docker Desktop 4.99.0, Windows 11, Git Bash, em 26/11/2026. Os tempos variam de máquina para máquina.
 
 > 🔁 **Revise hoje:** capítulos 1, 5 e 7
+
+<!-- nav:start -->
+---
+
+[◀ Capítulo anterior](07-seu-primeiro-dockerfile.md) · [Mapa do livro](../README.md) · [Próximo capítulo ▶](09-volumes-dados-que-sobrevivem.md)
+<!-- nav:end -->

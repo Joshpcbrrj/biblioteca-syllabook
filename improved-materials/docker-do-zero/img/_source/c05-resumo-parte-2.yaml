@@ -1,0 +1,37 @@
+type: cards
+title: "Parte 2 (capítulos 5 a 8): ferramentas, imagens e Dockerfile"
+cards:
+  - icon: app-window
+    title: "Janela × CLI"
+    items: ["janela e CLI são clientes do mesmo motor", "o que um cria, o outro enxerga", "o que se reproduz fica na CLI"]
+  - icon: arrow-left-right
+    title: "Contextos"
+    items: ["um nome guarda o endereço de um motor", "--context vale para um comando"]
+    code: ["docker context ls", "docker context use <nome>"]
+  - icon: package
+    title: "Nome da imagem"
+    items: ["registro/ns/repo:tag", "sem tag, vale latest", "o digest sha256: é fixo"]
+  - icon: download
+    title: "Mexer em imagens"
+    items: ["pull baixa só o que falta", "tag dá outro nome, sem copiar", "rmi recusa se um contêiner usa"]
+    code: ["docker pull alpine:3.23", "docker rmi alpine:3.23"]
+  - icon: file-code
+    title: "Dockerfile"
+    items: ["uma camada por instrução", "RUN no build; CMD a cada início", "EXPOSE só documenta a porta"]
+    code: ["docker build -t x:1 ."]
+  - icon: terminal
+    title: "CMD × ENTRYPOINT"
+    items: ["ENTRYPOINT: programa fixo", "CMD: padrão que o run troca", "forma exec: PID 1 é o programa"]
+  - icon: shield-check
+    title: "Build seguro"
+    items: [".dockerignore: menos contexto", "ARG e ENV aparecem no history", "USER app: sem root"]
+  - icon: zap
+    title: "Cache"
+    items: ["mudou uma camada, as seguintes refazem", "o que muda menos vem primeiro"]
+    code: ["COPY requirements.txt .", "RUN pip install ...", "COPY app.py ."]
+  - icon: layers
+    title: "Multi-stage"
+    items: ["vários FROM; o último é a imagem final", "COPY --from= traz só o necessário", "--target para parar num estágio"]
+  - icon: filter
+    title: "Imagem enxuta"
+    items: ["limpar no mesmo RUN", "Alpine (musl) × slim (glibc)"]

@@ -19,7 +19,7 @@ Como nos capítulos anteriores, os nomes começam com `dz-` e as portas ficam s�
 
 ## A API do livro
 
-Para ter algo real para empacotar, o livro usa uma API pequena, escrita em Python **só com a biblioteca padrão** (sem `pip`, sem framework). Uma **API** é um programa que responde a pedidos de outros programas, aqui pelo protocolo HTTP e trocando dados em JSON. Ela tem três rotas:
+O livro precisa de algo concreto para empacotar, então usa uma API pequena, escrita em Python **só com a biblioteca padrão** (sem `pip`, sem framework). Uma **API** é um programa que responde a pedidos de outros programas, aqui pelo protocolo HTTP e trocando dados em JSON. Ela tem três rotas:
 
 | Rota | Método | O que faz |
 | --- | --- | --- |
@@ -349,7 +349,7 @@ PID                 CMD
 71355               sleep 300
 ```
 
-(O `PID` do `docker top` é o do computador, não o de dentro do contêiner; o que importa é que, na forma shell, existem **dois** processos, e o primeiro é o `sh`.) A forma shell tem um custo: o `docker stop` envia o sinal ao `sh`, que não o repassa ao seu programa. Medido com `CMD sleep 300` na forma shell, o `docker stop` levou cerca de 3,5 s e terminou com código 137. A regra do livro: **`CMD` e `ENTRYPOINT` sempre na forma exec** (com aspas duplas, como JSON).
+(O `PID` do `docker top` é o do computador, não o de dentro do contêiner; o que importa é que, na forma shell, existem **dois** processos, e o primeiro é o `sh`.) A forma shell tem um custo: o `docker stop` envia o sinal ao `sh`, que não o repassa ao seu programa. Medido com `CMD sleep 300` na forma shell, o `docker stop` esperou o prazo padrão do daemon (a documentação fala em 10 s; nesta máquina foram cerca de 3,5 s, como o capítulo 4 explica) e terminou com código 137. A regra do livro: **`CMD` e `ENTRYPOINT` sempre na forma exec** (com aspas duplas, como JSON).
 
 > ⚠️ **Erro comum:** escrever `CMD ['python', 'app.py']` com aspas simples. Para o Docker isso não é um JSON válido, e ele trata como forma shell sem avisar.
 
@@ -736,3 +736,9 @@ Não: a tag pode passar a apontar para outra imagem; o digest identifica sempre 
 - Execução e saída real: Docker Engine 29.9.3 com Docker Desktop 4.99.0, Windows 11, Git Bash, em 26/11/2026.
 
 > 🔁 **Revise hoje:** capítulos 4 e 6
+
+<!-- nav:start -->
+---
+
+[◀ Capítulo anterior](06-imagens-e-o-docker-hub.md) · [Mapa do livro](../README.md) · [Próximo capítulo ▶](08-builds-rapidos-e-imagens-enxutas.md)
+<!-- nav:end -->

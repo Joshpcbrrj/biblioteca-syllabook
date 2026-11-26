@@ -1,0 +1,42 @@
+type: cards
+title: "Parte 3 (capítulos 9 a 12): dados, rede e entrega"
+cards:
+  - icon: database
+    title: "Camada gravável"
+    items: ["some junto com o contêiner", "docker diff mostra o que mudou"]
+  - icon: folder
+    title: "Volume × bind × tmpfs"
+    items: ["volume: guardado pelo Docker", "bind mount: pasta do seu computador", "tmpfs: só memória, só em Linux"]
+  - icon: save
+    title: "Volume nomeado"
+    items: ["remova sempre pelo nome", "docker rm não apaga o volume"]
+    code: ["docker volume create V", "docker volume rm V"]
+  - icon: key
+    title: "PostgreSQL 18"
+    items: ["monte em /var/lib/postgresql", "a senha vem de -e", "senha de laboratório, nunca a real"]
+  - icon: copy
+    title: "Backup"
+    items: ["tar com o banco parado", "pg_dump com o banco em uso", "teste a restauração"]
+  - icon: network
+    title: "Rede própria"
+    items: ["acha o outro contêiner pelo nome", "a padrão só alcança pelo IP", "localhost é o próprio contêiner"]
+    code: ["docker network create"]
+  - icon: lock
+    title: "Portas"
+    items: ["só a API leva -p 127.0.0.1", "o banco fica sem -p"]
+  - icon: cloud-upload
+    title: "Publicar"
+    items: ["tag com nome completo e versão", "push envia só as camadas novas", "1.1.0 e 1.1; latest só em teste"]
+    code: ["docker tag A B", "docker push B"]
+  - icon: lock-open
+    title: "Login e segredos"
+    items: ["token com --password-stdin", "segredo nunca em ENV, ARG ou COPY"]
+  - icon: variable
+    title: "Configuração"
+    items: ["endereço e senha entram por -e", "a mesma imagem serve a todos os ambientes"]
+  - icon: rocket
+    title: "Projeto final"
+    items: ["API 1.1 e banco em dz-net", "dados em dz-dados", "imagem publicada com versão"]
+  - icon: workflow
+    title: "Prévia do Compose"
+    items: ["o mesmo projeto num compose.yaml", "healthcheck no banco", "continua no livro seguinte"]

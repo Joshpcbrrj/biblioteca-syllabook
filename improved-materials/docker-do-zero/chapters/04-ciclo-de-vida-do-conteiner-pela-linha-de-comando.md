@@ -1,4 +1,4 @@
-# 4. Ciclo de vida do contêiner pela linha de comando
+# 4. Ciclo de vida do contêiner na linha de comando
 
 > 🗺️ **Neste capítulo:** você aprende a ler um `docker run` por partes e a conduzir um contêiner do nascimento ao fim: rodar, listar, pausar, parar, ler os logs, entrar nele e removê-lo, tudo com o servidor do projeto. · ⏱️ ~50 min
 
@@ -120,7 +120,7 @@ Um contêiner não "está ligado ou desligado": ele passa por estados, e cada co
 
 **O estado de um contêiner diz em que ponto da vida ele está: `created` (criado, nunca rodou), `running` (rodando), `paused` (congelado), `exited` (parou) e, raramente, `restarting` e `dead`.**
 
-![Os estados created, running, exited e removido, e os comandos que levam de um a outro](../img/c04-estados.svg)
+![Os estados created, running, exited e removido, com os comandos que fazem o contêiner passar de um para o outro](../img/c04-estados.svg)
 
 Você pode ver cada estado com `docker create` (cria sem iniciar) e `docker inspect`:
 
@@ -274,7 +274,7 @@ real	0m3.589s
 exited exit=137
 ```
 
-Demorou cerca de 3,5 s e terminou com **137**. Esse número é 128 + 9: o programa morreu pelo sinal 9 (SIGKILL). Ou seja, o Docker mandou SIGTERM, o PID 1 ignorou, a espera acabou e veio o SIGKILL. Nesta máquina o prazo medido foi de uns 3,5 s; a ajuda do `docker stop` não informa o valor padrão, então não confie num número fixo e use `-t` quando importar:
+Demorou cerca de 3,5 s e terminou com **137**. Esse número é 128 + 9: o programa morreu pelo sinal 9 (SIGKILL). Ou seja, o Docker mandou SIGTERM, o PID 1 ignorou, a espera acabou e veio o SIGKILL. **Quanto tempo o Docker espera?** A documentação oficial diz que, sem prazo configurado no contêiner, quem decide é o daemon (o servidor do Docker): são **10 segundos** para contêineres Linux (e 30 para Windows). O Engine 29.7.0 acrescentou a opção `default-stop-timeout` do daemon para mudar esse padrão. Nesta máquina, porém, o `docker stop` sem opções demorou **cerca de 3,5 s**, e eu não encontrei o motivo: o contêiner não tinha prazo próprio (`docker inspect` mostra `<nil>` em `.Config.StopTimeout`) e o `daemon.json` não menciona o assunto. Já com `-t 10`, a espera foi mesmo de 10 s, e com `--stop-timeout 5` no `run`, de 5 s. A lição prática: o padrão pode variar de instalação para instalação, então, quando o prazo importar, **defina você mesmo**, com `-t` no `stop` ou `--stop-timeout` no `run`:
 
 ```bash
 # -t 1: espera no máximo 1 segundo antes do SIGKILL
@@ -806,7 +806,14 @@ O seu usuário não está no grupo `docker`, e só quem está nele acessa o sock
 - docker stop: https://docs.docker.com/reference/cli/docker/container/stop/ (conferido em 26/11/2026)
 - docker run: https://docs.docker.com/reference/cli/docker/container/run/ (conferido em 26/11/2026)
 - docker container prune: https://docs.docker.com/reference/cli/docker/container/prune/ (conferido em 26/11/2026)
+- Notas de versão do Docker Engine 29 (opção `default-stop-timeout`, 29.7.0): https://docs.docker.com/engine/release-notes/29/ (conferido em 26/11/2026)
 - Iniciar contêineres automaticamente: https://docs.docker.com/engine/containers/start-containers-automatically/ (conferido em 26/11/2026)
 - Execução e saída real: Docker Engine 29.9.3 com Docker Desktop, Windows 11 e Git Bash, em 26/11/2026.
 
 > 🔁 **Revise hoje:** capítulos 1 e 3
+
+<!-- nav:start -->
+---
+
+[◀ Capítulo anterior](03-instalar-no-linux-e-no-mac.md) · [Mapa do livro](../README.md) · [Próximo capítulo ▶](05-docker-desktop-na-pratica-interface-linha-de.md)
+<!-- nav:end -->

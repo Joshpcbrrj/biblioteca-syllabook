@@ -25,11 +25,11 @@ Os requisitos abaixo são os da página oficial de instalação do Docker Deskto
 | --- | --- |
 | Windows 10 | 64 bits, Enterprise, Pro ou Education, versão 22H2 (build 19045) |
 | Windows 11 | 64 bits, Enterprise, Pro ou Education, versão 23H2 (build 22631) ou mais nova |
-| WSL | versão 2.1.5 ou mais nova, com o recurso WSL 2 ligado |
+| WSL | a partir da 2.1.5, com o recurso WSL 2 ativado |
 | Processador | 64 bits, com SLAT (*Second Level Address Translation*) |
-| Memória | 8 GB de RAM |
-| Firmware | virtualização de hardware ligada na BIOS/UEFI |
-| Serviço do Windows | **Servidor** (`LanmanServer`) ligado, com início Automático |
+| RAM | no mínimo 8 GB |
+| Firmware | virtualização por hardware habilitada na BIOS/UEFI |
+| Serviço do Windows | **Servidor** (`LanmanServer`) em execução, com início Automático |
 
 Duas observações. O Windows **Home** não aparece na tabela, mas a mesma página diz que as edições Home e Education só rodam contêineres Linux, e é isso que este livro usa. E o Windows Server não é suportado.
 
@@ -122,9 +122,9 @@ Se o Windows reclamar de virtualização (por exemplo, o erro `0x80370102`), a M
 | | Por usuário (recomendado) | Para todos os usuários |
 | --- | --- | --- |
 | Onde instala | `%LOCALAPPDATA%\Programs\DockerDesktop` | `C:\Program Files\Docker\Docker` |
-| Administrador | Não, nem para atualizar | Sim, para instalar e atualizar |
-| Backends | WSL 2 ou Docker VMM | WSL 2, Hyper-V ou Docker VMM |
-| Contêineres Windows | Não | Sim |
+| Conta de administrador | Dispensada, até nas atualizações | Necessária para instalar e atualizar |
+| Backends possíveis | WSL 2 ou Docker VMM | WSL 2, Hyper-V ou ainda Docker VMM |
+| Roda contêineres Windows | Não | Sim |
 
 Trocar de modo depois exige desinstalar e reinstalar. Na tela de configuração do instalador, deixe marcada a opção **Use WSL 2** (a documentação diz que, desde a versão 4.97, essa página lista os backends como opções). Conclua o assistente e **inicie o Docker Desktop manualmente**: ele não abre sozinho depois de instalar.
 
@@ -139,7 +139,7 @@ Start-Process 'Docker Desktop Installer.exe' -Wait `
 
 O `winget` também tem o pacote: `winget show --id Docker.DockerDesktop --source winget` achou o `Docker.DockerDesktop`, na versão 4.100.1, quando conferi, e `winget install -e --id Docker.DockerDesktop` o instalaria. Atenção: a versão 4.100.0 e a 4.100.1 têm um problema conhecido nas notas de versão: contêineres e imagens podem ficar escondidos depois da atualização, até você desmarcar *Use containerd for pulling and storing images* em **Settings > General**. Se acontecer, o conteúdo não foi apagado.
 
-**Primeiro início:** o Docker Desktop mostra o *Docker Subscription Service Agreement*. O uso é gratuito para uso pessoal, educação, projetos de código aberto não comerciais e empresas pequenas (menos de 250 funcionários **e** menos de US$ 10 milhões de receita anual). Fora disso, é preciso assinatura. Sem aceitar, o Docker Desktop não roda. O login numa conta Docker é opcional para este livro.
+**Primeiro início:** o Docker Desktop mostra o *Docker Subscription Service Agreement*. A licença é gratuita em quatro casos: uso pessoal, ensino, projetos abertos sem fins comerciais e empresas pequenas (menos de 250 funcionários **e** receita anual abaixo de US$ 10 milhões). Fora deles, é preciso assinar um plano. Sem aceitar, o Docker Desktop não roda. O login numa conta Docker é opcional para este livro.
 
 ![Etapas: conferir requisitos, ligar o WSL 2, instalar o Docker Desktop e testar com hello-world](../img/c02-caminho.svg)
 
@@ -310,9 +310,15 @@ A imagem é o pacote somente leitura; o contêiner é a instância criada a part
 
 Conferido em 26/11/2026.
 
-- [Install Docker Desktop on Windows](https://docs.docker.com/desktop/setup/install/windows-install/)
-- [Docker Desktop WSL 2 backend](https://docs.docker.com/desktop/features/wsl/)
-- [Docker Desktop release notes](https://docs.docker.com/desktop/release-notes/)
-- [Install WSL (Microsoft)](https://learn.microsoft.com/en-us/windows/wsl/install)
-- [Manual installation steps for WSL (Microsoft)](https://learn.microsoft.com/en-us/windows/wsl/install-manual)
-- [Troubleshooting WSL (Microsoft)](https://learn.microsoft.com/en-us/windows/wsl/troubleshooting)
+- [Instalação do Docker Desktop no Windows](https://docs.docker.com/desktop/setup/install/windows-install/)
+- [Backend WSL 2 do Docker Desktop](https://docs.docker.com/desktop/features/wsl/)
+- [Notas de versão do Docker Desktop](https://docs.docker.com/desktop/release-notes/)
+- [Instalação do WSL (Microsoft)](https://learn.microsoft.com/en-us/windows/wsl/install)
+- [Instalação manual do WSL (Microsoft)](https://learn.microsoft.com/en-us/windows/wsl/install-manual)
+- [Solução de problemas do WSL (Microsoft)](https://learn.microsoft.com/en-us/windows/wsl/troubleshooting)
+
+<!-- nav:start -->
+---
+
+[◀ Capítulo anterior](01-por-que-conteineres-existem.md) · [Mapa do livro](../README.md) · [Próximo capítulo ▶](03-instalar-no-linux-e-no-mac.md)
+<!-- nav:end -->

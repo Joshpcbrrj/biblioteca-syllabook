@@ -23,7 +23,7 @@ Os nomes seguem com `dz-`, as portas ficam em `127.0.0.1`, e as saídas vêm do 
 
 Você já usou um registro sem perceber: toda vez que um `docker pull` ou `docker run` baixou o `python:3.14-slim`, ele veio do Docker Hub (capítulo 6).
 
-**Um registro (*registry*) é um servidor que guarda imagens, organizadas em repositórios, e as entrega a quem pedir.** Um **repositório** reúne as versões (tags) de uma mesma imagem, por exemplo todas as versões do `python`.
+**Um registro (*registry*) é um servidor onde as imagens ficam armazenadas, divididas em repositórios, e de onde qualquer pessoa autorizada pode baixá-las.** Um **repositório** reúne as versões (tags) de uma mesma imagem, por exemplo todas as versões do `python`.
 
 | Registro | Endereço | Observação |
 | --- | --- | --- |
@@ -409,7 +409,7 @@ Os arquivos da camada gravável somem com ele; só o que está num volume sobrev
 
 | Item | Em uma frase |
 | --- | --- |
-| Registro | servidor que guarda imagens em repositórios (Docker Hub, GHCR ou o seu) |
+| Registro | servidor de imagens, organizado em repositórios (Docker Hub, GHCR ou o seu próprio) |
 | `docker tag` | dá à imagem um nome completo: `registro/namespace/repositório:tag` |
 | `docker push` | envia só as camadas que o registro ainda não tem; mostra o digest |
 | `docker pull` / `run` | baixam da onde o nome indicar; sem prefixo, vale o Docker Hub |
@@ -428,3 +428,9 @@ Os arquivos da camada gravável somem com ele; só o que está num volume sobrev
 - Execução e saída real do registro local: Docker Engine 29.9.3 com Docker Desktop 4.99.0, Windows 11, Git Bash, em 26/11/2026.
 
 > 🔁 **Revise hoje:** capítulos 4, 8 e 10
+
+<!-- nav:start -->
+---
+
+[◀ Capítulo anterior](10-redes-conteineres-que-conversam.md) · [Mapa do livro](../README.md) · [Próximo capítulo ▶](12-projeto-final-api-com-banco-em-conteineres.md)
+<!-- nav:end -->

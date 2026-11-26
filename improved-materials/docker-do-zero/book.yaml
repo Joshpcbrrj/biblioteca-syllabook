@@ -150,8 +150,7 @@ concepts:
   depends:
   - docker-run
 - id: logs-exec
-  name: logs
-  exec e inspect: null
+  name: logs, exec e inspect
   chapter: 4
   depends:
   - docker-run
@@ -294,7 +293,7 @@ chapters:
   - Docker Engine direto no Ubuntu do WSL
   - Instalar o Docker Desktop no Mac
 - n: 4
-  title: Ciclo de vida do contêiner pela linha de comando
+  title: Ciclo de vida do contêiner na linha de comando
   goal: Rodar, listar, parar, remover e ler os logs do contêiner do projeto, com porta publicada
   topics:
   - anatomia do docker run
@@ -613,31 +612,32 @@ progress:
     sem version) executada e derrubada com down -v. Login e push ao Docker Hub: não executados.'
 changes: []
 handoff:
-- 'Capturas reais que dependem do usuário (img/CREDITS.md): cap. 2 página Configuration do instalador
-  (Use WSL 2) e Gerenciador de Tarefas > Desempenho > CPU (Virtualização); cap. 5 aba Containers do Docker
-  Desktop 4.99 (lista, abas Logs/Files/Stats do dz-web) e Settings > Resources > WSL integration. Nenhuma
-  foi inserida nos caps. 1 a 12; o passo a passo pela janela do cap. 5 (lab, passos 2 a 5) está marcado
-  como não executado: rever depois das capturas.'
-- Caps. 1 a 12 escritos, auditados (0 erros) e commitados localmente (nada enviado ao GitHub, sem Notion).
-  Cap. 1 agora usa mkdir -p e o cap. 4 foi reajustado (explica o -p desde o cap. 1 e mostra a falha só
-  como teste sem -p). O cap. 12 explica por que o psycopg já estava no requirements.txt do cap. 8.
-- 'Não executado por exigir conta/ambiente: docker login e push ao Docker Hub/GHCR (cap. 11, só o registry:3
-  local em 127.0.0.1:5050 foi rodado); --add-host=host.docker.internal:host-gateway em Engine de Linux
-  puro (cap. 10); driver host com o recurso ativado no Desktop (cap. 10); --mount com bind inexistente
-  no Linux (cap. 9: a doc diz que dá erro, mas no Desktop/Windows a pasta foi criada sem erro).'
-- 'Ambiente de laboratório: contêineres do autor (cariockko-*) seguem rodando; a porta 5432 do host já
-  estava ocupada por outro programa (não foi usada); 8080 e 5050 foram usadas só pelo livro. Estado final
-  desta sessão: nenhum contêiner, rede, volume ou imagem dz-* ou do livro sobrando (postgres:18, registry:3
-  e dz-api:1.1 removidos; python:3.14-slim e alpine:3.23 já eram do autor e ficaram). Usar MSYS_NO_PATHCONV=1
-  no Git Bash.'
-- Projeto final em projects/tarefas-api (app.py 1.1, Dockerfile, requirements.txt, .dockerignore, compose.yaml).
-  Nos caps. 9 a 12 foram escritos comandos com senha de laboratório 'senha-de-teste'; conferir no cap.
-  0 e no simulado que nenhum item sugere senha real.
-- 'Problemas da skill a reportar no fim: projects.py marca como falha (exit 143) um projeto de servidor
-  com run:, então o marcador do cap. 7 ficou sem run; o skeleton cria o nome do arquivo do cap. 5 truncado
-  (05-docker-desktop-na-pratica-interface-linha-de.md); projects.py lista só app.py, compose.yaml e requirements.txt
-  (Dockerfile e .dockerignore não aparecem em ''files'').'
-- 'Próximo passo: partes fixas (ler references/BOOK.md antes): capítulo 0 com o livro numa página, teste
-  de nivelamento, cheat sheets por seção, simulado final, glossário, próximos caminhos (livro seguinte:
-  Docker Compose na prática); depois audit.py do livro todo, build.py (capa, EPUB, zip) e, só com autorização,
-  publicação. Sugerido: continuar em nova conversa (''continue meu livro Docker do zero'').'
+- 'Capturas que dependem de você (img/CREDITS.md): cap. 2 (página Configuration do instalador, com Use
+  WSL 2; Gerenciador de Tarefas > Desempenho > CPU > Virtualização) e cap. 5 (aba Containers do Docker
+  Desktop 4.99 com lista e abas Logs/Files/Stats do dz-web; Settings > Resources > WSL integration). Nenhuma
+  foi inserida; o passo a passo pela janela do cap. 5 (lab, passos 2 a 5) está marcado como não executado:
+  rever depois das capturas.'
+- 'Partes fixas feitas: cap. 0 (livro numa página, ritmos, teste de nivelamento), folhas de revisão nos
+  caps. 1, 5 e 9, simulado (13-simulado-final.md, 29 perguntas), glossário, README e capa (cover.png 1600x2560).
+  build.py gerou EPUB, zip e site Zensical só em pasta temporária (nada na biblioteca, sem build.py lists).
+  Ainda não houve revisão humana nem publicação.'
+- Auditoria com --original apontou texto do original reaproveitado nos caps. 1 a 11 e no simulado (frases
+  com 12+ palavras iguais); foi reescrito com palavras novas. Sobraram só 3 alertas de URL de fonte (cap.
+  1, cap. 11, research/c11.md), falso positivo do audit.py; reportar. O título do cap. 4 passou a 'na
+  linha de comando' (em book.yaml também).
+- 'docker stop: a documentação oficial diz 10 s no Linux (30 s no Windows) quando o contêiner não define
+  prazo; o Engine 29.7.0 acrescentou a opção default-stop-timeout do daemon. Nesta máquina o stop sem
+  opções levou ~3,5 s (StopTimeout nil, daemon.json sem a opção) e não achei o motivo; com -t 10 levou
+  10 s e com --stop-timeout 5, 5 s. Caps. 4 e 7 ajustados.'
+- 'Não executado por exigir conta/ambiente: docker login e push ao Docker Hub/GHCR (cap. 11; só o registry:3
+  local foi rodado); --add-host host-gateway em Engine Linux puro e driver host com o recurso ativado
+  (cap. 10); --mount com bind inexistente no Linux (cap. 9); instalações dos caps. 2 e 3 e Mac.'
+- 'Ambiente: contêineres do autor seguem rodando (portas 3000, 3001, 5433, 8080, 9000, 9001 ocupadas);
+  estado final: nada dz-* sobrando. Usar MSYS_NO_PATHCONV=1 no Git Bash.'
+- 'Problemas da skill a reportar: audit.py --original acusa URL de fonte com 12+ palavras como cópia;
+  projects.py marca como falha (exit 143) projeto de servidor com run: e não lista Dockerfile/.dockerignore
+  em files; o skeleton trunca o nome do arquivo do cap. 5; âncora de título com emoji difere entre GitHub
+  e Zensical.'
+- 'Próximo passo: você ver o site e o EPUB (pastas temporárias, ver resumo), tirar as capturas, decidir
+  revisão humana; depois autorizar a publicação (GitHub, EPUB) e book.py link com o livro Docker Compose
+  na prática.'

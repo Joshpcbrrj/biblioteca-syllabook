@@ -1,0 +1,37 @@
+type: cards
+title: "Parte 1 (capítulos 1 a 4): instalar e conduzir um contêiner"
+cards:
+  - icon: container
+    title: "Contêiner × imagem"
+    items: ["contêiner: processo isolado", "imagem: pacote somente leitura", "uma imagem gera vários contêineres"]
+  - icon: layers
+    title: "Contêiner × VM"
+    items: ["VM: kernel próprio e boot", "contêiner: kernel do host", "isola processos, rede e arquivos", "divide CPU, memória e disco"]
+  - icon: settings
+    title: "As peças"
+    items: ["CLI pede, Engine (dockerd) executa", "o Desktop traz Engine e janela"]
+  - icon: monitor
+    title: "Windows"
+    items: ["WSL 2.1.5+ e virtualização ligada", "WSL 2 é o backend padrão"]
+    code: ["wsl --install", "docker run hello-world"]
+  - icon: terminal
+    title: "Linux"
+    items: ["repositório oficial do Docker", "grupo docker = poder de root", "sudo usermod -aG docker $USER"]
+  - icon: play
+    title: "Rodar"
+    items: ["opções antes da imagem", "host primeiro: -p host:contêiner", "127.0.0.1: só no seu computador"]
+    code: ["docker run -d -p H:C img"]
+  - icon: refresh-cw
+    title: "Estados"
+    items: ["created, running, paused, exited", "depois do rm, o contêiner some"]
+  - icon: timer
+    title: "Parar"
+    items: ["stop: SIGTERM, prazo, SIGKILL", "143 = SIGTERM; 137 = SIGKILL", "defina o prazo com -t"]
+  - icon: list
+    title: "Listar e limpar"
+    items: ["ps -a mostra os parados", "rm apaga; rm -f força"]
+    code: ["docker ps -a", "docker rm dz-web"]
+  - icon: search
+    title: "Observar"
+    items: ["logs: o que o processo escreveu", "exec: comando no contêiner vivo", "inspect --format: um campo"]
+    code: ["docker logs -f dz-web", "docker exec dz-web ls /"]

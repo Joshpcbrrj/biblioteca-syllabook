@@ -1,0 +1,39 @@
+type: cards
+title: "O livro numa página: do primeiro contêiner a uma API com banco, publicada"
+cards:
+  - icon: container
+    title: "1. Por que contêineres"
+    items: ["contêiner = processo isolado", "usa o kernel do host, sem VM", "imagem é a receita, contêiner a cozinha"]
+  - icon: monitor
+    title: "2. Desktop no Windows"
+    items: ["ligar WSL 2 e a virtualização", "instalar o Docker Desktop", "hello-world confirma a instalação"]
+  - icon: terminal
+    title: "3. Linux e Mac"
+    items: ["Engine pelo repositório oficial", "grupo docker equivale a root", "Docker Desktop no Mac"]
+  - icon: play
+    title: "4. Ciclo de vida"
+    items: ["run -d -p 127.0.0.1:8080:8000", "stop: exit 143; kill: exit 137", "logs, exec e inspect --format"]
+  - icon: app-window
+    title: "5. Desktop na prática"
+    items: ["janela e CLI falam com o mesmo motor", "docker context ls e use", "o que se repete fica na CLI"]
+  - icon: package
+    title: "6. Imagens e Docker Hub"
+    items: ["nome: registro/ns/repo:tag", "a tag muda, o digest não", "pull, tag, rmi, save e load"]
+  - icon: file-code
+    title: "7. Primeiro Dockerfile"
+    items: ["docker build -t dz-api:1.0 .", "CMD na forma exec, USER app", ".dockerignore deixa o .env de fora"]
+  - icon: zap
+    title: "8. Builds enxutos"
+    items: ["requirements antes do código", "multi-stage: 511 MB para 197 MB", "limpar no mesmo RUN"]
+  - icon: database
+    title: "9. Volumes"
+    items: ["docker rm não apaga o volume", "volume × bind mount × tmpfs", "backup com tar, teste a restauração"]
+  - icon: network
+    title: "10. Redes"
+    items: ["rede própria acha por nome", "localhost é o próprio contêiner", "só a API com -p 127.0.0.1"]
+  - icon: cloud-upload
+    title: "11. Publicar a imagem"
+    items: ["docker tag e docker push", "versão 1.1.0 e 1.1, não só latest", "login com token, nunca a senha"]
+  - icon: rocket
+    title: "12. Projeto final"
+    items: ["API e banco na rede dz-net", "configuração por -e", "dados no volume dz-dados"]

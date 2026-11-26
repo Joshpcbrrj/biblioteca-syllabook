@@ -19,21 +19,21 @@ Se você usa Windows e quer apenas seguir o livro, o capítulo 2 basta e você p
 
 ## Linux: Docker Engine ou Docker Desktop para Linux?
 
-Existem dois produtos com nomes parecidos, e escolher sem saber a diferença é fonte de confusão.
+Há dois produtos de nome parecido, e escolher um sem entender a diferença costuma dar dor de cabeça.
 
-**O Docker Engine é o motor (`dockerd`) e a CLI instalados direto no sistema; o Docker Desktop para Linux é o aplicativo gráfico, que roda o seu próprio motor dentro de uma VM.**
+**O Docker Engine é o servidor (`dockerd`) mais a CLI, instalados no próprio sistema; o Docker Desktop para Linux é um aplicativo com interface gráfica, que traz um motor seu dentro de uma VM.**
 
 ![Engine × Desktop no Linux: onde o motor roda, interface, contexto e onde ficam as imagens](../img/c03-engine-x-desktop.svg)
 
-Segundo a documentação, os dois podem ser instalados lado a lado, mas cada um tem as próprias imagens e contêineres (o Desktop cria o contexto `desktop-linux`, e o que você criou antes no Engine não aparece nele). Os dois também podem disputar as mesmas portas, e a recomendação é parar o Engine enquanto usa o Desktop. Este livro usa o **Engine**: é o que roda em servidores, em CI e no Ubuntu do WSL.
+A documentação admite os dois na mesma máquina, mas com estoques separados de imagens e contêineres (o Desktop cria o contexto `desktop-linux`, e o que você criou antes no Engine não aparece nele). Os dois também podem disputar as mesmas portas, e a recomendação é parar o Engine enquanto usa o Desktop. Este livro usa o **Engine**: é o que roda em servidores, em CI e no Ubuntu do WSL.
 
-> ⚠️ **Erro comum:** achar que o pacote `docker.io` do Ubuntu é "o Docker oficial". Ele é empacotado pelo Ubuntu, com versão e ritmo de atualização próprios, e a documentação manda removê-lo antes de instalar os pacotes da Docker.
+> ⚠️ **Erro comum:** supor que o `docker.io` do Ubuntu seja "o Docker oficial". Ele é montado pela equipe do Ubuntu, que decide a versão e quando atualizar, e a documentação manda removê-lo antes de instalar os pacotes da Docker.
 
 ## Instalar o Docker Engine no Ubuntu pelo repositório oficial
 
-O Ubuntu instala programas pelo **apt**, que busca pacotes nas fontes cadastradas no sistema. A Docker mantém a sua própria fonte, em `download.docker.com`. **Instalar pelo repositório oficial é cadastrar essa fonte no apt, junto com a chave que prova que os pacotes vieram da Docker, e instalar os pacotes `docker-ce` por ali.** A vantagem é que depois o `apt upgrade` atualiza o Docker junto com o resto do sistema.
+No Ubuntu, o **apt** instala programas a partir das fontes que o sistema conhece. A Docker mantém uma fonte própria, em `download.docker.com`. **Instalar pelo repositório oficial significa registrar essa fonte no apt, com a chave que garante a origem dos pacotes, e instalar o `docker-ce` a partir dela.** A vantagem é que depois o `apt upgrade` atualiza o Docker junto com o resto do sistema.
 
-A documentação lista estas versões do Ubuntu (64 bits): 26.10, 26.04 LTS, 24.04 LTS e 22.04 LTS, para x86_64, armhf, arm64, s390x e ppc64le. Derivados, como o Linux Mint, não são oficialmente suportados.
+As versões de Ubuntu citadas na documentação, todas de 64 bits, são a 26.10 e as LTS 26.04, 24.04 e 22.04, para x86_64, armhf, arm64, s390x e ppc64le. Derivados, como o Linux Mint, não são oficialmente suportados.
 
 ![Seis passos: remover conflitantes, guardar a chave, cadastrar o repositório, instalar, testar e liberar o grupo docker](../img/c03-apt-caminho.svg)
 
@@ -217,7 +217,7 @@ Depois, rode `wsl --shutdown` no PowerShell e abra a distro de novo.
 No Mac, o caminho é o Docker Desktop, e a instalação não pede a senha do administrador:
 
 1. Baixe o `Docker.dmg` da página oficial, na versão certa para o seu processador: **Apple silicon** (os chips da linha M) ou **Intel**.
-2. Abra o `.dmg` e arraste o ícone do Docker para a pasta **Applications** (o padrão é `/Applications/Docker.app`).
+2. Abra o `.dmg` e leve o ícone do Docker até a pasta **Applications** (o padrão é `/Applications/Docker.app`).
 3. Abra o `Docker.app`, leia e aceite o acordo de assinatura e espere o Engine iniciar.
 4. Confira no Terminal:
 
@@ -383,8 +383,14 @@ Porque a porta 8000 só existia dentro do contêiner; no seu computador só exis
 
 Conferido em 26/11/2026.
 
-- [Install Docker Engine on Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
-- [Linux post-installation steps for Docker Engine](https://docs.docker.com/engine/install/linux-postinstall/)
-- [Install Docker Desktop on Linux](https://docs.docker.com/desktop/setup/install/linux/)
-- [Install Docker Desktop on Mac](https://docs.docker.com/desktop/setup/install/mac-install/)
-- [Advanced settings in WSL: systemd (Microsoft)](https://learn.microsoft.com/en-us/windows/wsl/wsl-config)
+- [Instalação do Docker Engine no Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
+- [Passos pós-instalação no Linux](https://docs.docker.com/engine/install/linux-postinstall/)
+- [Instalação do Docker Desktop no Linux](https://docs.docker.com/desktop/setup/install/linux/)
+- [Instalação do Docker Desktop no Mac](https://docs.docker.com/desktop/setup/install/mac-install/)
+- [Configurações avançadas do WSL: systemd (Microsoft)](https://learn.microsoft.com/en-us/windows/wsl/wsl-config)
+
+<!-- nav:start -->
+---
+
+[◀ Capítulo anterior](02-docker-desktop-no-windows-ativar-e-instalar.md) · [Mapa do livro](../README.md) · [Próximo capítulo ▶](04-ciclo-de-vida-do-conteiner-pela-linha-de-comando.md)
+<!-- nav:end -->
