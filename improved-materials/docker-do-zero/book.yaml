@@ -576,15 +576,30 @@ changes: []
 handoff:
 - 'Pedir ao usuário 3 capturas reais (img/CREDITS.md): cap. 2 página Configuration do instalador (opção
   Use WSL 2) e Gerenciador de Tarefas > Desempenho > CPU (Virtualização); cap. 5 aba Containers do Docker
-  Desktop 4.99 e Settings > Resources > WSL integration. Nenhuma captura real foi inserida nos caps. 1
-  a 3.'
-- 'Cap. 4: o docker stop de PID 1 sem tratador levou ~3,5 s (exit 137) nesta máquina, não 10 s; a doc
-  não cita o prazo padrão: medir de novo e não afirmar 10 s sem fonte.'
-- 'Pesquisa em aberto: página atual do host.docker.internal (a URL de networking do Desktop deu 404),
-  pacote/versão do psycopg para a API 1.1 (cap. 12) e registry:3 para o push local (cap. 11).'
-- 'Segurança do laboratório: esta máquina tem contêineres e imagens do autor (cariockko-*, portas 3000/3001,
-  localhost:5000/stack-api): usar só nomes dz-*, nunca prune/rm em massa; ubuntu:26.04, alpine:3.23 e
-  python:3.14-slim já baixadas. Usar sempre MSYS_NO_PATHCONV=1 no Git Bash.'
-- 'Próximo passo: book.py brief 4 (caps. 4 a 12 e partes fixas: cap. 0, teste de nivelamento, simulado,
-  glossário, cheat sheets, próximos caminhos); ler references/BOOK.md antes das partes fixas e ler o original
-  de cada capítulo só nas seções do brief.'
+  Desktop 4.99 (lista, abas Logs/Files/Stats do dz-web) e Settings > Resources > WSL integration. Nenhuma
+  captura real foi inserida nos caps. 1 a 8; o cap. 5 avisa isso no texto e o passo a passo pela janela
+  (lab, passos 2 a 5) está marcado como não executado: rever depois das capturas.'
+- 'Cap. 4: stop medido em ~3,5 s (exit 137) quando o PID 1 ignora o SIGTERM; o texto não afirma 10 s.
+  O comando do cap. 1 usa mkdir sem -p e falha ao reiniciar o dz-web (mostrado no cap. 4): considerar
+  trocar por mkdir -p no cap. 1.'
+- 'Projeto (pasta ~/api-livro do leitor): cap. 7 criou app.py (já trata SIGTERM e usa ENDERECO, PORTA,
+  APP_VERSAO), Dockerfile e .dockerignore; cap. 8 acrescentou requirements.txt (psycopg[c]==3.3.9, versão
+  atual em 26/11/2026) e trocou o Dockerfile por multi-stage (libpq5 na final, USER app, imagem dz-api:1.0
+  de 197 MB). O app.py ainda NÃO usa o psycopg: o cap. 12 entrega a versão 1.1 com banco e deve reaproveitar
+  este Dockerfile e o requirements.txt.'
+- 'Pesquisa em aberto: página atual do host.docker.internal (a URL de networking do Desktop deu 404) e
+  registry:3 para o push local (cap. 11). O psycopg está resolvido (3.3.9, wheel [c] compila com gcc libc6-dev
+  libpq-dev; runtime libpq5).'
+- 'Segurança do laboratório: esta máquina tem contêineres e imagens do autor (cariockko-*, projeto-site-1,
+  MinIO nas portas 9000/9001, 3000, 3001, 5433): usar só nomes dz-*, nunca prune/rm em massa (prune só
+  com --filter label=dz=livro); a porta 9000 está OCUPADA (use 9100 etc.); a 8080 é a do livro. Imagens
+  do autor já existentes: python:3.14-slim, python:3.13-slim, postgres:17, postgres:15-alpine, nginx,
+  redis, alpine:3.23, ubuntu:26.04; baixe postgres:18 só no cap. 9 e remova depois. Usar MSYS_NO_PATHCONV=1
+  no Git Bash. Estado final desta sessão: nenhum contêiner nem imagem dz-* sobrando; python:3.14-alpine
+  e busybox removidos.'
+- 'Problemas da skill a reportar no fim: projects.py marca como falha (exit 143) um projeto de servidor
+  com run:, então o marcador do cap. 7 ficou sem run; a ementa/skeleton cria o nome do arquivo do cap.
+  5 truncado (05-docker-desktop-na-pratica-interface-linha-de.md).'
+- 'Próximo passo: book.py brief 9 (caps. 9 a 12 e partes fixas: cap. 0, teste de nivelamento, simulado,
+  glossário, cheat sheets, próximos caminhos); ler references/BOOK.md antes das partes fixas e o original
+  só nas seções do brief.'
