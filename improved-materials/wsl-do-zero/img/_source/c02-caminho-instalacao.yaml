@@ -1,0 +1,8 @@
+type: flow
+title: Da instalação ao Ubuntu no WSL 2 em cinco passos, cada um com uma prova
+steps:
+  - {text: "wsl --install -d Ubuntu-26.04", note: "PowerShell como administrador", kind: start, icon: terminal}
+  - {text: "Reiniciar o Windows", note: "só na primeira vez, se o WSL ainda não existia", icon: refresh-cw}
+  - {text: "Abrir o Ubuntu e criar usuário e senha", note: "primeira abertura demora alguns minutos", icon: user}
+  - {text: "wsl -l -v mostra VERSION 2", note: "prova do lado Windows", icon: circle-check}
+  - {text: "verificar.sh diz Tudo certo", note: "prova do lado Linux", kind: end, icon: list-checks}
