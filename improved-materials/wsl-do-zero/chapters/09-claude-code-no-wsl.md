@@ -553,7 +553,7 @@ else
 fi
 ```
 
-Rodei o `verificar.sh` na distro de teste. Ela é **enxuta de propósito** (não tem as ferramentas do capítulo 6, nem o repositório e os dotfiles montados), então os testes dos capítulos 3 a 6 falham. O que importa aqui é a linha nova:
+Rodei o `verificar.sh` na distro de teste. Ela é **enxuta de propósito** (não tem as ferramentas do capítulo 6, nem o repositório e os dotfiles montados), então alguns testes dos capítulos 3 a 6 falham. Abaixo estão só as seis últimas linhas de teste, e a que importa é a nova:
 
 ```text
 OK    systemd é o processo 1
