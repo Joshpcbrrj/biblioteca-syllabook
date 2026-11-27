@@ -23,3 +23,13 @@ $conferidor = Join-Path $PSScriptRoot 'windows\conferir-wslconfig.ps1'
 $modeloOk = (Test-Path $modelo) -and (Test-Path $conferidor) -and
     -not (& $conferidor -Caminho $modelo | Select-String 'FALHA')
 Checa "modelo do .wslconfig confere (windows/)" $modeloOk
+
+# o backup.ps1 existe e a sintaxe dele esta correta (sem roda-lo)
+$bkp = Join-Path $PSScriptRoot 'backup.ps1'
+$erros = $null
+if (Test-Path $bkp) {
+    [void][System.Management.Automation.Language.Parser]::ParseFile(
+        $bkp, [ref]$null, [ref]$erros)
+}
+Checa "backup.ps1 presente e sem erro de sintaxe" `
+    ((Test-Path $bkp) -and $erros.Count -eq 0)

@@ -573,6 +573,14 @@ progress:
     analogia apartamento x prédio. Comandos de gerenciamento (wsl --help), export 3,16 GB em 1m24, import,
     --manage --move falhou (WSL_E_DISTRO_NOT_STOPPED; precisa de shutdown, não executado), problemas comuns
     da documentação.'
+- n: 8
+  done: '2026-11-27'
+  summary: 'Backup e restauração: wsl --export (1.237,7 MB na distro de teste; 3,16 GB com ferramentas)
+    e --import com outro nome (clone teste-...); distro importada abre como root, [user] default= no wsl.conf,
+    usuário precisa existir (erro real getpwnam). SHA-256 (Get-FileHash x sha256sum -c, FAILED real).
+    Projetos x distro inteira (analogia caderno de receitas x refeição congelada), backup-projetos.sh
+    (5,0 MB -> 12 KB). backup.ps1 com -Testar e prefixo teste-; verificar.ps1 com 5 testes. Não executado:
+    --vhd, --import-in-place.'
 handoff:
 - 'Próximo passo: book.py brief 8 (capítulos 1 a 7 prontos e commitados; dossiês de 1 a 10 já escritos
   em research/). Depois: cap. 9, 10 e as partes fixas (capítulo 0, teste de nivelamento, simulado, glossário).'

@@ -1,0 +1,8 @@
+type: flow
+title: Do backup à distro restaurada, em quatro passos
+steps:
+  - {text: "wsl --export wz-teste arquivo.tar", note: "grava a distro inteira num único arquivo", icon: download, kind: start}
+  - {text: "Guardar fora do C: e conferir o SHA-256", note: "outro disco, HD externo ou nuvem", icon: folder}
+  - {text: "wsl --import nome pasta arquivo.tar", note: "cria uma distro nova a partir do arquivo", icon: upload}
+  - {text: "whoami responde root?", note: "abre sem o seu usuário", kind: decision, side: "Acrescente [user] default= ao /etc/wsl.conf e rode wsl --terminate", label: "sim"}
+  - {text: "Distro restaurada com o seu usuário", icon: circle-check, kind: end}

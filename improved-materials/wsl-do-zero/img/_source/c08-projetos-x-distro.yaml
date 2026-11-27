@@ -1,0 +1,10 @@
+type: compare
+title: Backup de projetos e backup da distro inteira se completam
+left: {title: "Só os projetos", icon: folder, color: green}
+right: {title: "A distro inteira", icon: folder, color: blue}
+rows:
+  - ["git push, ou tar de ~/projetos", "wsl --export"]
+  - ["Código e histórico", "Usuário, programas, configurações e projetos"]
+  - ["De KB a poucos MB", "De centenas de MB a vários GB"]
+  - ["Todo dia (git) ou toda semana (tar)", "Antes de formatar, trocar de PC ou mudar muito"]
+  - ["Depois, reinstale com o bootstrap.sh", "Depois, só importe e abra"]
