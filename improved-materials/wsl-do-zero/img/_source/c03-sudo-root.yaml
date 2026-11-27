@@ -1,0 +1,9 @@
+type: compare
+title: Com sudo, só um comando roda como administrador; no shell de root, tudo roda
+left: {title: "sudo comando", icon: shield-check, color: green}
+right: {title: "sudo -i (shell de root)", icon: triangle-alert, color: red}
+rows:
+  - ["Um comando por vez como root", "Tudo o que você digitar vira root"]
+  - ["Pede a sua senha", "Pede a sua senha uma vez"]
+  - ["Arquivos novos seus continuam seus", "Arquivos novos ficam do root"]
+  - ["Prompt segue com $", "Prompt muda para #"]

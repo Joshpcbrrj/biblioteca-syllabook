@@ -1,0 +1,9 @@
+type: boxes
+title: O prompt diz quem você é, em qual computador, em qual pasta e com que poder
+name: "ana@PC:~$"
+cells:
+  - {value: "ana", label: "usuário", highlight: true}
+  - {value: "@", label: "separador"}
+  - {value: "PC", label: "nome do computador"}
+  - {value: "~", label: "pasta atual: /home/ana", highlight: true}
+  - {value: "$", label: "usuário comum (root mostra #)"}

@@ -534,3 +534,10 @@ progress:
     uid 1000, grupo sudo), wsl -l -v e --version, tabela de erros (0x80370102, 0.0%). Lab: passos 1-3
     não executados (PC do autor já tem Ubuntu); passos 4-6 na wz-teste; verificar.sh rodou OK com saída
     0.'
+- n: 3
+  done: '2026-11-27'
+  summary: Prompt (ana@PC:~$), comandos básicos, apt update × upgrade/install/remove (apt 3.2.0, 163 pacotes),
+    erro de lock sem sudo, sudo-rs 0.2.13 × root (arquivo rascunho.txt do root, sudo -i, root bloqueado),
+    systemd (wsl.conf, PID 1, serviços; experimento com systemd=false e --terminate), repositório meu-ambiente
+    com git 2.53.0 e verificar.sh v2 com 7 testes (falha antes do git init, OK depois). Analogia do síndico.
+    Todos os comandos rodaram na wz-teste como ana.

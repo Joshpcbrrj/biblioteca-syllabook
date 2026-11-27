@@ -1,0 +1,18 @@
+# Confere, do lado Windows, se o PC esta pronto para o WSL 2.
+$build = [System.Environment]::OSVersion.Version.Build
+$cpu = Get-CimInstance Win32_Processor | Select-Object -First 1
+$emUso = (Get-CimInstance Win32_ComputerSystem).HypervisorPresent
+$wsl = Get-Command wsl.exe -ErrorAction SilentlyContinue
+
+# mostra OK ou FALHA para cada teste
+function Checa($texto, $ok) {
+    if ($ok) { "OK    $texto" } else { "FALHA $texto" }
+}
+
+$versaoOk = $build -ge 19041
+# com o hipervisor em uso, o campo do firmware aparece como False
+$virtOk = $cpu.VirtualizationFirmwareEnabled -or $emUso
+
+Checa "Windows 10 build 19041+ ou 11 (este: build $build)" $versaoOk
+Checa "virtualizacao ligada no firmware ou em uso" $virtOk
+Checa "wsl.exe encontrado" ($null -ne $wsl)

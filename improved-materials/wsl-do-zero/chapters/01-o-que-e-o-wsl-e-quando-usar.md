@@ -105,7 +105,7 @@ cd $HOME\meu-ambiente
 
 **Passo 2. Criar o verificador do lado Windows.** Salve o arquivo abaixo na pasta, com o nome `verificar.ps1`. O texto do script está sem acentos de propósito: o Windows PowerShell 5.1 lê arquivos sem marcação como "ANSI", e um `ç` ou `ã` virariam letras estranhas na saída.
 
-<!-- project: meu-ambiente | expect: Windows -->
+<!-- project: meu-ambiente -->
 
 **verificar.ps1**
 
