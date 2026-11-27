@@ -324,7 +324,7 @@ Default Version: 2
 Para guardar uma distro inteira, ou levá-la para outro disco, o WSL tem `--export`. Ele grava um arquivo `.tar` com tudo (sistema, usuários, arquivos). Na distro de teste, que tem Node, Java e o repositório:
 
 ```powershell
-# a distro precisa estar parada ou ser exportada em repouso
+# grava a distro inteira, com tudo o que há nela, num arquivo .tar
 wsl --export wz-teste D:\wz-temp\wz-teste.tar
 ```
 
@@ -341,7 +341,7 @@ A volta é o `--import`, que cria uma distro **nova** a partir do arquivo, no di
 wsl --import wz-teste D:\wz-temp\wz-teste D:\wz-temp\dl\u.wsl --version 2
 ```
 
-(Este foi o comando que criou a `wz-teste` no começo desta sessão, a partir da imagem oficial do Ubuntu em vez de um `.tar` meu; a sintaxe é a mesma.) Trocar uma distro de pasta é, portanto, exportar, **desregistrar a antiga** e importar na pasta nova. Cada passo é seguro sozinho; o `--unregister` é o que não tem volta, então só o faça depois de importar e **testar** a cópia.
+(Foi este o comando que criou a `wz-teste`, a distro de teste, a partir da imagem oficial do Ubuntu em vez de um `.tar` meu; a sintaxe é a mesma.) Trocar uma distro de pasta é, portanto, exportar, **desregistrar a antiga** e importar na pasta nova. Cada passo é seguro sozinho; o `--unregister` é o que não tem volta, então só o faça depois de importar e **testar** a cópia.
 
 O WSL novo tem um atalho mais curto, o `--manage ... --move`. Eu tentei:
 
@@ -350,11 +350,12 @@ wsl --manage wz-teste --move D:\wz-temp\wz-movida
 ```
 
 ```text
-The operation could not be completed because the VHD is currently in use. To force WSL to stop use: wsl.exe --shutdown
+The operation could not be completed because the VHD is currently in use.
+To force WSL to stop use: wsl.exe --shutdown
 Error code: Wsl/Service/MoveDistro/WSL_E_DISTRO_NOT_STOPPED
 ```
 
-Mesmo com a `wz-teste` parada, o disco virtual continuava em uso; o mais provável é que a VM compartilhada o mantenha aberto enquanto outras distros rodam (a mensagem não diz o motivo). O WSL pede o `--shutdown`, e como não posso rodá-lo nesta máquina, **o `--move` ficou sem executar**. Para você, é o caminho certo se você puder parar tudo: salve o trabalho, rode o `--shutdown` e então o `--move`. Se não puder, use o exportar-e-importar.
+(Quebrei a primeira linha da mensagem em duas, só para caber na página.) Mesmo com a `wz-teste` parada, o disco virtual continuava em uso; o mais provável é que a VM compartilhada o mantenha aberto enquanto outras distros rodam (a mensagem não diz o motivo). O WSL pede o `--shutdown`, e como não posso rodá-lo nesta máquina, **o `--move` ficou sem executar**. Para você, é o caminho certo se você puder parar tudo: salve o trabalho, rode o `--shutdown` e então o `--move`. Se não puder, use o exportar-e-importar.
 
 Há ainda outros ajustes de disco em `wsl --manage nome`: `--resize` (tamanho do disco), `--set-sparse` (devolve espaço ao Windows) e `--compact`, que a documentação descreve no `wsl --help`; não executei nenhum deles.
 
@@ -373,7 +374,7 @@ A [seção de solução de problemas](https://learn.microsoft.com/windows/wsl/tr
 
 Uma regra de diagnóstico serve para quase todos: **de que lado está o problema?** Rode `wsl -l -v` (a distro está `Running`?), depois `wsl --status` (a versão padrão é a 2?) e então um comando simples dentro da distro. Se o simples falha, o problema é do WSL; se só o seu programa falha, é da distro.
 
-> ⚠️ **Não executado:** nenhum destes problemas foi reproduzido: eles vêm da documentação oficial e dependem de firewall, firmware e versão do Windows do leitor. O primeiro foi reproduzido, na versão provocada pelo `appendWindowsPath=false` da seção anterior.
+> ⚠️ **Não executado:** nenhum destes problemas foi reproduzido: eles vêm da documentação oficial e dependem de firewall, firmware e versão do Windows do leitor. Só o primeiro foi reproduzido, e numa variante: com o `appendWindowsPath=false` da seção anterior, o `cmd.exe` deixou de ser encontrado.
 
 ## O projeto: o `meu-ambiente` do lado Windows
 
