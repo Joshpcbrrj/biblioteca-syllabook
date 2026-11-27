@@ -90,7 +90,7 @@ systemd=true
 default=ana
 ```
 
-A diferença está no `/etc/wsl.conf`. Uma distro importada **não tem o lançador** que a loja instala (o `ubuntu.exe`, que sabe qual é o seu usuário), então o WSL abre como **root** a menos que o `wsl.conf` diga outra coisa. O backup da `wz-teste` abriu como `ana` porque a seção `[user]` já estava no arquivo, e ela **viaja dentro do `.tar`**. Já a imagem crua não tem usuário comum nenhum, e é por isso que a primeira abre como root.
+A diferença está no `/etc/wsl.conf`. Uma distro importada **não tem o lançador** que a loja instala (o `ubuntu.exe`, que sabe qual é o seu usuário), então o WSL abre como **root** a menos que o `wsl.conf` diga outra coisa. O backup da `wz-teste` abriu como `ana` porque a seção `[user]` já estava no arquivo, e ela **viaja dentro do `.tar`**. Já a imagem crua não tem usuário comum nenhum, e é por isso que a distro da imagem abre como root.
 
 Se a sua restaurada abrir como root (backup de uma distro sem `[user]`, ou imagem crua), o **usuário e a pasta pessoal continuam lá dentro**: só falta dizer ao WSL quem deve entrar. Como root:
 
@@ -366,7 +366,7 @@ if ($Testar) {
 Três cuidados no script merecem nota:
 
 - **O nome do clone é sempre `teste-` + a distro.** Assim o `--unregister` do `finally` nunca aponta para a distro de verdade, nem que você digite o nome errado. E ele para antes de começar se já existir uma distro com esse nome.
-- **`Lista-Distros` troca a codificação do console.** O `wsl -l -q` escreve em UTF-16, e sem a troca o PowerShell 5.1 devolve os nomes com um espaço entre as letras. (Mesmo motivo de o texto estar sem acentos: no PowerShell 5.1, arquivo sem marcação é lido como "ANSI".)
+- **`Lista-Distros` troca a codificação do console.** O `wsl -l -q` escreve em UTF-16, e sem a troca o PowerShell 5.1 devolve os nomes com um espaço entre as letras. (O script também está sem acentos de propósito: no PowerShell 5.1, um arquivo sem marcação de codificação é lido como "ANSI", e os acentos sairiam trocados.)
 - **Não sobrescreve nem apaga nada seu.** O arquivo leva a data no nome e, se já existir, o script para.
 
 Rodei na distro de teste, só nela (as outras duas distros da máquina nem foram citadas):
