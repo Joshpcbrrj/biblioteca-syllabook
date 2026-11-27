@@ -173,7 +173,7 @@ No `.wslconfig`, na sua pasta de usuário do Windows (`%UserProfile%`), na seç�
 <details>
 <summary>Ver resposta</summary>
 
-Basta o `wsl --terminate <distro>`, que para só aquela distro (o apartamento). O `wsl --shutdown` derruba **todas** as distros e a máquina virtual (o prédio), e só é necessário para o `.wslconfig`. Se outras distros têm projetos rodando, evite o `--shutdown`. Revise no [capítulo 7](07-gerenciar-o-wsl.md).
+Não precisa: o `wsl --terminate <distro>` já resolve, e para só aquela distro (o apartamento). O `wsl --shutdown` derruba **todas** as distros e a máquina virtual (o prédio), e só é necessário para o `.wslconfig`. Se outras distros têm projetos rodando, evite o `--shutdown`. Revise no [capítulo 7](07-gerenciar-o-wsl.md).
 
 </details>
 
