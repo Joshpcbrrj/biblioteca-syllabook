@@ -541,3 +541,23 @@ progress:
     systemd (wsl.conf, PID 1, serviços; experimento com systemd=false e --terminate), repositório meu-ambiente
     com git 2.53.0 e verificar.sh v2 com 7 testes (falha antes do git init, OK depois). Analogia do síndico.
     Todos os comandos rodaram na wz-teste como ana.
+handoff:
+- 'Próximo passo: book.py brief 4 (capítulos 1 a 3 prontos e commitados; dossiês de 1 a 10 já escritos
+  em research/).'
+- 'A distro wz-teste foi desregistrada ao fim da sessão; para recriar: wsl --import wz-teste D:\wz-temp\wz-teste
+  D:\wz-temp\dl\u.wsl --version 2 (imagem oficial do Ubuntu 26.04.1 já baixada, SHA256 conferido); ela
+  entra como root, então crie o usuário ana com adduser --disabled-password, chpasswd e usermod -aG sudo;
+  desregistre só ela no fim.'
+- 'O disco C: tem só 2,5 GB livres: tudo da distro de teste fica em D:\wz-temp; nos comandos wsl dos labs
+  use </dev/null e timeout, porque sudo -l e prompts penduram a sessão.'
+- 'Não executado e ainda sem a fonte registrada: cap. 2 passos 1 a 3 (wsl --install no PC do autor), cap.
+  5 (instalar Nerd Font e perfil do Windows Terminal), cap. 9 (login do Claude Code).'
+- 'Promessas já feitas ao leitor: cap. 4 explica por que arquivos vindos de /mnt/c chegam como 100755
+  e leva o .gitattributes ao meu-ambiente; cap. 7 explica terminate × shutdown (nunca rodar --shutdown
+  nem tocar no .wslconfig da máquina do autor); cap. 6 e 9 mostram como evitar arquivos do root na pasta
+  pessoal.'
+- 'Pendente de verificação na hora de escrever: versões reais de git, node, java e python no cap. 6; nomes
+  dos comandos do Spec Kit para o Claude Code (specify integration list) no cap. 10; seção de problemas
+  comuns do guia oficial no cap. 7.'
+- 'O Ubuntu 26.04 usa sudo-rs 0.2.13 e o prompt de senha é ''[sudo: authenticate] Password:''; em wsl
+  -l -v o PC do autor mostra Ubuntu-26.04 e docker-desktop, ambos intocados.'
