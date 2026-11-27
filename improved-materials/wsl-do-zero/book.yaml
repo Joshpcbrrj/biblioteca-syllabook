@@ -600,33 +600,40 @@ progress:
     -> bootstrap ganhou o passo, 11/11 OK; backup.ps1 -Testar do ambiente completo (2,6 GB) restaura como
     ana.'
 handoff:
-- 'Próximo passo: book.py brief 8 (capítulos 1 a 7 prontos e commitados; dossiês de 1 a 10 já escritos
-  em research/). Depois: cap. 9, 10 e as partes fixas (capítulo 0, teste de nivelamento, simulado, glossário).'
-- 'A distro wz-teste foi desregistrada ao fim da sessão; para recriar: wsl --import wz-teste D:\wz-temp\wz-teste
-  D:\wz-temp\dl\u.wsl --version 2 (imagem oficial do Ubuntu 26.04.1 já baixada, SHA256 conferido). Ela
-  entra como root: crie ana (adduser --disabled-password --gecos '''', echo ''ana:ana123'' | chpasswd,
-  usermod -aG sudo ana) e acrescente [user] default=ana ao /etc/wsl.conf. Para scripts que chamam sudo
-  sem tty, crie /etc/sudoers.d/lab-nopass com ''ALL ALL=(ALL) NOPASSWD:ALL'' (só na distro de teste).
-  Desregistre só ela no fim.'
-- 'No wsl com bash -c e aspas, o Git Bash da máquina estraga os argumentos e as barras invertidas: escreva
-  os labs em arquivos .sh em D:\wz-temp\lab e rode wsl -d wz-teste -u ana -- bash /mnt/d/wz-temp/lab/x.sh
-  </dev/null com MSYS_NO_PATHCONV=1. No Bash/Python do harness, barra invertida dupla perde um nível:
-  prefira a ferramenta Edit para texto com \.'
-- 'C: tem pouco espaço (~2,5 GB): tudo da distro e das baixas fica em D:\wz-temp. Export da distro com
-  as ferramentas do cap. 6 deu 3,16 GB (apagado).'
-- 'Não executado e sem passo de leitor: cap. 2 passos 1 a 3 (wsl --install no PC do autor); cap. 5: instalar
-  Nerd Font, trocar perfil/esquema do Windows Terminal e layout ABNT2 (fontes oficiais citadas no texto);
-  cap. 6: abrir janela pelo WSLg (xeyes &); cap. 7: wsl --shutdown, --set-default, --update, --unregister
-  e wsl --manage --move (falhou com WSL_E_DISTRO_NOT_STOPPED porque outras distros rodavam). Ainda a registrar
-  como não executado: cap. 9 (login do Claude Code).'
-- 'Promessas já feitas ao leitor: cap. 7 → 8: o export da distro pesa 3,16 GB com as ferramentas, então
-  o backup do cap. 8 precisa decidir o que guardar (o repositório meu-ambiente + backup.ps1 do projeto);
-  cap. 6 e 9: evitar arquivos do root na pasta pessoal. O projeto meu-ambiente já tem: README.md, .gitattributes,
-  verificar.sh (10 testes), verificar.ps1 (4 testes), bootstrap.sh, dotfiles/{starship.toml,bashrc.meu,instalar.sh},
-  windows/{wslconfig.modelo,conferir-wslconfig.ps1}; o cap. 8 acrescenta backup.ps1.'
-- 'Pendente de verificação ao escrever: nomes dos comandos do Spec Kit para o Claude Code (specify integration
-  list) no cap. 10; Claude Code instalação no Ubuntu (cap. 9, doc code.claude.com/docs/en/setup). Versões
-  reais do lab: Ubuntu 26.04.1, git 2.53.0, Python 3.14.4, nvm 0.41.0 + Node v26.13.1 (npm 11.20.0), SDKMAN
-  + Java 25.0.5.1 Temurin, uv 0.13.10, Starship 1.27.0, WSL 3.0.5.0, WSLg 1.0.79.'
-- Distros do autor (Ubuntu-26.04 e docker-desktop) ficaram Running e intocadas; o %UserProfile%\.wslconfig
-  do autor não foi lido nem alterado.
+- 'Próximo passo: capítulos 1 a 10 prontos e commitados (a releitura de cada um foi feita nesta sessão:
+  caps. 8 a 10). Falta o passo 5 do fluxo: partes fixas (references/BOOK.md): capítulo 0 com o livro numa
+  página, teste de nivelamento, folhas-resumo por seção, simulado, glossário, próximos passos. Depois:
+  audit.py do livro todo, projects.py (rodar numa CÓPIA), capa, build.py, publicar. Ler BOOK.md e VISUALS.md
+  antes.'
+- 'Distro de teste: as distros wz-teste e teste-final foram desregistradas no fim; Ubuntu-26.04 e docker-desktop
+  do autor intocadas. Para recriar: wsl --import wz-teste D:/wz-temp/wz-teste D:/wz-temp/dl/u.wsl --version
+  2 (imagem oficial 26.04.1 em D:/wz-temp/dl, SHA256 conferido). Entra como root: adduser --disabled-password
+  --gecos '''' ana, chpasswd, usermod -aG sudo ana, printf ''[user]\ndefault=ana'' >> /etc/wsl.conf, e
+  /etc/sudoers.d/lab-nopass (só no teste). O script D:/wz-temp/lab/c8setup.sh faz isso. Desregistrar só
+  ela no fim.'
+- 'Dicas de ambiente: no Git Bash use MSYS_NO_PATHCONV=1 e escreva os labs em .sh em D:/wz-temp/lab; um
+  nohup dentro de ''wsl -d'' morre quando a sessão fecha: rode tarefas longas com run_in_background. Python
+  no Windows grava CRLF em open(...,''w'') e come barra invertida em strings (\b e \t viram controle):
+  use Edit/Write para texto com barra invertida e confira com grep. projects.py REESCREVE os arquivos
+  de projects/ a partir dos blocos dos capítulos (já sobrescreveu verificar.ps1 e dotfiles/starship.toml):
+  rode sempre numa cópia (cp -r) e compare; o último bloco completo de cada arquivo vence (por isso verificar.sh,
+  verificar.ps1, bootstrap.sh e README.md aparecem inteiros nos caps. 8 a 10).'
+- 'Pendência conhecida: o dotfiles/starship.toml montado a partir do bloco do cap. 5 difere do arquivo
+  do repositório no caractere do ícone (\ue0a0 literal x escape); conferir o bloco do cap. 5 antes da
+  publicação.'
+- 'Não executado e sem passo de leitor (acumulado): cap. 2 passos 1 a 3 (wsl --install); cap. 5 (Nerd
+  Font, perfil do Windows Terminal, ABNT2); cap. 6 (janela do WSLg); cap. 7 (wsl --shutdown, --set-default,
+  --update, --unregister, --manage --move); cap. 8 (--export --vhd, --import-in-place, restaurar num Windows
+  recém-formatado); cap. 9 (login, tela de confiança, /init, comandos dentro da sessão, Shift+Tab, plugins
+  @synced); cap. 10 (todos os /speckit-* dentro do Claude Code: o app tarefas é uma implementação de referência
+  escrita à mão, 6 testes, não gerada pelo Claude). Nenhuma captura de tela baixada nesta sessão.'
+- 'Versões reais do lab: Ubuntu 26.04.1, git 2.53.0, Python 3.14.4, Node v26.13.1, Java 25.0.5.1, uv 0.13.10,
+  Claude Code 2.1.332, Spec Kit 1.4.5, WSL 3.0.5.0. Projeto meu-ambiente final: verificar.sh 11 testes
+  (11 OK numa distro restaurada só pelo repositório), verificar.ps1 5 testes, bootstrap.sh com passo do
+  Claude Code, backup.ps1 (-Testar, clone teste-), backup-projetos.sh, CLAUDE.md, claude/settings.exemplo.json,
+  exemplos/tarefas.'
+- 'Para o resumo final e o report.py da skill: (1) projects.py sobrescreve arquivos do projeto sem aviso;
+  (2) audit.py exige comentário # em blocos longos de toml/python mesmo com docstring; (3) a skill pede
+  reler cada capítulo antes do commit: feito nos caps. 8 a 10. Os 4 caps. 4 a 7 foram relidos? Ver git
+  log: a releitura deles foi pulada na sessão anterior e não foi refeita; considerar uma passada de leitura
+  nativa neles antes de publicar.'
