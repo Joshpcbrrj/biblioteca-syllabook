@@ -59,7 +59,9 @@ Saída:
 
 ```text
 6.18.58.1-microsoft-standard-WSL2
-Linux version 6.18.58.1-microsoft-standard-WSL2 (root@6869314ecc53) (gcc (GCC) 13.2.0, GNU ld (GNU Binutils) 2.41) #1 SMP PREEMPT_DYNAMIC Tue Oct 27 00:24:11 UTC 2026
+Linux version 6.18.58.1-microsoft-standard-WSL2 (root@6869314ecc53)
+  (gcc (GCC) 13.2.0, GNU ld (GNU Binutils) 2.41)
+  #1 SMP PREEMPT_DYNAMIC Tue Oct 27 00:24:11 UTC 2026
 ```
 
 O nome termina em `microsoft-standard-WSL2`: é a assinatura do kernel do WSL 2, e é por ela que o verificador deste capítulo reconhece o ambiente. O número no começo (`6.18.58.1`) muda quando o WSL é atualizado, então o seu pode ser outro, mas o final do nome é sempre esse.

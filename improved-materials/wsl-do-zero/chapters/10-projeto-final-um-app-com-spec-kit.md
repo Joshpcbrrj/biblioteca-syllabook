@@ -99,14 +99,16 @@ cd tarefas
 ```text
 Next Steps
 1. Go to the project folder: cd tarefas
-2. Start Claude in this project directory; spec-kit skills were installed to .claude/skills
+2. Start Claude in this project directory; spec-kit skills were installed
+   to .claude/skills
 3. Start using skills with your coding agent:
    3.1 /speckit-constitution - Establish project principles
    3.2 /speckit-specify - Create baseline specification
    3.3 /speckit-plan - Create implementation plan
    3.4 /speckit-tasks - Generate actionable tasks
    3.5 /speckit-implement - Execute implementation
-   3.6 /speckit-converge - Assess the codebase and append remaining work as tasks
+   3.6 /speckit-converge - Assess the codebase and append remaining
+       work as tasks
 ```
 
 (Mostrei o quadro "Next Steps", que vem logo depois das mensagens de progresso.) Se a pasta já existe, `specify init --here --integration claude` usa a pasta atual; se ela já tiver arquivos, o init avisa e pede confirmação (`--force` pula a pergunta). Sem o `--integration`, o init pergunta qual agente usar.
@@ -136,7 +138,8 @@ A árvore real, até dois níveis de profundidade:
 ```text
 ---
 name: "speckit-specify"
-description: "Create or update the feature specification from a natural language feature description."
+description: "Create or update the feature specification from a natural
+  language feature description."
 argument-hint: "Describe the feature you want to specify"
 ```
 
@@ -154,7 +157,7 @@ git add -A
 git commit -m "Spec Kit inicial"
 ```
 
-O `.specify/.gitignore` já deixa de fora o que é só da sua máquina (como o `feature.json`, que aponta a funcionalidade ativa).
+O `.specify/.gitignore` já deixa de fora o que pertence só à sua máquina (como o `feature.json`, que aponta a funcionalidade ativa).
 
 ## Os comandos `/speckit-*`
 
@@ -740,7 +743,7 @@ Verificador e montador do meu ambiente de desenvolvimento no WSL.
 | `backup-projetos.sh` | Backup leve de `~/projetos` |
 | `claude/` | Modelo do `~/.claude/settings.json` |
 | `CLAUDE.md` | Contexto e regras para o Claude Code |
-| `exemplos/tarefas/` | App de referência do projeto final (Typer, SQLite, pytest) |
+| `exemplos/tarefas/` | App de referência (Typer, SQLite e pytest) |
 ```
 
 ### Backup final
@@ -756,7 +759,8 @@ Eu **não** rodei esse comando na distro `Ubuntu-26.04` desta máquina, que é d
 ```text
 Exportando teste-final para D:\wz-temp\bkp\teste-final-2026-11-27.tar ...
 The operation completed successfully.
-Pronto: 2605.1 MB, sha256 d3b93a64c4568f58e6e64e48360d2c587b05208476abb8f3f6073a9d6190e27d
+Pronto: 2605.1 MB,
+  sha256 d3b93a64c4568f58e6e64e48360d2c587b05208476abb8f3f6073a9d6190e27d
 Restaurando como 'teste-teste-final' para provar o backup ...
 The operation completed successfully.
 Usuario que abre na restaurada: ana

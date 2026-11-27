@@ -87,7 +87,8 @@ du -sh ~/.local/share/claude
 ```
 
 ```text
-lrwxrwxrwx 1 ana ana 46 Nov 27 02:46 claude -> /home/ana/.local/share/claude/versions/2.1.332
+lrwxrwxrwx 1 ana ana 46 Nov 27 02:46 claude ->
+  /home/ana/.local/share/claude/versions/2.1.332
 384M	/home/ana/.local/share/claude
 ```
 
@@ -266,7 +267,7 @@ Repositório que monta e confere o meu ambiente de desenvolvimento no WSL.
 
 - Os scripts devem continuar idempotentes: rodar duas vezes não estraga nada.
 - Os `.sh` usam fim de linha LF (veja o `.gitattributes`).
-- Os `.ps1` ficam sem acentos: o PowerShell 5.1 lê arquivo sem marcação como ANSI.
+- Os `.ps1` ficam sem acentos (o PowerShell 5.1 lê sem marcação como ANSI).
 - Nunca guardar senhas, tokens ou chaves neste repositório.
 - Nunca rodar `wsl --shutdown` nem `wsl --unregister` sem eu pedir.
 ```
@@ -371,7 +372,10 @@ claude plugin install commit-commands@claude-plugins-official
 ```
 
 ```text
-✘ Failed to install plugin "commit-commands@claude-plugins-official": Plugin "commit-commands" not found in marketplace "claude-plugins-official". Your local copy may be out of date — try `claude plugin marketplace update claude-plugins-official`.
+✘ Failed to install plugin "commit-commands@claude-plugins-official":
+  Plugin "commit-commands" not found in marketplace
+  "claude-plugins-official". Your local copy may be out of date —
+  try `claude plugin marketplace update claude-plugins-official`.
 ```
 
 O caminho manual, que a documentação também traz, é adicionar o marketplace e instalar:
@@ -383,8 +387,10 @@ claude plugin list
 ```
 
 ```text
-✔ Successfully added marketplace: claude-plugins-official (declared in user settings)
-✔ Successfully installed plugin: commit-commands@claude-plugins-official (scope: user)
+✔ Successfully added marketplace: claude-plugins-official
+  (declared in user settings)
+✔ Successfully installed plugin: commit-commands@claude-plugins-official
+  (scope: user)
   ❯ commit-commands@claude-plugins-official
     Version: 1.0.1
     Scope: user
@@ -398,7 +404,10 @@ claude plugin list
   "permissions": { "defaultMode": "plan" },
   "extraKnownMarketplaces": {
     "claude-plugins-official": {
-      "source": { "source": "github", "repo": "anthropics/claude-plugins-official" }
+      "source": {
+        "source": "github",
+        "repo": "anthropics/claude-plugins-official"
+      }
     }
   },
   "language": "portuguese",
@@ -409,7 +418,7 @@ claude plugin list
 O escopo `user` realmente mora no `settings.json`, e o que os plugins fazem é lido de lá. **Leia o que um plugin traz antes de ligá-lo**: ele pode ter hooks (comandos que rodam sozinhos) e MCPs. O `commit-commands` traz só três comandos em Markdown, e eu os listei na pasta do plugin, sem hooks nem `.mcp.json`:
 
 ```bash
-ls ~/.claude/plugins/cache/claude-plugins-official/commit-commands/1.0.1/commands
+ls ~/.claude/plugins/cache/claude-plugins-official/commit-commands/*/commands
 ```
 
 ```text
@@ -443,7 +452,9 @@ claude mcp get docling
 ```
 
 ```text
-Added stdio MCP server docling with command: uvx --python 3.12 --from docling-mcp docling-mcp-server to user config
+Added stdio MCP server docling with command:
+  uvx --python 3.12 --from docling-mcp docling-mcp-server
+  to user config
 File modified: /home/ana/.claude.json
 
 docling:
@@ -655,7 +666,7 @@ O `bypassPermissions` do projeto é ignorado (só vale no arquivo do usuário), 
 | `CLAUDE.md` | Contexto e regras do projeto; orienta, mas não é barreira |
 | Modos | `default`, `acceptEdits`, `plan`, `auto`; Shift+Tab alterna |
 | `permissions.defaultMode` | Fixa o modo inicial; `auto` e `bypassPermissions` só no arquivo do usuário |
-| `language` | Fixa o idioma das respostas; é só uma instrução |
+| `language` | Fixa o idioma das respostas; é apenas uma instrução |
 | Plugin | Pacote de um marketplace; escopo `user`, `project` ou `local` |
 | MCP | Programa à parte com ferramentas; `claude mcp add`; veja o campo `Issue` |
 

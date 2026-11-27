@@ -23,7 +23,7 @@ O **terminal** é a janela onde você digita comandos. Quem lê o que você digi
 
 No seu Ubuntu, o `PC` é o nome do seu computador. O `~` é um atalho para a sua **pasta pessoal** (*home*), que aqui é `/home/ana`. E o `$` mostra que você é um usuário comum: o administrador (*root*) vê `#`.
 
-> ⚠️ **Erro comum:** copiar o prompt junto com o comando. Quando um livro ou tutorial mostra `$ ls`, o `$` é só o prompt; você digita `ls`.
+> ⚠️ **Erro comum:** copiar o prompt junto com o comando. Quando um livro ou tutorial mostra `$ ls`, o `$` é apenas o prompt; você digita `ls`.
 
 ## Comandos de sobrevivência
 
@@ -91,9 +91,12 @@ sudo apt update
 ```
 
 ```text
-Get:46 http://archive.ubuntu.com/ubuntu resolute-backports/restricted amd64 c-n-f Metadata [120 B]
-Get:47 http://archive.ubuntu.com/ubuntu resolute-backports/multiverse amd64 Components [216 B]
-Get:48 http://archive.ubuntu.com/ubuntu resolute-backports/multiverse amd64 c-n-f Metadata [120 B]
+Get:46 http://archive.ubuntu.com/ubuntu resolute-backports/restricted
+  amd64 c-n-f Metadata [120 B]
+Get:47 http://archive.ubuntu.com/ubuntu resolute-backports/multiverse
+  amd64 Components [216 B]
+Get:48 http://archive.ubuntu.com/ubuntu resolute-backports/multiverse
+  amd64 c-n-f Metadata [120 B]
 Fetched 33.0 MB in 7s (4411 kB/s)
 Reading package lists...
 Building dependency tree...
@@ -110,9 +113,11 @@ apt list --upgradable | head -4
 
 ```text
 Listing...
-apt/resolute-updates,resolute-security 3.2.1ubuntu0.1 amd64 [upgradable from: 3.2.0]
+apt/resolute-updates,resolute-security 3.2.1ubuntu0.1 amd64
+  [upgradable from: 3.2.0]
 base-files/resolute-updates 14ubuntu6.3 amd64 [upgradable from: 14ubuntu6.2]
-binutils-common/resolute-updates,resolute-security 2.46-3ubuntu2.1 amd64 [upgradable from: 2.46-3ubuntu2]
+binutils-common/resolute-updates,resolute-security 2.46-3ubuntu2.1 amd64
+  [upgradable from: 2.46-3ubuntu2]
 ```
 
 Cada linha mostra o pacote, a versão nova e, entre colchetes, a atual. Instalar, usar e remover um programa pequeno, o `tree` (que desenha pastas em árvore), mostra o ciclo completo:
@@ -143,8 +148,10 @@ apt install -y tree
 ```
 
 ```text
-Error: Could not open lock file /var/lib/dpkg/lock-frontend - open (13: Permission denied)
-Error: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), are you root?
+Error: Could not open lock file /var/lib/dpkg/lock-frontend
+  - open (13: Permission denied)
+Error: Unable to acquire the dpkg frontend lock
+  (/var/lib/dpkg/lock-frontend), are you root?
 ```
 
 O `apt` precisa mexer em arquivos do sistema, que só o administrador pode alterar. Isso nos leva ao `sudo`.
@@ -240,10 +247,12 @@ systemctl list-units --type=service --state=running --no-pager | head -8
 ```text
   UNIT                        LOAD   ACTIVE SUB     DESCRIPTION
   chrony.service              loaded active running chrony, an NTP client/server
-  cron.service                loaded active running Regular background program processing daemon
+  cron.service                loaded active running
+    Regular background program processing daemon
   dbus.service                loaded active running D-Bus System Message Bus
   getty@tty1.service          loaded active running Getty on tty1
-  networkd-dispatcher.service loaded active running Dispatcher daemon for systemd-networkd
+  networkd-dispatcher.service loaded active running
+    Dispatcher daemon for systemd-networkd
   packagekit.service          loaded active running PackageKit Daemon
   polkit.service              loaded active running Authorization Manager
 ```
@@ -375,7 +384,8 @@ git log --oneline
 
 ```text
 Initialized empty Git repository in /home/ana/meu-ambiente/.git/
-[main (root-commit) f111cf0] Primeira versao: verificadores do Windows e do Linux
+[main (root-commit) f111cf0] Primeira versao: verificadores do Windows
+  e do Linux
  3 files changed, 64 insertions(+)
  create mode 100644 README.md
  create mode 100755 verificar.ps1
@@ -401,7 +411,7 @@ OK    ~/meu-ambiente é um repositório git
 Tudo certo: este ambiente está montado.
 ```
 
-> 🔎 **Para ir além:** esse é só o mínimo do Git. O livro *Git e GitHub essencial*, da mesma trilha, ensina o resto: ramos, histórico, remotos e o GitHub.
+> 🔎 **Para ir além:** esse é apenas o mínimo do Git. O livro *Git e GitHub essencial*, da mesma trilha, ensina o resto: ramos, histórico, remotos e o GitHub.
 
 ## 🧪 Laboratório
 

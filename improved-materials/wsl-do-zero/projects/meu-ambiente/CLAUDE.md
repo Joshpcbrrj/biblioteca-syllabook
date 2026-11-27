@@ -13,6 +13,6 @@ Repositório que monta e confere o meu ambiente de desenvolvimento no WSL.
 
 - Os scripts devem continuar idempotentes: rodar duas vezes não estraga nada.
 - Os `.sh` usam fim de linha LF (veja o `.gitattributes`).
-- Os `.ps1` ficam sem acentos: o PowerShell 5.1 lê arquivo sem marcação como ANSI.
+- Os `.ps1` ficam sem acentos (o PowerShell 5.1 lê sem marcação como ANSI).
 - Nunca guardar senhas, tokens ou chaves neste repositório.
 - Nunca rodar `wsl --shutdown` nem `wsl --unregister` sem eu pedir.

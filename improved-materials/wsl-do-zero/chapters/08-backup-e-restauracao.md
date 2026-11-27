@@ -104,7 +104,8 @@ E, no PowerShell, reinicie a distro: `wsl --terminate nome-da-distro`.
 Tentei isso na imagem crua, e o resultado ensina a armadilha:
 
 ```text
-<3>WSL (331 - Relay) ERROR: CreateProcessParseCommon:1075: getpwnam(ana) failed 0
+<3>WSL (331 - Relay) ERROR: CreateProcessParseCommon:1075:
+  getpwnam(ana) failed 0
 root
 ```
 
@@ -180,7 +181,8 @@ sha256sum -c wz-teste-2026-11-27.tar.sha256
 ```
 
 ```text
-7ea998f8b67d32c53ebc37f5c38b80eea62301f51720661e699369b0bc8b4e3d  wz-teste-2026-11-27.tar
+7ea998f8b67d32c53ebc37f5c38b80eea62301f51720661e699369b0bc8b4e3d
+  wz-teste-2026-11-27.tar
 wz-teste-2026-11-27.tar: OK
 ```
 
@@ -377,7 +379,8 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\backup.ps1 `
 ```text
 Exportando wz-teste para D:\wz-temp\bkp\wz-teste-2026-11-27.tar ...
 The operation completed successfully.
-Pronto: 1237.7 MB, sha256 7ea998f8b67d32c53ebc37f5c38b80eea62301f51720661e699369b0bc8b4e3d
+Pronto: 1237.7 MB,
+  sha256 7ea998f8b67d32c53ebc37f5c38b80eea62301f51720661e699369b0bc8b4e3d
 Restaurando como 'teste-wz-teste' para provar o backup ...
 The operation completed successfully.
 Usuario que abre na restaurada: ana

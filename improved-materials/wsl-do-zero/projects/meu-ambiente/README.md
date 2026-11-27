@@ -22,4 +22,4 @@ Verificador e montador do meu ambiente de desenvolvimento no WSL.
 | `backup-projetos.sh` | Backup leve de `~/projetos` |
 | `claude/` | Modelo do `~/.claude/settings.json` |
 | `CLAUDE.md` | Contexto e regras para o Claude Code |
-| `exemplos/tarefas/` | App de referência do projeto final (Typer, SQLite, pytest) |
+| `exemplos/tarefas/` | App de referência (Typer, SQLite e pytest) |
