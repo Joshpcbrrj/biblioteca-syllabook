@@ -1,0 +1,4 @@
+# carregado pelo ~/.bashrc; só liga o que estiver instalado
+if command -v starship > /dev/null; then
+  eval "$(starship init bash)"
+fi

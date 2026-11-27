@@ -548,6 +548,14 @@ progress:
     permissões 777/100755 vindas de /mnt, CRLF x LF com erro $''\r'', .gitattributes (* text=auto, *.sh
     eol=lf, *.ps1 eol=crlf), verificar.sh com 8 testes. Analogia: dois bairros e a ponte com tradutor
     (9p). Rodou na wz-teste como ana.'
+- n: 5
+  done: '2026-11-27'
+  summary: 'Quatro camadas da aparência (janela/cores e fonte no Windows; prompt e locale no Ubuntu; teclado
+    no Windows). Windows Terminal: perfil, schemes/colorScheme (JSON validado, aplicação não executada;
+    imagem One Half Dark da MicrosoftDocs). Nerd Font 3.5.1 (não executado; teste printf \ue0a0). Starship
+    1.27.0 instalado em ~/.local/bin após ler o script de 554 linhas. dotfiles/ no meu-ambiente: starship.toml,
+    bashrc.meu, instalar.sh idempotente (link simbólico + linha no .bashrc). locale: language-pack-pt,
+    LC_ALL, update-locale. ABNT2 (não executado). Voltar ao padrão. verificar.sh com 9 testes.'
 handoff:
 - 'Próximo passo: book.py brief 4 (capítulos 1 a 3 prontos e commitados; dossiês de 1 a 10 já escritos
   em research/).'

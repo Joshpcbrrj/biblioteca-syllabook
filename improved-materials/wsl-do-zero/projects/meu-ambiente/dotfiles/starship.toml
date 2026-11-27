@@ -1,0 +1,10 @@
+# prompt do meu-ambiente: pasta, branch do Git, estado e o símbolo final
+add_newline = false
+format = "$directory$git_branch$git_status$character"
+
+[directory]
+truncation_length = 2
+
+[git_branch]
+# \ue0a0 é o ícone de branch; só uma Nerd Font sabe desenhá-lo
+symbol = "\ue0a0 "

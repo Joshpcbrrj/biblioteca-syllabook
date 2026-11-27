@@ -1,0 +1,8 @@
+type: layers
+title: A aparência do terminal tem quatro camadas, e duas moram no Windows e duas no Ubuntu
+layers:
+  - {text: "1. Janela e cores", note: "Windows Terminal: perfil e esquema (Windows)", icon: monitor, color: blue}
+  - {text: "2. Fonte", note: "Nerd Font, instalada no Windows", icon: file-text, color: blue}
+  - {text: "3. Prompt", note: "Starship, ligado no ~/.bashrc (Ubuntu)", icon: terminal, color: green}
+  - {text: "4. Idioma e teclado", note: "locale no Ubuntu; layout ABNT2 no Windows", icon: languages, color: orange}
+caption: "Azul: no Windows. Verde: no Ubuntu. Laranja: um pouco de cada lado."

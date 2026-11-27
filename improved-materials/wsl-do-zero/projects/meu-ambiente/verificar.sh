@@ -29,6 +29,12 @@ repo_existe() { git -C ~/meu-ambiente rev-parse --is-inside-work-tree; }
 lf_fixo() {
   [ -f ~/meu-ambiente/.gitattributes ] && ! grep -q "$(printf '\r')" "$0"
 }
+# o link do Starship aponta para o repositório e o .bashrc carrega o bashrc.meu
+dotfiles_ligados() {
+  alvo=~/meu-ambiente/dotfiles/starship.toml
+  [ "$(readlink ~/.config/starship.toml)" = "$alvo" ] &&
+    grep -q 'dotfiles/bashrc.meu' ~/.bashrc
+}
 
 checa "distribuição é o Ubuntu" eh_ubuntu
 checa "kernel do WSL 2" kernel_wsl2
@@ -38,6 +44,7 @@ checa "usuário no grupo sudo" no_grupo_sudo
 checa "systemd é o processo 1" systemd_ativo
 checa "~/meu-ambiente é um repositório git" repo_existe
 checa ".gitattributes presente e scripts com LF" lf_fixo
+checa "dotfiles ligados (starship e .bashrc)" dotfiles_ligados
 
 echo "---"
 if [ "$falhas" -eq 0 ]; then
