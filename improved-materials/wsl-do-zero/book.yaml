@@ -598,9 +598,10 @@ progress:
     -> bootstrap ganhou o passo, 11/11 OK; backup.ps1 -Testar do ambiente completo (2,6 GB) restaura como
     ana.'
 handoff:
-- 'Estado: livro completo (caps. 0 a 11 e glossário, capa, README, 3 folhas-resumo). audit.py (com --original),
-  projects.py e validate sem erros nem avisos; build.py (EPUB e zip) e build.py site rodaram numa pasta
-  temporária. Nada foi enviado ao GitHub; build.py lists não foi rodado.'
+- 'Estado: livro completo (caps. 0 a 11 e glossário, capa, README, 3 folhas-resumo). Releitura em separado
+  feita nesta sessão (caps. 8, 9, 10, simulado e glossário, um commit cada, só ajustes pequenos). audit.py
+  do livro inteiro (com a comparação com o original) e projects.py sem erros nem avisos. Nada foi enviado
+  ao GitHub; build.py lists não foi rodado.'
 - 'Próximo passo: publicar (modes/PUBLISH.md): build.py lists, EPUB em release, push. Notion por último,
   em conversa nova. Antes, o autor deve ler o livro (revisão humana: não).'
 - 'Não executado e sem passo de leitor (acumulado): cap. 2 passos 1 a 3 (wsl --install); cap. 5 (Nerd
@@ -608,13 +609,14 @@ handoff:
   --update, --unregister, --manage --move); cap. 8 (--export --vhd, --import-in-place, restaurar num Windows
   recém-formatado); cap. 9 (login, tela de confiança, /init, comandos dentro da sessão, Shift+Tab, plugins
   @synced); cap. 10 (todos os /speckit-* dentro do Claude Code). Nenhuma captura de tela baixada.'
-- 'Nesta sessão os labs não foram rodados de novo (só texto): a wz-teste não existe e as distros do autor
-  ficaram intocadas, .wslconfig nunca tocado. Para recriar a distro de teste: wsl --import wz-teste D:/wz-temp/wz-teste
+- 'Labs não rodados de novo (só releitura de texto): a wz-teste não existe e as distros do autor ficaram
+  intocadas; .wslconfig nunca tocado. Para recriar a distro de teste: wsl --import wz-teste D:/wz-temp/wz-teste
   D:/wz-temp/dl/u.wsl --version 2; rode D:/wz-temp/lab/c8setup.sh e depois wsl --terminate wz-teste (nunca
   --shutdown). No Git Bash use MSYS_NO_PATHCONV=1.'
 - 'Para o report.py da skill: (1) projects.py reescrevia arquivos de projects/ sem avisar (agora recusa);
   (2) o regex de título de arquivo do projects.py não aceita \_ escapado: o arquivo é ignorado em silêncio
   e depois acusado como ''editado à mão''; (3) audit.py exige comentário # em blocos longos de toml/python
   mesmo com docstring; (4) audit.py --original mostra só a primeira cópia de cada arquivo, então corrigir
-  uma revela a próxima (os caps. 8 a 10 tinham ~100 trechos iguais ao original); (5) build.py site só
-  gera o fonte (zensical build não foi rodado).'
+  uma revela a próxima; (5) build.py site só gera o fonte (zensical build não foi rodado); (6) audit.py
+  11 (simulado) acusa seções ausentes, que só valem para capítulos comuns, enquanto o audit do livro inteiro
+  passa.'
