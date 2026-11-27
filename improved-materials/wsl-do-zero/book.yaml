@@ -556,6 +556,13 @@ progress:
     1.27.0 instalado em ~/.local/bin após ler o script de 554 linhas. dotfiles/ no meu-ambiente: starship.toml,
     bashrc.meu, instalar.sh idempotente (link simbólico + linha no .bashrc). locale: language-pack-pt,
     LC_ALL, update-locale. ABNT2 (não executado). Voltar ao padrão. verificar.sh com 9 testes.'
+- n: 6
+  done: '2026-11-27'
+  summary: PATH e ordem de busca (51 entradas, 42 do Windows; which -a; npm do Windows aparece antes do
+    nvm). nvm 0.41.0 + Node v26.13.1 (PROFILE=/dev/null), SDKMAN + Java 25.0.5.1 Temurin (rcupdate=false,
+    auto_answer), uv 0.13.10, WSLg 1.0.79 (DISPLAY, x11-apps; janela não executada). bootstrap.sh idempotente
+    testado do zero com usuário bia (50 s) e de novo (3,7 s); bashrc.meu com PATH/nvm/SDKMAN; verificar.sh
+    com 10 testes. Todos os comandos rodaram na wz-teste.
 handoff:
 - 'Próximo passo: book.py brief 4 (capítulos 1 a 3 prontos e commitados; dossiês de 1 a 10 já escritos
   em research/).'

@@ -1,0 +1,9 @@
+type: layers
+title: O shell procura o comando na ordem do PATH, e o primeiro que acha vence; o Windows vem por último
+layers:
+  - {text: "~/.sdkman/.../java/current/bin", note: "java do SDKMAN", icon: terminal, color: green}
+  - {text: "~/.nvm/.../v26.13.1/bin", note: "node e npm do nvm: este npm vence", icon: terminal, color: green}
+  - {text: "~/.local/bin", note: "starship e uv", icon: terminal, color: green}
+  - {text: "/usr/bin e outras pastas do Ubuntu", note: "git, python3, apt", icon: terminal, color: blue}
+  - {text: "/mnt/c/Program Files/nodejs", note: "um npm do Windows: só vence se o Linux não tiver o seu", icon: monitor, color: orange}
+caption: "Quanto mais acima, mais cedo o shell olha. Verde: pasta pessoal. Laranja: Windows."

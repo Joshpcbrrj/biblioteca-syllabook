@@ -1,4 +1,19 @@
 # carregado pelo ~/.bashrc; só liga o que estiver instalado
+
+# programas instalados na pasta pessoal (starship, uv) ficam em ~/.local/bin
+case ":$PATH:" in
+  *":$HOME/.local/bin:"*) ;;
+  *) PATH="$HOME/.local/bin:$PATH" ;;
+esac
+
 if command -v starship > /dev/null; then
   eval "$(starship init bash)"
 fi
+
+# nvm: o Node.js da pasta pessoal, antes do npm do Windows no PATH
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+
+# SDKMAN: o Java (e outros) da pasta pessoal
+export SDKMAN_DIR="$HOME/.sdkman"
+[ -s "$SDKMAN_DIR/bin/sdkman-init.sh" ] && . "$SDKMAN_DIR/bin/sdkman-init.sh"

@@ -35,6 +35,10 @@ dotfiles_ligados() {
   [ "$(readlink ~/.config/starship.toml)" = "$alvo" ] &&
     grep -q 'dotfiles/bashrc.meu' ~/.bashrc
 }
+# um shell interativo novo carrega o bashrc.meu, que liga o nvm e o SDKMAN
+ferramentas_ok() {
+  bash -ic 'node --version && java -version && uv --version'
+}
 
 checa "distribuição é o Ubuntu" eh_ubuntu
 checa "kernel do WSL 2" kernel_wsl2
@@ -45,6 +49,7 @@ checa "systemd é o processo 1" systemd_ativo
 checa "~/meu-ambiente é um repositório git" repo_existe
 checa ".gitattributes presente e scripts com LF" lf_fixo
 checa "dotfiles ligados (starship e .bashrc)" dotfiles_ligados
+checa "node, java e uv respondem num shell novo" ferramentas_ok
 
 echo "---"
 if [ "$falhas" -eq 0 ]; then
