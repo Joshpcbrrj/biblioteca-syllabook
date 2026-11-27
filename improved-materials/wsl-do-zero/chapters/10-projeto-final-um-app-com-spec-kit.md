@@ -530,7 +530,7 @@ Tarefa 1 apagada.
 Erro: não existe a tarefa 9.
 ```
 
-Tudo como a spec pede: título vazio recusado com mensagem clara (código de saída 1), exclusão que pergunta antes, filtro por status e dados que ficam salvos entre execuções (o teste `test_data_survives_between_runs`). **Não medi** o critério "em menos de 1 segundo" do original, e por isso ele não está no pedido acima.
+Tudo como a spec pede: título vazio recusado com mensagem clara (código de saída 1), exclusão que pergunta antes, filtro por status e dados que ficam salvos entre execuções (o teste `test_data_survives_between_runs`). O pedido não fixa um tempo de resposta, porque eu não o mediria. Repare também que a prioridade "média" é digitada sem acento (`media`), para ninguém depender do acento no terminal.
 
 ## Boas práticas
 
@@ -567,7 +567,7 @@ Não instalei nenhuma extensão nem rodei os `upgrade`.
 
 ## Encerramento: o ambiente completo
 
-Você partiu de um Windows sem Linux e chegou a um projeto especificado, testado e versionado. O que mostra que o **ambiente** é seu (e não apenas o app) é a restauração: refazê-lo do zero, com um só comando, numa distro nova.
+Você partiu de um Windows sem Linux e chegou a um projeto especificado, testado e versionado. O que mostra que o **ambiente** é seu (e não apenas o app) é a restauração: refazê-lo do zero, a partir de um repositório, numa distro nova.
 
 ### Restaurar do zero, de verdade
 
@@ -692,7 +692,7 @@ OK    Claude Code instalado como usuário
 Tudo certo: este ambiente está montado.
 ```
 
-Onze testes `OK`: o ambiente se refaz do zero com um repositório e um comando. O que o repositório **não** traz é o que está fora dele (suas chaves, o login do Claude, os `.env`): para isso servem o `backup.ps1` e o seu próprio cuidado.
+Onze testes `OK`: o ambiente se refaz do zero com um repositório e um script. O que o repositório **não** traz é o que está fora dele (suas chaves, o login do Claude, os `.env`): para isso servem o `backup.ps1` e o seu próprio cuidado.
 
 > ⚠️ **Não executado:** a parte do **Windows** da restauração (a fonte e o perfil do Windows Terminal do capítulo 5, e o `.wslconfig` do capítulo 7) não entra no `bootstrap.sh`, porque é do lado do Windows e depende das suas escolhas. O texto desses capítulos continua valendo.
 
