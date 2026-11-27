@@ -29,7 +29,29 @@ promise:
   level: iniciante
   sequence: o que é o WSL, instalação, primeiros passos no Ubuntu, arquivos entre os dois lados, terminal, ferramentas de dev e WSLg, gerenciamento, backup e restauração, Claude Code, projeto final com Spec Kit
 new_content_pct: 15
-sources: []
+sources:
+- {title: "Install WSL", url: "https://learn.microsoft.com/windows/wsl/install", checked: "2026-11-27"}
+- {title: "Basic commands for WSL", url: "https://learn.microsoft.com/windows/wsl/basic-commands", checked: "2026-11-27"}
+- {title: "Advanced settings configuration in WSL", url: "https://learn.microsoft.com/windows/wsl/wsl-config", checked: "2026-11-27"}
+- {title: "Comparing WSL versions", url: "https://learn.microsoft.com/windows/wsl/compare-versions", checked: "2026-11-27"}
+- {title: "Working across file systems", url: "https://learn.microsoft.com/windows/wsl/filesystems", checked: "2026-11-27"}
+- {title: "Use systemd to manage Linux services with WSL", url: "https://learn.microsoft.com/windows/wsl/systemd", checked: "2026-11-27"}
+- {title: "Set up a WSL development environment", url: "https://learn.microsoft.com/windows/wsl/setup/environment", checked: "2026-11-27"}
+- {title: "Run Linux GUI apps on WSL", url: "https://learn.microsoft.com/windows/wsl/tutorials/gui-apps", checked: "2026-11-27"}
+- {title: "WSL releases (GitHub)", url: "https://github.com/microsoft/WSL/releases", checked: "2026-11-27"}
+- {title: "Windows Terminal releases", url: "https://github.com/microsoft/terminal/releases", checked: "2026-11-27"}
+- {title: "Nerd Fonts", url: "https://www.nerdfonts.com/font-downloads", checked: "2026-11-27"}
+- {title: "Starship", url: "https://starship.rs", checked: "2026-11-27"}
+- {title: "nvm", url: "https://github.com/nvm-sh/nvm", checked: "2026-11-27"}
+- {title: "SDKMAN! install", url: "https://sdkman.io/install", checked: "2026-11-27"}
+- {title: "uv installation", url: "https://docs.astral.sh/uv/getting-started/installation/", checked: "2026-11-27"}
+- {title: "Claude Code setup", url: "https://code.claude.com/docs/en/setup", checked: "2026-11-27"}
+- {title: "Claude Code permission modes", url: "https://code.claude.com/docs/en/permission-modes", checked: "2026-11-27"}
+- {title: "Claude Code plugins", url: "https://code.claude.com/docs/en/discover-plugins", checked: "2026-11-27"}
+- {title: "Claude Code MCP", url: "https://code.claude.com/docs/en/mcp", checked: "2026-11-27"}
+- {title: "Spec Kit", url: "https://github.com/github/spec-kit", checked: "2026-11-27"}
+- {title: "Ubuntu 26.04.1 WSL image", url: "https://releases.ubuntu.com/26.04.1/", checked: "2026-11-27"}
+choices: {images: real, reading: large}
 approved_on: '2026-11-27'
 edition: '2.0'
 human_review: false
