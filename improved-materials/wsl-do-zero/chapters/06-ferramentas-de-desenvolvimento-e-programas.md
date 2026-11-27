@@ -94,7 +94,11 @@ npm --version
 11.19.0
 ```
 
-O `npm` respondeu, mas é o do Windows, mexendo em arquivos do Windows. Você acha que está usando o Node do Linux e não está. Depois de instalar o nvm (próxima seção), a mesma pergunta dá outra resposta:
+O `npm` respondeu, mas é o do Windows, mexendo em arquivos do Windows. Você acha que está usando o Node do Linux e não está. Depois de instalar o nvm (próxima seção), a mesma pergunta, agora para os dois comandos, dá outra resposta:
+
+```bash
+which -a node npm
+```
 
 ```text
 /home/ana/.nvm/versions/node/v26.13.1/bin/node
@@ -410,7 +414,7 @@ user	0m0.452s
 sys	0m0.289s
 ```
 
-(Essa segunda rodada é a anterior, repetida pelo mesmo usuário: levou 3,7 s e não baixou nada.)
+(A segunda rodada veio logo depois da primeira, pelo mesmo usuário: levou 3,7 s e não baixou nada.)
 
 Falta um teste no verificador. A função `ferramentas_ok` abre um shell **interativo** novo, que carrega o `bashrc.meu`, e pergunta a versão de cada ferramenta. O arquivo inteiro, com o que mudou desde o capítulo 5 (a função e a linha do `checa`):
 
@@ -534,7 +538,7 @@ Na distro de teste, antes do nvm: `python3` e `git` aparecem em `/usr/bin` e em 
 <details>
 <summary>Ver resposta</summary>
 
-Basta rodar `bash bootstrap.sh` outra vez. O script é idempotente: cada bloco verifica se o resultado existe (`[ ! -s "$NVM_DIR/nvm.sh" ]`, `[ -d ".../java/current" ] ||`, `[ ! -x ".../uv" ]`) e pula o que já está pronto. Cuidado com um detalhe: se o Java caiu pela metade, a pasta `~/.sdkman/candidates/java/current` pode não existir, e o script tenta de novo. Critérios: (1) manda rodar de novo; (2) explica a verificação "já existe?" de cada bloco.
+Basta rodar `bash bootstrap.sh` outra vez. O script é idempotente: cada bloco verifica se o resultado existe (`[ ! -s "$NVM_DIR/nvm.sh" ]`, `[ ! -d ".../java/current" ]`, `[ ! -x ".../uv" ]`) e pula o que já está pronto. Cuidado com um detalhe: se o Java caiu pela metade, a pasta `~/.sdkman/candidates/java/current` pode não existir, e o script tenta de novo. Critérios: (1) manda rodar de novo; (2) explica a verificação "já existe?" de cada bloco.
 
 </details>
 
