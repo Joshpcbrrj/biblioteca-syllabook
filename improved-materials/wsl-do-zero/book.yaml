@@ -620,3 +620,4 @@ handoff:
   uma revela a próxima; (5) build.py site só gera o fonte (zensical build não foi rodado); (6) audit.py
   11 (simulado) acusa seções ausentes, que só valem para capítulos comuns, enquanto o audit do livro inteiro
   passa.'
+notion_url: "https://app.notion.com/p/425345e204438152af01df51ef27918b"
