@@ -99,9 +99,9 @@ O objeto `font` vale a partir do Windows Terminal 1.10; versões antigas usam `f
 
 ```bash
 # imprime o caractere U+E0A0, o ícone de branch do Git
-printf '\n'
+printf '\ue0a0\n'
 # mostra os bytes dele, para provar que o Ubuntu o enviou
-printf '\n' | od -An -tx1
+printf '\ue0a0\n' | od -An -tx1
 ```
 
 ```text
@@ -138,7 +138,12 @@ set -eu
 ```bash
 # -b escolhe a pasta de instalação; -y pula a pergunta de confirmação
 mkdir -p ~/.local/bin
-sh /tmp/starship-install.sh -y -b "$HOME/.local/bin"
+# o sed tira as cores, o grep fica com as linhas que importam e o fold
+# quebra a linha longa do endereço
+sh /tmp/starship-install.sh -y -b "$HOME/.local/bin" 2>&1 |
+  sed 's/\x1b\[[0-9;]*m//g; s/\x1b(B//g' |
+  grep -E 'Bin directory|Platform|Arch|Tarball|Installing|installed' |
+  fold -s -w 78
 ~/.local/bin/starship --version | head -1
 ```
 
@@ -146,14 +151,16 @@ sh /tmp/starship-install.sh -y -b "$HOME/.local/bin"
 > Bin directory: /home/ana/.local/bin
 > Platform:      unknown-linux-musl
 > Arch:          x86_64
-> Tarball URL: https://github.com/starship/starship/releases/latest/download/starship-x86_64-unknown-linux-musl.tar.gz
+> Tarball URL: 
+https://github.com/starship/starship/releases/latest/download/starship-x86_64-
+unknown-linux-musl.tar.gz
 ! Bin directory /home/ana/.local/bin is not in your $PATH
 > Installing Starship, please wait…
 ✓ Starship latest installed
 starship 1.27.0
 ```
 
-(Mostrei só as linhas que importam; o instalador imprime também a instrução de ativação.) O aviso "não está no seu `$PATH`" vale só para o shell já aberto: o `~/.profile` do Ubuntu acrescenta o `~/.local/bin` ao `PATH` quando a pasta existe, e isso vale ao abrir o Ubuntu de novo. O Starship ainda não aparece no seu prompt: falta ligá-lo e configurá-lo, e é aí que entram os *dotfiles*.
+(O instalador imprime também a instrução de ativação para cada shell, que o `grep` deixou de fora.) O aviso "não está no seu `$PATH`" vale só para o shell já aberto: o `~/.profile` do Ubuntu acrescenta o `~/.local/bin` ao `PATH` quando a pasta existe, e isso vale ao abrir o Ubuntu de novo. O Starship ainda não aparece no seu prompt: falta ligá-lo e configurá-lo, e é aí que entram os *dotfiles*.
 
 ### Dotfiles no repositório
 
@@ -174,8 +181,8 @@ format = "$directory$git_branch$git_status$character"
 truncation_length = 2
 
 [git_branch]
-#  é o ícone de branch; só uma Nerd Font sabe desenhá-lo
-symbol = " "
+# \ue0a0 é o ícone de branch; só uma Nerd Font sabe desenhá-lo
+symbol = "\ue0a0 "
 ```
 
 O `format` lista os módulos na ordem em que aparecem; `$character` é o símbolo final (`❯`), que fica verde quando o comando anterior deu certo e vermelho quando falhou. O segundo arquivo é o trecho que o `~/.bashrc` vai carregar:
@@ -455,7 +462,7 @@ Tudo certo: este ambiente está montado.
 <details>
 <summary>Ver resposta</summary>
 
-A fonte precisa estar no **Windows** e ser escolhida no perfil do Windows Terminal, porque é ele que desenha as letras; o Ubuntu só envia os caracteres. Correção: instalar a Nerd Font no Windows e pôr `"font": { "face": "<nome exato>" }` no perfil (`defaults` ou o do Ubuntu). Teste: `printf '\n'` deve desenhar o ícone.
+A fonte precisa estar no **Windows** e ser escolhida no perfil do Windows Terminal, porque é ele que desenha as letras; o Ubuntu só envia os caracteres. Correção: instalar a Nerd Font no Windows e pôr `"font": { "face": "<nome exato>" }` no perfil (`defaults` ou o do Ubuntu). Teste: `printf '\ue0a0\n'` deve desenhar o ícone.
 
 </details>
 

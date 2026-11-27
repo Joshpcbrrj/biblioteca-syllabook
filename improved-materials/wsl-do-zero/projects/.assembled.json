@@ -1,0 +1,26 @@
+{
+ "meu-ambiente": {
+  "files": {
+   ".gitattributes": "1f3617cfc33fd7e8",
+   "CLAUDE.md": "b7dd153870bf7709",
+   "README.md": "5d7cd6c3fabdf404",
+   "backup-projetos.sh": "a40f9a06ea60b49a",
+   "backup.ps1": "4ee59c84d5e10649",
+   "bootstrap.sh": "19826ed7f28f4c33",
+   "claude/settings.exemplo.json": "def1bd084c133bfe",
+   "dotfiles/bashrc.meu": "0b29964f107bcb83",
+   "dotfiles/instalar.sh": "18d133e6c3a9b2cc",
+   "dotfiles/starship.toml": "a49ac91e4397d758",
+   "exemplos/tarefas/pyproject.toml": "e559bf022b10bac1",
+   "exemplos/tarefas/src/tarefas/__init__.py": "1163ba30bdcf485e",
+   "exemplos/tarefas/src/tarefas/cli.py": "8201a64589f646c7",
+   "exemplos/tarefas/src/tarefas/db.py": "9d07c56f8fea059f",
+   "exemplos/tarefas/tests/test_tarefas.py": "1695f6406c8f48ed",
+   "verificar.ps1": "a43d45e7adbf3c3d",
+   "verificar.sh": "4d0989672be47a15",
+   "windows/conferir-wslconfig.ps1": "13588750d90d8332",
+   "windows/wslconfig.modelo": "59cf6b4267723cac"
+  },
+  "generated": []
+ }
+}
