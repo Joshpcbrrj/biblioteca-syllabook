@@ -223,9 +223,7 @@ concepts:
   depends:
   - shell-prompt
 - id: version-managers
-  name: gerenciadores de versão (nvm
-  SDKMAN: null
-  uv): null
+  name: gerenciadores de versão (nvm, SDKMAN, uv)
   chapter: 6
   depends:
   - path
