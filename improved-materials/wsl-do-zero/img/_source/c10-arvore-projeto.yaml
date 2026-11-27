@@ -1,0 +1,15 @@
+type: tree
+title: O que o specify init cria na pasta do projeto
+root:
+  text: "tarefas/"
+  icon: folder
+  children:
+    - text: ".specify/"
+      note: "memória, modelos e scripts do Spec Kit"
+      children:
+        - {text: "memory/constitution.md", note: "as regras do projeto"}
+        - {text: "templates/", note: "modelos de spec, plan e tasks"}
+    - text: ".claude/skills/"
+      note: "os nove comandos /speckit-*"
+    - text: "specs/"
+      note: "nasce no primeiro /speckit-specify: 001-nome/"

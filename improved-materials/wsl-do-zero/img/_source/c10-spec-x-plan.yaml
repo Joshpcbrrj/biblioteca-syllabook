@@ -1,0 +1,9 @@
+type: compare
+title: A spec diz o quê; o plan diz como
+left: {title: "spec.md", icon: book, color: green}
+right: {title: "plan.md", icon: code, color: blue}
+rows:
+  - ["Responde: o quê e por quê", "Responde: como"]
+  - ["Apagar uma tarefa pede confirmação", "Python com Typer; dados em SQLite"]
+  - ["Não cita tecnologia", "Escolhe e justifica a tecnologia"]
+  - ["Quem lê: você, antes de tudo", "Quem lê: você, antes das tarefas"]

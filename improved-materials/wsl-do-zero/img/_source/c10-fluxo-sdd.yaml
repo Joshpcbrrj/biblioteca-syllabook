@@ -1,0 +1,9 @@
+type: flow
+title: O fluxo do Spec Kit, com revisão entre cada passo
+steps:
+  - {text: "/speckit-constitution", note: "uma vez por projeto: as regras fixas", icon: book-open, kind: start}
+  - {text: "/speckit-specify", note: "o quê e por quê, sem tecnologia", icon: code}
+  - {text: "/speckit-plan", note: "como: linguagem, biblioteca, estrutura", icon: compass}
+  - {text: "/speckit-tasks", note: "tarefas em fases, na ordem", icon: calendar}
+  - {text: "/speckit-implement", note: "uma fase por vez, com um commit por fase", icon: code-xml}
+  - {text: "/speckit-converge", note: "compara o código com a spec e acrescenta o que faltou", icon: circle-check, kind: end}

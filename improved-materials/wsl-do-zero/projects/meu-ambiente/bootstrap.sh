@@ -48,6 +48,17 @@ if [ ! -x "$HOME/.local/bin/uv" ]; then
 fi
 echo "$("$HOME/.local/bin/uv" --version)"
 
+passo "Claude Code (instalador oficial, como o seu usuário)"
+if [ ! -x "$HOME/.local/bin/claude" ]; then
+  curl -fsSL https://claude.ai/install.sh -o /tmp/claude-install.sh
+  bash /tmp/claude-install.sh > /dev/null 2>&1
+fi
+echo "claude $("$HOME/.local/bin/claude" --version)"
+# configurações iniciais, só se você ainda não tem as suas
+mkdir -p ~/.claude
+[ -f ~/.claude/settings.json ] ||
+  cp "$aqui/claude/settings.exemplo.json" ~/.claude/settings.json
+
 passo "dotfiles"
 bash "$aqui/dotfiles/instalar.sh"
 echo "bootstrap concluído"

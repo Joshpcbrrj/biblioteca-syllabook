@@ -590,6 +590,15 @@ progress:
     e language no settings.json (auto/bypass só no arquivo do usuário), json.tool; plugins (marketplace
     add manual, commit-commands sem hooks, escopos); MCP docling falhou por falta de uvx (campo Issue).
     verificar.sh com 11 testes. Não executado: login, tela de confiança, comandos dentro da sessão.'
+- n: 10
+  done: '2026-11-27'
+  summary: 'Projeto final: SDD e Spec Kit 1.4.5 (instalado e specify init rodados de verdade: nove skills
+    /speckit-* com hífen, árvore .specify/.claude, init não cria git); fluxo constitution/specify/plan/tasks/implement/converge
+    e prompts do app de tarefas (não executados: exigem login); app de referência escrito à mão (Typer+SQLite+pytest,
+    6 testes, falha real do teste por y/N); extensões/atualização (specify self check 1.4.5). Restauração
+    do zero em distro nova: git clone + bootstrap.sh (1m17) + verificar.sh achou lacuna (Claude Code)
+    -> bootstrap ganhou o passo, 11/11 OK; backup.ps1 -Testar do ambiente completo (2,6 GB) restaura como
+    ana.'
 handoff:
 - 'Próximo passo: book.py brief 8 (capítulos 1 a 7 prontos e commitados; dossiês de 1 a 10 já escritos
   em research/). Depois: cap. 9, 10 e as partes fixas (capítulo 0, teste de nivelamento, simulado, glossário).'
