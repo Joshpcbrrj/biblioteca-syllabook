@@ -563,6 +563,16 @@ progress:
     auto_answer), uv 0.13.10, WSLg 1.0.79 (DISPLAY, x11-apps; janela não executada). bootstrap.sh idempotente
     testado do zero com usuário bia (50 s) e de novo (3,7 s); bashrc.meu com PATH/nvm/SDKMAN; verificar.sh
     com 10 testes. Todos os comandos rodaram na wz-teste.
+- n: 7
+  done: '2026-11-27'
+  summary: 'Dois arquivos: .wslconfig (Windows, todas as distros, exige --shutdown; chaves memory/processors/swap/vmIdleTimeout/networkingMode)
+    x wsl.conf (por distro, --terminate). Nesta máquina Ubuntu vê 15 GiB, 4 GiB swap, 6 CPUs. Modelo windows/wslconfig.modelo
+    + windows/conferir-wslconfig.ps1 (testado em pasta temporária, bom e ruim; .wslconfig do autor intocado),
+    verificar.ps1 com 4 testes. Experimento appendWindowsPath=false: PATH 51 (42 Windows) -> 9, cmd.exe
+    some, restaurado. terminate x shutdown (wsl -l -v real, só wz-teste parou; shutdown não executado);
+    analogia apartamento x prédio. Comandos de gerenciamento (wsl --help), export 3,16 GB em 1m24, import,
+    --manage --move falhou (WSL_E_DISTRO_NOT_STOPPED; precisa de shutdown, não executado), problemas comuns
+    da documentação.'
 handoff:
 - 'Próximo passo: book.py brief 4 (capítulos 1 a 3 prontos e commitados; dossiês de 1 a 10 já escritos
   em research/).'

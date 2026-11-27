@@ -1,0 +1,12 @@
+# Modelo do .wslconfig (lado Windows). Este arquivo NAO vale nada sozinho:
+# so tem efeito se copiado para %UserProfile%\.wslconfig e se o WSL for
+# reiniciado depois (wsl --shutdown, que derruba todas as distros).
+[wsl2]
+# limite de memoria da VM (padrao: metade da RAM do Windows)
+memory=8GB
+# nucleos de processador que a VM pode usar (padrao: todos)
+processors=4
+# arquivo de troca (padrao: 25% da memoria); 0 desliga
+swap=2GB
+# ms sem uso ate a VM desligar sozinha (padrao: 60000)
+vmIdleTimeout=60000

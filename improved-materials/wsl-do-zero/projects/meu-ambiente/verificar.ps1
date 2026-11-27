@@ -16,3 +16,10 @@ $virtOk = $cpu.VirtualizationFirmwareEnabled -or $emUso
 Checa "Windows 10 build 19041+ ou 11 (este: build $build)" $versaoOk
 Checa "virtualizacao ligada no firmware ou em uso" $virtOk
 Checa "wsl.exe encontrado" ($null -ne $wsl)
+
+# o modelo do .wslconfig (windows/) passa no conferidor, sem ser aplicado
+$modelo = Join-Path $PSScriptRoot 'windows\wslconfig.modelo'
+$conferidor = Join-Path $PSScriptRoot 'windows\conferir-wslconfig.ps1'
+$modeloOk = (Test-Path $modelo) -and (Test-Path $conferidor) -and
+    -not (& $conferidor -Caminho $modelo | Select-String 'FALHA')
+Checa "modelo do .wslconfig confere (windows/)" $modeloOk

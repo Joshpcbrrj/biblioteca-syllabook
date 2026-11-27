@@ -1,0 +1,9 @@
+type: compare
+title: O .wslconfig vale para todas as distros e mora no Windows; o wsl.conf vale para uma distro e mora no Linux
+left: {title: ".wslconfig", icon: monitor, color: blue}
+right: {title: "wsl.conf", icon: terminal, color: green}
+rows:
+  - ['Windows: %UserProfile%\.wslconfig', "Linux: /etc/wsl.conf"]
+  - ["Vale para todas as distros do WSL 2", "Vale só para a distro dona do arquivo"]
+  - ["memory, processors, swap, rede", "systemd, interop, automount, usuário"]
+  - ["Aplica depois de wsl --shutdown", "Aplica depois de wsl --terminate"]

@@ -1,0 +1,10 @@
+type: compare
+title: O terminate para uma distro e deixa as outras rodando; o shutdown derruba todas e a máquina virtual
+left: {title: "wsl --terminate wz-teste", icon: circle-check, color: green}
+right: {title: "wsl --shutdown", icon: triangle-alert, color: red}
+rows:
+  - ["Para só a distro citada", "Para todas as distros e a VM"]
+  - ["Ubuntu-26.04: Running", "Ubuntu-26.04: Stopped"]
+  - ["docker-desktop: Running", "docker-desktop: Stopped"]
+  - ["wz-teste: Stopped", "wz-teste: Stopped"]
+  - ["Aplica o wsl.conf dessa distro", "Aplica também o .wslconfig"]
