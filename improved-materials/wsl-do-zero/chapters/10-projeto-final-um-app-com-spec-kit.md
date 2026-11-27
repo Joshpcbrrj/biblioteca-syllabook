@@ -286,7 +286,7 @@ build-backend = "hatchling.build"
 packages = ["src/tarefas"]
 ```
 
-**exemplos/tarefas/src/tarefas/\_\_init\_\_.py**
+**`exemplos/tarefas/src/tarefas/__init__.py`**
 
 ```python
 """Lista de tarefas no terminal."""
