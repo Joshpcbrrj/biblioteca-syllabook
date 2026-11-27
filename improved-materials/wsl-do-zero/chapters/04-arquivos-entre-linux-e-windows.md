@@ -216,7 +216,8 @@ Reproduza no `~/meu-ambiente`. O comando `sed` abaixo faz o que o editor do Wind
 cd ~/meu-ambiente
 # simula o salvamento com CRLF
 sed -i 's/$/\r/' verificar.sh
-file verificar.sh | cut -d: -f2
+# o file separa os atributos por vírgula; uma por linha, cabe na página
+file verificar.sh | cut -d: -f2 | tr ',' '\n'
 git ls-files --eol verificar.sh
 bash verificar.sh 2>&1 | head -2
 ```
@@ -224,7 +225,10 @@ bash verificar.sh 2>&1 | head -2
 Saída (falha de propósito):
 
 ```text
- Bourne-Again shell script, Unicode text, UTF-8 text executable, with CRLF line terminators
+ Bourne-Again shell script
+ Unicode text
+ UTF-8 text executable
+ with CRLF line terminators
 i/lf    w/crlf  attr/                 	verificar.sh
 verificar.sh: line 4: $'\r': command not found
 verificar.sh: line 6: syntax error near unexpected token `$'{\r''
@@ -272,8 +276,8 @@ Agora o editor do Windows grava CRLF de novo. O Git avisa e normaliza, e basta r
 
 ```bash
 sed -i 's/$/\r/' verificar.sh
-# o Git avisa e guarda LF mesmo assim
-git add verificar.sh
+# o Git avisa e guarda LF mesmo assim (o fold só quebra a linha longa do aviso)
+git add verificar.sh 2>&1 | fold -s -w 78
 git ls-files --eol verificar.sh
 # recria o arquivo a partir do Git e roda
 rm verificar.sh && git checkout -- verificar.sh
@@ -281,7 +285,8 @@ git ls-files --eol verificar.sh
 ```
 
 ```text
-warning: in the working copy of 'verificar.sh', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'verificar.sh', CRLF will be replaced by LF 
+the next time Git touches it
 i/lf    w/crlf  attr/text eol=lf      	verificar.sh
 i/lf    w/lf    attr/text eol=lf      	verificar.sh
 ```
