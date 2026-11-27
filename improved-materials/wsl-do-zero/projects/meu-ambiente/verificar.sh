@@ -39,6 +39,8 @@ dotfiles_ligados() {
 ferramentas_ok() {
   bash -ic 'node --version && java -version && uv --version'
 }
+# o instalador nativo põe o comando em ~/.local/bin, sem sudo
+claude_ok() { "$HOME/.local/bin/claude" --version; }
 
 checa "distribuição é o Ubuntu" eh_ubuntu
 checa "kernel do WSL 2" kernel_wsl2
@@ -50,6 +52,7 @@ checa "~/meu-ambiente é um repositório git" repo_existe
 checa ".gitattributes presente e scripts com LF" lf_fixo
 checa "dotfiles ligados (starship e .bashrc)" dotfiles_ligados
 checa "node, java e uv respondem num shell novo" ferramentas_ok
+checa "Claude Code instalado como usuário" claude_ok
 
 echo "---"
 if [ "$falhas" -eq 0 ]; then

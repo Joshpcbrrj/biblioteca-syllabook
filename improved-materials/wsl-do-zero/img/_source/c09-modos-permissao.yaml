@@ -1,0 +1,7 @@
+type: flow
+title: Shift+Tab troca o modo de permissão, um por vez
+steps:
+  - {text: "default (manual)", note: "lê sozinho; pergunta antes de editar ou executar", icon: circle-help, kind: start, label: "Shift+Tab"}
+  - {text: "acceptEdits", note: "edita arquivos sem perguntar", icon: code, label: "Shift+Tab"}
+  - {text: "plan", note: "lê e propõe um plano; não edita", icon: compass, label: "Shift+Tab"}
+  - {text: "auto", note: "age sozinho, com um classificador vigiando", icon: circle-check, kind: end}

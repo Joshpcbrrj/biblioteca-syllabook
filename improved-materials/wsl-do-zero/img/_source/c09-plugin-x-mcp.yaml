@@ -1,0 +1,10 @@
+type: compare
+title: Plugin e servidor MCP resolvem problemas diferentes
+left: {title: "Plugin", icon: box, color: green}
+right: {title: "Servidor MCP", icon: container, color: blue}
+rows:
+  - ["Pacote de comandos, skills, agentes e hooks", "Programa à parte que oferece ferramentas"]
+  - ["/plugin install nome@marketplace", "claude mcp add nome -- comando"]
+  - ["Vem de um marketplace", "Você aponta o comando ou a URL"]
+  - ["Escopos: user, project, local", "Escopos: local, project, user"]
+  - ["Fica em settings.json", "Fica em ~/.claude.json ou .mcp.json"]

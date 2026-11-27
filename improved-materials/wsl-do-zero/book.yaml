@@ -581,6 +581,15 @@ progress:
     Projetos x distro inteira (analogia caderno de receitas x refeição congelada), backup-projetos.sh
     (5,0 MB -> 12 KB). backup.ps1 com -Testar e prefixo teste-; verificar.ps1 com 5 testes. Não executado:
     --vhd, --import-in-place.'
+- n: 9
+  done: '2026-11-27'
+  summary: 'Claude Code no WSL (2.1.332 instalado de verdade na wz-teste): WSL x Windows independentes;
+    install.sh lido antes (grep), recusa sudo, confere SHA-256, 384 MB em ~/.local; PATH via ~/.profile
+    (shell de login), claude doctor; comandos e atalhos verificados nos docs; CLAUDE.md escrito à mão
+    (/init não executado); modos de permissão (default/acceptEdits/plan/auto/dontAsk/bypass), defaultMode
+    e language no settings.json (auto/bypass só no arquivo do usuário), json.tool; plugins (marketplace
+    add manual, commit-commands sem hooks, escopos); MCP docling falhou por falta de uvx (campo Issue).
+    verificar.sh com 11 testes. Não executado: login, tela de confiança, comandos dentro da sessão.'
 handoff:
 - 'Próximo passo: book.py brief 8 (capítulos 1 a 7 prontos e commitados; dossiês de 1 a 10 já escritos
   em research/). Depois: cap. 9, 10 e as partes fixas (capítulo 0, teste de nivelamento, simulado, glossário).'
