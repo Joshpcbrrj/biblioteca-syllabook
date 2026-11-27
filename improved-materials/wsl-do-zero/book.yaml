@@ -598,31 +598,23 @@ progress:
     -> bootstrap ganhou o passo, 11/11 OK; backup.ps1 -Testar do ambiente completo (2,6 GB) restaura como
     ana.'
 handoff:
-- 'Próximo passo: capítulos 1 a 10 prontos, todos relidos e commitados (caps. 4 a 7 relidos nesta sessão,
-  um commit cada). Falta o passo 5 do fluxo: partes fixas (references/BOOK.md): capítulo 0 com o livro
-  numa página, teste de nivelamento, folhas-resumo por seção, simulado, glossário, próximos passos e README.md
-  do livro. Depois: audit.py do livro todo (e audit.py --original), capa, build.py, publicar. Ler BOOK.md
-  e VISUALS.md antes.'
-- 'Estado: projects.py passa sem --discard e sem erros (starship.toml com \ue0a0 no cap. 5; __init__.py
-  do cap. 10 agora com título em formato que o projects.py reconhece: use **`caminho`** com crase, nunca
-  com barras invertidas). audit.py sem avisos nos caps. 4 a 7; restam avisos de linhas longas nos caps.
-  1, 3, 8, 9 e 10 e ''é só'' nos caps. 3, 9 e 10 (fora do pedido desta sessão).'
-- 'Distro de teste: wz-teste foi desregistrada no fim; Ubuntu-26.04 e docker-desktop do autor intocadas,
-  .wslconfig nunca tocado. Para recriar: wsl --import wz-teste D:/wz-temp/wz-teste D:/wz-temp/dl/u.wsl
-  --version 2; entra como root; rode D:/wz-temp/lab/c8setup.sh (cria o usuário ana e o sudo sem senha,
-  só no teste) e depois wsl --terminate wz-teste (nunca --shutdown). Dicas: no Git Bash use MSYS_NO_PATHCONV=1,
-  labs em .sh em D:/wz-temp/lab; Python no Windows come barra invertida em strings: use chr(92) ou Edit
-  e confira com grep.'
+- 'Estado: livro completo (caps. 0 a 11 e glossário, capa, README, 3 folhas-resumo). audit.py (com --original),
+  projects.py e validate sem erros nem avisos; build.py (EPUB e zip) e build.py site rodaram numa pasta
+  temporária. Nada foi enviado ao GitHub; build.py lists não foi rodado.'
+- 'Próximo passo: publicar (modes/PUBLISH.md): build.py lists, EPUB em release, push. Notion por último,
+  em conversa nova. Antes, o autor deve ler o livro (revisão humana: não).'
 - 'Não executado e sem passo de leitor (acumulado): cap. 2 passos 1 a 3 (wsl --install); cap. 5 (Nerd
   Font, perfil do Windows Terminal, ABNT2); cap. 6 (janela do WSLg); cap. 7 (wsl --shutdown, --set-default,
   --update, --unregister, --manage --move); cap. 8 (--export --vhd, --import-in-place, restaurar num Windows
   recém-formatado); cap. 9 (login, tela de confiança, /init, comandos dentro da sessão, Shift+Tab, plugins
-  @synced); cap. 10 (todos os /speckit-* dentro do Claude Code: o app tarefas é referência escrita à mão).
-  Nenhuma captura de tela baixada.'
-- 'Versões reais do lab: Ubuntu 26.04.1, git 2.53.0, Python 3.14.4, Node v26.13.1, Java 25.0.5.1, uv 0.13.10,
-  Starship 1.27.0, Claude Code 2.1.332, Spec Kit 1.4.5, WSL 3.0.5.0. Projeto meu-ambiente: verificar.sh
-  11 testes, verificar.ps1 5, bootstrap.sh, backup.ps1, backup-projetos.sh, CLAUDE.md, exemplos/tarefas.'
-- 'Para o resumo final e o report.py da skill: (1) projects.py reescrevia arquivos de projects/ sem avisar
-  (agora recusa, ok); (2) o regex de título de arquivo do projects.py não aceita \_ escapado (**x\_\_init\_\_.py**):
-  o arquivo é ignorado em silêncio e depois acusado como ''editado à mão'', sem dizer a causa; (3) audit.py
-  exige comentário # em blocos longos de toml/python mesmo com docstring.'
+  @synced); cap. 10 (todos os /speckit-* dentro do Claude Code). Nenhuma captura de tela baixada.'
+- 'Nesta sessão os labs não foram rodados de novo (só texto): a wz-teste não existe e as distros do autor
+  ficaram intocadas, .wslconfig nunca tocado. Para recriar a distro de teste: wsl --import wz-teste D:/wz-temp/wz-teste
+  D:/wz-temp/dl/u.wsl --version 2; rode D:/wz-temp/lab/c8setup.sh e depois wsl --terminate wz-teste (nunca
+  --shutdown). No Git Bash use MSYS_NO_PATHCONV=1.'
+- 'Para o report.py da skill: (1) projects.py reescrevia arquivos de projects/ sem avisar (agora recusa);
+  (2) o regex de título de arquivo do projects.py não aceita \_ escapado: o arquivo é ignorado em silêncio
+  e depois acusado como ''editado à mão''; (3) audit.py exige comentário # em blocos longos de toml/python
+  mesmo com docstring; (4) audit.py --original mostra só a primeira cópia de cada arquivo, então corrigir
+  uma revela a próxima (os caps. 8 a 10 tinham ~100 trechos iguais ao original); (5) build.py site só
+  gera o fonte (zensical build não foi rodado).'
