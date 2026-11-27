@@ -16,7 +16,7 @@ prerequisites:
 - Usar o terminal no nível básico (cd, ls, mkdir)
 track:
   name: ferramentas-do-dev
-  order: 1
+  order: 2
 reference_version: Git 2.5x, GitHub (interface de 2026)
 review_by: 2027-11
 original:
