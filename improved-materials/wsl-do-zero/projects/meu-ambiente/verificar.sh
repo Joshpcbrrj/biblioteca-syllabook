@@ -25,6 +25,10 @@ usuario_comum() { [ "$(id -u)" -ne 0 ]; }
 no_grupo_sudo() { id -nG | grep -qw sudo; }
 systemd_ativo() { [ "$(ps -p 1 -o comm=)" = systemd ]; }
 repo_existe() { git -C ~/meu-ambiente rev-parse --is-inside-work-tree; }
+# o .gitattributes existe e este script não tem CRLF (o bash não o leria)
+lf_fixo() {
+  [ -f ~/meu-ambiente/.gitattributes ] && ! grep -q "$(printf '\r')" "$0"
+}
 
 checa "distribuição é o Ubuntu" eh_ubuntu
 checa "kernel do WSL 2" kernel_wsl2
@@ -33,6 +37,7 @@ checa "usuário comum, não root" usuario_comum
 checa "usuário no grupo sudo" no_grupo_sudo
 checa "systemd é o processo 1" systemd_ativo
 checa "~/meu-ambiente é um repositório git" repo_existe
+checa ".gitattributes presente e scripts com LF" lf_fixo
 
 echo "---"
 if [ "$falhas" -eq 0 ]; then

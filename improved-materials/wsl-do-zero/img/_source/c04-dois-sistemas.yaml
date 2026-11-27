@@ -1,0 +1,6 @@
+type: tree
+title: Dentro do Ubuntu convivem dois sistemas de arquivos, e cada um aparece no outro lado com um caminho diferente
+root: {text: "Ubuntu (/)", note: "o que o Linux enxerga", icon: terminal, color: purple, children: [
+  {text: "/home/ana", note: 'disco do Linux (ext4); no Windows: \wsl$\Ubuntu\home\ana', icon: folder, color: green},
+  {text: "/mnt/c e /mnt/d", note: 'discos do Windows, C:\ e D:\', icon: monitor, color: orange}]}
+caption: "Verde: o lugar dos seus projetos. Laranja: o Windows visto do Linux."

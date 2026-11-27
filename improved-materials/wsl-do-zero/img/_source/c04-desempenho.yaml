@@ -1,0 +1,7 @@
+type: bars
+title: Criar 2.000 arquivos pequenos levou 0,14 s na pasta pessoal do Linux e 5,3 s em /mnt/d
+bars:
+  - {label: "~/teste-linux (ext4)", value: 0.14, highlight: true}
+  - {label: "/mnt/d (Windows)", value: 5.3}
+unit: "segundos"
+caption: "Medição na distro de teste; os números mudam de PC para PC, a proporção é o que importa."

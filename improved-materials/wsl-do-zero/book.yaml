@@ -541,6 +541,13 @@ progress:
     systemd (wsl.conf, PID 1, serviços; experimento com systemd=false e --terminate), repositório meu-ambiente
     com git 2.53.0 e verificar.sh v2 com 7 testes (falha antes do git init, OK depois). Analogia do síndico.
     Todos os comandos rodaram na wz-teste como ana.
+- n: 4
+  done: '2026-11-27'
+  summary: 'Dois sistemas de arquivos (ext4 em / e 9p em /mnt/c e /mnt/d), caminhos \wsl$ e /mnt, wslpath
+    -w/-u, explorer.exe (não executado), medição de 2.000 arquivos (0,136 s no ~ x 5,323 s no /mnt/d),
+    permissões 777/100755 vindas de /mnt, CRLF x LF com erro $''\r'', .gitattributes (* text=auto, *.sh
+    eol=lf, *.ps1 eol=crlf), verificar.sh com 8 testes. Analogia: dois bairros e a ponte com tradutor
+    (9p). Rodou na wz-teste como ana.'
 handoff:
 - 'Próximo passo: book.py brief 4 (capítulos 1 a 3 prontos e commitados; dossiês de 1 a 10 já escritos
   em research/).'
