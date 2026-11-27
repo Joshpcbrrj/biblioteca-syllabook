@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="2560" viewBox="0 0 1600 2560">
+  <!-- Ideia: uma janela dentro de outra, com um prompt de terminal no centro (um sistema dentro do outro). Acento: verde-azulado da trilha ferramentas-do-dev. -->
+  <rect width="1600" height="2560" fill="#0f1b2d"/>
+  <rect x="120" y="120" width="1360" height="12" fill="#2bb3a3"/>
+
+  <g font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" fill="#ffffff">
+    <text x="120" y="420" font-size="200" font-weight="700">WSL</text>
+    <text x="120" y="590" font-size="150" font-weight="700" fill="#2bb3a3">do zero</text>
+    <text x="120" y="760" font-size="60" fill="#c9d4e3">Linux no Windows</text>
+    <text x="120" y="840" font-size="60" fill="#c9d4e3">para programar</text>
+    <text x="120" y="930" font-size="44" fill="#8fa3bd">baseado em uma versão anterior do livro</text>
+  </g>
+
+  <!-- janela externa (o Windows) -->
+  <g stroke-linejoin="round">
+    <rect x="260" y="1120" width="1080" height="1000" rx="40" fill="#16263d" stroke="#c9d4e3" stroke-width="12"/>
+    <path d="M260 1240 H1340" stroke="#c9d4e3" stroke-width="12"/>
+  </g>
+  <g fill="#2bb3a3">
+    <circle cx="340" cy="1180" r="22"/>
+    <circle cx="410" cy="1180" r="22" fill="#c9d4e3"/>
+    <circle cx="480" cy="1180" r="22" fill="#c9d4e3"/>
+  </g>
+
+  <!-- janela interna (o Linux) com o prompt -->
+  <g stroke-linejoin="round">
+    <rect x="420" y="1380" width="760" height="560" rx="32" fill="#0f1b2d" stroke="#2bb3a3" stroke-width="12"/>
+    <path d="M420 1470 H1180" stroke="#2bb3a3" stroke-width="12"/>
+  </g>
+  <g fill="#2bb3a3">
+    <circle cx="480" cy="1425" r="14"/>
+    <circle cx="525" cy="1425" r="14"/>
+    <circle cx="570" cy="1425" r="14"/>
+  </g>
+  <path d="M520 1620 L620 1690 L520 1760" stroke="#2bb3a3" stroke-width="28" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M680 1780 H860" stroke="#ffffff" stroke-width="28" stroke-linecap="round"/>
+  <path d="M520 1860 H1080" stroke="#8fa3bd" stroke-width="16" stroke-linecap="round" stroke-dasharray="4 28"/>
+
+  <text x="120" y="2400" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="56" fill="#ffffff">por Josué B. Almeida</text>
+  <text x="1480" y="2400" text-anchor="end" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="44" fill="#c9d4e3">Edição 2.0</text>
+</svg>
