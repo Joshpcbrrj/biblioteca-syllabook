@@ -1,6 +1,6 @@
 # 10. Projeto final: um app com Spec Kit
 
-> 🗺️ **Neste capítulo:** o projeto final do livro. Você instala o Spec Kit, cria um app de lista de tarefas no terminal seguindo o fluxo especificar, planejar, quebrar em tarefas, implementar e convergir com o Claude Code, e **prova o ambiente inteiro** restaurando-o do zero com o repositório `meu-ambiente`. · ⏱️ ~70 min
+> 🗺️ **Neste capítulo:** é o projeto final. Você instala o Spec Kit, monta com o Claude Code um app de lista de tarefas para o terminal (especificar, planejar, dividir em tarefas, implementar e convergir) e **prova o ambiente todo** ao restaurá-lo do zero a partir do repositório `meu-ambiente`. · ⏱️ ~70 min
 
 > 🔥 **Aquecimento:** (1) Onde fica o `permissions.defaultMode` que faz toda sessão abrir no modo planejar? (2) Por que o instalador do Claude Code recusa o `sudo`?
 >
@@ -13,33 +13,33 @@
 
 ## De onde paramos
 
-No capítulo 9 você instalou o Claude Code como o seu usuário e aprendeu a controlar o que ele faz sozinho. Falta usá-lo num projeto de verdade. Pedir "faça um app de tarefas" numa frase só costuma dar um resultado que ninguém revisou e que ninguém sabe explicar. Este capítulo mostra um jeito organizado de trabalhar com o assistente, e fecha o livro provando que o ambiente que você montou se refaz do zero.
+No capítulo 9, você instalou o Claude Code com o seu usuário e viu como controlar o que ele faz por conta própria. Falta aplicá-lo a um projeto de verdade. Se você pede "faça um app de tarefas" numa só frase, o resultado costuma sair sem revisão e sem que ninguém consiga explicá-lo. Aqui você vê uma forma organizada de trabalhar com o assistente, e o livro termina com a prova de que o ambiente que você montou pode ser refeito do zero.
 
 > ⚠️ **O que foi e o que não foi executado.** Instalei o Spec Kit **de verdade** na distro de teste (versão **1.4.5**) e rodei o `specify init`, de modo que a árvore de arquivos e os nomes dos comandos vêm da execução real. **Não executei** os comandos `/speckit-*`: eles rodam **dentro** do Claude Code e exigem o login na sua conta. Por isso, a implementação do app que mostro é uma **implementação de referência, escrita por mim** e testada; ela **não** foi gerada pelo Claude. O que o Claude gera na sua sessão será diferente, e você pode usar os testes da referência como critério de aceitação.
 
 ## Spec-Driven Development e o Spec Kit
 
-Quando você pede código direto a um assistente, ele precisa adivinhar o que você quer, que tecnologia usar e em que ordem fazer. Cada adivinhação errada só aparece no código, quando corrigir já custa caro.
+Ao pedir código direto a um assistente, você o obriga a adivinhar o que você quer, qual tecnologia usar e em que ordem agir. Cada palpite errado só vira problema quando o código já existe, e aí consertar sai caro.
 
-**Spec-Driven Development (SDD, desenvolvimento guiado por especificação) é escrever primeiro o que o programa deve fazer, depois como fazer, depois a lista de tarefas, e só então o código. O Spec Kit, do GitHub, é o kit de ferramentas que transforma isso em comandos para o assistente.**
+**Spec-Driven Development (SDD, desenvolvimento guiado por especificação) é começar escrevendo o que o programa deve fazer, depois o modo de fazer, depois a lista de tarefas, e só no fim o código. O Spec Kit, do GitHub, reúne as ferramentas que viram isso em comandos para o assistente.**
 
-A regra de ouro é separar duas perguntas:
+A regra de ouro é manter duas perguntas separadas:
 
 ![Comparação: a spec diz o quê e por quê, o plan diz como](../img/c10-spec-x-plan.svg)
 
-Cada etapa gera um arquivo Markdown dentro do projeto. Você lê, corrige e só então passa para a próxima. Se o Claude errar a especificação, você conserta uma frase, e não cem linhas de código.
+Toda etapa produz um arquivo Markdown no projeto. Você o lê, corrige e só depois avança. Se o Claude errar na especificação, o conserto é uma frase, e não cem linhas de código.
 
-![O fluxo do Spec Kit: constitution uma vez, depois specify, plan, tasks, implement e converge](../img/c10-fluxo-sdd.svg)
+![Fluxo do Spec Kit: a constitution entra uma única vez; depois vêm specify, plan, tasks, implement e converge](../img/c10-fluxo-sdd.svg)
 
-> 💡 **Analogia:** é contratar uma agência de viagens. As suas regras fixas ("nunca voo de madrugada, sempre seguro-viagem") são a constitution. O pedido ("dez dias na praia, em julho, com as crianças") é a spec: diz o que você quer, sem escolher companhia aérea. A agência devolve o roteiro com voos e hotéis (o plan), depois a lista de reservas a fazer, na ordem (as tasks), e faz as reservas (o implement). No fim, alguém confere as passagens contra o pedido original (o converge). A analogia falha num ponto: uma agência de verdade tem uma pessoa responsável; aqui quem responde pelo resultado **é você**, que lê cada arquivo antes de seguir.
+> 💡 **Analogia:** pense numa agência de viagens. Suas regras permanentes ("sem voo de madrugada, com seguro-viagem sempre") formam a constitution. O pedido ("dez dias de praia em julho, levando as crianças") é a spec: ela diz o que você deseja, sem escolher a companhia aérea. A agência responde com o roteiro de voos e hotéis (o plan), depois com a lista de reservas, na ordem (as tasks), e então reserva tudo (o implement). Ao final, alguém compara as passagens com o pedido original (o converge). A analogia tem um limite: numa agência de verdade, há uma pessoa responsável; aqui o responsável pelo resultado **é você**, que lê cada arquivo antes de seguir.
 
-> ⚠️ **Erro comum:** pôr tecnologia na especificação ("um app em Python que..."). Isso mistura as duas perguntas e tira do plano a chance de discutir a escolha. Na spec, descreva o comportamento; deixe Python, Typer e SQLite para o plan.
+> ⚠️ **Erro comum:** escrever tecnologia na especificação ("um app em Python que..."). Assim as duas perguntas se confundem e o plan perde a chance de discutir a escolha. Na spec, conte o comportamento; deixe Python, Typer e SQLite para o plan.
 
 ## Instalar o Specify CLI
 
-O Spec Kit tem duas partes: o **Specify CLI**, um programa de terminal (`specify`) que prepara a pasta do projeto, e os **comandos** `/speckit-*`, que o CLI instala dentro do projeto para você usar no Claude Code.
+O Spec Kit se divide em duas partes: o **Specify CLI**, um programa de terminal (`specify`) que organiza a pasta do projeto, e os **comandos** `/speckit-*`, que o CLI coloca dentro do projeto para você usar no Claude Code.
 
-Você já tem quase tudo do livro: **Python 3.11 ou mais novo** e o **uv** (capítulo 6), **git** (capítulo 6) e o **Claude Code** (capítulo 9). Confira:
+Quase tudo de que você precisa já veio do livro: **Python 3.11 ou superior** e o **uv** (capítulo 6), o **git** (capítulo 6) e o **Claude Code** (capítulo 9). Verifique:
 
 ```bash
 python3 --version
@@ -53,7 +53,7 @@ uv 0.13.10 (x86_64-unknown-linux-gnu)
 git version 2.53.0
 ```
 
-**O `uv tool install` instala um programa Python num ambiente isolado só dele e põe o comando em `~/.local/bin`, sem mexer no Python do sistema e sem `sudo`.**
+**O `uv tool install` coloca um programa Python num ambiente só dele e cria o comando em `~/.local/bin`, sem alterar o Python do sistema e sem `sudo`.**
 
 ```bash
 uv tool install specify-cli
@@ -82,13 +82,13 @@ Check Available Tools
 ├── ○ Cline (no CLI required)
 ```
 
-(A lista é longa; mostrei só as linhas que importam.) Para **fixar** uma versão, a documentação oficial recomenda instalar do repositório com a tag da versão (`uv tool install specify-cli --from git+https://github.com/github/spec-kit.git@v1.4.5`). Eu **não executei** essa forma. O Spec Kit lança versões quase toda semana: confira a lista em [github.com/github/spec-kit/releases](https://github.com/github/spec-kit/releases) antes de fixar uma.
+(A lista é longa; deixei só as linhas relevantes.) Para **fixar** uma versão, a documentação oficial indica instalar a partir do repositório, com a tag da versão (`uv tool install specify-cli --from git+https://github.com/github/spec-kit.git@v1.4.5`). Eu **não executei** essa forma. Como o Spec Kit publica versões quase toda semana, consulte a lista em [github.com/github/spec-kit/releases](https://github.com/github/spec-kit/releases) antes de escolher uma.
 
 > ⚠️ **Erro comum:** rodar `uv tool install specify-cli` de novo esperando atualizar. Para atualizar, use `specify self upgrade` (seção "Extensões e atualização").
 
 ## `specify init`: criar o projeto
 
-**O `specify init` cria a estrutura do Spec Kit numa pasta: regras, modelos, scripts e os comandos para o agente escolhido com `--integration`.**
+**O `specify init` monta numa pasta a estrutura do Spec Kit, com regras, modelos, scripts e os comandos do agente que você escolher em `--integration`.**
 
 ```bash
 cd ~/projetos
@@ -113,7 +113,7 @@ Next Steps
 
 (Mostrei o quadro "Next Steps", que vem logo depois das mensagens de progresso.) Se a pasta já existe, `specify init --here --integration claude` usa a pasta atual; se ela já tiver arquivos, o init avisa e pede confirmação (`--force` pula a pergunta). Sem o `--integration`, o init pergunta qual agente usar.
 
-> ⚠️ **Erro comum:** rodar `specify init --here --force` numa pasta com trabalho não salvo. Ele mescla arquivos com os seus; faça um commit antes, para ver depois o que mudou com `git diff`. E tutoriais antigos usam `--ai claude`: use `--integration claude`, que é o que esta versão mostra nos exemplos.
+> ⚠️ **Erro comum:** executar `specify init --here --force` numa pasta com trabalho sem salvar. Ele mistura os arquivos dele com os seus; faça um commit antes, para enxergar depois o que mudou com `git diff`. Além disso, tutoriais antigos usam `--ai claude`: prefira `--integration claude`, que é a forma dos exemplos desta versão.
 
 ### O que é criado
 
@@ -145,7 +145,7 @@ argument-hint: "Describe the feature you want to specify"
 
 O `constitution.md` nasce como **modelo**, cheio de marcadores como `[PROJECT_NAME]` e `[PRINCIPLE_1_NAME]`: é o `/speckit-constitution` que os preenche. E o `init-options.json` registra a escolha, incluindo `"integration": "claude"`, `"script": "sh"` (bash, no Linux) e `"speckit_version": "1.4.5"`.
 
-> 💡 **Analogia:** pense num fichário escolar novo. A folha da capa, com o regulamento da escola, é o `constitution.md`. As folhas-modelo pautadas no fundo são os `templates/`. As abas coloridas que abrem cada seção são os comandos em `.claude/skills/`. E as divisórias por matéria (`specs/001-...`, `specs/002-...`) só aparecem quando você começa a estudar a primeira matéria. A analogia falha porque o fichário não se atualiza: o Spec Kit se atualiza (`specify integration upgrade`), e vale conferir o que mudou com `git diff`.
+> 💡 **Analogia:** imagine um fichário escolar novo. A folha de rosto, com o regulamento da escola, é o `constitution.md`. As folhas pautadas do fundo são os `templates/`. As abas coloridas que marcam cada seção são os comandos em `.claude/skills/`. Já as divisórias de cada matéria (`specs/001-...`, `specs/002-...`) só surgem quando você começa a estudar a primeira. A analogia falha porque um fichário não se atualiza e o Spec Kit sim (`specify integration upgrade`); por isso, olhe o que mudou com `git diff`.
 
 ### O `init` não cria o repositório git
 
@@ -161,9 +161,9 @@ O `.specify/.gitignore` já deixa de fora o que pertence só à sua máquina (co
 
 ## Os comandos `/speckit-*`
 
-Os comandos do Spec Kit não são programas do terminal: são **skills** do Claude Code. Você os digita **dentro da sessão do `claude`**, e o texto depois do comando é a sua instrução.
+Os comandos do Spec Kit não rodam no terminal comum: são **skills** do Claude Code. Digite-os **na sessão do `claude`**; o que vem depois do comando é a instrução que você passa ao assistente.
 
-**No Claude Code, os comandos se chamam `/speckit-<etapa>`, com hífen; a forma com ponto (`/speckit.specify`) é a notação de páginas de referência e de outros agentes.** A saída do `init` acima confirma os nomes com hífen, e o `specify integration list` mostra a integração pronta:
+**No Claude Code, os comandos têm o formato `/speckit-<etapa>`, com hífen; a versão com ponto (`/speckit.specify`) aparece em páginas de referência e em outros agentes.** A saída do `init` acima confirma os nomes com hífen, e o `specify integration list` mostra a integração pronta:
 
 ```text
 Key     Name         Status      CLI Required  Safe
@@ -172,29 +172,29 @@ Default integration: claude
 Installed integrations: claude
 ```
 
-| Comando | Quando usar | Gera |
+| Comando | Quando usar | Produz |
 | --- | --- | --- |
-| `/speckit-constitution` | Uma vez por projeto: regras fixas (testes, idioma, restrições) | `constitution.md` |
-| `/speckit-specify` | O quê e por quê, sem tecnologia | `spec.md` |
-| `/speckit-clarify` | Tirar ambiguidades antes do plano (opcional) | `spec.md` atualizado |
+| `/speckit-constitution` | Uma vez por projeto: regras fixas (testes, idioma, limites) | `constitution.md` |
+| `/speckit-specify` | O que fazer e por quê, sem tecnologia | `spec.md` |
+| `/speckit-clarify` | Resolver dúvidas antes do plano (opcional) | `spec.md` atualizado |
 | `/speckit-plan` | Como: linguagem, bibliotecas, banco, estrutura | `plan.md` e arquivos de apoio |
 | `/speckit-checklist` | Checar a qualidade dos requisitos (opcional) | `checklists/` |
-| `/speckit-tasks` | Quebrar o plano em tarefas ordenadas, por fases | `tasks.md` |
-| `/speckit-analyze` | Conferir se spec, plan e tasks batem (opcional) | Relatório |
+| `/speckit-tasks` | Dividir o plano em tarefas, em ordem e por fases | `tasks.md` |
+| `/speckit-analyze` | Verificar se spec, plan e tasks combinam (opcional) | Relatório |
 | `/speckit-implement` | Executar as tarefas do `tasks.md` | Código |
 | `/speckit-converge` | Comparar o código com a spec e acrescentar o que faltou como tarefas | `tasks.md` atualizado |
 
 Quais são opcionais, e onde entram, vem do quadro "Enhancement Skills" que o próprio `init` imprimiu: `clarify` antes do `plan`, `checklist` depois do `plan`, `analyze` depois do `tasks` e antes do `implement`.
 
-**Fluxo curto**, para funcionalidades pequenas: `specify` → `plan` → `tasks` → `implement` → `converge`. **Fluxo completo**, para o que é importante, com `constitution` uma vez e os três portões a mais (`clarify`, `checklist`, `analyze`). Repita `implement` e `converge` até o converge dizer que convergiu.
+O **fluxo curto** serve a funcionalidades pequenas: `specify` → `plan` → `tasks` → `implement` → `converge`. O **fluxo completo** é para o que tem peso, com a `constitution` uma vez e mais três verificações (`clarify`, `checklist`, `analyze`). Repita `implement` e `converge` até o converge informar que convergiu.
 
-> ⚠️ **Erro comum:** digitar `/speckit-specify` no bash. O bash responde que o comando não existe. Os comandos `/speckit-*` vão na caixa de texto do Claude Code; no terminal ficam só os comandos `specify ...`.
+> ⚠️ **Erro comum:** digitar `/speckit-specify` no bash, que responde que o comando não existe. Os `/speckit-*` vão na caixa de texto do Claude Code; no terminal comum, só rodam os comandos `specify ...`.
 
 ## O projeto guiado: tarefas no terminal
 
-Agora o projeto, passo a passo: um app de lista de tarefas pela linha de comando, em Python, com **Typer** (biblioteca para criar comandos de terminal), **SQLite** (banco de dados num arquivo) e **pytest** (testes). Os passos 2 a 8 acontecem dentro do Claude Code, com a sua conta, e **não foram executados** por mim. Os pedidos abaixo são os que você deve digitar.
+Vamos ao projeto, passo a passo: um app de lista de tarefas para a linha de comando, escrito em Python com **Typer** (uma biblioteca que cria comandos de terminal), **SQLite** (um banco de dados que vive num arquivo) e **pytest** (testes). Os passos 2 a 8 ocorrem dentro do Claude Code, com a sua conta, e **não foram executados** por mim. Os pedidos a seguir são os que você deve digitar.
 
-**1. Criar o projeto e o repositório** (no bash): o `specify init`, o `git init` e o primeiro commit, como acima. Depois, `claude` na pasta `~/projetos/tarefas`, confiando na pasta (capítulo 9). Ao digitar `/speckit`, os nove comandos devem aparecer na lista.
+**1. Criar o projeto e o repositório** (no bash): rode o `specify init`, o `git init` e o primeiro commit, como mostrado antes. Depois, abra o `claude` em `~/projetos/tarefas` e confie na pasta (capítulo 9). Ao digitar `/speckit`, a lista deve trazer os nove comandos.
 
 **2. Constitution (uma vez):**
 
@@ -205,9 +205,9 @@ sem dependências desnecessárias, mensagens ao usuário em português,
 código em inglês.
 ```
 
-Abra o `.specify/memory/constitution.md` e confira se as regras ficaram como você quer: todas as etapas seguintes são avaliadas contra elas.
+Abra o `.specify/memory/constitution.md` e veja se as regras refletem o que você quer: todas as etapas seguintes serão julgadas por elas.
 
-**3. Specify: o quê, sem tecnologia:**
+**3. Specify: o que fazer, sem tecnologia:**
 
 ```text
 /speckit-specify O usuário pode adicionar, listar, concluir e apagar
@@ -218,9 +218,9 @@ Critérios: apagar pede confirmação; título vazio é recusado com
 uma mensagem clara.
 ```
 
-Ele cria `specs/001-<nome-curto>/` com o `spec.md`. Leia as histórias e os requisitos. Trechos que ele marcou como dúvida são perguntas que ele não quis adivinhar.
+O comando cria `specs/001-<nome-curto>/` com o `spec.md`. Leia as histórias e os requisitos. Os trechos marcados como dúvida são perguntas que ele preferiu não adivinhar.
 
-**4. Clarify (opcional):** `/speckit-clarify` faz perguntas para tirar ambiguidades (por exemplo, se uma tarefa concluída pode voltar a pendente) e grava as respostas na spec.
+**4. Clarify (opcional):** o `/speckit-clarify` faz perguntas para esclarecer pontos ambíguos (por exemplo, se uma tarefa concluída pode voltar para pendente) e anota as respostas na spec.
 
 **5. Plan: como:**
 
@@ -232,15 +232,15 @@ para os testes. Projeto gerenciado com uv. Estrutura em src/ e tests/.
 
 Revise o `plan.md`. É aqui que se discute tecnologia.
 
-**6. Checklist, tasks e analyze:** `/speckit-checklist`, `/speckit-tasks` e `/speckit-analyze`. O `tasks` gera o `tasks.md`, organizado em fases. O `analyze` só lê e aponta conflitos; se ele achar algo, volte à etapa dona do problema (specify, plan ou tasks) e corrija lá. **Leia o `tasks.md` inteiro antes de seguir**: é exatamente o roteiro que o Claude vai executar.
+**6. Checklist, tasks e analyze:** `/speckit-checklist`, `/speckit-tasks` e `/speckit-analyze`. O `tasks` produz o `tasks.md`, dividido em fases. O `analyze` apenas lê e aponta conflitos; se achar algum, volte à etapa responsável (specify, plan ou tasks) e corrija nela. **Leia o `tasks.md` por inteiro antes de continuar**: ele é o roteiro exato que o Claude vai seguir.
 
-**7. Implement em fases, com um commit por fase:**
+**7. Implement por fases, com um commit em cada uma:**
 
 ```text
 /speckit-implement Execute apenas a primeira fase e pare.
 ```
 
-Quando ele parar, confira e salve a fase no terminal (com `!` na frente dá para rodar sem sair do Claude Code):
+Quando ele parar, revise e salve a fase no terminal (o `!` no começo permite rodar o comando sem sair do Claude Code):
 
 ```bash
 # os testes do projeto passam?
@@ -250,13 +250,13 @@ git add -A
 git commit -m "Fase 1: setup"
 ```
 
-Siga fase por fase, sempre testando e fazendo commit no fim.
+Continue fase após fase, sempre testando e commitando ao terminar.
 
-**8. Converge:** `/speckit-converge` compara o código com a spec, o plan e as tasks. Se faltou algo, acrescenta tarefas ao `tasks.md` (sem mexer no código); rode o `/speckit-implement` de novo e repita até o converge dizer que convergiu.
+**8. Converge:** o `/speckit-converge` confronta o código com a spec, o plan e as tasks. Se algo ficou faltando, ele acrescenta tarefas ao `tasks.md` (sem tocar no código); rode o `/speckit-implement` outra vez e repita até o converge informar que convergiu.
 
 **9. A próxima funcionalidade** (por exemplo, uma data de vencimento) volta ao passo 3, com um novo `/speckit-specify`: a constitution continua valendo.
 
-> ⚠️ **Erro comum:** mandar `/speckit-implement` sem limite num projeto grande. O Claude tenta fazer tudo de uma vez, o contexto enche e fica difícil revisar. Implemente uma fase por vez.
+> ⚠️ **Erro comum:** disparar o `/speckit-implement` sem limites em um projeto grande. O Claude tenta resolver tudo de uma só vez, o contexto transborda e a revisão fica difícil. Implemente uma fase de cada vez.
 
 ### A implementação de referência
 
@@ -534,13 +534,13 @@ Tudo como a spec pede: título vazio recusado com mensagem clara (código de sa�
 
 ## Boas práticas
 
-- **Spec diz o quê, plan diz como.** Nada de tecnologia no `/speckit-specify`.
-- **Revise cada arquivo antes de seguir.** Erro na spec vira erro no código.
-- **Nunca rode o implement sem ler o `tasks.md`.**
-- **Uma fase por vez, um commit por fase.** O git é o seu botão de desfazer.
-- **Uma funcionalidade por vez.** Cada uma ganha a sua pasta em `specs/`.
-- **Use `/clear` entre etapas longas** (capítulo 9): os arquivos em `specs/` guardam o progresso.
-- **Modo de permissão:** no implement, o modo aceitar edições deixa você acompanhar sem aprovar cada arquivo; nas etapas de texto, o manual basta (capítulo 9).
+- **A spec fala do quê; o plan, do como.** Sem tecnologia no `/speckit-specify`.
+- **Releia cada arquivo antes de avançar.** Um erro na spec se transforma em erro no código.
+- **Jamais rode o implement sem ter lido o `tasks.md`.**
+- **Uma fase de cada vez, com um commit por fase.** O git funciona como o seu botão de desfazer.
+- **Uma funcionalidade de cada vez.** Cada uma recebe a sua própria pasta em `specs/`.
+- **Use o `/clear` entre etapas longas** (capítulo 9): o progresso fica registrado nos arquivos de `specs/`.
+- **Modo de permissão:** no implement, o modo de aceitar edições permite acompanhar sem aprovar arquivo por arquivo; nas etapas só de texto, o modo manual é suficiente (capítulo 9).
 - **Teste, não confie.** Rode o `uv run pytest` você mesmo depois de cada fase, como o passo 7.
 
 ## Extensões e atualização
@@ -567,7 +567,7 @@ Não instalei nenhuma extensão nem rodei os `upgrade`.
 
 ## Encerramento: o ambiente completo
 
-Você começou com um Windows sem Linux e terminou com um projeto especificado, testado e versionado. A prova de que o **ambiente** (e não só o app) é seu é a restauração: refazê-lo do zero, com um comando, numa distro nova.
+Você partiu de um Windows sem Linux e chegou a um projeto especificado, testado e versionado. O que mostra que o **ambiente** é seu (e não apenas o app) é a restauração: refazê-lo do zero, com um só comando, numa distro nova.
 
 ### Restaurar do zero, de verdade
 
@@ -696,15 +696,15 @@ Onze testes `OK`: o ambiente se refaz do zero com um repositório e um comando. 
 
 > ⚠️ **Não executado:** a parte do **Windows** da restauração (a fonte e o perfil do Windows Terminal do capítulo 5, e o `.wslconfig` do capítulo 7) não entra no `bootstrap.sh`, porque é do lado do Windows e depende das suas escolhas. O texto desses capítulos continua valendo.
 
-> 💡 **Analogia:** é completar um álbum de figurinhas. Cada página foi preenchida aos poucos. O colecionador cuidadoso escaneia todas as páginas e guarda a cópia em outro lugar: se o álbum molhar, ele não recomeça do zero. O `bootstrap.sh` é a **lista** de figurinhas que o álbum precisa, e o backup é o escaneamento. A analogia falha porque o escaneamento não tem prazo de validade; o do WSL tem: o backup envelhece, e o repositório não.
+> 💡 **Analogia:** pense em completar um álbum de figurinhas. Cada página foi preenchida aos poucos. Quem coleciona com cuidado digitaliza cada página e guarda o arquivo em outro lugar: se o álbum molhar, não é preciso recomeçar. O `bootstrap.sh` é a **lista** das figurinhas que o álbum exige, e o backup é o escaneamento. A analogia falha porque o escaneamento não vence; o backup do WSL envelhece, e o repositório não.
 
 ### Checklist do ambiente
 
-- `wsl --version` e `wsl -l -v` mostram o WSL e o Ubuntu na versão 2 (caps. 1 e 2)
-- O Ubuntu abre com o seu usuário e `sudo apt update` funciona (cap. 3)
-- Projetos em `~/projetos`, no disco do Linux, e não em `/mnt/c` (cap. 4)
-- Terminal com tema, Nerd Font, Starship e idioma configurados (cap. 5)
-- `git`, `node`, `java` e `uv` respondem (cap. 6); `./verificar.sh` sem nenhuma `FALHA`
+- `wsl --version` e `wsl -l -v` exibem o WSL e o Ubuntu na versão 2 (caps. 1 e 2)
+- A distro abre já com o seu usuário e o `sudo apt update` roda (cap. 3)
+- Os projetos ficam em `~/projetos`, no disco do Linux, e não em `/mnt/c` (cap. 4)
+- O terminal tem tema, Nerd Font, Starship e idioma ajustados (cap. 5)
+- `git`, `node`, `java` e `uv` respondem (cap. 6); o `./verificar.sh` termina sem nenhuma `FALHA`
 - `.wslconfig` com limites de memória e CPU, se você precisou (cap. 7)
 - Backup da distro com `backup.ps1 -Testar`, num disco que não o C: (cap. 8)
 - `claude --version` responde e o `~/.claude/settings.json` é JSON válido (cap. 9)
@@ -748,7 +748,7 @@ Verificador e montador do meu ambiente de desenvolvimento no WSL.
 
 ### Backup final
 
-Com tudo marcado, faça o backup que guarda o ambiente inteiro, exatamente como no capítulo 8. No PowerShell, com a **sua** distro (`wsl -l -v` mostra o nome), uma pasta em outro disco e o teste de restauração:
+Com tudo marcado, faça o backup do ambiente inteiro, do mesmo modo que no capítulo 8. No PowerShell, use a **sua** distro (o `wsl -l -v` mostra o nome), uma pasta em outro disco e o teste de restauração:
 
 ```powershell
 .\backup.ps1 -Distro Ubuntu-26.04 -Destino E:\backups -Testar
@@ -768,9 +768,9 @@ OK    a restauracao abre com um usuario comum.
 Clone 'teste-teste-final' removido.
 ```
 
-São **2,6 GB** com o Node, o Java e o Claude Code (o do capítulo 8, enxuto, tinha 1,2 GB). O app também passou no ambiente refeito: dentro do `~/meu-ambiente/exemplos/tarefas`, o `uv run pytest -q` respondeu `6 passed in 3.20s`. Mantenha o `git push` dos projetos em dia, que é o backup do dia a dia.
+O arquivo tem **2,6 GB**, com o Node, o Java e o Claude Code (o do capítulo 8, mais enxuto, tinha 1,2 GB). O app também passou no ambiente refeito: em `~/meu-ambiente/exemplos/tarefas`, o `uv run pytest -q` respondeu `6 passed in 3.20s`. Continue com o `git push` dos projetos em dia, que é o backup da rotina.
 
-> ⚠️ **Erro comum:** deixar o backup da distro só para "quando der". O ambiente levou dez capítulos para montar; o export leva minutos. Faça agora e repita antes de qualquer mudança grande.
+> ⚠️ **Erro comum:** adiar o backup da distro para "quando der". O ambiente exigiu dez capítulos de trabalho; o export leva minutos. Faça já e repita antes de cada mudança grande.
 
 ## 🏋️ Pratique
 
@@ -854,7 +854,7 @@ O `.tar` (`wsl --import`) devolve **tudo** como estava, inclusive o que não est
 
 | Item | Em uma frase |
 | --- | --- |
-| SDD | Escrever o quê, depois o como, depois as tarefas, e só então o código |
+| SDD | Escrever primeiro o quê, depois o como, depois as tarefas, e só no fim o código |
 | `uv tool install specify-cli` | Instala o `specify` isolado, em `~/.local/bin`, sem `sudo` |
 | `specify init <pasta> --integration claude` | Cria `.specify/` e os nove comandos em `.claude/skills/`; não cria o git |
 | `/speckit-*` | Comandos que vão dentro do Claude Code, com hífen |
@@ -875,3 +875,18 @@ O `.tar` (`wsl --import`) devolve **tudo** como estava, inclusive o que não est
 - Execuções: Spec Kit 1.4.5, uv 0.13.10, Python 3.14.4, na distro de teste Ubuntu 26.04.1, 27/11/2026.
 
 > 🔁 **Revise hoje:** 5, 8, 9
+
+<!-- next-steps:start -->
+## 🧭 Próximos caminhos
+
+- **VS Code com WSL**: Para editar no Windows o código que mora no Linux (Remote - WSL · extensões no lado Linux)
+- **[Contêineres no WSL](../../docker-do-zero/README.md)**: Para rodar Docker sobre o WSL 2 (Docker Desktop · Docker Engine no Ubuntu)
+- **GPU no WSL**: Para usar CUDA e IA local (drivers · CUDA no WSL)
+- **Engenharia reversa com Ghidra**: Era o próximo livro planejado na trilha (Ghidra · REA)
+<!-- next-steps:end -->
+
+<!-- nav:start -->
+---
+
+[◀ Capítulo anterior](09-claude-code-no-wsl.md) · [Mapa do livro](../README.md) · [Próximo capítulo ▶](11-simulado-final.md)
+<!-- nav:end -->

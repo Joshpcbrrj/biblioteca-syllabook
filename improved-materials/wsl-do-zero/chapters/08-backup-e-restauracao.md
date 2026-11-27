@@ -17,11 +17,11 @@ No capítulo 7 você viu que `wsl --unregister` apaga a distro e o disco virtual
 
 ## `wsl --export`: a distro inteira num arquivo
 
-Reinstalar tudo do zero leva uma tarde: Ubuntu, git, nvm, uv, Starship, chaves SSH. O `bootstrap.sh` do capítulo 6 refaz as ferramentas, mas não traz de volta o que **só existe** na sua distro. O `wsl --export` empacota tudo.
+Montar tudo de novo toma uma tarde inteira: o Ubuntu, o git, o nvm, o uv, o Starship, as chaves SSH. O `bootstrap.sh` do capítulo 6 reinstala as ferramentas, mas não recupera o que **só existe** dentro da sua distro. Para isso serve o `wsl --export`, que empacota tudo.
 
-**O `wsl --export` grava uma cópia completa de uma distro (sistema, programas, usuários, configurações e a sua pasta pessoal) num único arquivo, por padrão no formato `.tar`.**
+**O `wsl --export` salva uma distro inteira, com sistema, programas, usuários, configurações e a sua pasta pessoal, em um único arquivo. O formato padrão é o `.tar`.**
 
-O `.tar` (de *tape archive*) junta muitos arquivos e pastas num só, preservando nomes, permissões e donos. Roda no **PowerShell**:
+O `.tar` (de *tape archive*) reúne muitos arquivos e pastas num só e guarda os nomes, as permissões e os donos de cada um. Rode no **PowerShell**:
 
 ```powershell
 # nome da distro (veja com wsl -l -v), arquivo de destino
@@ -42,11 +42,11 @@ O WSL 2 guarda cada distro num disco virtual (`ext4.vhdx`). A opção `--vhd` ex
 
 ## `wsl --import`: criar uma distro a partir do arquivo
 
-O `.tar` só serve depois de importado. A importação cria uma distro **nova**, com o nome e a pasta que você escolher.
+O `.tar` só ganha vida quando é importado. A importação cria uma distro **nova**, no nome e na pasta que você definir.
 
-**O `wsl --import <nome> <pasta> <arquivo>` registra uma distro chamada `<nome>`, guarda o disco dela em `<pasta>` e preenche esse disco com o conteúdo do `<arquivo>`.**
+**O `wsl --import <nome> <pasta> <arquivo>` cadastra no WSL uma distro de nome `<nome>`, cria o disco dela dentro de `<pasta>` e o enche com o que está no `<arquivo>`.**
 
-![Fluxo do backup: exportar, guardar fora do C: e conferir, importar, e dizer de novo quem é o usuário padrão](../img/c08-export-import.svg)
+![Fluxo do backup: exportar, guardar fora do C: e conferir, importar, e informar outra vez quem é o usuário padrão](../img/c08-export-import.svg)
 
 Importe o backup com **outro nome**, para a original ficar intacta. No PowerShell:
 
@@ -60,9 +60,9 @@ wsl --import teste-clone D:\wz-temp\tc `
 The operation completed successfully.
 ```
 
-Como o nome é livre, o mesmo arquivo vira, ao mesmo tempo, **backup** (para voltar atrás) e **clone** (uma cópia independente para testar um upgrade arriscado ou um tutorial que você não conhece). As duas distros dividem a mesma VM e o mesmo limite do `.wslconfig`, mas cada uma tem o próprio disco.
+Como o nome é livre, o mesmo arquivo serve de **backup** (para voltar atrás) e de **clone**: uma cópia independente, boa para experimentar uma atualização arriscada ou seguir um tutorial desconhecido. As duas distros compartilham a VM e o limite do `.wslconfig`, mas cada uma tem o seu disco.
 
-> 💡 **Analogia:** é como trocar de celular restaurando o backup da nuvem. O backup traz de volta apps, fotos e ajustes, e o celular novo (a pasta do `--import`) pode ser até de outro modelo. A analogia falha num ponto: o celular novo pede o seu login; a distro importada **não pede nada**, e abre com o usuário que o `/etc/wsl.conf` mandar.
+> 💡 **Analogia:** pense em trocar de celular e restaurar o backup da nuvem. Voltam os aplicativos, as fotos e as configurações, e o aparelho novo (a pasta do `--import`) pode até ser de outro modelo. A analogia falha num ponto: o celular novo pede o seu login; a distro importada **não pede nada**, e abre com o usuário que o `/etc/wsl.conf` mandar.
 
 > ⚠️ **Erro comum:** usar o `--unregister` com o nome errado. Ele apaga a distro indicada sem perguntar. Rode `wsl -l -v` antes e copie o nome exato do clone.
 
@@ -190,26 +190,26 @@ Isso mostra que o `Get-FileHash` do PowerShell e o `sha256sum` do Linux concorda
 
 ## Projetos × distro inteira
 
-Exportar a distro gera um arquivo de gigabytes. Para o dia a dia, isso é pesado demais. Existem **dois níveis** de backup, e eles se completam.
+Exportar a distro gera um arquivo de gigabytes, e isso é pesado demais para a rotina. Por isso há **dois níveis** de backup, que se complementam.
 
 ![Comparação: backup só dos projetos (pequeno, frequente) e backup da distro inteira (grande, ocasional)](../img/c08-projetos-x-distro.svg)
 
 | | Só os projetos | Distro inteira |
 | --- | --- | --- |
-| Como | `git push` ou `tar` de `~/projetos` | `wsl --export` |
-| O que leva | Código e histórico do git | Tudo: usuário, programas, configurações e projetos |
-| Tamanho | KB a poucos MB | de centenas de MB a vários GB |
-| Quando | Todo dia (git) ou toda semana (tar) | Antes de formatar, trocar de PC ou mudar muito |
+| Como se faz | `git push` ou `tar` de `~/projetos` | `wsl --export` |
+| O que guarda | Código e histórico do git | Tudo: usuário, programas, ajustes e projetos |
+| Tamanho | De KB a poucos MB | De centenas de MB a vários GB |
+| Frequência | Diária (git) ou semanal (tar) | Antes de formatar, trocar de PC ou mexer muito |
 | Depois de perder | Reinstale com o `bootstrap.sh` e restaure | `wsl --import` e abra |
 
-> 💡 **Analogia:** o backup de projetos é o caderno de receitas: leve, cabe na bolsa, e com ele você refaz qualquer prato, mas vai ter de cozinhar tudo de novo. O backup da distro é a refeição congelada: ocupa o freezer, basta esquentar. A analogia falha porque o caderno **melhora com o tempo** (você o atualiza todo dia) e a refeição congelada fica velha: um backup de distro de seis meses traz ferramentas e pacotes de seis meses atrás.
+> 💡 **Analogia:** o backup de projetos é um caderno de receitas: leve, cabe na bolsa e permite refazer qualquer prato, mas você precisa cozinhar tudo outra vez. O backup da distro é a refeição congelada: ocupa espaço no freezer e só precisa ser aquecida. A analogia falha porque o caderno **melhora com o tempo** (você o atualiza todo dia) e a refeição congelada fica velha: um backup de distro de seis meses traz ferramentas e pacotes de seis meses atrás.
 
 Uma regra prática:
 
-- **Sempre:** projetos no git, com repositório remoto (GitHub). Cada `git push` já é um backup.
-- **Toda semana:** um `tar` de `~/projetos` pega o que o git não pega (`.env`, rascunhos, projetos sem repositório).
-- **Antes de formatar o Windows ou trocar de computador:** `wsl --export`, obrigatoriamente.
-- **Antes de mudanças grandes** (subir a versão do Ubuntu, mexer em muitos pacotes do sistema, rodar `--unregister` em qualquer distro): `wsl --export`.
+- **Sempre:** projetos no git, com um repositório remoto (o GitHub). Todo `git push` já é um backup.
+- **Toda semana:** um `tar` de `~/projetos` captura o que o git deixa de fora (`.env`, rascunhos e projetos que não têm repositório).
+- **Antes de formatar o Windows ou trocar de computador:** o `wsl --export` é obrigatório.
+- **Antes de mudanças grandes** (subir a versão do Ubuntu, alterar muitos pacotes do sistema, rodar `--unregister` em qualquer distro): faça o `wsl --export`.
 
 ### Backup dos projetos com `tar`
 
@@ -254,7 +254,7 @@ Criado: /home/ana/backups/projetos-2026-11-27.tar.gz (12K)
 projetos-2026-11-27.tar.gz: OK
 ```
 
-De 5,0 MB para 12 KB: quase todo o peso era `node_modules`, que o `npm install` refaz. Confira o conteúdo **sem extrair** (`tar -t`) e **restaure numa pasta temporária** (a prova de que o backup volta):
+Caiu de 5,0 MB para 12 KB, porque quase todo o peso era `node_modules`, que o `npm install` recria. Veja o conteúdo **sem extrair** (`tar -t`) e **restaure numa pasta temporária**, que é a prova de que o backup volta:
 
 ```bash
 # lista o pacote (-t), esconde o miolo do .git e restaura em /tmp
@@ -289,7 +289,7 @@ codigo de saida: 1
 
 Se isso acontecer depois de copiar para o pen drive ou baixar da nuvem, **não confie na cópia**: copie de novo do original até aparecer `OK`.
 
-> ⚠️ **Erro comum:** guardar o backup só em `/mnt/c/...` ou na Área de Trabalho e formatar o Windows em seguida. Confira que o arquivo está no destino certo, **e que abre**, antes de apagar qualquer coisa.
+> ⚠️ **Erro comum:** deixar o backup só em `/mnt/c/...` ou na Área de Trabalho e, logo depois, formatar o Windows. Antes de apagar qualquer coisa, veja se o arquivo está no lugar certo **e se ele abre**.
 
 ## O `backup.ps1`: exportar, conferir e testar
 
@@ -454,19 +454,19 @@ Faça o commit no Ubuntu, dentro de `~/meu-ambiente`: `git add -A` e `git commit
 
 ## 🏋️ Pratique
 
-**1. Exemplo resolvido.** Você vai formatar o Windows amanhã. Escreva, na ordem, os comandos do PowerShell para salvar o Ubuntu num HD externo (letra `E:`) e, depois de reinstalar o WSL, restaurá-lo em `C:\WSL\Linux`.
+**1. Exemplo resolvido.** O Windows será formatado amanhã. Liste, em ordem, os comandos de PowerShell que salvam o Ubuntu num HD externo (unidade `E:`) e que, com o WSL reinstalado, o restauram em `C:\WSL\Linux`.
 
 <details>
 <summary>Ver resposta</summary>
 
-Antes de formatar:
+Na véspera da formatação:
 
 ```powershell
 wsl --terminate Ubuntu-26.04
 wsl --export Ubuntu-26.04 E:\wsl-backup.tar
 ```
 
-Depois de reinstalar o WSL:
+Com o WSL já reinstalado:
 
 ```powershell
 wsl --import Ubuntu-26.04 C:\WSL\Linux E:\wsl-backup.tar --version 2
@@ -496,21 +496,21 @@ Ordem do `--import`: nome, pasta, arquivo. Confira o nome com `wsl -l -v` antes 
 
 </details>
 
-**3. Faça sozinho.** Você copiou `projetos-2026-11-27.tar.gz` e o `.sha256` para um pen drive e, ao conferir, viu `projetos-2026-11-27.tar.gz: FAILED`. O que aconteceu e o que fazer?
+**3. Faça sozinho.** Você levou `projetos-2026-11-27.tar.gz` e o `.sha256` para um pen drive e, na conferência, apareceu `projetos-2026-11-27.tar.gz: FAILED`. Qual é o problema e como resolver?
 
 <details>
 <summary>Ver resposta</summary>
 
-A cópia **não é idêntica** ao original: algum byte mudou (cópia interrompida ou pen drive com defeito). Não use essa cópia: copie de novo a partir do original e confira até aparecer `OK`. Critérios: (1) diz que a cópia está corrompida; (2) manda copiar de novo, não "restaurar assim mesmo".
+A cópia **difere do original**: algum byte mudou (cópia interrompida ou pen drive com defeito). Descarte-a, copie outra vez a partir do original e repita a conferência até ver `OK`. Critérios: (1) aponta que a cópia está corrompida; (2) manda copiar de novo, em vez de "restaurar assim mesmo".
 
 </details>
 
-**4. Desafio.** Para cada situação, diga se basta o backup de projetos ou se é preciso exportar a distro: (a) terminar o dia de trabalho; (b) trocar de notebook; (c) testar um script que altera arquivos em `/etc`.
+**4. Desafio.** Em cada situação, diga se o backup de projetos resolve ou se é preciso exportar a distro: (a) fim do expediente; (b) troca de notebook; (c) teste de um script que mexe em arquivos de `/etc`.
 
 <details>
 <summary>Ver resposta</summary>
 
-(a) Projetos: `git push`, ou o `backup-projetos.sh` da semana. (b) Distro inteira: `wsl --export` no velho e `wsl --import` no novo (ou o `bootstrap.sh` e os projetos, se preferir recomeçar limpo). (c) Nenhum dos dois sozinho: importe um **clone**, rode o script nele e apague o clone; a original nem é tocada. Critérios: (1) justifica pelo que se perde; (2) usa o clone para o (c).
+(a) Projetos: um `git push`, ou o `backup-projetos.sh` semanal. (b) Distro inteira: `wsl --export` no notebook antigo e `wsl --import` no novo (ou o `bootstrap.sh` mais os projetos, se você quiser começar limpo). (c) Nenhum dos dois, sozinho: importe um **clone**, rode o script nele e apague o clone, sem encostar na original. Critérios: (1) justifica pelo que se perderia; (2) usa o clone no item (c).
 
 </details>
 
@@ -540,7 +540,7 @@ A cópia **não é idêntica** ao original: algum byte mudou (cópia interrompid
 - "Faça-me 5 perguntas sobre `wsl --export`, `wsl --import`, o usuário padrão e o SHA-256, uma de cada vez. Espere a minha resposta antes de dar o retorno e não me dê as respostas antes."
 - "Esta é a minha resposta ao exercício 4: [minha resposta]. Aponte os meus erros sem me dar a solução."
 
-> ➡️ **Próximo passo:** com o ambiente protegido por backup, é hora de pôr um assistente de programação para trabalhar nele. O capítulo 9 instala o Claude Code no WSL e mostra os modos de permissão, plugins e MCPs.
+> ➡️ **Próximo passo:** o ambiente já tem backup, então dá para colocar um assistente de programação para trabalhar nele. No capítulo 9, você instala o Claude Code no WSL e conhece os modos de permissão, os plugins e os MCPs.
 
 ## 📌 Resumo
 
@@ -563,3 +563,9 @@ A cópia **não é idêntica** ao original: algum byte mudou (cópia interrompid
 - Execuções: WSL 3.0.5.0 com a distro de teste Ubuntu 26.04.1, 27/11/2026.
 
 > 🔁 **Revise hoje:** 1, 5, 7
+
+<!-- nav:start -->
+---
+
+[◀ Capítulo anterior](07-gerenciar-o-wsl.md) · [Mapa do livro](../README.md) · [Próximo capítulo ▶](09-claude-code-no-wsl.md)
+<!-- nav:end -->

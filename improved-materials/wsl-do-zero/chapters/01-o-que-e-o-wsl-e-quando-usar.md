@@ -16,7 +16,7 @@ Você abre um tutorial de programação e o primeiro comando é `sudo apt instal
 
 Existem três jeitos de ter um Linux à mão sem abandonar o Windows: instalar o Linux ao lado dele (*dual boot*), rodá-lo dentro de uma máquina virtual, ou usar o WSL. Este livro usa o terceiro.
 
-**O WSL (*Windows Subsystem for Linux*, "Subsistema do Windows para Linux") é o recurso do Windows que roda um Linux de verdade, com o terminal e as ferramentas dele, dentro do próprio Windows, sem você montar máquina virtual nem reiniciar para trocar de sistema.**
+**O WSL (*Windows Subsystem for Linux*, ou "Subsistema do Windows para Linux") é um recurso do Windows que executa um Linux de verdade, com terminal e ferramentas próprias, dentro do Windows. Você não monta máquina virtual e não reinicia o computador para trocar de sistema.**
 
 No fim do livro você terá, no seu computador, um ambiente de desenvolvimento completo, que sabe montar, personalizar, salvar e restaurar. Tudo gira em torno de um projeto, o **meu-ambiente**, que cresce a cada capítulo. Neste, ele nasce como um verificador: um pequeno programa que diz "OK" ou "FALHA" para cada coisa que precisa estar certa.
 
@@ -37,7 +37,7 @@ A tabela da documentação da Microsoft ajuda a ver o que muda na prática:
 | Característica | WSL 1 | WSL 2 |
 | --- | --- | --- |
 | Kernel Linux completo | não | sim |
-| Compatibilidade total de chamadas do sistema | não | sim |
+| Todas as chamadas do sistema funcionam | não | sim |
 | `systemd` (o gerenciador de serviços do Linux) | não | sim |
 | Velocidade ao acessar arquivos do outro sistema | melhor | pior |
 | Convive com versões atuais do VirtualBox e do VMware | sim | com restrições |
@@ -154,7 +154,7 @@ OK    virtualizacao ligada no firmware ou em uso
 OK    wsl.exe encontrado
 ```
 
-Se alguma linha mostrar `FALHA`: a primeira pede atualização do Windows (Windows Update); a segunda pede para ligar a virtualização na BIOS/UEFI do computador (a opção costuma se chamar *Intel VT-x*, *AMD-V* ou *SVM Mode*); a terceira indica um Windows que não traz o WSL, caso em que você instala pelo capítulo 2.
+Se alguma linha mostrar `FALHA`: a primeira pede atualização do Windows (Windows Update); a segunda pede que você ligue a virtualização no firmware (BIOS/UEFI), numa opção que costuma ter o nome de *Intel VT-x*, *AMD-V* ou *SVM Mode*; a terceira indica um Windows que não traz o WSL, caso em que você instala pelo capítulo 2.
 
 ### 🔎 Para ir além: por que o verificador aceita "já em uso"?
 
@@ -292,3 +292,9 @@ Entre na BIOS/UEFI na hora de ligar o PC e ligue a opção de virtualização (V
 - [Releases do WSL no GitHub](https://github.com/microsoft/WSL/releases): WSL 3.0.5, de 03/11/2026 (27/11/2026)
 - [Kernel do WSL 2, código aberto](https://github.com/microsoft/WSL2-Linux-Kernel) (27/11/2026)
 - Execuções: PC do autor (Windows 11, build 26300; WSL 3.0.5.0) e distro de teste Ubuntu 26.04.1 no WSL 2, 27/11/2026.
+
+<!-- nav:start -->
+---
+
+[◀ Capítulo anterior](00-como-estudar-este-livro.md) · [Mapa do livro](../README.md) · [Próximo capítulo ▶](02-instalacao-do-wsl-e-do-ubuntu.md)
+<!-- nav:end -->

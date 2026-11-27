@@ -102,3 +102,9 @@ Se você nunca usou o WSL, pule o teste e comece pelo [capítulo 1](01-o-que-e-o
 O teste mede o que você sabe, não o que você tem instalado. Mesmo começando adiante, leia o *Resumo* dos capítulos que pulou e crie o projeto **meu-ambiente** pelos capítulos 1 e 3: os exemplos seguintes usam os verificadores, os dotfiles e o `bootstrap.sh` dele.
 
 > ➡️ **Próximo passo:** comece pelo capítulo que a tabela indicou.
+
+<!-- nav:start -->
+---
+
+[Mapa do livro](../README.md) · [Próximo capítulo ▶](01-o-que-e-o-wsl-e-quando-usar.md)
+<!-- nav:end -->

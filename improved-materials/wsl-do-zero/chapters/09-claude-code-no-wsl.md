@@ -1,6 +1,6 @@
 # 9. Claude Code no WSL
 
-> 🗺️ **Neste capítulo:** você instala o Claude Code no Ubuntu do WSL **como o seu usuário** (e não como root), aprende os comandos e atalhos do dia a dia, os modos de permissão, os plugins e os MCPs, e fixa o modo inicial e o idioma das respostas no `~/.claude/settings.json`. O `meu-ambiente` ganha um `CLAUDE.md` e um exemplo de configuração. · ⏱️ ~55 min
+> 🗺️ **Neste capítulo:** você instala o Claude Code no Ubuntu do WSL **com o seu usuário** (nunca como root), conhece os comandos e atalhos de todo dia, os modos de permissão, os plugins e os MCPs, e deixa fixos o modo inicial e o idioma das respostas no `~/.claude/settings.json`. O `meu-ambiente` ganha um `CLAUDE.md` e um exemplo de configuração. · ⏱️ ~55 min
 
 > 🔥 **Aquecimento:** (1) Por que o `backup.ps1` importa o clone com um nome que começa com `teste-`? (2) Uma distro importada abre como `root`. Qual arquivo e qual seção corrigem isso?
 >
@@ -13,35 +13,35 @@
 
 ## De onde paramos
 
-No capítulo 8 você protegeu o ambiente com backup e provou a restauração. Agora é hora de pôr um assistente de programação para trabalhar dentro dele. O Claude Code roda no terminal, lê e edita os arquivos do projeto e executa comandos, e por isso o jeito como você o instala e as permissões que você dá a ele importam tanto quanto o programa.
+No capítulo 8, você protegeu o ambiente com backup e provou que a restauração funciona. Agora vamos colocar um assistente de programação para trabalhar nele. O Claude Code trabalha no terminal: abre e altera os arquivos do projeto e executa comandos. Por isso, a forma de instalá-lo e as permissões que você concede pesam tanto quanto o próprio programa.
 
 > ⚠️ **O que foi e o que não foi executado.** Instalei o Claude Code **de verdade** na distro de teste `wz-teste`, como usuário comum, e as saídas desta seção vêm dela (versão **2.1.332**). **Não executei** o que depende da sua conta: o login, a tela de confiança e tudo o que acontece **dentro** de uma sessão (`/mcp`, `/plugin`, o Shift+Tab). Para eles, o texto segue a documentação oficial e diz o que você deve ver.
 
 ## WSL ou Windows
 
-O Claude Code existe para Windows e para Linux, e no seu computador você pode ter **duas instalações**: uma no Windows e outra dentro do Ubuntu.
+Há versões do Claude Code para Windows e para Linux, e é possível ter **duas instalações** no mesmo computador: uma no Windows e outra dentro do Ubuntu.
 
-**As duas instalações são independentes: cada uma tem o seu login, as suas configurações, os seus MCPs e o seu histórico.**
+**As duas instalações não se misturam: cada uma guarda o próprio login, as próprias configurações, os próprios MCPs e o próprio histórico.**
 
-| | Claude Code do WSL | Claude Code do Windows |
+| | Claude Code no WSL | Claude Code no Windows |
 | --- | --- | --- |
-| Onde instala | No Ubuntu, com `curl ... install.sh` | No Windows, pelo instalador do Windows |
+| Instalação | No Ubuntu, com `curl ... install.sh` | No Windows, com o instalador do Windows |
 | Projetos | Em `~/projetos`, no disco do Linux | Em pastas do Windows (`C:\...`) |
-| Ferramentas que ele usa | As do Linux: bash, git, nvm, uv | As do Windows |
-| Sandbox | Suportado no WSL 2 | Não suportado |
-| Quando usar | Projetos Linux, web, Python, Node | Apps e instaladores do Windows |
+| Ferramentas usadas | As do Linux: bash, git, nvm, uv | As do Windows |
+| Sandbox | Disponível no WSL 2 | Indisponível |
+| Indicado para | Projetos Linux, web, Python e Node | Aplicativos e instaladores do Windows |
 
-Segundo a [documentação oficial](https://code.claude.com/docs/en/setup), o WSL 2 permite o *sandbox* (uma área isolada onde os comandos não alcançam o resto do sistema), o WSL 1 não, e a instalação no WSL é feita **dentro do terminal do WSL**, não pelo PowerShell. Este livro usa a instalação do WSL, no Ubuntu que você montou.
+A [documentação oficial](https://code.claude.com/docs/en/setup) diz que o *sandbox* (uma área isolada, de onde os comandos não alcançam o resto do sistema) funciona no WSL 2 e não no WSL 1, e que a instalação no WSL acontece **dentro do terminal do WSL**, e não pelo PowerShell. O livro adota a instalação do WSL, no Ubuntu que você montou.
 
-**Pré-requisitos.** O Claude Code exige uma conta paga (Pro, Max, Ultra, Team, Enterprise ou Console; o plano grátis do claude.ai não inclui o Claude Code) e, no Linux, Ubuntu 20.04 ou mais novo. O instalador nativo **não precisa do Node.js**: você só vai precisar do Node (nvm, capítulo 6) e do `uv` para certos MCPs, mais adiante.
+**Pré-requisitos.** O Claude Code pede uma conta paga (Pro, Max, Ultra, Team, Enterprise ou Console; o plano gratuito do claude.ai não o inclui) e, no Linux, o Ubuntu 20.04 ou mais recente. O instalador nativo **dispensa o Node.js**: você só vai usar o Node (nvm, capítulo 6) e o `uv` em certos MCPs, mais adiante.
 
-> ⚠️ **Erro comum:** fazer o login e configurar MCPs e plugins no Windows e esperar que apareçam no Ubuntu. Não aparecem: o que você configura numa instalação não vale para a outra.
+> ⚠️ **Erro comum:** entrar na conta e configurar MCPs e plugins no Windows esperando vê-los no Ubuntu. Eles não aparecem, porque cada instalação tem a sua configuração, e o que você ajusta numa não vale na outra.
 
-## Instalar como usuário
+## Instalar com o seu usuário
 
-**A instalação nativa é um script que baixa o Claude Code para a sua pasta pessoal (`~/.local/share/claude`) e cria o comando `claude` em `~/.local/bin`. Ela se atualiza sozinha em segundo plano.**
+**A instalação nativa é um script que coloca o Claude Code na sua pasta pessoal (`~/.local/share/claude`) e cria o comando `claude` em `~/.local/bin`. Depois disso, ele se atualiza sozinho, em segundo plano.**
 
-Como tudo fica na sua pasta pessoal, a instalação é do **seu usuário**, sem `sudo`. O livro vem repetindo o conselho de olhar um script antes de rodá-lo com `curl | bash`. Faça isso aqui: baixe, leia o que ele faz com `grep` e só depois execute. No Ubuntu, com o prompt terminando em `$`:
+Tudo fica na sua pasta pessoal, então a instalação pertence ao **seu usuário** e dispensa `sudo`. O livro já recomendou ler um script antes de executá-lo com `curl | bash`, e vale aqui também: baixe, veja o que ele faz com `grep` e só então rode. No Ubuntu, com o prompt terminando em `$`:
 
 ```bash
 # confirme que você NÃO é root (o prompt termina em $)
@@ -192,35 +192,35 @@ exit
 
 > ⚠️ **Não executado:** o login depende da sua conta, e eu não coloquei credenciais na máquina de testes. **Nunca cole tokens ou senhas num chat, num script ou num repositório.** O que segue é o que a documentação diz.
 
-Na primeira vez que você roda `claude`, ele abre o login no navegador. No WSL, se o navegador não abrir sozinho, copie o link mostrado no terminal e abra no navegador do Windows. Em seguida, aparece a **tela de confiança** (*"Is this a project you trust?"*): o Claude Code pergunta se pode ler, editar e executar arquivos na pasta atual.
+Na primeira execução do `claude`, uma página de login se abre no navegador. No WSL, caso ela não apareça, copie o endereço mostrado no terminal e cole no navegador do Windows. Depois vem a **tela de confiança** (*"Is this a project you trust?"*), em que o Claude Code quer saber se pode ler, editar e executar arquivos na pasta atual.
 
-- Numa **pasta de projeto** sua: escolha **Yes, I trust this folder**.
-- Na **pasta pessoal** (`/home/ana`) ou numa pasta que você não conhece: escolha **No, exit**.
+- Dentro de uma **pasta de projeto** sua: responda **Yes, I trust this folder**.
+- Na **pasta pessoal** (`/home/ana`) ou numa pasta desconhecida: responda **No, exit**.
 
-Por isso, use o Claude Code **sempre dentro de uma pasta de projeto**, no disco do Linux (capítulo 4). Neste livro, é o `~/meu-ambiente`:
+Por esse motivo, abra o Claude Code **sempre numa pasta de projeto**, no disco do Linux (capítulo 4). Neste livro, ela é o `~/meu-ambiente`:
 
 ```bash
 cd ~/meu-ambiente
 claude
 ```
 
-> ⚠️ **Erro comum:** abrir o `claude` na pasta pessoal ou em `/mnt/c/...`. Na pasta pessoal ele enxerga todos os seus arquivos (chaves SSH, backups, configurações); em `/mnt/c` tudo fica mais lento e voltam os problemas de permissão e de quebra de linha (capítulo 4).
+> ⚠️ **Erro comum:** iniciar o `claude` na pasta pessoal ou em `/mnt/c/...`. Na pasta pessoal, ele passa a enxergar tudo o que é seu (chaves SSH, backups, configurações); em `/mnt/c`, o trabalho fica lento e os problemas de permissão e de fim de linha voltam (capítulo 4).
 
 ## Comandos e atalhos
 
-Dentro da sessão, os comandos começam com `/`. Digite só `/` para ver a lista. Os essenciais, conferidos na [lista oficial](https://code.claude.com/docs/en/commands):
+Na sessão, os comandos começam com `/`. Basta digitar `/` para listá-los. Estes são os principais, conferidos na [lista oficial](https://code.claude.com/docs/en/commands):
 
 | Comando | Para que serve |
 | --- | --- |
-| `/init` | Cria um `CLAUDE.md` com o contexto do projeto |
-| `/memory` | Edita os `CLAUDE.md` e a memória automática |
-| `/model` | Troca o modelo e o salva como padrão |
-| `/plan` | Entra no modo planejar |
-| `/context` | Mostra o que ocupa a janela de contexto |
-| `/compact` | Resume a conversa para liberar contexto |
-| `/clear` | Começa uma conversa nova, com o contexto vazio |
-| `/resume` | Retoma uma conversa anterior |
-| `/rewind` | Volta código e conversa a um ponto anterior |
+| `/init` | Gera um `CLAUDE.md` com o contexto do projeto |
+| `/memory` | Abre os `CLAUDE.md` e a memória automática para edição |
+| `/model` | Escolhe o modelo e o grava como padrão |
+| `/plan` | Liga o modo de planejamento |
+| `/context` | Exibe o que está ocupando a janela de contexto |
+| `/compact` | Resume a conversa para abrir espaço no contexto |
+| `/clear` | Abre uma conversa nova, de contexto vazio |
+| `/resume` | Volta a uma conversa anterior |
+| `/rewind` | Recua o código e a conversa até um ponto anterior |
 | `/mcp` | Gerencia os servidores MCP |
 | `/plugin` | Gerencia os plugins |
 | `/permissions` | Regras do que ele pode fazer sem perguntar |
@@ -231,17 +231,17 @@ Dentro da sessão, os comandos começam com `/`. Digite só `/` para ver a lista
 
 E os atalhos, da [página do modo interativo](https://code.claude.com/docs/en/interactive-mode):
 
-| Atalho | O que faz |
+| Tecla | Função |
 | --- | --- |
-| **Shift+Tab** | Troca o modo de permissão (próxima seção) |
-| **Esc** | Interrompe a resposta atual; o que já foi feito fica |
-| **Esc Esc** | Com a caixa vazia, abre o menu do `/rewind`; com texto, limpa o rascunho |
+| **Shift+Tab** | Alterna o modo de permissão (próxima seção) |
+| **Esc** | Interrompe a resposta em andamento; o que já foi feito permanece |
+| **Esc Esc** | Com a caixa vazia, abre o menu do `/rewind`; com texto, apaga o rascunho |
 | **@** | Menciona um arquivo: `explique @verificar.sh` |
 | **!** no início | Roda um comando do terminal e mostra a saída à sessão: `! git status` |
 
-Fora da sessão, no bash, os mais úteis são `claude -c` (continua a última conversa da pasta), `claude doctor`, `claude mcp list` e `claude plugin list`.
+Fora da sessão, no bash, os comandos mais úteis são `claude -c` (retoma a última conversa da pasta), `claude doctor`, `claude mcp list` e `claude plugin list`.
 
-> ⚠️ **Erro comum:** usar `/clear` achando que só "limpa a tela". Ele começa uma conversa **nova**, com o contexto vazio; para liberar espaço sem perder o fio, use `/compact`.
+> ⚠️ **Erro comum:** achar que o `/clear` só "limpa a tela". Na verdade, ele abre uma conversa **nova**, sem contexto; para ganhar espaço sem perder o fio da conversa, use o `/compact`.
 
 ### O `CLAUDE.md` do projeto
 
@@ -274,11 +274,11 @@ Repositório que monta e confere o meu ambiente de desenvolvimento no WSL.
 
 A última regra importa: instruções no `CLAUDE.md` orientam o Claude, mas **não são uma barreira**. Quem barra ações são os modos de permissão, a seguir.
 
-## Modos de permissão
+## Os modos de permissão
 
-Um assistente que edita arquivos e roda comandos precisa de um limite claro: quando ele age sozinho e quando para e pergunta.
+Um assistente que edita arquivos e executa comandos precisa de regras claras: quando age por conta própria e quando para para perguntar.
 
-**O modo de permissão define o que o Claude Code faz sem pedir a sua aprovação. O modo atual aparece no indicador logo abaixo da caixa de texto.**
+**O modo de permissão determina quais ações o Claude Code executa sem pedir a sua aprovação. O modo em vigor aparece no indicador logo abaixo da caixa de texto.**
 
 Os valores, segundo a [documentação](https://code.claude.com/docs/en/permission-modes):
 
@@ -291,13 +291,13 @@ Os valores, segundo a [documentação](https://code.claude.com/docs/en/permissio
 | Não perguntar | `dontAsk` | Modo sem perguntas, que nunca entra no Shift+Tab |
 | Pular verificações | `bypassPermissions` | Sem nenhuma verificação |
 
-No modo automático, cada ação passa por um segundo modelo, o classificador, que bloqueia o que parece arriscado. A partir do Claude Code 2.1.283, no terminal, a sessão **já começa no automático**, desde que o modelo e a sua organização o permitam; antes disso, ele só valia em alguns planos. Confira o indicador ao abrir a sessão em vez de supor o modo.
+No modo automático, um segundo modelo (o classificador) avalia cada ação e barra o que parece arriscado. Desde o Claude Code 2.1.283, no terminal, a sessão **já abre no automático**, se o modelo e a sua organização o permitirem; antes, ele só existia em alguns planos. Olhe o indicador ao abrir a sessão, em vez de presumir o modo.
 
 ![Shift+Tab percorre manual, aceitar edições, planejar e automático](../img/c09-modos-permissao.svg)
 
 A ordem do ciclo, segundo a documentação: se a sessão está no `auto`, o primeiro Shift+Tab leva ao `default`, e daí em diante `default` → `acceptEdits` → `plan` → (de volta ao `auto`). O `bypassPermissions` só entra no ciclo se a sessão foi aberta com ele.
 
-> 💡 **Analogia:** é a autoescola. No manual, o instrutor autoriza cada manobra antes de você fazer. Em aceitar edições, você troca marcha e faz curvas sozinho, mas pergunta antes de entrar na avenida. Em planejar, vocês traçam o trajeto no mapa antes de dar a partida. No automático, você dirige sozinho, com o instrutor ao lado e o pé no freio duplo (o classificador). A analogia falha em um ponto: o freio duplo é um **modelo de IA**, que também pode errar; ele reduz o risco, não o elimina.
+> 💡 **Analogia:** imagine a autoescola. No modo manual, o instrutor libera cada manobra antes de você executá-la. Em aceitar edições, você passa as marchas e faz as curvas sozinho, mas consulta antes de entrar na avenida. Em planejar, os dois desenham o trajeto no mapa antes de ligar o carro. No automático, você conduz sozinho, mas o instrutor fica ao seu lado, com o pé no freio duplo (o classificador). A analogia tem um limite: esse freio duplo é um **modelo de IA**, que também erra; ele diminui o risco, mas não o elimina.
 
 ### Abrir num modo e fixar o modo inicial
 
@@ -308,7 +308,7 @@ Para abrir uma sessão já num modo, use a opção da linha de comando (o `--hel
 claude --permission-mode plan
 ```
 
-Para que **toda** sessão comece num modo, use a chave `permissions.defaultMode` no arquivo de configurações do seu usuário, `~/.claude/settings.json`. A ordem de precedência, segundo a documentação, é: a opção da linha de comando, depois o `settings.json`, depois o padrão. O repositório guarda um modelo, que começa no manual e em português:
+Para que **toda** sessão abra num certo modo, use a chave `permissions.defaultMode` no arquivo de configurações do seu usuário, o `~/.claude/settings.json`. Segundo a documentação, a precedência é: opção da linha de comando, depois o `settings.json`, depois o padrão. O repositório guarda um modelo, que parte do modo manual e já está em português:
 
 **claude/settings.exemplo.json**
 
@@ -323,13 +323,13 @@ Para que **toda** sessão comece num modo, use a chave `permissions.defaultMode`
 
 Para começar no automático, troque por `"auto"`; para planejar, `"plan"`. Mas há uma regra de segurança: `auto` e `bypassPermissions` **só valem no arquivo do usuário** (`~/.claude/settings.json`). Num `.claude/settings.json` de projeto, são ignorados, para que um repositório baixado da internet não possa ligar sozinho o modo que age sem perguntar.
 
-**O modo que pula tudo.** O `bypassPermissions` executa sem verificação. A documentação manda usá-lo só em ambientes isolados (contêineres ou máquinas virtuais sem internet) e diz que o Claude Code se recusa a abrir assim como root. No seu Ubuntu do dia a dia, **não use**. Nem ele ignora tudo: as regras de negação (*deny*) valem em todos os modos.
+**O modo que dispensa tudo.** O `bypassPermissions` executa sem nenhuma verificação. A documentação o reserva para ambientes isolados (contêineres ou máquinas virtuais sem internet) e informa que o Claude Code não abre assim como root. No Ubuntu do seu dia a dia, **não use**. Nem esse modo ignora tudo: as regras de negação (*deny*) continuam valendo.
 
 > ⚠️ **Erro comum:** retomar uma conversa antiga (`claude -c` ou `/resume`) e não olhar o indicador do modo. Confira antes de pedir algo que mexe em muitos arquivos.
 
-## Idioma das respostas
+## O idioma das respostas
 
-O Claude costuma responder no idioma em que você escreve. Para fixar o português, a chave `language` do mesmo arquivo (a do modelo acima) faz isso. Segundo a documentação, o valor é repassado ao Claude **como uma instrução, sem validação**: qualquer nome de idioma serve, e um erro de digitação não dá erro, só chega ao Claude como foi escrito. Ela não muda o idioma do Ubuntu (capítulo 5).
+Em geral, o Claude responde no idioma em que você escreve. Para fixar o português, use a chave `language` do mesmo arquivo (a do modelo acima). De acordo com a documentação, o valor chega ao Claude **como uma instrução, sem validação**: qualquer nome de idioma é aceito, e um erro de digitação não gera aviso, só é entregue ao Claude do jeito que foi escrito. A chave não altera o idioma do Ubuntu (capítulo 5).
 
 Na distro de teste, escrevi o arquivo com `defaultMode` em `plan` e conferi se o JSON está certo. O `settings.json` é **JSON estrito**: uma vírgula sobrando o estraga. Veja o `python3 -m json.tool` (que vem no Ubuntu) com um arquivo certo e um com defeito:
 
@@ -353,9 +353,9 @@ Illegal trailing comma before end of object: line 1 column 27 (char 26)
 
 ## Plugins
 
-Plugins adicionam ao Claude Code pacotes prontos de comandos, skills (instruções especializadas), agentes, hooks e até MCPs. Eles vêm de **marketplaces**, catálogos que você adiciona uma vez.
+Os plugins levam ao Claude Code conjuntos prontos de comandos, skills (instruções especializadas), agentes, hooks e até MCPs. Eles chegam por **marketplaces**, catálogos que você cadastra uma única vez.
 
-**Um plugin é um pacote de extensões instalado de um marketplace. O escopo escolhido na instalação decide onde ele vale.**
+**Um plugin é um conjunto de extensões vindo de um marketplace. O escopo que você escolhe ao instalar define onde ele passa a valer.**
 
 Os escopos, segundo a [documentação](https://code.claude.com/docs/en/discover-plugins):
 
@@ -431,9 +431,9 @@ Para outros marketplaces, adicione-o antes (`/plugin marketplace add dono/reposi
 
 ## MCPs
 
-Plugins trazem pacotes de instruções. Às vezes o Claude precisa de uma **ferramenta nova** de verdade, como ler um PDF ou falar com um serviço.
+Os plugins entregam instruções prontas. Às vezes, porém, o Claude precisa de uma **ferramenta nova** de fato, como abrir um PDF ou se comunicar com um serviço externo.
 
-**Um servidor MCP (*Model Context Protocol*) é um programa à parte que oferece ferramentas ao Claude Code. Você o registra com `claude mcp add`, no bash, fora da sessão.**
+**Um servidor MCP (*Model Context Protocol*) é um programa independente que dá ferramentas novas ao Claude Code. O cadastro é feito com `claude mcp add`, no bash, fora da sessão.**
 
 ![Plugin e servidor MCP: o que cada um é, como se instala e onde fica](../img/c09-plugin-x-mcp.svg)
 
@@ -475,9 +475,9 @@ claude mcp remove docling -s user
 Removed MCP server docling from user config
 ```
 
-> 💡 **Analogia:** o plugin é uma maleta de ferramentas montada por alguém e comprada numa loja (o marketplace), com manuais e, às vezes, até uma máquina dentro. O MCP é uma máquina avulsa, como uma serra de bancada, ligada na tomada, que o pedreiro usa quando precisa. O escopo é onde a maleta ou a máquina fica: `user` é a sua maleta pessoal, `project` é o armário da obra, `local` é a sua gaveta só naquela obra. A analogia falha porque a "tomada" do MCP também é um risco: **um servidor MCP roda um programa na sua máquina** (stdio) ou fala com um serviço de fora (http), e um servidor que busca conteúdo da internet pode trazer instruções escondidas (*prompt injection*). Só registre servidores em que você confia.
+> 💡 **Analogia:** o plugin é uma maleta de ferramentas preparada por outra pessoa e vendida numa loja (o marketplace), com manuais e, às vezes, uma máquina junto. O MCP é uma máquina separada, como uma serra de bancada ligada na tomada, que o pedreiro usa quando precisa. O escopo diz onde a maleta ou a máquina fica guardada: `user` é a sua maleta pessoal, `project` é o armário da obra e `local` é a sua gaveta, só naquela obra. A analogia falha porque a "tomada" do MCP também traz risco: **um servidor MCP executa um programa no seu computador** (stdio) ou conversa com um serviço externo (http), e um servidor que traz conteúdo da internet pode carregar instruções escondidas (*prompt injection*). Cadastre apenas servidores em que você confia.
 
-> ⚠️ **Erro comum:** registrar um MCP cujo comando não existe no Linux. O registro funciona e a conexão falha, como acima. Confira com `claude mcp get <nome>`.
+> ⚠️ **Erro comum:** cadastrar um MCP cujo comando não existe no Linux. O cadastro dá certo e a conexão falha, como no exemplo acima. Verifique com `claude mcp get <nome>`.
 
 ## O projeto: o `meu-ambiente` com o Claude
 
@@ -608,12 +608,12 @@ Teste: `python3 -m json.tool ~/.claude/settings.json` imprime o JSON formatado, 
 
 </details>
 
-**3. Faça sozinho.** Você quer o Docling só no projeto `~/projetos/relatorios`, e não em todos. Qual comando, de qual pasta, e onde fica guardado? Como confere?
+**3. Faça sozinho.** Você quer o Docling apenas no projeto `~/projetos/relatorios`, e não em todos. Que comando usar, de que pasta, e onde ele fica guardado? Como verificar?
 
 <details>
 <summary>Ver resposta</summary>
 
-Sem `--scope`, o padrão é `local`, que vale só para o projeto atual. De dentro da pasta: `claude mcp add docling -- uvx --python 3.12 --from docling-mcp docling-mcp-server`. Fica no `~/.claude.json`, ligado a esse projeto. Confira com `claude mcp get docling` na pasta; em outra pasta, o `claude mcp list` não o lista. Critérios: (1) rodou de dentro da pasta; (2) não usou `--scope user`.
+Se você omite o `--scope`, vale o `local`, restrito ao projeto atual. Entre na pasta e rode `claude mcp add docling -- uvx --python 3.12 --from docling-mcp docling-mcp-server`. O registro vai para o `~/.claude.json`, preso a esse projeto. Verifique com `claude mcp get docling` na pasta; em outra pasta, o `claude mcp list` não o mostra. Critérios: (1) rodou de dentro da pasta; (2) não usou `--scope user`.
 
 </details>
 
@@ -652,14 +652,14 @@ O `bypassPermissions` do projeto é ignorado (só vale no arquivo do usuário), 
 - "Faça-me 5 perguntas sobre instalar o Claude Code no WSL, modos de permissão, plugins e MCPs, uma de cada vez. Espere a minha resposta antes de dar o retorno e não me dê as respostas antes."
 - "Esta é a minha resposta ao exercício 4: [minha resposta]. Aponte os meus erros sem me dar a solução."
 
-> ➡️ **Próximo passo:** com o Claude Code instalado e sob controle, falta usá-lo num projeto de verdade, do começo ao fim. O capítulo 10 cria um app com o fluxo do Spec Kit e fecha o livro restaurando tudo num ambiente novo.
+> ➡️ **Próximo passo:** com o Claude Code instalado e sob controle, resta usá-lo num projeto de verdade, do início ao fim. O capítulo 10 constrói um app com o fluxo do Spec Kit e encerra o livro restaurando tudo num ambiente novo.
 
 ## 📌 Resumo
 
 | Item | Em uma frase |
 | --- | --- |
-| WSL × Windows | Duas instalações independentes; use a do WSL para projetos Linux |
-| `install.sh` | Instala como o seu usuário em `~/.local`; recusa `sudo` e confere o SHA-256 |
+| WSL × Windows | Duas instalações separadas; use a do WSL nos projetos Linux |
+| `install.sh` | Instala com o seu usuário em `~/.local`; recusa `sudo` e confere o SHA-256 |
 | `PATH` | Terminal novo basta; senão, `~/.local/bin` no `~/.bashrc` |
 | `claude doctor` | Diagnóstico só de leitura, sem abrir sessão |
 | Tela de confiança | Confie só em pastas de projeto |
@@ -681,3 +681,9 @@ O `bypassPermissions` do projeto é ignorado (só vale no arquivo do usuário), 
 - Execuções: Claude Code 2.1.332 na distro de teste Ubuntu 26.04.1, 27/11/2026.
 
 > 🔁 **Revise hoje:** 4, 6, 8
+
+<!-- nav:start -->
+---
+
+[◀ Capítulo anterior](08-backup-e-restauracao.md) · [Mapa do livro](../README.md) · [Próximo capítulo ▶](10-projeto-final-um-app-com-spec-kit.md)
+<!-- nav:end -->

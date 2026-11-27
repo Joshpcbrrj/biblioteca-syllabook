@@ -13,7 +13,7 @@
 
 ## De onde paramos
 
-No capítulo 2 você instalou o Ubuntu 26.04, criou o seu usuário e viu o `verificar.sh` dizer "Tudo certo". Só que ele estava solto na sua pasta do Windows. Agora você aprende o básico do terminal do Ubuntu e leva o projeto **meu-ambiente** para o lugar dele: o sistema de arquivos do Linux.
+Lá no capítulo 2, o Ubuntu 26.04 ficou instalado, com o seu usuário criado, e o `verificar.sh` respondeu "Tudo certo". Só que ele estava solto na sua pasta do Windows. Agora você aprende o básico do terminal do Ubuntu e leva o projeto **meu-ambiente** para o lugar dele: o sistema de arquivos do Linux.
 
 ## O terminal e o prompt
 
@@ -120,7 +120,7 @@ binutils-common/resolute-updates,resolute-security 2.46-3ubuntu2.1 amd64
   [upgradable from: 2.46-3ubuntu2]
 ```
 
-Cada linha mostra o pacote, a versão nova e, entre colchetes, a atual. Instalar, usar e remover um programa pequeno, o `tree` (que desenha pastas em árvore), mostra o ciclo completo:
+Cada linha traz o nome do pacote, a versão nova e, entre colchetes, a que está instalada. Instalar, usar e remover um programa pequeno, o `tree` (que desenha pastas em árvore), mostra o ciclo completo:
 
 ```bash
 sudo apt install -y tree
@@ -555,3 +555,9 @@ O arquivo foi criado por um comando rodado como root, e o dono dele é o root, n
 - [Configurações avançadas do WSL: wsl.conf](https://learn.microsoft.com/windows/wsl/wsl-config) (27/11/2026)
 - [Comandos básicos do WSL](https://learn.microsoft.com/windows/wsl/basic-commands) (27/11/2026)
 - Execuções: distro de teste Ubuntu 26.04.1 no WSL 2 (apt 3.2.0, sudo-rs 0.2.13, git 2.53.0), 27/11/2026.
+
+<!-- nav:start -->
+---
+
+[◀ Capítulo anterior](02-instalacao-do-wsl-e-do-ubuntu.md) · [Mapa do livro](../README.md) · [Próximo capítulo ▶](04-arquivos-entre-linux-e-windows.md)
+<!-- nav:end -->

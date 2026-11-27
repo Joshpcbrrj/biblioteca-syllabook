@@ -26,4 +26,23 @@ Este livro aprimora uma versão anterior, escrita em Markdown. Só a estrutura, 
 Nenhuma errata registrada até agora. Achou um erro? Anote o capítulo, o trecho e o que você esperava ver, e envie ao autor.
 
 <!-- map:start -->
+## 🗺️ Mapa do livro
+
+- [0. Como estudar este livro](chapters/00-como-estudar-este-livro.md)
+- [1. O que é o WSL e quando usar](chapters/01-o-que-e-o-wsl-e-quando-usar.md) · ⏱️ ~35 min
+- [2. Instalação do WSL e do Ubuntu](chapters/02-instalacao-do-wsl-e-do-ubuntu.md) · ⏱️ ~45 min
+- [3. Primeiros passos no Ubuntu](chapters/03-primeiros-passos-no-ubuntu.md) · ⏱️ ~50 min
+- [4. Arquivos entre Linux e Windows](chapters/04-arquivos-entre-linux-e-windows.md) · ⏱️ ~45 min
+- [5. O terminal do seu jeito](chapters/05-o-terminal-do-seu-jeito.md) · ⏱️ ~50 min
+- [6. Ferramentas de desenvolvimento e programas com janela](chapters/06-ferramentas-de-desenvolvimento-e-programas.md) · ⏱️ ~60 min
+- [7. Gerenciar o WSL](chapters/07-gerenciar-o-wsl.md) · ⏱️ ~50 min
+- [8. Backup e restauração](chapters/08-backup-e-restauracao.md) · ⏱️ ~55 min
+- [9. Claude Code no WSL](chapters/09-claude-code-no-wsl.md) · ⏱️ ~55 min
+- [10. Projeto final: um app com Spec Kit](chapters/10-projeto-final-um-app-com-spec-kit.md) · ⏱️ ~70 min
+- [11. Simulado final](chapters/11-simulado-final.md)
+- [Glossário](chapters/glossario.md)
 <!-- map:end -->
+
+<!-- credit:start -->
+📘 *Criado pela skill Claude Syllabook - Joshpcbrrj* · [github.com/Joshpcbrrj/syllabook](https://github.com/Joshpcbrrj/syllabook)
+<!-- credit:end -->

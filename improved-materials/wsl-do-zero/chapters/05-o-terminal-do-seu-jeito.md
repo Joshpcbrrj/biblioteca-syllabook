@@ -552,3 +552,9 @@ Dois erros comuns: pôr `$time` no `format` e esquecer o `disabled = false` (o m
 - Execuções: distro de teste Ubuntu 26.04.1 no WSL 2 (Starship 1.27.0), 27/11/2026.
 
 > 🔁 **Revise hoje:** 2, 4
+
+<!-- nav:start -->
+---
+
+[◀ Capítulo anterior](04-arquivos-entre-linux-e-windows.md) · [Mapa do livro](../README.md) · [Próximo capítulo ▶](06-ferramentas-de-desenvolvimento-e-programas.md)
+<!-- nav:end -->

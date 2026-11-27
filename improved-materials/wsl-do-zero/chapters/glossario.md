@@ -42,7 +42,7 @@ Um termo por linha, em ordem alfabética, com o termo em inglês quando ele é d
 - **Plugin:** pacote de um marketplace que acrescenta comandos (e às vezes hooks e MCPs) ao Claude Code. [Capítulo 9](09-claude-code-no-wsl.md)
 - **Prompt:** o texto que o terminal mostra antes do cursor, com usuário, computador e pasta; termina em `$` (usuário comum) ou `#` (root). [Capítulo 3](03-primeiros-passos-no-ubuntu.md)
 - **root:** o administrador do Linux; o que ele cria pertence a ele, por isso não se trabalha como root. [Capítulo 3](03-primeiros-passos-no-ubuntu.md)
-- **SDD** (*Spec-Driven Development*): desenvolver a partir da especificação: o quê, depois o como, depois as tarefas, e só então o código. [Capítulo 10](10-projeto-final-um-app-com-spec-kit.md)
+- **SDD** (*Spec-Driven Development*): desenvolver guiado pela especificação: primeiro o que o programa faz, depois como, depois as tarefas, e só no fim o código. [Capítulo 10](10-projeto-final-um-app-com-spec-kit.md)
 - **SDKMAN:** gerenciador de kits de desenvolvimento, como o Java. [Capítulo 6](06-ferramentas-de-desenvolvimento-e-programas.md)
 - **SHA-256:** impressão digital de um arquivo; confere que a cópia está íntegra. [Capítulo 8](08-backup-e-restauracao.md)
 - **Spec** (*specification*): no Spec Kit, o documento que diz o quê e por quê, sem tecnologia. [Capítulo 10](10-projeto-final-um-app-com-spec-kit.md)
@@ -67,3 +67,58 @@ Um termo por linha, em ordem alfabética, com o termo em inglês quando ele é d
 - **WSL** (*Windows Subsystem for Linux*): recurso do Windows que roda um Linux de verdade dentro dele. [Capítulo 1](01-o-que-e-o-wsl-e-quando-usar.md)
 - **WSL 1 × WSL 2:** o WSL 1 traduz as chamadas do Linux; o WSL 2 tem um kernel Linux completo numa VM leve e é o padrão. [Capítulo 1](01-o-que-e-o-wsl-e-quando-usar.md)
 - **WSLg:** parte do WSL que mostra programas Linux com janela no desktop do Windows. [Capítulo 6](06-ferramentas-de-desenvolvimento-e-programas.md)
+
+<!-- credit:start -->
+---
+
+📘 *Criado pela skill Claude Syllabook - Joshpcbrrj* · [github.com/Joshpcbrrj/syllabook](https://github.com/Joshpcbrrj/syllabook)
+<!-- credit:end -->
+
+<!-- nav:start -->
+---
+
+[◀ Capítulo anterior](11-simulado-final.md) · [Mapa do livro](../README.md)
+<!-- nav:end -->
+
+<!-- index:start -->
+## Índice remissivo
+
+- .wslconfig: [7. Gerenciar o WSL](07-gerenciar-o-wsl.md)
+- /mnt/c e \\wsl$: [4. Arquivos entre Linux e Windows](04-arquivos-entre-linux-e-windows.md)
+- apt: [3. Primeiros passos no Ubuntu](03-primeiros-passos-no-ubuntu.md)
+- Claude Code: [9. Claude Code no WSL](09-claude-code-no-wsl.md)
+- comandos de gerenciamento: [7. Gerenciar o WSL](07-gerenciar-o-wsl.md)
+- CRLF × LF: [4. Arquivos entre Linux e Windows](04-arquivos-entre-linux-e-windows.md)
+- desempenho entre sistemas: [4. Arquivos entre Linux e Windows](04-arquivos-entre-linux-e-windows.md)
+- distribuição (distro): [2. Instalação do WSL e do Ubuntu](02-instalacao-do-wsl-e-do-ubuntu.md)
+- distro de teste: [8. Backup e restauração](08-backup-e-restauracao.md)
+- dotfiles versionados: [5. O terminal do seu jeito](05-o-terminal-do-seu-jeito.md)
+- gerenciadores de versão (nvm, SDKMAN, uv): [6. Ferramentas de desenvolvimento e programas com janela](06-ferramentas-de-desenvolvimento-e-programas.md)
+- kernel do WSL 2: [1. O que é o WSL e quando usar](01-o-que-e-o-wsl-e-quando-usar.md)
+- locale e teclado: [5. O terminal do seu jeito](05-o-terminal-do-seu-jeito.md)
+- modos de permissão: [9. Claude Code no WSL](09-claude-code-no-wsl.md)
+- Nerd Font: [5. O terminal do seu jeito](05-o-terminal-do-seu-jeito.md)
+- PATH e ordem de busca: [6. Ferramentas de desenvolvimento e programas com janela](06-ferramentas-de-desenvolvimento-e-programas.md)
+- plugins e MCPs: [9. Claude Code no WSL](09-claude-code-no-wsl.md)
+- prompt Starship: [5. O terminal do seu jeito](05-o-terminal-do-seu-jeito.md)
+- repositório meu-ambiente: [3. Primeiros passos no Ubuntu](03-primeiros-passos-no-ubuntu.md)
+- script de instalação (bootstrap): [6. Ferramentas de desenvolvimento e programas com janela](06-ferramentas-de-desenvolvimento-e-programas.md)
+- sistema de arquivos do Linux: [4. Arquivos entre Linux e Windows](04-arquivos-entre-linux-e-windows.md)
+- Spec Kit e specify: [10. Projeto final: um app com Spec Kit](10-projeto-final-um-app-com-spec-kit.md)
+- Spec-Driven Development: [10. Projeto final: um app com Spec Kit](10-projeto-final-um-app-com-spec-kit.md)
+- sudo × root: [3. Primeiros passos no Ubuntu](03-primeiros-passos-no-ubuntu.md)
+- systemd no WSL: [3. Primeiros passos no Ubuntu](03-primeiros-passos-no-ubuntu.md)
+- terminal e prompt: [3. Primeiros passos no Ubuntu](03-primeiros-passos-no-ubuntu.md)
+- terminate × shutdown: [7. Gerenciar o WSL](07-gerenciar-o-wsl.md)
+- usuário e senha do Linux: [2. Instalação do WSL e do Ubuntu](02-instalacao-do-wsl-e-do-ubuntu.md)
+- virtualização no firmware: [2. Instalação do WSL e do Ubuntu](02-instalacao-do-wsl-e-do-ubuntu.md)
+- Windows Terminal e perfis: [5. O terminal do seu jeito](05-o-terminal-do-seu-jeito.md)
+- WSL: [1. O que é o WSL e quando usar](01-o-que-e-o-wsl-e-quando-usar.md)
+- wsl --export: [8. Backup e restauração](08-backup-e-restauracao.md)
+- wsl --import e usuário padrão: [8. Backup e restauração](08-backup-e-restauracao.md)
+- wsl --install: [2. Instalação do WSL e do Ubuntu](02-instalacao-do-wsl-e-do-ubuntu.md)
+- WSL 1 × WSL 2: [1. O que é o WSL e quando usar](01-o-que-e-o-wsl-e-quando-usar.md)
+- WSL × VM × dual boot: [1. O que é o WSL e quando usar](01-o-que-e-o-wsl-e-quando-usar.md)
+- wsl.conf: [7. Gerenciar o WSL](07-gerenciar-o-wsl.md)
+- WSLg: [6. Ferramentas de desenvolvimento e programas com janela](06-ferramentas-de-desenvolvimento-e-programas.md)
+<!-- index:end -->

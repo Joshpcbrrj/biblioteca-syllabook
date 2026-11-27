@@ -483,3 +483,9 @@ O `^M` é o `\r` do CRLF colado ao nome do interpretador na primeira linha (`#!/
 - Execuções: distro de teste Ubuntu 26.04.1 no WSL 2 (git 2.53.0), 27/11/2026.
 
 > 🔁 **Revise hoje:** 1, 3
+
+<!-- nav:start -->
+---
+
+[◀ Capítulo anterior](03-primeiros-passos-no-ubuntu.md) · [Mapa do livro](../README.md) · [Próximo capítulo ▶](05-o-terminal-do-seu-jeito.md)
+<!-- nav:end -->

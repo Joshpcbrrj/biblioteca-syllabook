@@ -593,3 +593,9 @@ Basta rodar `bash bootstrap.sh` outra vez. O script é idempotente: cada bloco v
 - Execuções: distro de teste Ubuntu 26.04.1 no WSL 2, 27/11/2026.
 
 > 🔁 **Revise hoje:** 3, 5
+
+<!-- nav:start -->
+---
+
+[◀ Capítulo anterior](05-o-terminal-do-seu-jeito.md) · [Mapa do livro](../README.md) · [Próximo capítulo ▶](07-gerenciar-o-wsl.md)
+<!-- nav:end -->

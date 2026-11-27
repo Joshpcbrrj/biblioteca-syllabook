@@ -532,3 +532,9 @@ O `--shutdown` para **todas** as distros e a VM, inclusive a que o Docker Deskto
 - Execuções: WSL 3.0.5.0 (kernel 6.18.58.1-1, WSLg 1.0.79) com a distro de teste Ubuntu 26.04.1, 27/11/2026.
 
 > 🔁 **Revise hoje:** 4, 6
+
+<!-- nav:start -->
+---
+
+[◀ Capítulo anterior](06-ferramentas-de-desenvolvimento-e-programas.md) · [Mapa do livro](../README.md) · [Próximo capítulo ▶](08-backup-e-restauracao.md)
+<!-- nav:end -->

@@ -285,3 +285,9 @@ Instale o WSL e importe a distro do backup (ou instale uma distro nova), crie o 
 Acertou 23 ou mais? Você domina o que o livro propôs. Entre 16 e 22, revise os capítulos da tabela e refaça só as perguntas que errou daqui a três dias. Menos de 16, refaça o *Pratique* dos capítulos indicados antes de tentar de novo.
 
 > ➡️ **Próximo passo:** o [Glossário](glossario.md) reúne os termos do livro, e a seção *Próximos caminhos*, no fim do capítulo 10, sugere o que estudar a seguir.
+
+<!-- nav:start -->
+---
+
+[◀ Capítulo anterior](10-projeto-final-um-app-com-spec-kit.md) · [Mapa do livro](../README.md) · [Próximo capítulo ▶](glossario.md)
+<!-- nav:end -->

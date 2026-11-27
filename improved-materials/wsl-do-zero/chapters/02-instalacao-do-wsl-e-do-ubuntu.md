@@ -17,7 +17,7 @@ No capítulo 1 você criou, na pasta `meu-ambiente`, o `verificar.ps1` (que já 
 
 ## Requisitos: Windows e virtualização
 
-Para instalar com um comando só, você precisa do **Windows 11** ou do **Windows 10 versão 2004 ou mais nova (build 19041 ou maior)**. Em versões mais antigas, a Microsoft mantém um passo a passo manual; este livro não o segue.
+Para instalar com um comando só, o seu PC precisa ter o **Windows 11** ou o **Windows 10 na versão 2004 ou posterior (build 19041 ou acima)**. Em versões mais antigas, a Microsoft mantém um passo a passo manual; este livro não o segue.
 
 O WSL 2 ainda pede que a **virtualização** esteja ligada: um recurso do processador que deixa o Windows criar a VM leve onde o kernel Linux roda. Quem liga é o **firmware** do computador (a BIOS ou UEFI), e só ele. Em geral já vem ligada; se não estiver, ou o `wsl --install` falha, ou o Ubuntu não abre.
 
@@ -31,7 +31,7 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\verificar.ps1
 
 ## O comando `wsl --install`
 
-Abra o **PowerShell como administrador** (clique com o botão direito no menu Iniciar → **Terminal (Admin)** e aceite o aviso do Controle de Conta de Usuário) e rode:
+Abra o **PowerShell como administrador** (menu Iniciar, botão direito, **Terminal (Admin)**) e confirme o aviso do Controle de Conta de Usuário. Então rode:
 
 ```powershell
 wsl --install
@@ -334,3 +334,9 @@ Não. A distro está instalada, mas na arquitetura **WSL 1** (`VERSION 1`). O li
 - [DistributionInfo.json (microsoft/WSL)](https://github.com/microsoft/WSL/blob/master/distributions/DistributionInfo.json): endereço e SHA256 da imagem do Ubuntu 26.04.1 (27/11/2026)
 - Imagens: [MicrosoftDocs/WSL](https://github.com/MicrosoftDocs/WSL), CC BY 4.0.
 - Execuções: PC do autor (Windows 11, build 26300; WSL 3.0.5.0) e distro de teste Ubuntu 26.04.1, 27/11/2026.
+
+<!-- nav:start -->
+---
+
+[◀ Capítulo anterior](01-o-que-e-o-wsl-e-quando-usar.md) · [Mapa do livro](../README.md) · [Próximo capítulo ▶](03-primeiros-passos-no-ubuntu.md)
+<!-- nav:end -->
