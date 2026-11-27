@@ -1,0 +1,7 @@
+type: flow
+title: Duas perguntas dizem se o WSL 2 serve ou se você precisa de VM ou dual boot
+steps:
+  - {text: "Programar no Windows com ferramentas Linux", kind: start, icon: terminal}
+  - {text: "Precisa de um sistema inteiro, com a área de trabalho dele?", kind: decision, label: "não", side: "Máquina virtual", side_icon: layers, side_color: orange, side_label: "sim"}
+  - {text: "Precisa do Linux como sistema principal, com o hardware todo só dele?", kind: decision, label: "não", side: "Dual boot", side_icon: rotate-ccw, side_color: orange, side_label: "sim"}
+  - {text: "WSL 2", note: "Linux dentro do Windows", kind: end, icon: circle-check}

@@ -1,0 +1,8 @@
+type: layers
+title: No WSL 2, o Linux roda sobre um kernel de verdade, dentro de uma VM leve que o Windows cuida
+layers:
+  - {text: "Windows 11", note: "seus programas, o Explorer, o PowerShell", icon: monitor, color: blue}
+  - {text: "VM leve, gerenciada pelo WSL", note: "você não configura nem vê", icon: box, color: gray}
+  - {text: "Kernel Linux 6.18.58.1", note: "feito pela Microsoft, atualizado com o WSL", icon: cpu, color: purple}
+  - {text: "Ubuntu 26.04", note: "bash, apt, git e os seus projetos", icon: terminal, color: green}
+caption: "Este é o WSL 2. É ele que o livro usa."

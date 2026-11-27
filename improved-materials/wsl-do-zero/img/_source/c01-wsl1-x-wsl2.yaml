@@ -1,0 +1,10 @@
+type: compare
+title: O WSL 1 traduz as chamadas do Linux; o WSL 2 tem um kernel Linux de verdade
+left: {title: "WSL 1", icon: arrow-left-right, color: gray}
+right: {title: "WSL 2", icon: cpu, color: purple}
+rows:
+  - ["Traduz chamadas Linux para o Windows", "Kernel Linux completo numa VM leve"]
+  - ["Sem systemd", "Com systemd"]
+  - ["Compatibilidade parcial", "Compatibilidade total de chamadas"]
+  - ["Rápido ao ler arquivos do Windows", "Lento ao ler arquivos do Windows"]
+  - ["Mais lento nos arquivos do Linux", "Muito mais rápido nos arquivos do Linux"]
