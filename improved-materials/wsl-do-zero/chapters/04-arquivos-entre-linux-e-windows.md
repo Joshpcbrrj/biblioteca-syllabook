@@ -11,6 +11,14 @@
 >
 > </details>
 
+## 📇 A parte 2 numa página
+
+![Parte 2, capítulos 4 a 6. Dois sistemas de arquivos: ext4 no disco do Linux, discos do Windows em /mnt/c, \\wsl$ mostra o Linux no Windows. Converter e abrir: wslpath -w e wslpath -u, explorer.exe . abre a pasta. Desempenho: muitos arquivos em /mnt custam caro, 2.000 arquivos: 0,1 s × 5,3 s, o projeto mora no Linux. CRLF × LF: Windows grava \r\n, bash tropeça no \r, .gitattributes fixa o fim. Quatro camadas: janela, cores e fonte: Windows, prompt e idioma: Ubuntu, teclado vem do Windows. Starship e Nerd Font: Nerd Font traz os ícones, Starship: uma linha no .bashrc, dotfiles com link simbólico. Locale: language-pack-pt, update-locale, cada camada se desfaz. PATH: lista de pastas, o primeiro programa achado vale, which -a mostra todos. Versões das linguagens: apt para o sistema, nvm, SDKMAN e uv, tudo na pasta pessoal. WSLg e bootstrap: WSLg: janelas Linux no Windows, DISPLAY aponta o caminho, bootstrap.sh é idempotente.](../img/c04-resumo-parte-2.svg)
+
+- [Capítulo 4: Arquivos entre Linux e Windows](04-arquivos-entre-linux-e-windows.md)
+- [Capítulo 5: O terminal do seu jeito](05-o-terminal-do-seu-jeito.md)
+- [Capítulo 6: Ferramentas de desenvolvimento e programas com janela](06-ferramentas-de-desenvolvimento-e-programas.md)
+
 ## De onde paramos
 
 No capítulo 3 você criou o repositório `~/meu-ambiente` dentro da sua pasta pessoal do Linux e viu o `verificar.sh` passar com 7 testes. Ali dentro tudo foi natural. Só que o seu dia a dia mistura os dois mundos: você vai querer abrir uma pasta do Linux no Explorer, ler um arquivo da sua área de trabalho do Windows e usar o VS Code do Windows num projeto do Linux. Este capítulo ensina a fazer isso sem se queimar.

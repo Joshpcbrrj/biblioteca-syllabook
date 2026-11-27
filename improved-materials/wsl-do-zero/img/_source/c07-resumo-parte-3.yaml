@@ -1,0 +1,33 @@
+type: cards
+title: "Parte 3 (capítulos 7 a 10): gerenciar, proteger e construir"
+cards:
+  - icon: settings
+    title: ".wslconfig × wsl.conf"
+    items: ["Windows × cada distro", "vale após --shutdown × --terminate", "memory, processors, swap"]
+  - icon: pause
+    title: "--terminate × --shutdown"
+    items: ["um apartamento × o prédio", "shutdown derruba todas", "o trabalho na memória se perde"]
+  - icon: list-checks
+    title: "Diagnóstico"
+    items: ["wsl -l -v e wsl --status", "comando simples na distro", "--unregister só com backup"]
+  - icon: save
+    title: "Exportar e importar"
+    items: ["--export grava um .tar", "--import cria outra distro", "[user] default= no wsl.conf"]
+  - icon: shield-check
+    title: "Provar o backup"
+    items: ["SHA-256 confere a cópia", "clone teste- numa distro à parte", "backup.ps1 -Testar"]
+  - icon: terminal
+    title: "Claude Code"
+    items: ["instale como usuário", "claude doctor só lê", "confie só em pastas de projeto"]
+  - icon: lock
+    title: "Modos de permissão"
+    items: ["default, acceptEdits, plan, auto", "Shift+Tab alterna", "defaultMode no settings.json"]
+  - icon: puzzle
+    title: "Plugins e MCPs"
+    items: ["plugin vem de um marketplace", "MCP: programa com ferramentas", "leia o que trazem antes"]
+  - icon: workflow
+    title: "Spec-Driven Development"
+    items: ["o quê, depois o como", "specify, plan, tasks, implement", "uma fase por vez, um commit"]
+  - icon: rotate-ccw
+    title: "Restaurar do zero"
+    items: ["distro nova e usuário", "git clone e bootstrap.sh", "verificar.sh prova o ambiente"]

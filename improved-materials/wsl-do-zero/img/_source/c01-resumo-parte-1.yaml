@@ -1,0 +1,33 @@
+type: cards
+title: "Parte 1 (capítulos 1 a 3): entender, instalar e dar os primeiros passos"
+cards:
+  - icon: layers
+    title: "WSL 1 × WSL 2"
+    items: ["WSL 1 traduz chamadas", "WSL 2: kernel Linux numa VM", "WSL 2 é o padrão e tem systemd"]
+  - icon: cpu
+    title: "O kernel"
+    items: ["uname -r termina em WSL2", "versão do pacote ≠ arquitetura", "vem com as atualizações do WSL"]
+  - icon: compass
+    title: "WSL × VM × dual boot"
+    items: ["VM: sistema inteiro numa janela", "dual boot: um sistema por vez", "WSL: Linux sem reiniciar"]
+  - icon: download
+    title: "Instalar"
+    items: ["virtualização no firmware", "wsl --install -d Ubuntu-26.04", "reinicie na primeira vez"]
+  - icon: user
+    title: "Usuário e conferência"
+    items: ["conta própria no grupo sudo", "wsl -l -v: VERSION 2", "wsl --version mostra o kernel"]
+  - icon: square-terminal
+    title: "Prompt e comandos"
+    items: ["ana@PC:~$ mostra o contexto", "pwd, ls, cd, mkdir, cp, mv", "rm não tem lixeira"]
+  - icon: package
+    title: "apt"
+    items: ["update renova a lista", "upgrade atualiza o instalado", "sem sudo: erro de lock"]
+  - icon: shield
+    title: "sudo × root"
+    items: ["sudo roda um comando como root", "o que o root cria é dele", "não trabalhe como root"]
+  - icon: refresh-cw
+    title: "systemd"
+    items: ["PID 1 cuida dos serviços", "[boot] systemd=true", "mudou o wsl.conf: --terminate"]
+  - icon: git-branch
+    title: "meu-ambiente"
+    items: ["repositório Git no ~", "verificar.ps1 e verificar.sh", "cresce a cada capítulo"]

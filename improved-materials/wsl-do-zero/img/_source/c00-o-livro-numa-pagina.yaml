@@ -1,0 +1,33 @@
+type: cards
+title: "O livro numa página: de um PC com Windows a um ambiente Linux completo, com backup provado"
+cards:
+  - icon: layers
+    title: "O que é o WSL"
+    items: ["Linux de verdade dentro do Windows", "WSL 2 = kernel Linux numa VM leve", "WSL × VM × dual boot"]
+  - icon: download
+    title: "Instalação"
+    items: ["wsl --install -d Ubuntu-26.04", "virtualização ligada no firmware", "wsl -l -v mostra VERSION 2"]
+  - icon: square-terminal
+    title: "Primeiros passos"
+    items: ["prompt: $ comum, # root", "apt update ≠ apt upgrade", "sudo; não trabalhe como root"]
+  - icon: folder-open
+    title: "Arquivos entre os lados"
+    items: ["projeto mora no ext4 do Linux", '/mnt/c e \\wsl$ atravessam', "CRLF × LF: .gitattributes"]
+  - icon: terminal
+    title: "Terminal do seu jeito"
+    items: ["janela e fonte no Windows", "Starship e locale no Ubuntu", "dotfiles no repositório"]
+  - icon: wrench
+    title: "Ferramentas de dev"
+    items: ["PATH: o primeiro achado vale", "nvm, SDKMAN e uv", "bootstrap.sh recria tudo"]
+  - icon: settings
+    title: "Gerenciar o WSL"
+    items: [".wslconfig: todas, --shutdown", "wsl.conf: uma, --terminate", "--unregister apaga tudo"]
+  - icon: save
+    title: "Backup e restauração"
+    items: ["wsl --export e --import", "[user] default= no wsl.conf", "prove o backup num clone"]
+  - icon: sparkles
+    title: "Claude Code no WSL"
+    items: ["instale como usuário, sem sudo", "modos: default a plan", "plugins e MCPs: leia antes"]
+  - icon: rocket
+    title: "Projeto final"
+    items: ["Spec Kit: specify, plan, tasks", "app de tarefas com testes", "restaurar tudo em distro nova"]

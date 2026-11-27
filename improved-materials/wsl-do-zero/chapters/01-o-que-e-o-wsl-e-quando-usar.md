@@ -2,6 +2,14 @@
 
 > 🗺️ **Neste capítulo:** você entende o que é o WSL, qual a diferença entre o WSL 1 e o WSL 2, por que o kernel importa e quando um WSL serve melhor do que uma máquina virtual ou um dual boot. No fim, você cria o verificador do projeto **meu-ambiente** e confere se o seu PC está pronto. · ⏱️ ~35 min
 
+## 📇 A parte 1 numa página
+
+![Parte 1, capítulos 1 a 3. WSL 1 × WSL 2: WSL 1 traduz chamadas, WSL 2: kernel Linux numa VM, WSL 2 é o padrão e tem systemd. O kernel: uname -r termina em WSL2, versão do pacote ≠ arquitetura, vem com as atualizações do WSL. WSL × VM × dual boot: VM: sistema inteiro numa janela, dual boot: um sistema por vez, WSL: Linux sem reiniciar. Instalar: virtualização no firmware, wsl --install -d Ubuntu-26.04, reinicie na primeira vez. Usuário e conferência: conta própria no grupo sudo, wsl -l -v: VERSION 2, wsl --version mostra o kernel. Prompt e comandos: ana@PC:~$ mostra o contexto, pwd, ls, cd, mkdir, cp, mv, rm não tem lixeira. apt: update renova a lista, upgrade atualiza o instalado, sem sudo: erro de lock. sudo × root: sudo roda um comando como root, o que o root cria é dele, não trabalhe como root. systemd: PID 1 cuida dos serviços, [boot] systemd=true, mudou o wsl.conf: --terminate. meu-ambiente: repositório Git no ~, verificar.ps1 e verificar.sh, cresce a cada capítulo.](../img/c01-resumo-parte-1.svg)
+
+- [Capítulo 1: O que é o WSL e quando usar](01-o-que-e-o-wsl-e-quando-usar.md)
+- [Capítulo 2: Instalação do WSL e do Ubuntu](02-instalacao-do-wsl-e-do-ubuntu.md)
+- [Capítulo 3: Primeiros passos no Ubuntu](03-primeiros-passos-no-ubuntu.md)
+
 ## Por que um Linux dentro do Windows
 
 Você abre um tutorial de programação e o primeiro comando é `sudo apt install ...`. No Windows, esse comando não existe. Isso acontece o tempo todo: os servidores onde os sistemas rodam são quase todos Linux, e grande parte das ferramentas de desenvolvimento nasce nele. Quem programa só com as ferramentas do Windows acaba sempre um passo atrás do tutorial.

@@ -11,6 +11,15 @@
 >
 > </details>
 
+## 📇 A parte 3 numa página
+
+![Parte 3, capítulos 7 a 10. .wslconfig × wsl.conf: Windows × cada distro, vale após --shutdown × --terminate, memory, processors, swap. --terminate × --shutdown: um apartamento × o prédio, shutdown derruba todas, o trabalho na memória se perde. Diagnóstico: wsl -l -v e wsl --status, comando simples na distro, --unregister só com backup. Exportar e importar: --export grava um .tar, --import cria outra distro, [user] default= no wsl.conf. Provar o backup: SHA-256 confere a cópia, clone teste- numa distro à parte, backup.ps1 -Testar. Claude Code: instale como usuário, claude doctor só lê, confie só em pastas de projeto. Modos de permissão: default, acceptEdits, plan, auto, Shift+Tab alterna, defaultMode no settings.json. Plugins e MCPs: plugin vem de um marketplace, MCP: programa com ferramentas, leia o que trazem antes. Spec-Driven Development: o quê, depois o como, specify, plan, tasks, implement, uma fase por vez, um commit. Restaurar do zero: distro nova e usuário, git clone e bootstrap.sh, verificar.sh prova o ambiente.](../img/c07-resumo-parte-3.svg)
+
+- [Capítulo 7: Gerenciar o WSL](07-gerenciar-o-wsl.md)
+- [Capítulo 8: Backup e restauração](08-backup-e-restauracao.md)
+- [Capítulo 9: Claude Code no WSL](09-claude-code-no-wsl.md)
+- [Capítulo 10: Projeto final: um app com Spec Kit](10-projeto-final-um-app-com-spec-kit.md)
+
 ## De onde paramos
 
 No capítulo 6 você montou as ferramentas e o `bootstrap.sh`. Você também viu duas promessas pendentes: que o `appendWindowsPath` do `wsl.conf` tira o `PATH` do Windows do Ubuntu, e que `wsl --terminate` é diferente de `wsl --shutdown`. Este capítulo cumpre as duas e ensina o resto do gerenciamento: limites de recursos, trocar e mover distros, e o que fazer quando algo não funciona.

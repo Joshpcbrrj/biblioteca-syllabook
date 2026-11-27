@@ -1,0 +1,33 @@
+type: cards
+title: "Parte 2 (capítulos 4 a 6): arquivos, terminal e ferramentas"
+cards:
+  - icon: folder
+    title: "Dois sistemas de arquivos"
+    items: ["ext4 no disco do Linux", "discos do Windows em /mnt/c", '\\wsl$ mostra o Linux no Windows']
+  - icon: arrow-left-right
+    title: "Converter e abrir"
+    items: ["wslpath -w e wslpath -u", "explorer.exe . abre a pasta"]
+  - icon: timer
+    title: "Desempenho"
+    items: ["muitos arquivos em /mnt custam caro", "2.000 arquivos: 0,1 s × 5,3 s", "o projeto mora no Linux"]
+  - icon: file-text
+    title: "CRLF × LF"
+    items: ['Windows grava \r\n', 'bash tropeça no \r', ".gitattributes fixa o fim"]
+  - icon: monitor
+    title: "Quatro camadas"
+    items: ["janela, cores e fonte: Windows", "prompt e idioma: Ubuntu", "teclado vem do Windows"]
+  - icon: sparkles
+    title: "Starship e Nerd Font"
+    items: ["Nerd Font traz os ícones", "Starship: uma linha no .bashrc", "dotfiles com link simbólico"]
+  - icon: languages
+    title: "Locale"
+    items: ["language-pack-pt", "update-locale", "cada camada se desfaz"]
+  - icon: list-ordered
+    title: "PATH"
+    items: ["lista de pastas", "o primeiro programa achado vale", "which -a mostra todos"]
+  - icon: wrench
+    title: "Versões das linguagens"
+    items: ["apt para o sistema", "nvm, SDKMAN e uv", "tudo na pasta pessoal"]
+  - icon: app-window
+    title: "WSLg e bootstrap"
+    items: ["WSLg: janelas Linux no Windows", "DISPLAY aponta o caminho", "bootstrap.sh é idempotente"]
