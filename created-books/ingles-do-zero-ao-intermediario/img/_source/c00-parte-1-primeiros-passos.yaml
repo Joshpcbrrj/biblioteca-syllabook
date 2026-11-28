@@ -1,0 +1,13 @@
+type: cards
+title: "Parte 1: primeiros passos (caps. 1 a 3)"
+cards:
+  - {icon: user, title: "To be", items: ["am, is, are", "I'm, you're, she's", "idade: I'm 30"]}
+  - {icon: users, title: "Pronomes", items: ["I, you, he, she, it", "we, they", "sujeito é obrigatório"]}
+  - {icon: message-circle, title: "Cumprimentos", items: ["Good morning, Good evening", "Good night é despedida", "a ou an pelo som"]}
+  - {icon: repeat, title: "Revisão espaçada", items: ["rever após 1, 3 e 7 dias", "cartões com frases inteiras", "IPA mais aproximação"]}
+  - {icon: circle-help, title: "Perguntas", items: ["palavra + am/is/are + sujeito", "What time is it?", "Where, When, Who, How"]}
+  - {icon: hash, title: "Números e horas", items: ["thirteen x thirty", "past até a meia hora, to depois", "at hora, on dia, in mês"]}
+  - {icon: mail, title: "Soletrar", items: ["E x I, G x J, A x E", "@ é at, . é dot", "use example.com"]}
+  - {icon: clock, title: "Presente simples", items: ["só he/she/it levam -s", "-es, -ies, has", "/s/, /z/, /ɪz/"]}
+  - {icon: circle-help, title: "Do e does", items: ["Does she work...?", "verbo volta à forma base", "to be não usa do"]}
+  - {icon: repeat, title: "Frequência", items: ["always antes do verbo", "depois do to be", "never já é negativo"]}

@@ -1,0 +1,9 @@
+type: compare
+title: "Rotina ou agora? O verbo muda junto"
+left: {title: "Presente simples (rotina)", color: blue}
+right: {title: "Presente contínuo (agora)", color: purple}
+rows:
+  - ["I work at a bank.", "I'm working on a report."]
+  - ["She checks her e-mail every day.", "She's checking her e-mail now."]
+  - ["Do you meet clients?", "Are you meeting a client today?"]
+caption: "Am, is ou are + verbo com -ing: o que está acontecendo agora ou já está marcado."

@@ -1,0 +1,11 @@
+type: compare
+title: "Erros comuns com will e if"
+left: {title: "Erro comum", color: red}
+right: {title: "Inglês natural", color: green}
+style: wrong-right
+rows:
+  - ["If I will go, I call you.", "If I go, I'll call you."]
+  - ["I will to call you.", "I'll call you."]
+  - ["If it will rain, we stay.", "If it rains, we'll stay."]
+  - ["If she come, I'll tell you.", "If she comes, I'll tell you."]
+caption: "Depois de if, presente simples. O will fica na outra parte da frase."

@@ -1,0 +1,11 @@
+type: cards
+title: "Parte 4: imprevistos e projeto final (caps. 10 e 11)"
+cards:
+  - {icon: bell, title: "Will", items: ["decisão na hora", "oferta e promessa", "won't"]}
+  - {icon: git-branch, title: "Primeira condicional", items: ["if + presente simples", "will + verbo", "nunca If I will"]}
+  - {icon: headphones, title: "Pedir repetição", items: ["Could you repeat that?", "more slowly", "Let me check I understood"]}
+  - {icon: smartphone, title: "Ligação e vídeo", items: ["Hold on", "You're on mute", "You're breaking up"]}
+  - {icon: mail, title: "Confirmar", items: ["Just to confirm...", "por escrito", "grave só a sua voz"]}
+  - {icon: file-text, title: "Entregas", items: ["2 e-mails de 80 a 120 palavras", "resumo da documentação", "conversa de 5 minutos"]}
+  - {icon: list-checks, title: "Autoavaliação", items: ["10 linhas, notas de 1 a 3", "não é certificação", "a entrega é a prova"]}
+  - {icon: timer, title: "Continuidade", items: ["20 minutos por dia", "cartões, leitura, escuta", "fala ou escrita"]}

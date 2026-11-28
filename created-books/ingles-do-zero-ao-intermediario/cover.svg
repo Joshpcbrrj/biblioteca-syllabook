@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 2560" width="1600" height="2560" role="img"><title>Capa: Inglês do zero ao intermediário</title>
+<rect width="1600" height="2560" fill="#0B3C49"/>
+<rect x="80" y="80" width="1440" height="2400" fill="none" stroke="#F2C14E" stroke-width="6"/>
+<text x="800" y="420" text-anchor="middle" font-family="Georgia, serif" font-size="230" font-weight="700" fill="#FAF9F6">Inglês</text>
+<text x="800" y="640" text-anchor="middle" font-family="Georgia, serif" font-size="170" font-weight="700" fill="#FAF9F6">do zero ao</text>
+<text x="800" y="850" text-anchor="middle" font-family="Georgia, serif" font-size="170" font-weight="700" fill="#F2C14E">intermediário</text>
+<rect x="560" y="930" width="480" height="8" fill="#F2C14E"/>
+<text x="800" y="1040" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="62" fill="#FAF9F6">Para conversar, viajar e ler e-mails</text>
+<text x="800" y="1125" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="62" fill="#FAF9F6">e documentação, estudando sozinho</text>
+<text x="800" y="1250" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="56" fill="#7FB7BE">por Josué B. Almeida</text>
+<rect x="250" y="2050" width="260" height="170" rx="40" fill="none" stroke="#7FB7BE" stroke-width="8"/>
+<path d="M300 2218 L270 2275 L350 2218" fill="none" stroke="#7FB7BE" stroke-width="8" stroke-linejoin="round"/>
+<rect x="294" y="2208" width="60" height="16" fill="#0B3C49"/>
+<text x="380.0" y="2169.0" text-anchor="middle" font-family="Georgia, serif" font-size="84" font-weight="700" fill="#FAF9F6">A1</text>
+<rect x="560" y="1850" width="340" height="230" rx="40" fill="none" stroke="#7FB7BE" stroke-width="8"/>
+<path d="M610 2078 L580 2135 L660 2078" fill="none" stroke="#7FB7BE" stroke-width="8" stroke-linejoin="round"/>
+<rect x="604" y="2068" width="60" height="16" fill="#0B3C49"/>
+<text x="730.0" y="2009.0" text-anchor="middle" font-family="Georgia, serif" font-size="110" font-weight="700" fill="#FAF9F6">A2</text>
+<rect x="960" y="1560" width="420" height="300" rx="40" fill="#F2C14E" stroke="#F2C14E" stroke-width="8"/>
+<path d="M1010 1858 L980 1915 L1060 1858" fill="#F2C14E" stroke="#F2C14E" stroke-width="8" stroke-linejoin="round"/>
+<rect x="1004" y="1848" width="60" height="16" fill="#F2C14E"/>
+<text x="1170.0" y="1766.0" text-anchor="middle" font-family="Georgia, serif" font-size="140" font-weight="700" fill="#0B3C49">B1</text>
+</svg>

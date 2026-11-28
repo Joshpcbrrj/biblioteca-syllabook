@@ -1,0 +1,11 @@
+type: compare
+title: "Quatro erros comuns em e-mails em inglês"
+left: {title: "Erro comum", color: red}
+right: {title: "Inglês natural", color: green}
+style: wrong-right
+rows:
+  - ["Dear,", "Dear Ms Costa,"]
+  - ["I annex the file.", "I've attached the file."]
+  - ["I want that you send the report.", "Could you please send the report?"]
+  - ["Actually I am busy. (querendo dizer: atualmente)", "Currently, I'm busy."]
+caption: "Dear sempre leva nome; attach é anexar; actually quer dizer na verdade."

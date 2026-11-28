@@ -1,0 +1,9 @@
+type: flow
+title: "Para perguntar, primeiro veja se o verbo é to be"
+steps:
+  - {text: "Quero perguntar algo", kind: start}
+  - {text: "O verbo é to be?", kind: decision, label: "não", side: "Inverta: Are you busy?", side_note: "to be + sujeito", side_color: green, side_label: "sim"}
+  - {text: "Use Do (I, you, we, they) ou Does (he, she, it)", kind: step, color: orange}
+  - {text: "Sujeito + verbo na forma base", kind: step, note: "Does she work here?"}
+  - {text: "Pergunta pronta", kind: end}
+caption: "O Does já carrega o -s: o verbo principal volta à forma base."

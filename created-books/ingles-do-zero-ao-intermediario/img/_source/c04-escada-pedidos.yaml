@@ -1,0 +1,9 @@
+type: layers
+title: "Quanto mais acima, mais direto; quanto mais abaixo, mais formal"
+layers:
+  - {text: "I want a coffee.", note: "direto demais para pedir algo a um desconhecido", color: red}
+  - {text: "Can I have a coffee?", note: "informal e comum", color: blue}
+  - {text: "Could I have a coffee?", note: "educado, serve na maioria das situações", color: green}
+  - {text: "I'd like a coffee, please.", note: "educado, muito usado em hotel e restaurante", color: green}
+  - {text: "Would it be possible to have a coffee?", note: "muito formal", color: purple}
+caption: "Em dúvida, escolha Could I have...? ou I'd like..., e diga please."

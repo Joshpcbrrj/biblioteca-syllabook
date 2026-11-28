@@ -1,0 +1,11 @@
+type: compare
+title: "O -s da terceira pessoa aparece uma vez só"
+left: {title: "Erro comum", color: red}
+right: {title: "Inglês natural", color: green}
+style: wrong-right
+rows:
+  - ["She work at a bank.", "She works at a bank."]
+  - ["Does she works here?", "Does she work here?"]
+  - ["She don't work today.", "She doesn't work today."]
+  - ["I don't never work on Sunday.", "I never work on Sunday."]
+caption: "Na pergunta e na negativa, o does/doesn't leva o -s; o verbo fica na forma base."

@@ -1,0 +1,6 @@
+type: layers
+title: "In, on, at: do período longo ao instante"
+layers:
+  - {text: "in", note: "meses, anos, partes do dia: in July, in 2027, in the morning", color: blue}
+  - {text: "on", note: "dias e datas: on Monday, on 5 May", color: teal}
+  - {text: "at", note: "horas e momentos: at 3 pm, at noon, at night", color: purple}

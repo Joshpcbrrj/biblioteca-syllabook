@@ -1,0 +1,11 @@
+type: boxes
+title: "Os cinco modelos de hora que cobrem quase tudo"
+name: "3:00 a 3:50"
+cells:
+  - {value: "3:00", label: "three o'clock"}
+  - {value: "3:10", label: "ten past three"}
+  - {value: "3:15", label: "quarter past three"}
+  - {value: "3:30", label: "half past three", highlight: true}
+  - {value: "3:45", label: "quarter to four"}
+  - {value: "3:50", label: "ten to four"}
+caption: "Até a meia hora, use past; depois dela, use to e diga a hora seguinte."

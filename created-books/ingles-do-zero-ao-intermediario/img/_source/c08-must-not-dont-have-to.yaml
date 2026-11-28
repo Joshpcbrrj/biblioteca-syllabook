@@ -1,0 +1,9 @@
+type: compare
+title: "Must not e don't have to têm sentidos opostos"
+left: {title: "must not = é proibido", color: red}
+right: {title: "don't have to = não é obrigatório", color: green}
+rows:
+  - ["You must not share your password.", "You don't have to use a phone."]
+  - ["Não faça. É contra a regra.", "Você pode fazer ou não. Tanto faz."]
+  - ["Do not close the app.", "You don't have to close the app."]
+caption: "Na dúvida, procure a palavra not logo depois de must: a frase proíbe."

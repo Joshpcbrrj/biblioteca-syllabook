@@ -1,0 +1,11 @@
+type: compare
+title: "Na pergunta, a palavra interrogativa vem primeiro e o to be vem antes do sujeito"
+left: {title: "Ordem do português", color: red}
+right: {title: "Ordem do inglês", color: green}
+style: wrong-right
+rows:
+  - ["Where you are from?", "Where are you from?"]
+  - ["What your name is?", "What is your name?"]
+  - ["What hour is it?", "What time is it?"]
+  - ["Who she is?", "Who is she?"]
+caption: "Pergunta com to be: palavra interrogativa + am/is/are + sujeito."

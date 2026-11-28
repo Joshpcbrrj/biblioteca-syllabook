@@ -1,0 +1,10 @@
+type: compare
+title: "O mesmo pedido em dois registros"
+left: {title: "Informal (colega)", color: blue}
+right: {title: "Formal (cliente, primeiro contato)", color: purple}
+rows:
+  - ["Hi Lucy,", "Dear Ms Costa,"]
+  - ["Can you send me the file?", "Could you please send me the file?"]
+  - ["Attached is the agenda.", "Please find attached the agenda."]
+  - ["Thanks,", "Kind regards,"]
+caption: "Os dois são corretos; a escolha depende de quem lê e de como a empresa escreve."
