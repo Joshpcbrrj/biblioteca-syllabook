@@ -1,0 +1,8 @@
+type: boxes
+title: "Os três sons do -ed"
+name: "worked, played, wanted"
+cells:
+  - {value: "/t/", label: "worked, stopped, asked"}
+  - {value: "/d/", label: "played, lived, called", highlight: true}
+  - {value: "/ɪd/", label: "wanted, needed, started"}
+caption: "Só se ouve uma sílaba a mais quando o verbo termina em t ou d (wanted, needed)."

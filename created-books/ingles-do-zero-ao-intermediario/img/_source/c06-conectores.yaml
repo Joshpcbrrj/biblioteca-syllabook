@@ -1,0 +1,8 @@
+type: timeline
+title: "Conectores de sequência: a ordem da história"
+events:
+  - {when: "First", text: "I went to the office."}
+  - {when: "Then", text: "I met a new client."}
+  - {when: "After that", text: "We had lunch."}
+  - {when: "Later", text: "I wrote a report."}
+  - {when: "Finally", text: "I sent it to my boss.", highlight: true}

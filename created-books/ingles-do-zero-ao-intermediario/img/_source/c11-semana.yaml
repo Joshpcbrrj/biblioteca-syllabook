@@ -1,0 +1,9 @@
+type: timeline
+title: "Sua semana de trabalho no exterior"
+events:
+  - {when: "Segunda", text: "E-mail 1: confirmar a chegada e pedir informações", icon: mail}
+  - {when: "Terça", text: "Ler a documentação do Wi-Fi e resumir em português", icon: file-text}
+  - {when: "Quarta e quinta", text: "Conversa gravada de 5 minutos (só a sua voz)", icon: mic, highlight: true}
+  - {when: "Sexta", text: "E-mail 2: follow-up com o combinado", icon: mail}
+  - {when: "Sábado", text: "Autoavaliação e plano de continuidade", icon: list-checks}
+caption: "Cada entrega usa o que você aprendeu em capítulos diferentes."

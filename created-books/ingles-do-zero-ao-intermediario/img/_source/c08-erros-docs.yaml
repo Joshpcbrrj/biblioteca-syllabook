@@ -1,0 +1,11 @@
+type: compare
+title: "Erros comuns ao ler e seguir documentação"
+left: {title: "Erro", color: red}
+right: {title: "Certo", color: green}
+rows:
+  - ["traduzir palavra por palavra", "ler o título, os passos e os avisos"]
+  - ["support = suportar", "support = apoio, ajuda; também 'dar suporte a'"]
+  - ["eventually = eventualmente", "eventually = por fim, no final"]
+  - ["must not = não precisa", "must not = é proibido"]
+caption: "Quatro armadilhas de leitor brasileiro."
+style: wrong-right

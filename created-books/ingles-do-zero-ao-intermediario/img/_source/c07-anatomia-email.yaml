@@ -1,0 +1,8 @@
+type: layers
+title: "As partes de um e-mail de trabalho, de cima para baixo"
+layers:
+  - {text: "Subject", note: "o assunto em poucas palavras: Meeting on Friday: new time", color: blue}
+  - {text: "Greeting", note: "Hi Lucy, / Dear Ms Costa,", color: teal}
+  - {text: "Opening + purpose", note: "Thanks for your e-mail. I'm writing about...", color: purple}
+  - {text: "Request or information + next step", note: "Could you...? / Let me know if...", color: orange}
+  - {text: "Closing + name", note: "Best regards, / Thanks, / Kind regards,", color: green}

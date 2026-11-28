@@ -1,0 +1,12 @@
+type: cards
+title: "Parte 2: viajar, planejar e contar (caps. 4 a 6)"
+cards:
+  - {icon: map, title: "Pedidos educados", items: ["Could I have... / I'd like...", "I want soa seco", "I'm afraid... para negar"]}
+  - {icon: package, title: "Some e any", items: ["some: afirmativa e oferta", "any: pergunta e negativa", "information não tem plural"]}
+  - {icon: calculator, title: "Quantidade", items: ["How many + contável", "How much + incontável", "boarding pass x passport"]}
+  - {icon: play, title: "Presente contínuo", items: ["am/is/are + -ing", "agora ou já marcado", "know e want ficam simples"]}
+  - {icon: rocket, title: "Going to", items: ["plano ou previsão", "am/is/are going to + base", "gonna só reconhecer"]}
+  - {icon: calendar, title: "In, on, at", items: ["at hora, on dia, in mês", "at night, in the morning", "agenda é pauta"]}
+  - {icon: rotate-ccw, title: "Passado regular", items: ["verbo + -ed", "sons /t/, /d/, /ɪd/", "sem -s na 3ª pessoa"]}
+  - {icon: list-ordered, title: "Irregulares", items: ["went, wrote, sent, took", "Did you go...?", "was e were sem did"]}
+  - {icon: workflow, title: "Conectores", items: ["first, then", "after that, later", "finally"]}

@@ -1,0 +1,8 @@
+type: timeline
+title: "Calendário de revisão espaçada"
+events:
+  - {when: "Dia 0", text: "Faça os cartões", highlight: true}
+  - {when: "Dia 1", text: "1ª revisão"}
+  - {when: "Dia 3", text: "2ª revisão"}
+  - {when: "Dia 7", text: "3ª revisão"}
+caption: "Errou? O cartão volta para o dia seguinte."

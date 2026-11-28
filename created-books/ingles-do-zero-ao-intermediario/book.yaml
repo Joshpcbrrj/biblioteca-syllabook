@@ -1,0 +1,436 @@
+title: Inglês do zero ao intermediário
+subtitle: Para conversar, viajar e ler e-mails e documentação, estudando sozinho
+slug: ingles-do-zero-ao-intermediario
+origin: created
+language: pt-BR
+conversation_language: pt-BR
+profiles:
+- languages
+level:
+  start: A0 (iniciante)
+  end: B1 (intermediário)
+audience: Falantes de português que sabem só algumas palavras soltas e querem inglês para o trabalho e
+  para viajar
+goal: Manter uma conversa simples de 5 minutos sobre trabalho e viagem, escrever e responder um e-mail
+  de trabalho e ler uma página de documentação técnica, no nível B1 do CEFR
+prerequisites: []
+review_by: 2027-11
+reviewed_on: ''
+editions: []
+notion_url: ''
+sources:
+- title: Cambridge English, International language standards (CEFR, escala A1-C2)
+  url: https://www.cambridgeenglish.org/exams-and-tests/cefr/
+  checked: '2026-11-28'
+- title: Nation, P. (1996), The four strands of a language course
+  url: https://openaccess.wgtn.ac.nz/articles/journal_contribution/The_four_strands_of_a_language_course/12560387
+- title: Council of Europe, CEFR Companion Volume (2020)
+  url: https://rm.coe.int/16809ea0d4
+- title: New General Service List 1.2
+  url: https://www.newgeneralservicelist.com/new-general-service-list
+  checked: '2026-11-28'
+- title: Saito & Chen, Optimizing L2 phonetic learning (SSLA, 2026)
+  url: https://www.cambridge.org/core/journals/studies-in-second-language-acquisition/article/optimizing-l2-phonetic-learning/1DF617B31C08FE04252E293B83481493
+  checked: '2026-11-28'
+- title: Nguyen & Doan, crítica à hipótese do input compreensível (Frontiers in Psychology, 2025)
+  url: https://www.frontiersin.org/articles/10.3389/fpsyg.2025.1636777
+  checked: '2026-11-28'
+- title: 'British Council LearnEnglish: recursos gratuitos'
+  url: https://learnenglish.britishcouncil.org/getting-started
+  checked: '2026-11-28'
+approved_on: '2026-11-27'
+edition: '1.0'
+human_review: false
+choices:
+  images: real
+  reading: large
+concepts:
+- id: verb-to-be
+  name: verbo to be
+  chapter: 1
+  depends: []
+- id: subject-pronouns
+  name: pronomes pessoais
+  chapter: 1
+  depends: []
+- id: greetings
+  name: cumprimentos e apresentação
+  chapter: 1
+  depends:
+  - verb-to-be
+- id: ipa-basics
+  name: leitura da pronúncia (IPA + aproximação)
+  chapter: 1
+  depends: []
+- id: spaced-review
+  name: revisão espaçada
+  chapter: 1
+  depends: []
+- id: wh-questions
+  name: perguntas com what, where, when, who, how
+  chapter: 2
+  depends:
+  - verb-to-be
+- id: numbers-time
+  name: números, horas e datas
+  chapter: 2
+  depends: []
+- id: spelling
+  name: soletrar (alfabeto)
+  chapter: 2
+  depends:
+  - ipa-basics
+- id: present-simple
+  name: presente simples
+  chapter: 3
+  depends:
+  - subject-pronouns
+- id: do-does
+  name: do/does em perguntas e negativas
+  chapter: 3
+  depends:
+  - present-simple
+  - wh-questions
+- id: frequency-adverbs
+  name: advérbios de frequência
+  chapter: 3
+  depends:
+  - present-simple
+- id: polite-requests
+  name: pedidos educados (can, could, would like)
+  chapter: 4
+  depends:
+  - wh-questions
+- id: countable-uncountable
+  name: contáveis e incontáveis (some, any, how much)
+  chapter: 4
+  depends:
+  - numbers-time
+- id: present-continuous
+  name: presente contínuo
+  chapter: 5
+  depends:
+  - verb-to-be
+  - present-simple
+- id: going-to
+  name: futuro com going to
+  chapter: 5
+  depends:
+  - present-continuous
+- id: prepositions-time
+  name: preposições de tempo (in, on, at)
+  chapter: 5
+  depends:
+  - numbers-time
+- id: past-simple
+  name: passado simples
+  chapter: 6
+  depends:
+  - present-simple
+  - do-does
+- id: irregular-verbs
+  name: verbos irregulares mais usados
+  chapter: 6
+  depends:
+  - past-simple
+- id: email-structure
+  name: estrutura de e-mail de trabalho
+  chapter: 7
+  depends:
+  - polite-requests
+  - going-to
+- id: register
+  name: registro formal e informal
+  chapter: 7
+  depends:
+  - polite-requests
+- id: reading-strategies
+  name: skimming e scanning
+  chapter: 8
+  depends:
+  - present-simple
+- id: false-friends
+  name: cognatos e falsos cognatos
+  chapter: 8
+  depends: []
+- id: imperatives
+  name: imperativo em instruções
+  chapter: 8
+  depends:
+  - present-simple
+- id: modals-obligation
+  name: must, should, may, need to
+  chapter: 8
+  depends:
+  - polite-requests
+- id: present-perfect
+  name: present perfect
+  chapter: 9
+  depends:
+  - past-simple
+  - irregular-verbs
+- id: comparatives
+  name: comparativos e superlativos
+  chapter: 9
+  depends:
+  - verb-to-be
+- id: opinions
+  name: dar opinião e concordar/discordar
+  chapter: 9
+  depends:
+  - present-simple
+- id: will-future
+  name: futuro com will (decisões e promessas)
+  chapter: 10
+  depends:
+  - going-to
+- id: first-conditional
+  name: primeira condicional (if)
+  chapter: 10
+  depends:
+  - will-future
+  - present-simple
+- id: repair-strategies
+  name: pedir repetição e esclarecer
+  chapter: 10
+  depends:
+  - polite-requests
+- id: self-assessment-b1
+  name: autoavaliação B1 (can-do)
+  chapter: 11
+  depends:
+  - email-structure
+  - reading-strategies
+  - first-conditional
+  - present-perfect
+chapters:
+- n: 1
+  title: Hello! Suas primeiras frases
+  goal: Apresentar-se em voz alta em 30 segundos (nome, cidade, trabalho)
+  topics:
+  - verbo to be
+  - pronomes
+  - cumprimentos
+  - como ler a pronúncia
+  - como montar sua revisão espaçada
+  minutes: 60
+  sources_original: []
+- n: 2
+  title: Perguntas, números e horários
+  goal: Pedir e dar nome, telefone, e-mail soletrado e horário
+  topics:
+  - wh-questions
+  - números
+  - horas e datas
+  - alfabeto
+  minutes: 60
+  sources_original: []
+- n: 3
+  title: Minha rotina e meu trabalho
+  goal: Descrever sua rotina e sua função no trabalho em 6 frases
+  topics:
+  - presente simples
+  - do/does
+  - advérbios de frequência
+  - profissões
+  minutes: 70
+  sources_original: []
+- n: 4
+  title: 'Viagem I: aeroporto, hotel e restaurante'
+  goal: Fazer check-in, pedir comida e resolver um pedido simples
+  topics:
+  - can/could/would like
+  - some/any
+  - how much/how many
+  - diálogos de viagem
+  minutes: 70
+  sources_original: []
+- n: 5
+  title: 'Agora e depois: agenda e planos'
+  goal: Marcar uma reunião e dizer o que está fazendo e o que vai fazer
+  topics:
+  - presente contínuo
+  - going to
+  - in/on/at
+  - agenda
+  minutes: 70
+  sources_original: []
+- n: 6
+  title: Contando o que aconteceu
+  goal: Contar sua última viagem ou semana de trabalho em 8 frases no passado
+  topics:
+  - passado simples
+  - verbos irregulares
+  - conectores de sequência
+  minutes: 75
+  sources_original: []
+- n: 7
+  title: E-mails de trabalho
+  goal: Ler, escrever e responder um e-mail de trabalho de 80 a 120 palavras
+  topics:
+  - estrutura do e-mail
+  - registro
+  - frases prontas
+  - pedir e confirmar
+  minutes: 75
+  sources_original: []
+- n: 8
+  title: Lendo documentação técnica
+  goal: Seguir as instruções de uma página de documentação e resumir em português o que ela pede
+  topics:
+  - skimming e scanning
+  - falsos cognatos
+  - imperativo
+  - must/should/may
+  minutes: 75
+  sources_original: []
+- n: 9
+  title: 'Conversas mais longas: experiências e opiniões'
+  goal: Falar 2 minutos sobre experiências e comparar duas opções dando sua opinião
+  topics:
+  - present perfect
+  - comparativos
+  - opinião
+  - small talk
+  minutes: 80
+  sources_original: []
+- n: 10
+  title: Imprevistos, ligações e videochamadas
+  goal: 'Resolver um problema numa ligação: explicar, propor solução e confirmar'
+  topics:
+  - will
+  - primeira condicional
+  - pedir repetição
+  - reuniões online
+  minutes: 80
+  sources_original: []
+- n: 11
+  title: 'Projeto final: uma semana de trabalho no exterior'
+  goal: Entregar 2 e-mails, 1 resumo de documentação e uma conversa de 5 minutos gravada, avaliados pela
+    lista B1
+  topics:
+  - simulação integrada
+  - autoavaliação CEFR
+  - plano de continuidade
+  minutes: 120
+  sources_original: []
+next_steps:
+- title: Inglês B1 → B2 para o trabalho
+  why: Para reuniões, apresentações e negociação com mais fluência
+  topics:
+  - apresentações
+  - negociação
+  - phrasal verbs frequentes
+  - segunda condicional
+- title: Inglês técnico para TI
+  why: Para ler documentação, issues e escrever mensagens técnicas
+  topics:
+  - vocabulário técnico
+  - voz passiva
+  - escrever issues e PRs
+- title: Pronúncia e escuta para brasileiros
+  why: Para entender sotaques reais e ser entendido com facilidade
+  topics:
+  - vogais longas e curtas
+  - connected speech
+  - entonação
+covers:
+- english
+- english-a1
+- english-a2
+- english-b1
+- business-email
+- technical-reading
+progress:
+- n: 1
+  done: '2026-11-27'
+  summary: 'Ensinou o verbo to be (am/is/are e contrações), pronomes pessoais, cumprimentos, a/an, leitura
+    de IPA com aproximação em português e revisão espaçada 1-3-7 dias. Exemplos: Lucy (Manchester) e Bruno
+    (São Paulo), Ana Lima (Recife). Erros tratados: I have 30 years, falta de sujeito, Good night. I work
+    at e I live in aparecem só como blocos prontos.'
+- n: 2
+  done: '2026-11-28'
+  reread: '2026-11-28'
+  summary: 'Ensinou perguntas com what/where/when/who/how + to be (ordem palavra+am/is/are+sujeito, What
+    time), números 0-100 e -teen x -ty, telefone dígito a dígito, horas (past/to, o''clock), at/on/in,
+    datas com ordinais e EUA x Reino Unido, alfabeto e soletrar e-mail (at, dot). Exemplos: Lucy e Bruno
+    Souza registrando em evento, bruno.souza@example.com. How do you spell apareceu só como bloco pronto.'
+- n: 3
+  done: '2026-11-28'
+  reread: '2026-11-28'
+  summary: 'Ensinou presente simples (-s da 3ª pessoa, grafia -es/-ies/has, pronúncia /s/ /z/ /ɪz/), do/does
+    em perguntas e negativas com verbo na forma base, exceção do to be, advérbios de frequência e posição
+    (never já é negativo), vocabulário de trabalho e preposições at/in/for/on. Analogia do crachá para
+    o -s. Exemplos: rotina de Lucy em 6 frases. Erros: She work, Does she works, I check always, don''t
+    never.'
+- n: 4
+  done: '2026-11-28'
+  reread: '2026-11-28'
+  summary: 'Ensinou pedidos educados (Can/Could I have, I''d like, Would you like, I''m afraid; I want
+    soa seco), vocabulário de aeroporto/hotel/restaurante com variantes UK/US, gorjeta sem valores, alergia
+    com aviso, some/any (exceção em ofertas), contáveis x incontáveis (analogia tijolo e areia), how much/how
+    many, a lot of. Diálogos: check-in de Lucy, hotel de Bruno, restaurante de Lucy. Is there... apareceu
+    só como bloco pronto. Erros: informations, luggages, pass x passport.'
+- n: 5
+  done: '2026-11-28'
+  reread: '2026-11-28'
+  summary: 'Ensinou presente contínuo (am/is/are + -ing, negativa e pergunta sem do, grafia -ing, verbos
+    de estado), going to (plano e previsão com evidência, gonna só reconhecer), contínuo x going to, in/on/at
+    (at night, at/on the weekend, in + período), frases para marcar reunião, fuso (my time/your time,
+    UTC), agenda = pauta. Analogia da gravação x transmissão ao vivo. Exemplos: Lucy (Manchester) e Bruno
+    (São Paulo) marcando quinta às 2 p.m. Erros: I meeting, I''m knowing, in Monday, I going to.'
+- n: 6
+  done: '2026-11-28'
+  reread: '2026-11-28'
+  summary: 'Ensinou passado simples regular (-ed, grafia, três sons /t/ /d/ /ɪd/), 30 verbos irregulares
+    (was/were, went, wrote, sent, took...), did/didn''t + forma base, exceção do to be (was/were sem did),
+    marcadores de tempo (yesterday, last week, ago, on/in) e conectores first/then/after that/later/finally.
+    Analogia do carimbo no passaporte. Exemplos: semana de Lucy (Londres), viagem e atraso de Bruno. Erros:
+    Did you went, goed/buyed, I go to Rome last year, have been + last year só citado (cap. 9).'
+- n: 7
+  done: '2026-11-28'
+  reread: '2026-11-28'
+  summary: 'Ensinou a estrutura do e-mail de trabalho (assunto, saudação, abertura/motivo, pedido com
+    próximo passo, fecho), registro formal x informal x neutro, frases prontas (Could you please, Let
+    me know if, I''ve attached, Please find attached), vocabulário (reply all, Cc, Bcc, attachment), falsos
+    cognatos actually/pretend, nota Thanks in advance como interpretação, segurança contra phishing e
+    dados fictícios com IA, leitura rápida em 3 perguntas. Exemplos: Bruno e Lucy remarcando reunião (86
+    e 81 palavras), Ana Lima formal, Sam. I''ll só como bloco (will no cap. 10).'
+- n: 8
+  done: '2026-11-28'
+  reread: '2026-11-28'
+  summary: 'Ensinou skimming e scanning (roteiro de 5 passos: objetivo, requisitos, avisos antes dos passos,
+    passos, troubleshooting), cognatos verdadeiros e falsos cognatos técnicos (eventually, support, attend,
+    realize; actually do cap. 7), imperativo em instruções (do not/don''t) e must/should/may/need to/must
+    not/don''t have to, sem to e sem -s. Analogia das placas de trânsito. Exemplos: páginas fictícias
+    da Notesync (instalação e troca de senha) com resumo em português. If you see/before you start só
+    como blocos (if no cap. 10).'
+- n: 9
+  done: '2026-11-28'
+  reread: '2026-11-28'
+  summary: 'Ensinou present perfect (have/has + particípio, contrações, been/gone/seen/done/written/taken/eaten/spoken),
+    usos: experiência com ever/never, for x since e How long, resultado agora, just/already/yet; regra
+    passado simples (data definida) x present perfect. Comparativos e superlativos (-er/-est, more/most,
+    better/worse, than, as...as). Opinião (I think/In my opinion/I''d say, because/so/although, I agree,
+    I see your point but), small talk (responda e devolva). Analogia foto datada x álbum aberto. Exemplos:
+    Lucy e Bruno em Londres. Erros: I live here since, have been in 2023, more better, I am agree. Fluência
+    60-45-30 s como repetição sem atribuir.'
+- n: 10
+  done: '2026-11-28'
+  reread: '2026-11-28'
+  summary: 'Ensinou will (decisão na hora, oferta, promessa; won''t; sem to e sem -s) x going to, primeira
+    condicional (if + presente simples, will + verbo; nunca if will; when/unless), pedir repetição e esclarecer
+    (could you repeat, more slowly, Let me check I understood, I didn''t catch that, soletrar), frases
+    de telefone e videochamada (on mute, breaking up, share screen), confirmação por escrito e privacidade
+    (gravar só a própria voz). Analogia botão agora x agenda preenchida. Exemplos: Bruno e Sam (suporte
+    Acme), reserva de hotel. Erros: If I will go, I will to call, If she come.'
+- n: 11
+  done: '2026-11-28'
+  reread: '2026-11-28'
+  summary: 'Projeto final: semana fictícia no exterior com 2 e-mails (formal para Ms Clark e neutro para
+    Alex, 80-120 palavras), resumo em português de documentação do Wi-Fi (Visitor Wi-Fi Quick guide fictício)
+    com 3 perguntas em inglês, conversa gravada de 5 minutos em 4 blocos, listas de checagem B1, autoavaliação
+    de 10 linhas (notas 1-3, não é certificação, escrita para o livro, não copia o Companion Volume) e
+    plano de 20 min/dia. Gravar só a própria voz, dados fictícios. Não ensina conteúdo novo.'
+changes: []
+handoff: []

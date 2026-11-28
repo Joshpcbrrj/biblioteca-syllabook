@@ -1,0 +1,9 @@
+type: boxes
+title: "Seu plano de 20 minutos por dia, com as quatro vertentes"
+cells:
+  - {value: "5 min", label: "Cartões (revisão espaçada)"}
+  - {value: "5 min", label: "Leitura em nível B1"}
+  - {value: "5 min", label: "Escuta com áudio e dicionário"}
+  - {value: "5 min", label: "Fala ou escrita com o tutor de IA", highlight: true}
+name: "Um dia de estudo"
+caption: "Troque a ordem, mas mantenha as quatro partes na semana."

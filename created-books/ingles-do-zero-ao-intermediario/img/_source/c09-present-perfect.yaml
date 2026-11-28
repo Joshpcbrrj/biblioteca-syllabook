@@ -1,0 +1,8 @@
+type: timeline
+title: "Passado simples x present perfect"
+events:
+  - {when: "2022", text: "I started this job. (passado simples: momento definido)"}
+  - {when: "2023", text: "I went to Canada in 2023. (passado simples)", highlight: false}
+  - {when: "até hoje", text: "I've worked here for 3 years. (present perfect: ainda vale)", highlight: true}
+  - {when: "sem data", text: "I've been to Canada. (present perfect: a experiência conta agora)", highlight: true}
+caption: "Com data definida, use o passado simples; sem data ou ainda em andamento, use have/has + particípio."

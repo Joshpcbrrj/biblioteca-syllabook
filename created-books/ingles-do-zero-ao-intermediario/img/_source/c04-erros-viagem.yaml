@@ -1,0 +1,11 @@
+type: compare
+title: "Quatro erros comuns de quem viaja falando português"
+left: {title: "Erro comum", color: red}
+right: {title: "Inglês natural", color: green}
+style: wrong-right
+rows:
+  - ["I want a coffee.", "Could I have a coffee, please?"]
+  - ["I need some informations.", "I need some information."]
+  - ["How many water?", "How much water?"]
+  - ["Here is my pass.", "Here is my passport."]
+caption: "Information e luggage não têm plural; pass é cartão, passport é documento."

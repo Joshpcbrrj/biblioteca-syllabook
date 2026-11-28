@@ -1,0 +1,11 @@
+type: compare
+title: "Quatro erros comuns ao contar o passado"
+left: {title: "Erro comum", color: red}
+right: {title: "Inglês natural", color: green}
+style: wrong-right
+rows:
+  - ["Did you went to the meeting?", "Did you go to the meeting?"]
+  - ["I goed to Paris.", "I went to Paris."]
+  - ["I didn't saw him.", "I didn't see him."]
+  - ["I go to Rome last year.", "I went to Rome last year."]
+caption: "Depois de did e didn't, o verbo volta à forma base; na afirmativa, o próprio verbo vai para o passado."

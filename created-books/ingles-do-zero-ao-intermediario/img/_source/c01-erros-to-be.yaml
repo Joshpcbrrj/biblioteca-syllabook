@@ -1,0 +1,10 @@
+type: compare
+title: "Dois erros típicos de quem fala português"
+left: {title: "Calque do português", color: red}
+right: {title: "Inglês natural", color: green}
+style: wrong-right
+rows:
+  - ["I have 30 years", "I'm 30"]
+  - ["Is late", "It's late"]
+  - ["Am from Brazil", "I'm from Brazil"]
+caption: "Idade usa to be, e o sujeito nunca some."

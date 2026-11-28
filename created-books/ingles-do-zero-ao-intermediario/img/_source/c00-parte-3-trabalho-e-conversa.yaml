@@ -1,0 +1,12 @@
+type: cards
+title: "Parte 3: e-mails, documentação e conversa (caps. 7 a 9)"
+cards:
+  - {icon: mail, title: "Estrutura do e-mail", items: ["assunto e saudação", "motivo e pedido", "fecho com nome"]}
+  - {icon: users, title: "Registro", items: ["formal para cliente", "informal para colega", "na dúvida, neutro"]}
+  - {icon: file, title: "Frases prontas", items: ["Could you please...?", "I've attached", "Let me know if..."]}
+  - {icon: search, title: "Skimming e scanning", items: ["ideia geral primeiro", "depois o dado específico", "avisos antes dos passos"]}
+  - {icon: triangle-alert, title: "Falsos cognatos", items: ["actually: na verdade", "eventually: por fim", "support: apoio"]}
+  - {icon: list-checks, title: "Instruções", items: ["Click Settings", "Do not / Don't", "must, should, may"]}
+  - {icon: clock, title: "Present perfect", items: ["have/has + particípio", "for x since", "sem data: perfect"]}
+  - {icon: chart-bar, title: "Comparar", items: ["-er than, more ... than", "the -est, the most", "better e worse"]}
+  - {icon: message-square, title: "Opinião", items: ["I think... because...", "I agree, sem am", "devolva a pergunta"]}

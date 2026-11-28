@@ -1,0 +1,8 @@
+type: layers
+title: "Partes comuns de uma página de documentação, de cima para baixo"
+layers:
+  - {text: "Overview", note: "para que serve a ferramenta (leia primeiro)", color: blue}
+  - {text: "Requirements", note: "o que você precisa ter antes de começar", color: teal}
+  - {text: "Steps", note: "lista numerada: cada linha começa com um verbo", color: purple}
+  - {text: "Warning / Note", note: "avisos: leia antes de executar", color: orange}
+  - {text: "Troubleshooting", note: "o que fazer quando algo dá errado", color: green}

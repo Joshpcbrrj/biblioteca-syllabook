@@ -1,0 +1,9 @@
+type: flow
+title: "Resolvendo um problema numa ligação: cinco passos"
+steps:
+  - {text: "1. Identifique-se", note: "This is Bruno from Acme. I'm calling about...", kind: start}
+  - {text: "2. Explique o problema", note: "The file didn't arrive. / I can't open the link."}
+  - {text: "3. Proponha uma solução", note: "I'll send it again. / If you send it, I'll check it today."}
+  - {text: "4. Confirme", note: "Let me check I understood: ... Is that right?"}
+  - {text: "5. Escreva depois", note: "Just to confirm what we agreed: ...", kind: end}
+caption: "Se perder algo no meio: Sorry, could you repeat that?"

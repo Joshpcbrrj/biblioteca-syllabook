@@ -1,0 +1,14 @@
+type: cards
+title: "O livro numa página: de Hello! ao B1 em 11 passos"
+cards:
+  - {icon: message-circle, title: "Hello!", items: ["am, is, are e I'm", "Good evening x Good night", "apresentar-se em 30 s"]}
+  - {icon: circle-help, title: "Perguntas e números", items: ["Where are you from?", "at 5, on Monday, in May", "soletrar o e-mail"]}
+  - {icon: clock, title: "Rotina e trabalho", items: ["só he/she/it levam -s", "Does she work...?", "always antes do verbo"]}
+  - {icon: map, title: "Viagem I", items: ["Could I have... / I'd like", "some e any", "How much / How many"]}
+  - {icon: calendar, title: "Agora e depois", items: ["I'm working / I'm going to", "in, on, at", "marcar uma reunião"]}
+  - {icon: rotate-ccw, title: "Passado", items: ["-ed e went, wrote, sent", "Did you go...?", "first, then, finally"]}
+  - {icon: mail, title: "E-mails", items: ["assunto, saudação, pedido", "Could you please...?", "I've attached"]}
+  - {icon: file-text, title: "Documentação", items: ["skimming e scanning", "Click, Do not", "must x should x may"]}
+  - {icon: users, title: "Conversas", items: ["I've been to...", "bigger than, the best", "I agree / I see your point"]}
+  - {icon: headphones, title: "Imprevistos", items: ["I'll check / won't", "If it works, I'll call", "Could you repeat that?"]}
+  - {icon: target, title: "Projeto final", items: ["2 e-mails e 1 resumo", "conversa de 5 minutos", "autoavaliação B1"]}

@@ -1,0 +1,11 @@
+type: compare
+title: "Quatro erros comuns ao falar de agenda"
+left: {title: "Erro comum", color: red}
+right: {title: "Inglês natural", color: green}
+style: wrong-right
+rows:
+  - ["I meeting a client.", "I'm meeting a client."]
+  - ["I'm knowing the answer.", "I know the answer."]
+  - ["The meeting is in Monday.", "The meeting is on Monday."]
+  - ["I going to call him.", "I'm going to call him."]
+caption: "O contínuo e o going to precisam de am, is ou are; at + hora, on + dia, in + mês."
