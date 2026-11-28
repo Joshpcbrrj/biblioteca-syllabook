@@ -7,6 +7,7 @@
 <rect x="560" y="960" width="480" height="8" fill="#F2A93B"/>
 <text x="800" y="1080" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="68" fill="#FAF9F6">Uma história da computação:</text>
 <text x="800" y="1170" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="68" fill="#FAF9F6">máquinas, programas e pessoas</text>
+<text x="800" y="1290" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="56" fill="#8FA3C8">por Josué B. Almeida</text>
 <line x1="330" y1="2250" x2="415" y2="2128" stroke="#8FA3C8" stroke-width="5"/>
 <line x1="415" y1="2128" x2="501" y2="2038" stroke="#8FA3C8" stroke-width="5"/>
 <line x1="501" y1="2038" x2="586" y2="1956" stroke="#8FA3C8" stroke-width="5"/>
