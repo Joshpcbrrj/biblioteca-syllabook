@@ -1,0 +1,8 @@
+type: compare
+title: Analog measures a continuous quantity; digital counts digits
+left: {title: "Analog", color: blue}
+right: {title: "Digital", color: purple}
+rows:
+  - ["Bush's analyzer: the turning of shafts stands for numbers", "Babbage's engines: one wheel per digit, 0 to 9"]
+  - ["Solves equations approximately", "Only whole values are valid; a wheel out of position jams the machine"]
+  - ["Each new problem means reassembling shafts and connections", "Data enter as numbers (and as holes in cards)"]

@@ -1,0 +1,15 @@
+type: cards
+title: "The book on one page: from gears to AI in 12 steps"
+cards:
+  - {icon: calculator, title: "Counting and computing", items: ["calculating vs. computing", "Pascaline and arithmometer", "the card swaps the pattern"]}
+  - {icon: cpu, title: "Babbage and Lovelace", items: ["Difference: only adds", "Analytical: Store and Mill", "Note G is fact, the rest isn't"]}
+  - {icon: table, title: "Cards and the census", items: ["Hollerith and the 1890 census", "human computers", "analog vs. digital"]}
+  - {icon: binary, title: "Boole, Turing, Shannon", items: ["AND, OR, NOT with 0 and 1", "tape, head and states", "bit: a choice between two"]}
+  - {icon: zap, title: "War and vacuum tubes", items: ["relay vs. vacuum tube", "Z3, ABC, Colossus, ENIAC", "first depends on the definition"]}
+  - {icon: save, title: "Stored program", items: ["program in memory", "Baby 1948, EDSAC 1949", "UNIVAC, IBM, Zezinho"]}
+  - {icon: layers, title: "Transistor to chip", items: ["transistor 1947", "chip and Moore's law", "Intel 4004, Patinho Feio"]}
+  - {icon: code, title: "Software is born", items: ["a compiler translates", "FORTRAN and COBOL", "the moth didn't create the bug"]}
+  - {icon: monitor, title: "A PC on every desk", items: ["Altair and Apple II", "IBM PC and Macintosh", "Law 7,232 and the reserve"]}
+  - {icon: globe, title: "Everything connected", items: ["packets and ARPANET", "internet vs. web", "AlterNex and CGI.br"]}
+  - {icon: brain, title: "Machines that learn", items: ["Dartmouth and winters", "Deep Blue and AlphaGo", "Transformer and ChatGPT"]}
+  - {icon: map, title: "Your museum", items: ["15 milestones with causes", "check one legend", "2+ beyond the US and UK"]}

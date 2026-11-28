@@ -1,0 +1,8 @@
+type: timeline
+title: From the 1821 design to the machine built in 2002
+events:
+  - {when: "1821", text: "Difference Engine No. 1 begins"}
+  - {when: "1834", text: "The Analytical Engine takes shape"}
+  - {when: "1843", text: "Lovelace's Notes", highlight: true}
+  - {when: "1847–49", text: "Difference Engine No. 2 designed"}
+  - {when: "2002", text: "No. 2 works in London"}

@@ -1,0 +1,12 @@
+type: cards
+title: "Part 2: logic, war and memory (chs. 4–6)"
+cards:
+  - {icon: binary, title: "Boole's logic", items: ["works of 1847 and 1854", "AND, OR, NOT", "sums with 0 and 1"]}
+  - {icon: terminal, title: "Turing machine", items: ["1936–37", "tape, head, states", "universal: reads another table"]}
+  - {icon: hash, title: "Shannon and the bit", items: ["relays and Boolean algebra", "1948 paper", "bit: two options"]}
+  - {icon: zap, title: "Relay vs. vacuum tube", items: ["relay: mechanical switch", "tube: glass switch", "the tube is faster"]}
+  - {icon: lock, title: "Colossus", items: ["Flowers's vacuum tubes", "attacks the Lorenz cipher", "secret until the 1970s"]}
+  - {icon: users, title: "ENIAC", items: ["Mauchly and Eckert", "six programmers", "wires and switches"]}
+  - {icon: save, title: "Stored program", items: ["von Neumann, 1945", "program next to the data", "Baby 1948, EDSAC 1949"]}
+  - {icon: rocket, title: "UNIVAC and IBM", items: ["UNIVAC I, 1951", "46 units", "IBM: a name from 1924"]}
+  - {icon: globe, title: "Zezinho (ITA)", items: ["1961", "teaching computer", "did not run computations"]}

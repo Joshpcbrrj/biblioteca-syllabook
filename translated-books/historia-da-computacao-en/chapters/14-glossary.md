@@ -1,0 +1,103 @@
+# 14. Glossary
+
+> 🗺️ **In this chapter:** the terms in the book, in alphabetical order, each with a one-sentence definition and the chapter that explains it. · ⏱️ reference
+
+- **abacus**: A surface with movable markers that hold the numbers of a sum while it is being done. [Chapter 1](01-counting-before-computing-from-the-abacus.md)
+- **AI winters**: A name given later to periods of discouragement with AI, such as the one that followed the Lighthill report (1972); the book's sources give no data on funding cuts. [Chapter 11](11-machines-that-learn-the-long-road-of-artificial.md)
+- **analog computer**: A machine that represents quantities by continuous measures, such as the turning of a shaft. [Chapter 3](03-cards-censuses-and-flesh-and-blood-computers.md)
+- **Analytical Engine**: Babbage's general-purpose design, with cards, a Store and a Mill, never completed. [Chapter 2](02-babbage-and-lovelace-the-machine-that-was-never.md)
+- **arithmometer**: A four-operation calculator produced from 1820. [Chapter 1](01-counting-before-computing-from-the-abacus.md)
+- **ARPANET**: A computer network switched on in October 1969, an ancestor of the internet. [Chapter 10](10-everything-connected-arpanet-the-web.md)
+- **bit**: The unit of information: a choice between two options. [Chapter 4](04-the-idea-of-a-universal-machine-boole-turing.md)
+- **Boolean logic**: Calculations with 0 and 1 and the operations AND, OR and NOT. [Chapter 4](04-the-idea-of-a-universal-machine-boole-turing.md)
+- **Colossus**: A vacuum-tube machine used to attack the Lorenz cipher, kept secret until the 1970s. [Chapter 5](05-war-and-vacuum-tubes-zuse-colossus-and-eniac.md)
+- **compiler**: A program that translates a high-level language into machine instructions. [Chapter 8](08-teaching-the-machine-to-understand-people.md)
+- **computing** (as opposed to calculating): Following instructions that can be swapped, unlike merely calculating. [Chapter 1](01-counting-before-computing-from-the-abacus.md)
+- **Difference Engine**: Babbage's calculator of polynomial tables, which uses only additions. [Chapter 2](02-babbage-and-lovelace-the-machine-that-was-never.md)
+- **ENIAC**: Mauchly and Eckert's vacuum-tube machine, programmed by six women with wires and switches. [Chapter 5](05-war-and-vacuum-tubes-zuse-colossus-and-eniac.md)
+- **fact, interpretation and legend**: The three layers separated when checking an origin story. [Chapter 2](02-babbage-and-lovelace-the-machine-that-was-never.md)
+- **graphical user interface (GUI)**: The use of windows, icons and a mouse to operate the computer. [Chapter 9](09-a-computer-on-every-desk.md)
+- **human computer**: A person whose job was calculating by hand. [Chapter 3](03-cards-censuses-and-flesh-and-blood-computers.md)
+- **integrated circuit**: A complete circuit made in a single piece of material. [Chapter 7](07-from-the-transistor-to-the-chip.md)
+- **Jacquard loom**: A loom controlled by punched cards: swap the card, swap the pattern. [Chapter 1](01-counting-before-computing-from-the-abacus.md)
+- **mainframe**: A large computer used by companies and governments, such as those of the System/360 line. [Chapter 7](07-from-the-transistor-to-the-chip.md)
+- **market reserve** (Brazil's computing market reserve): A name given later to the restrictions of Law 7,232 of 1984, which protected Brazilian computing companies; the expression does not appear in the text of the law. [Chapter 9](09-a-computer-on-every-desk.md)
+- **microprocessor**: A whole processor on a single chip. [Chapter 7](07-from-the-transistor-to-the-chip.md)
+- **Moore's law**: The observation that the number of components per chip doubles about every two years. [Chapter 7](07-from-the-transistor-to-the-chip.md)
+- **neural networks**: Machine learning models that adjust many numbers from examples. [Chapter 11](11-machines-that-learn-the-long-road-of-artificial.md)
+- **operating system**: A program that manages the computer's resources for the other programs. [Chapter 8](08-teaching-the-machine-to-understand-people.md)
+- **Patinho Feio** ("Ugly Duckling"): A computer from the Poli-USP (1972), the basis of the G-10 and of Cobra's MC 500. [Chapter 7](07-from-the-transistor-to-the-chip.md)
+- **punched card**: A card in which each hole holds a piece of information: data in the census, instructions in the loom. [Chapter 3](03-cards-censuses-and-flesh-and-blood-computers.md)
+- **relay**: An electromechanical switch, slower than the vacuum tube. [Chapter 5](05-war-and-vacuum-tubes-zuse-colossus-and-eniac.md)
+- **smartphone**: A phone that is also a computer and an internet device, popularized by the iPhone (2007). [Chapter 10](10-everything-connected-arpanet-the-web.md)
+- **software engineering**: The field concerned with building large programs in a disciplined way. [Chapter 8](08-teaching-the-machine-to-understand-people.md)
+- **stored program**: A program kept in the same memory as the data. [Chapter 6](06-the-program-moves-into-memory-von-neumann.md)
+- **TCP/IP**: The set of protocols that links different networks, adopted by ARPANET in 1983. [Chapter 10](10-everything-connected-arpanet-the-web.md)
+- **transistor**: A semiconductor switch, with no glass and no moving part, presented in 1947. [Chapter 7](07-from-the-transistor-to-the-chip.md)
+- **Transformer**: A neural network architecture based only on attention, presented in 2017. [Chapter 11](11-machines-that-learn-the-long-road-of-artificial.md)
+- **Turing machine**: An abstract model of computing with a tape, a head and a table of states. [Chapter 4](04-the-idea-of-a-universal-machine-boole-turing.md)
+- **universal machine**: A Turing machine that reads the table of another and does what it would do. [Chapter 4](04-the-idea-of-a-universal-machine-boole-turing.md)
+- **vacuum tube**: A glass electronic switch, faster than the relay. [Chapter 5](05-war-and-vacuum-tubes-zuse-colossus-and-eniac.md)
+- **von Neumann architecture**: A computer organization in which program and data share the same memory. [Chapter 6](06-the-program-moves-into-memory-von-neumann.md)
+- **web** (World Wide Web): A service of pages with hyperlinks that runs on top of the internet. [Chapter 10](10-everything-connected-arpanet-the-web.md)
+
+<!-- credit:start -->
+---
+
+📘 *Created by the Claude skill Syllabook - Joshpcbrrj* · [github.com/Joshpcbrrj/syllabook](https://github.com/Joshpcbrrj/syllabook)
+<!-- credit:end -->
+
+<!-- nav:start -->
+---
+
+[◀ Previous chapter](13-final-mock-exam.md) · [Book map](../README.md)
+<!-- nav:end -->
+
+<!-- index:start -->
+## Index
+
+- Ada Lovelace's Notes: [2. Babbage and Lovelace: the machine that was never finished](02-babbage-and-lovelace-the-machine-that-was-never.md)
+- AI winters: [11. Machines that learn: the long road of artificial intelligence](11-machines-that-learn-the-long-road-of-artificial.md)
+- analog computer: [3. Cards, censuses and flesh-and-blood computers](03-cards-censuses-and-flesh-and-blood-computers.md)
+- Analytical Engine: [2. Babbage and Lovelace: the machine that was never finished](02-babbage-and-lovelace-the-machine-that-was-never.md)
+- annotated timeline: [12. Final project: your computing museum](12-final-project-your-computing-museum.md)
+- Boolean logic: [4. The idea of a universal machine: Boole, Turing and Shannon](04-the-idea-of-a-universal-machine-boole-turing.md)
+- Brazil's computing market reserve: [9. A computer on every desk](09-a-computer-on-every-desk.md)
+- calculating vs. computing: [1. Counting before computing: from the abacus to mechanical calculators](01-counting-before-computing-from-the-abacus.md)
+- Colossus and codebreaking: [5. War and vacuum tubes: Zuse, Colossus and ENIAC](05-war-and-vacuum-tubes-zuse-colossus-and-eniac.md)
+- commercial computer: [6. The program moves into memory: von Neumann and the first computers for sale](06-the-program-moves-into-memory-von-neumann.md)
+- compiler: [8. Teaching the machine to understand people: the birth of software](08-teaching-the-machine-to-understand-people.md)
+- Difference Engine: [2. Babbage and Lovelace: the machine that was never finished](02-babbage-and-lovelace-the-machine-that-was-never.md)
+- early computers in Brazil: [6. The program moves into memory: von Neumann and the first computers for sale](06-the-program-moves-into-memory-von-neumann.md)
+- ENIAC: [5. War and vacuum tubes: Zuse, Colossus and ENIAC](05-war-and-vacuum-tubes-zuse-colossus-and-eniac.md)
+- graphical user interface (GUI): [9. A computer on every desk](09-a-computer-on-every-desk.md)
+- high-level language: [8. Teaching the machine to understand people: the birth of software](08-teaching-the-machine-to-understand-people.md)
+- human computers: [3. Cards, censuses and flesh-and-blood computers](03-cards-censuses-and-flesh-and-blood-computers.md)
+- integrated circuit: [7. From the transistor to the chip](07-from-the-transistor-to-the-chip.md)
+- Jacquard loom: [1. Counting before computing: from the abacus to mechanical calculators](01-counting-before-computing-from-the-abacus.md)
+- large language models (LLMs): [11. Machines that learn: the long road of artificial intelligence](11-machines-that-learn-the-long-road-of-artificial.md)
+- mainframe: [7. From the transistor to the chip](07-from-the-transistor-to-the-chip.md)
+- mechanical calculator: [1. Counting before computing: from the abacus to mechanical calculators](01-counting-before-computing-from-the-abacus.md)
+- microprocessor: [7. From the transistor to the chip](07-from-the-transistor-to-the-chip.md)
+- Moore's law: [7. From the transistor to the chip](07-from-the-transistor-to-the-chip.md)
+- neural networks and machine learning: [11. Machines that learn: the long road of artificial intelligence](11-machines-that-learn-the-long-road-of-artificial.md)
+- operating system: [8. Teaching the machine to understand people: the birth of software](08-teaching-the-machine-to-understand-people.md)
+- packet switching: [10. Everything connected: ARPANET, the web and the phone](10-everything-connected-arpanet-the-web.md)
+- Patinho Feio: [7. From the transistor to the chip](07-from-the-transistor-to-the-chip.md)
+- personal computer: [9. A computer on every desk](09-a-computer-on-every-desk.md)
+- punched data card: [3. Cards, censuses and flesh-and-blood computers](03-cards-censuses-and-flesh-and-blood-computers.md)
+- relay and vacuum tube: [5. War and vacuum tubes: Zuse, Colossus and ENIAC](05-war-and-vacuum-tubes-zuse-colossus-and-eniac.md)
+- smartphone: [10. Everything connected: ARPANET, the web and the phone](10-everything-connected-arpanet-the-web.md)
+- software as a product: [9. A computer on every desk](09-a-computer-on-every-desk.md)
+- software engineering: [8. Teaching the machine to understand people: the birth of software](08-teaching-the-machine-to-understand-people.md)
+- stored program: [6. The program moves into memory: von Neumann and the first computers for sale](06-the-program-moves-into-memory-von-neumann.md)
+- symbolic AI: [11. Machines that learn: the long road of artificial intelligence](11-machines-that-learn-the-long-road-of-artificial.md)
+- tabulating machine: [3. Cards, censuses and flesh-and-blood computers](03-cards-censuses-and-flesh-and-blood-computers.md)
+- TCP/IP: [10. Everything connected: ARPANET, the web and the phone](10-everything-connected-arpanet-the-web.md)
+- the bit and information theory: [4. The idea of a universal machine: Boole, Turing and Shannon](04-the-idea-of-a-universal-machine-boole-turing.md)
+- the internet in Brazil: [10. Everything connected: ARPANET, the web and the phone](10-everything-connected-arpanet-the-web.md)
+- transistor: [7. From the transistor to the chip](07-from-the-transistor-to-the-chip.md)
+- Turing machine: [4. The idea of a universal machine: Boole, Turing and Shannon](04-the-idea-of-a-universal-machine-boole-turing.md)
+- von Neumann architecture: [6. The program moves into memory: von Neumann and the first computers for sale](06-the-program-moves-into-memory-von-neumann.md)
+- World Wide Web: [10. Everything connected: ARPANET, the web and the phone](10-everything-connected-arpanet-the-web.md)
+<!-- index:end -->

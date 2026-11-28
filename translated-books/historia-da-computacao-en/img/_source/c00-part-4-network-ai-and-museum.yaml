@@ -1,0 +1,12 @@
+type: cards
+title: "Part 4: network, artificial intelligence and the museum (chs. 10–12)"
+cards:
+  - {icon: network, title: "Packet switching", items: ["message in packets", "numbered and reassembled", "different paths"]}
+  - {icon: wifi, title: "ARPANET and TCP/IP", items: ["switched on October 1969", "TCP/IP on Jan. 1, 1983", "links different networks"]}
+  - {icon: globe, title: "The web", items: ["Berners-Lee, 1989", "released at CERN, 1991", "web ≠ internet"]}
+  - {icon: smartphone, title: "iPhone", items: ["announced Jan. 9, 2007", "phone, iPod, internet", "the phone becomes a computer"]}
+  - {icon: link, title: "Internet in Brazil", items: ["AlterNex, July 1989", "RNP and CGI.br (1995)", "commercial internet"]}
+  - {icon: message-circle, title: "Test and Dartmouth", items: ["Turing, 1950", "Dartmouth, Aug. 31, 1955", "AI winters"]}
+  - {icon: brain, title: "Deep Blue to AlphaGo", items: ["Deep Blue 1997", "2012 network: 18.9% error", "AlphaGo 4 to 1, 2016"]}
+  - {icon: sparkles, title: "Transformer", items: ["attention, 2017", "ChatGPT, 2022", "AI Act in force 2024"]}
+  - {icon: map, title: "Museum", items: ["15 milestones with causes", "check one legend", "2+ Brazilian milestones"]}

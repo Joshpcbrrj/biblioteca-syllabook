@@ -17,7 +17,7 @@ Achou um erro? Abra uma issue: toda correção ajuda o próximo leitor.
 | --- | --- |
 | [📗 Livros criados](created-books/README.pt-BR.md) | 3 |
 | [🔁 Materiais aprimorados](improved-materials/README.pt-BR.md) | 3 |
-| [🌐 Livros traduzidos](translated-books/README.pt-BR.md) | 0 |
+| [🌐 Livros traduzidos](translated-books/README.pt-BR.md) | 1 |
 
 ## 🧭 Trilhas
 
