@@ -43,6 +43,10 @@ Para pessoas curiosas, sem formação em computação, que querem entender de on
 
 Achou um erro? Use o formulário "Report an error" do repositório.
 
+## Também disponível em
+
+- [English: From Gears to AI](../../translated-books/historia-da-computacao-en/README.md)
+
 <!-- credit:start -->
 📘 *Criado pela skill Claude Syllabook - Joshpcbrrj* · [github.com/Joshpcbrrj/syllabook](https://github.com/Joshpcbrrj/syllabook)
 <!-- credit:end -->

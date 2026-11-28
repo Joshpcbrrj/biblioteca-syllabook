@@ -1,0 +1,8 @@
+type: compare
+title: Calculating gives an answer; computing follows swappable instructions
+left: {title: "Calculating", icon: calculator, color: blue}
+right: {title: "Computing", icon: cpu, color: purple}
+rows:
+  - ["Pascaline: it only adds", "Loom: the card changes the pattern"]
+  - ["You turn the wheels for every sum", "The machine follows the row of holes"]
+  - ["A new task needs a different machine", "A new task needs different cards"]

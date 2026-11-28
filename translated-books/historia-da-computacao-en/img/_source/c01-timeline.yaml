@@ -1,0 +1,8 @@
+type: timeline
+title: Five milestones, from counting with pebbles to programming a loom
+events:
+  - {when: "c. 300 BCE", text: "Salamis tablet"}
+  - {when: "1642", text: "Pascaline adds"}
+  - {when: "1670s", text: "Leibniz and the drum"}
+  - {when: "1801–1803", text: "Jacquard loom", highlight: true}
+  - {when: "1820", text: "Arithmometer"}

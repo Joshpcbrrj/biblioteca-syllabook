@@ -1,0 +1,8 @@
+type: compare
+title: The Difference Engine tabulates; the Analytical Engine would follow instructions
+left: {title: "Difference Engine", icon: calculator, color: blue}
+right: {title: "Analytical Engine", icon: cpu, color: purple}
+rows:
+  - ["One task: polynomial tables", "General purpose, with instructions on cards"]
+  - ["Only adds, by the method of differences", "The four operations, with branching and repetition"]
+  - ["Designed in 1821; No. 2 in 1847–1849", "Conceived in 1834; never completed"]

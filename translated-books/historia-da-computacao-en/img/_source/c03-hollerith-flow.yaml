@@ -1,0 +1,8 @@
+type: flow
+title: From the census form to the number on the dial
+steps:
+  - {text: "Enumerator records the answers", note: "paper, house by house", kind: start}
+  - {text: "Clerk punches the card", note: "pantograph: ~500 cards a day"}
+  - {text: "Two-plate reader closes on the card", note: "pins pass through the holes"}
+  - {text: "Pins touch mercury and close a circuit", note: "only where there is a hole"}
+  - {text: "The dial advances one unit", note: "40 dials on the 1890 tabulator", kind: end}

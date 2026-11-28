@@ -16,7 +16,7 @@ Found an error? Open an issue: every correction helps the next reader.
 | --- | --- |
 | [📗 Created books](created-books/) | 3 |
 | [🔁 Improved materials](improved-materials/) | 3 |
-| [🌐 Translated books](translated-books/) | 0 |
+| [🌐 Translated books](translated-books/) | 1 |
 
 ## 🧭 Tracks
 
