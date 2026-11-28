@@ -1,0 +1,150 @@
+{
+ "source": "entrada/A mão e a luva - Machado de Assis.epub",
+ "engine": "epub",
+ "sections": [
+  {
+   "id": "s01",
+   "title": "(intro)",
+   "level": 0,
+   "words": 19,
+   "file": "01-intro.md"
+  },
+  {
+   "id": "s02",
+   "title": "I. O fim da carta",
+   "level": 1,
+   "words": 2185,
+   "file": "02-i-o-fim-da-carta.md"
+  },
+  {
+   "id": "s03",
+   "title": "II. Um roupão",
+   "level": 1,
+   "words": 2019,
+   "file": "03-ii-um-roupao.md"
+  },
+  {
+   "id": "s04",
+   "title": "III. Ao pé da cerca",
+   "level": 1,
+   "words": 2046,
+   "file": "04-iii-ao-pe-da-cerca.md"
+  },
+  {
+   "id": "s05",
+   "title": "IV. Latet anguis",
+   "level": 1,
+   "words": 1544,
+   "file": "05-iv-latet-anguis.md"
+  },
+  {
+   "id": "s06",
+   "title": "V. Meninice",
+   "level": 1,
+   "words": 1493,
+   "file": "06-v-meninice.md"
+  },
+  {
+   "id": "s07",
+   "title": "VI. O post-scriptum",
+   "level": 1,
+   "words": 1639,
+   "file": "07-vi-o-post-scriptum.md"
+  },
+  {
+   "id": "s08",
+   "title": "VII. Um rival",
+   "level": 1,
+   "words": 1545,
+   "file": "08-vii-um-rival.md"
+  },
+  {
+   "id": "s09",
+   "title": "VIII. Golpe",
+   "level": 1,
+   "words": 1644,
+   "file": "09-viii-golpe.md"
+  },
+  {
+   "id": "s10",
+   "title": "IX. Conspiração",
+   "level": 1,
+   "words": 2058,
+   "file": "10-ix-conspiracao.md"
+  },
+  {
+   "id": "s11",
+   "title": "X. A revelação",
+   "level": 1,
+   "words": 3167,
+   "file": "11-x-a-revelacao.md"
+  },
+  {
+   "id": "s12",
+   "title": "XI. Luís Alves",
+   "level": 1,
+   "words": 1749,
+   "file": "12-xi-luis-alves.md"
+  },
+  {
+   "id": "s13",
+   "title": "XII. A viagem",
+   "level": 1,
+   "words": 1689,
+   "file": "13-xii-a-viagem.md"
+  },
+  {
+   "id": "s14",
+   "title": "XIII. Explicações",
+   "level": 1,
+   "words": 1664,
+   "file": "14-xiii-explicacoes.md"
+  },
+  {
+   "id": "s15",
+   "title": "XIV. Ex-abrupto",
+   "level": 1,
+   "words": 1700,
+   "file": "15-xiv-ex-abrupto.md"
+  },
+  {
+   "id": "s16",
+   "title": "XV. Embargos de terceiro",
+   "level": 1,
+   "words": 1742,
+   "file": "16-xv-embargos-de-terceiro.md"
+  },
+  {
+   "id": "s17",
+   "title": "XVI. A confissão",
+   "level": 1,
+   "words": 1835,
+   "file": "17-xvi-a-confissao.md"
+  },
+  {
+   "id": "s18",
+   "title": "XVII. A carta",
+   "level": 1,
+   "words": 1824,
+   "file": "18-xvii-a-carta.md"
+  },
+  {
+   "id": "s19",
+   "title": "XVIII. A escola",
+   "level": 1,
+   "words": 2101,
+   "file": "19-xviii-a-escola.md"
+  },
+  {
+   "id": "s20",
+   "title": "XIX. Conclusão",
+   "level": 1,
+   "words": 1657,
+   "file": "20-xix-conclusao.md"
+  }
+ ],
+ "total_words": 35320,
+ "warnings": [
+  "no headings: 19 chapters found by their chapter numbers (I, II, III...); check the outline against the book's table of contents"
+ ]
+}

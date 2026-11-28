@@ -1,0 +1,345 @@
+title: The Hand and the Glove
+subtitle: ''
+slug: a-mao-e-a-luva-en
+origin: created
+language: en
+conversation_language: pt-BR
+profiles:
+- knowledge
+level:
+  start: general reader
+  end: general reader
+audience: English-language readers of nineteenth-century fiction
+goal: Read Machado de Assis's A mão e a luva (1874) complete in English, faithfully translated
+prerequisites: []
+translation_of: a-mao-e-a-luva
+original:
+  title: A mão e a luva
+  author: Machado de Assis
+  where: original
+  rights: public domain (author died in 1908)
+review_by: 2027-11
+reviewed_on: ''
+editions: []
+notion_url: ''
+sources:
+- title: 'A mão e a luva (Wikisource, Portuguese edition, text compared to mend the OCR damage in the
+    original file: ch. I, II and the chapter-opening dashes; also followed for “crua cor” (ch. IV, read
+    as “raw pain”) and “confissão oral” (ch. VIII))'
+  url: https://pt.wikisource.org/wiki/A_m%C3%A3o_e_a_luva
+  checked: '2026-11-28'
+approved_on: '2026-11-28'
+edition: '1.0'
+human_review: false
+choices:
+  images: svg
+  reading: large
+glossary:
+- source: a baronesa
+  target: the baroness
+- source: Mrs. Oswald
+  target: Mrs. Oswald
+- source: D. (Dona) + nome
+  target: Dona + name
+- source: Sr. / Senhor
+  target: Mr. / sir (by context)
+- source: moço / rapaz
+  target: young man
+- source: namoro
+  target: courtship
+- source: namoro gorado
+  target: a failed courtship
+- source: rua dos Ciganos / rua da Constituição
+  target: Rua dos Ciganos / Rua da Constituição
+- source: roupão
+  target: dressing gown
+- source: post-scriptum
+  target: postscript
+- source: Latet anguis
+  target: Latet anguis
+- source: Ex-abrupto
+  target: Ex-abrupto
+- source: Embargos de terceiro
+  target: Third-Party Claims
+- source: travessão de diálogo
+  target: quotation marks
+- source: pinto das almas
+  target: the chick that belongs to the souls
+- source: Senhora (Sra.) Oswald
+  target: Senhora Oswald (then Mrs. Oswald)
+concepts: []
+chapters:
+- n: 1
+  title: The End of the Letter
+  goal: Translate chapter I of the original faithfully
+  topics:
+  - O fim da carta
+  minutes: 15
+  sources_original:
+  - 02-i-o-fim-da-carta.md
+- n: 2
+  title: A Dressing Gown
+  goal: Translate chapter II of the original faithfully
+  topics:
+  - Um roupão
+  minutes: 15
+  sources_original:
+  - 03-ii-um-roupao.md
+- n: 3
+  title: By the Fence
+  goal: Translate chapter III of the original faithfully
+  topics:
+  - Ao pé da cerca
+  minutes: 15
+  sources_original:
+  - 04-iii-ao-pe-da-cerca.md
+- n: 4
+  title: Latet anguis
+  goal: Translate chapter IV of the original faithfully
+  topics:
+  - Latet anguis
+  minutes: 10
+  sources_original:
+  - 05-iv-latet-anguis.md
+- n: 5
+  title: Girlhood
+  goal: Translate chapter V of the original faithfully
+  topics:
+  - Meninice
+  minutes: 10
+  sources_original:
+  - 06-v-meninice.md
+- n: 6
+  title: The Postscript
+  goal: Translate chapter VI of the original faithfully
+  topics:
+  - O post-scriptum
+  minutes: 10
+  sources_original:
+  - 07-vi-o-post-scriptum.md
+- n: 7
+  title: A Rival
+  goal: Translate chapter VII of the original faithfully
+  topics:
+  - Um rival
+  minutes: 10
+  sources_original:
+  - 08-vii-um-rival.md
+- n: 8
+  title: A Blow
+  goal: Translate chapter VIII of the original faithfully
+  topics:
+  - Golpe
+  minutes: 10
+  sources_original:
+  - 09-viii-golpe.md
+- n: 9
+  title: Conspiracy
+  goal: Translate chapter IX of the original faithfully
+  topics:
+  - Conspiração
+  minutes: 15
+  sources_original:
+  - 10-ix-conspiracao.md
+- n: 10
+  title: The Revelation
+  goal: Translate chapter X of the original faithfully
+  topics:
+  - A revelação
+  minutes: 20
+  sources_original:
+  - 11-x-a-revelacao.md
+- n: 11
+  title: Luís Alves
+  goal: Translate chapter XI of the original faithfully
+  topics:
+  - Luís Alves
+  minutes: 10
+  sources_original:
+  - 12-xi-luis-alves.md
+- n: 12
+  title: The Journey
+  goal: Translate chapter XII of the original faithfully
+  topics:
+  - A viagem
+  minutes: 10
+  sources_original:
+  - 13-xii-a-viagem.md
+- n: 13
+  title: Explanations
+  goal: Translate chapter XIII of the original faithfully
+  topics:
+  - Explicações
+  minutes: 10
+  sources_original:
+  - 14-xiii-explicacoes.md
+- n: 14
+  title: Ex-abrupto
+  goal: Translate chapter XIV of the original faithfully
+  topics:
+  - Ex-abrupto
+  minutes: 10
+  sources_original:
+  - 15-xiv-ex-abrupto.md
+- n: 15
+  title: Third-Party Claims
+  goal: Translate chapter XV of the original faithfully
+  topics:
+  - Embargos de terceiro
+  minutes: 10
+  sources_original:
+  - 16-xv-embargos-de-terceiro.md
+- n: 16
+  title: The Confession
+  goal: Translate chapter XVI of the original faithfully
+  topics:
+  - A confissão
+  minutes: 10
+  sources_original:
+  - 17-xvi-a-confissao.md
+- n: 17
+  title: The Letter
+  goal: Translate chapter XVII of the original faithfully
+  topics:
+  - A carta
+  minutes: 10
+  sources_original:
+  - 18-xvii-a-carta.md
+- n: 18
+  title: The School
+  goal: Translate chapter XVIII of the original faithfully
+  topics:
+  - A escola
+  minutes: 15
+  sources_original:
+  - 19-xviii-a-escola.md
+- n: 19
+  title: Conclusion
+  goal: Translate chapter XIX of the original faithfully
+  topics:
+  - Conclusão
+  minutes: 10
+  sources_original:
+  - 20-xix-conclusao.md
+next_steps: []
+covers:
+- machado-de-assis
+- a-mao-e-a-luva
+progress:
+- n: 1
+  done: '2026-11-28'
+  reread: '2026-11-28'
+  summary: 'Ch. I: Estêvão, heartbroken over Guiomar''s curt ''Forget all about it'', confides in Luís
+    Alves in 1853 Rio; Luís''s letter/postscript metaphor; Estêvão returns to São Paulo consoled. Terms:
+    failed courtship, postscript, Rua dos Ciganos.'
+- n: 2
+  done: '2026-11-28'
+  reread: '2026-11-28'
+  summary: 'Ch. II: Estêvão returns from São Paulo a bachelor of law, Lagrua partisan in the opera wars;
+    after Otello he visits Luís Alves in Botafogo and next morning sees a dressing gown in the neighboring
+    garden.'
+- n: 3
+  done: '2026-11-28'
+  reread: '2026-11-28'
+  summary: 'Ch. III: Estêvão watches the neighbor in the dressing gown, recognizes Guiomar (now the baroness''s
+    goddaughter), speaks to her at the fence; cool, polite talk; he leaves wondering whether he is entering
+    a drama or leaving a comedy.'
+- n: 4
+  done: '2026-11-28'
+  reread: '2026-11-28'
+  summary: 'Ch. IV: Guiomar tells her godmother the baroness about meeting Estêvão; Mrs. Oswald, the English
+    companion, reassures her; baroness cherishes a hidden plan for Guiomar''s happiness and fears a rival;
+    Guiomar''s toilette; the narrator promises Guiomar''s backstory.'
+- n: 5
+  done: '2026-11-28'
+  reread: '2026-11-28'
+  summary: 'Ch. V: Guiomar''s backstory: humble birth, widowed mother, solitary serious childhood, orphaned
+    at 13, school of Estêvão''s aunt, taken in by her godmother the baroness after Henriqueta''s death.'
+- n: 6
+  done: '2026-11-28'
+  reread: '2026-11-28'
+  summary: 'Ch. VI: Estêvão falls for Guiomar again; she snubs him at the theaters; Luís Alves, who once
+    courted her briefly, gets him hired as the baroness''s lawyer; Mrs. Oswald notices his passion and
+    sounds Guiomar out. Terms: postscript, città dolente, municipal judge.'
+- n: 7
+  done: '2026-11-28'
+  reread: '2026-11-28'
+  summary: 'Ch. VII: Mrs. Oswald presses Guiomar, who bristles; Jorge, the baroness''s affected nephew,
+    is introduced as the intended match; after two weeks Estêvão is tolerated by all while Guiomar stays
+    impassive. Terms: rival, Armida.'
+- n: 8
+  done: '2026-11-28'
+  reread: '2026-11-28'
+  summary: 'Ch. VIII: At the fence Estêvão declares his love to Guiomar, who gently but firmly offers
+    only esteem; the baroness, seeing them, tells Jorge they must talk. Terms: the decisive blow.'
+- n: 9
+  done: '2026-11-28'
+  reread: '2026-11-28'
+  summary: 'Ch. IX: The baroness learns from Jorge that he loves Guiomar and urges him on; Guiomar sleeps
+    untroubled after refusing Estêvão; Jorge slips a love letter into the novel Guiomar takes to bed.
+    Terms: sewing room, Constable edition.'
+- n: 10
+  done: '2026-11-28'
+  reread: '2026-11-28'
+  summary: 'Ch. X: Guiomar reads Jorge''s love letter, judges him and Estêvão; Mrs. Oswald, caught at
+    her door, reveals the baroness''s dream of the match; Guiomar, shaken, sighs ''Oh, my dreams!'' Terms:
+    the letter, the baroness''s campaign.'
+- n: 11
+  done: '2026-11-28'
+  reread: '2026-11-28'
+  summary: 'Ch. XI: Estêvão spends a week in solitude, thinking of death; the baroness summons him about
+    the lawsuit and announces the move to the country; he glimpses Guiomar at the carriage; Luís Alves
+    offers to test her heart if Estêvão gives up his pretensions, then concludes alone: ''she is an ambitious
+    woman.'' Terms: tilbury, Court, Caju.'
+- n: 12
+  done: '2026-11-28'
+  reread: '2026-11-28'
+  summary: 'Ch. XII: Jorge asks Luís Alves to join a conspiracy to stop the baroness''s trip to Cantagalo;
+    at the evening gathering Luís Alves argues against it but Guiomar insists the promise be kept; he
+    notices her spite when Jorge says he will go too, and tells her he will ''save the rest''. Terms:
+    Cantagalo, the Court.'
+- n: 13
+  done: '2026-11-28'
+  reread: '2026-11-28'
+  summary: 'Ch. XIII: Luís Alves covers his boldness with talk of the journey and tells Guiomar she has
+    a great and noble soul; narrator explains the baroness''s hopes for Jorge, Mrs. Oswald''s exaggerations,
+    Guiomar''s evasive reply to Jorge, and her view of both suitors (Estêvão a condor without wings, Jorge
+    a new Diogenes); she wants a man who can raise her high. Terms: campaign, elective affinity.'
+- n: 14
+  done: '2026-11-28'
+  reread: '2026-11-28'
+  summary: 'Ch. XIV: Guiomar had pushed the Cantagalo trip to escape Jorge, but Luís Alves and Jorge campaign
+    against it until cholera in Cantagalo cancels it; at the piano Luís Alves abruptly declares ''because
+    I love you''; Guiomar hides her turmoil from the baroness; Luís Alves tells Estêvão not to lose all
+    hope. Terms: ex-abrupto, cholera morbus.'
+- n: 15
+  done: '2026-11-28'
+  reread: '2026-11-28'
+  summary: 'Ch. XV: Luís Alves, elected deputy, asks Guiomar for forgiveness and she answers with a hand-clasp;
+    he defers the formal pledge; narrator shows her ambition choosing him; Mrs. Oswald''s ''Moor on the
+    coast'' plan makes Jorge propose before the baroness, and Guiomar answers ''I shall think it over''.
+    Terms: Third-Party Claims, sewing room, Sèvres.'
+- n: 16
+  done: '2026-11-28'
+  reread: '2026-11-28'
+  summary: 'Ch. XVI: at midnight Estêvão visits Luís Alves; Luís confesses that Guiomar loves him; a note
+    falls from the baroness''s window; Estêvão leaves in silence.'
+- n: 17
+  done: '2026-11-28'
+  reread: '2026-11-28'
+  summary: 'Ch. XVII: the note says ''Ask me''; Luís Alves proposes by letter; Guiomar''s night of anger
+    and gratitude is told; Mrs. Oswald fetches her to the baroness.'
+- n: 18
+  done: '2026-11-28'
+  reread: '2026-11-28'
+  summary: 'Ch. XVIII: the baroness offers Guiomar the choice; Guiomar feigns choosing Jorge and the baroness
+    grants Luís Alves; Jorge blames Mrs. Oswald; Luís Alves is received.'
+- n: 19
+  done: '2026-11-28'
+  reread: '2026-11-28'
+  summary: 'Ch. XIX: the engagement and wedding; Estêvão, on the wedding night, gives up his plan to die
+    and fades into anonymity; Guiomar and Luís Alves confirm their matched ambitions: the glove fits the
+    hand.'
+changes: []
+handoff:
+- Publicar na biblioteca real pelo modo 6 (autorizado em 2026-11-28); sem Notion.

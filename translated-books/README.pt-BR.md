@@ -10,6 +10,7 @@ Cada tradução fica numa pasta própria (`translated-books/<nome-do-livro>-<idi
 <!-- list:start -->
 | Livro | Nível | Capítulos | Edição | EPUB | Site |
 | --- | --- | --- | --- | --- | --- |
+| [The Hand and the Glove](a-mao-e-a-luva-en/) (en) | general reader → general reader | 19 | 1.0 · 2026-11-28 | [Baixar EPUB](https://github.com/Joshpcbrrj/biblioteca-syllabook/releases/download/epubs/a-mao-e-a-luva-en.epub) | [Ler no site](https://joshpcbrrj.github.io/biblioteca-syllabook/translated-books/a-mao-e-a-luva-en/) |
 | [From Gears to AI](historia-da-computacao-en/) (en) | beginner → intermediate | 12 | 1.0 · 2026-11-28 | [Baixar EPUB](https://github.com/Joshpcbrrj/biblioteca-syllabook/releases/download/epubs/historia-da-computacao-en.epub) | [Ler no site](https://joshpcbrrj.github.io/biblioteca-syllabook/translated-books/historia-da-computacao-en/) |
 <!-- list:end -->
 
