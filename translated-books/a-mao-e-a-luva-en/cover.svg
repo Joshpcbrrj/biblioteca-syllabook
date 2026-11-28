@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 2560" width="1600" height="2560" role="img"><title>Cover: The Hand and the Glove, by Machado de Assis, translated by Josué B. Almeida</title>
+<rect width="1600" height="2560" fill="#3B1426"/>
+<rect x="80" y="80" width="1440" height="2400" fill="none" stroke="#E8B4A0" stroke-width="6"/>
+<text x="800" y="330" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="80" letter-spacing="10" fill="#E8B4A0">MACHADO DE ASSIS</text>
+<text x="800" y="620" text-anchor="middle" font-family="Georgia, serif" font-size="230" font-weight="700" fill="#FAF6F1">The Hand</text>
+<text x="800" y="860" text-anchor="middle" font-family="Georgia, serif" font-size="230" font-weight="700" fill="#FAF6F1">and the</text>
+<text x="800" y="1100" text-anchor="middle" font-family="Georgia, serif" font-size="230" font-weight="700" fill="#E8B4A0">Glove</text>
+<rect x="560" y="1170" width="480" height="8" fill="#E8B4A0"/>
+<text x="800" y="1290" text-anchor="middle" font-family="Georgia, serif" font-size="72" font-style="italic" fill="#FAF6F1">A novel · 1874</text>
+<rect x="640" y="1480" width="320" height="420" rx="150" fill="none" stroke="#E8B4A0" stroke-width="10"/>
+<rect x="690" y="1530" width="220" height="320" rx="105" fill="#E8B4A0"/>
+<circle cx="800" cy="1690" r="38" fill="#3B1426"/>
+<text x="800" y="2260" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="66" fill="#FAF6F1">translated by Josué B. Almeida</text>
+</svg>
