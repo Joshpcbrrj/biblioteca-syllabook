@@ -1,0 +1,15 @@
+type: cards
+title: "O livro numa página: das engrenagens à IA em 12 passos"
+cards:
+  - {icon: calculator, title: "Contar e computar", items: ["calcular × computar", "Pascalina e aritmômetro", "cartão troca o desenho"]}
+  - {icon: cpu, title: "Babbage e Lovelace", items: ["diferencial só soma", "analítica: Store e Mill", "Nota G é fato, o resto não"]}
+  - {icon: table, title: "Cartões e censo", items: ["Hollerith e o censo de 1890", "computadores humanos", "analógico × digital"]}
+  - {icon: binary, title: "Boole, Turing, Shannon", items: ["E, OU, NÃO com 0 e 1", "fita, cabeça e estados", "bit: escolha entre duas"]}
+  - {icon: zap, title: "Guerra e válvulas", items: ["relé × válvula", "Z3, ABC, Colossus, ENIAC", "primeiro depende da definição"]}
+  - {icon: save, title: "Programa armazenado", items: ["programa na memória", "Baby 1948, EDSAC 1949", "UNIVAC, IBM, Zezinho"]}
+  - {icon: layers, title: "Transistor ao chip", items: ["transistor 1947", "chip e Lei de Moore", "Intel 4004, Patinho Feio"]}
+  - {icon: code, title: "Nasce o software", items: ["compilador traduz", "FORTRAN e COBOL", "mariposa não criou o bug"]}
+  - {icon: monitor, title: "PC em cada mesa", items: ["Altair e Apple II", "IBM PC e Macintosh", "Lei 7.232 e reserva"]}
+  - {icon: globe, title: "Tudo conectado", items: ["pacotes e ARPANET", "internet × web", "AlterNex e CGI.br"]}
+  - {icon: brain, title: "Máquinas que aprendem", items: ["Dartmouth e invernos", "Deep Blue e AlphaGo", "Transformer e ChatGPT"]}
+  - {icon: map, title: "Seu museu", items: ["15 marcos com causa", "checar uma lenda", "pelo menos 2 brasileiros"]}

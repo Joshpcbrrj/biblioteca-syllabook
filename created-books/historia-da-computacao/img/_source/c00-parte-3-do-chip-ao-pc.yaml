@@ -1,0 +1,12 @@
+type: cards
+title: "Parte 3: do chip ao computador pessoal (caps. 7 a 9)"
+cards:
+  - {icon: layers, title: "Transistor", items: ["dezembro de 1947", "Bell Labs", "sem vidro, sem peça móvel"]}
+  - {icon: cpu, title: "Circuito integrado", items: ["Kilby 1958", "Noyce 1959", "circuito num só pedaço"]}
+  - {icon: server, title: "System/360", items: ["7 de abril de 1964", "cinco modelos", "mesma programação"]}
+  - {icon: chart-line, title: "Lei de Moore", items: ["observação de 1965", "revisada em 1975", "dobra a cada dois anos"]}
+  - {icon: package, title: "Intel 4004", items: ["1971, 4 bits", "2.250 transistores", "primeiro microprocessador"]}
+  - {icon: code, title: "Compilador", items: ["traduz alto nível", "A-0 de Hopper, 1952", "FORTRAN 1957, COBOL 1960"]}
+  - {icon: bug, title: "Bug e Apollo", items: ["mariposa de 1947 existiu", "palavra bug é anterior", "Margaret Hamilton"]}
+  - {icon: terminal, title: "Unix e C", items: ["Unix, 1969", "C, 1972", "Bell Labs"]}
+  - {icon: monitor, title: "PC e reserva", items: ["Altair 1975, Alto 1974", "Apple II, IBM PC, Mac", "Lei 7.232/1984"]}

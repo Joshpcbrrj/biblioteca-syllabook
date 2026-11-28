@@ -1,0 +1,23 @@
+# Image credits
+
+- c01-pascalina.jpg: File:Arts et Metiers Pascaline dsc03869.jpg, David.Monniaux, CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0/), https://commons.wikimedia.org/wiki/File:Arts_et_Metiers_Pascaline_dsc03869.jpg
+- c01-jacquard.jpg: File:A Jacquard loom showing information punchcards, National Museum of Scotland.jpg, Stephencdickson, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0), https://commons.wikimedia.org/wiki/File:A_Jacquard_loom_showing_information_punchcards,_National_Museum_of_Scotland.jpg
+- c01-aritmometro.jpg: File:Arithmometer 1860.JPG, MKFI, Public domain, https://commons.wikimedia.org/wiki/File:Arithmometer_1860.JPG
+- c02-maquina-diferencial-2.jpg: File:Babbage Difference Engine.jpg, User:geni, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0), https://commons.wikimedia.org/wiki/File:Babbage_Difference_Engine.jpg
+- c02-lovelace.jpg: File:Ada Lovelace (crop 3-4).jpg, Margaret Sarah Carpenter, Public domain, https://commons.wikimedia.org/wiki/File:Ada_Lovelace_(crop_3-4).jpg
+- c03-pantografo.jpg: File:Census man using pantograph punch c. 1908.jpg, U.S. Census Bureau employees, Public domain, https://commons.wikimedia.org/wiki/File:Census_man_using_pantograph_punch_c._1908.jpg
+- c03-langley.jpg: File:Langley Women Computer with X-4 with Friden machine (LRC-1952-B701 P-74753).tiff, NASA Langley Research Center / NACA Langley, Public domain, https://commons.wikimedia.org/wiki/File:Langley_Women_Computer_with_X-4_with_Friden_machine_(LRC-1952-B701_P-74753).tiff
+- c03-integrador.jpg: File:Integrator Unit, Differential Analyzer, by Vannevar Bush with Harold Hazen, 1928-1931 - MIT Museum - Cambridge, MA - DSC09127.jpg, Daderot, CC0 (http://creativecommons.org/publicdomain/zero/1.0/deed.en), https://commons.wikimedia.org/wiki/File:Integrator_Unit,_Differential_Analyzer,_by_Vannevar_Bush_with_Harold_Hazen,_1928-1931_-_MIT_Museum_-_Cambridge,_MA_-_DSC09127.jpg
+- c05-bombe.jpg: File:A Turing Bombe, Bletchley Park - geograph.org.uk - 1590899.jpg, Ian Petticrew, CC BY-SA 2.0 (https://creativecommons.org/licenses/by-sa/2.0), https://commons.wikimedia.org/wiki/File:A_Turing_Bombe,_Bletchley_Park_-_geograph.org.uk_-_1590899.jpg
+- c05-eniac-valvula.jpg: File:ENIAC-changing a tube.jpg, M. Weik, Public domain, https://commons.wikimedia.org/wiki/File:ENIAC-changing_a_tube.jpg
+- c06-edsac.jpg: File:EDSAC (12).jpg, unknown author, CC BY 2.0 (https://creativecommons.org/licenses/by/2.0), https://commons.wikimedia.org/wiki/File:EDSAC_(12).jpg
+- c07-transistor.jpg: File:A replica of the first working transistor 02.jpg, Mister rf, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0), https://commons.wikimedia.org/wiki/File:A_replica_of_the_first_working_transistor_02.jpg
+- c08-hopper-univac.jpg: File:Grace Hopper and UNIVAC.jpg, Unknown author Unknown author, CC BY 2.0 (https://creativecommons.org/licenses/by/2.0), https://commons.wikimedia.org/wiki/File:Grace_Hopper_and_UNIVAC.jpg
+- c09-altair.jpg: File:2019-08-04 Altair 8800 Computer.jpg, Maksym Kozlenko, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0), https://commons.wikimedia.org/wiki/File:2019-08-04_Altair_8800_Computer.jpg
+- c09-xerox-alto.jpg: File:Xero Alto Computer.jpg, Bc4040, CC BY 4.0 (https://creativecommons.org/licenses/by/4.0), https://commons.wikimedia.org/wiki/File:Xero_Alto_Computer.jpg
+- c04-turing.jpg: File:Alan Turing (1912-1954) in 1936 at Princeton University.jpg, Unknown photographer, Public domain, https://commons.wikimedia.org/wiki/File:Alan_Turing_(1912-1954)_in_1936_at_Princeton_University.jpg
+- c10-imp.jpg: File:1969 ARPANET BBN IMP.jpg, ARPANET IMP, Public domain, https://commons.wikimedia.org/wiki/File:1969_ARPANET_BBN_IMP.jpg
+- c10-servidor-cern.jpg: File:CERN-first-server-p1030757.jpg, Rama, CC BY-SA 2.0 fr (https://creativecommons.org/licenses/by-sa/2.0/fr/deed.en), https://commons.wikimedia.org/wiki/File:CERN-first-server-p1030757.jpg
+- c10-iphone.jpg: File:First iPhone Macworld 2007 DSCF1283.agr.jpg, ArnoldReinhold, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0), https://commons.wikimedia.org/wiki/File:First_iPhone_Macworld_2007_DSCF1283.agr.jpg
+- c11-dartmouth-hall.jpg: File:Dartmouth College campus 2007-06-23 Dartmouth Hall 01.JPG, Kane5187, Public domain, https://commons.wikimedia.org/wiki/File:Dartmouth_College_campus_2007-06-23_Dartmouth_Hall_01.JPG
+- c11-alphago-partida1.png: File:Lee Sedol (B) vs AlphaGo (W) - Game 1.svg, Wesalius, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0), https://commons.wikimedia.org/wiki/File:Lee_Sedol_(B)_vs_AlphaGo_(W)_-_Game_1.svg

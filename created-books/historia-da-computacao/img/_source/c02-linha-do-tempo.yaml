@@ -1,0 +1,8 @@
+type: timeline
+title: Do projeto de 1821 à máquina construída em 2002
+events:
+  - {when: "1821", text: "Começa a Diferencial nº 1"}
+  - {when: "1834", text: "Nasce a ideia da Analítica"}
+  - {when: "1843", text: "Notas de Lovelace", highlight: true}
+  - {when: "1847–49", text: "Projeto da Diferencial nº 2"}
+  - {when: "2002", text: "Diferencial nº 2 funciona em Londres"}

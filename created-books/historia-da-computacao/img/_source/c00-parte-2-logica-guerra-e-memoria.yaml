@@ -1,0 +1,12 @@
+type: cards
+title: "Parte 2: lógica, guerra e memória (caps. 4 a 6)"
+cards:
+  - {icon: binary, title: "Lógica de Boole", items: ["obras de 1847 e 1854", "E, OU, NÃO", "contas com 0 e 1"]}
+  - {icon: terminal, title: "Máquina de Turing", items: ["1936–37", "fita, cabeça, estados", "universal: lê outra tabela"]}
+  - {icon: hash, title: "Shannon e o bit", items: ["relés e álgebra de Boole", "artigo de 1948", "bit: duas opções"]}
+  - {icon: zap, title: "Relé × válvula", items: ["relé: chave mecânica", "válvula: chave de vidro", "válvula é mais rápida"]}
+  - {icon: lock, title: "Colossus", items: ["válvulas de Flowers", "ataca a cifra Lorenz", "segredo até os anos 1970"]}
+  - {icon: users, title: "ENIAC", items: ["Mauchly e Eckert", "seis programadoras", "fios e chaves"]}
+  - {icon: save, title: "Programa armazenado", items: ["von Neumann, 1945", "programa junto dos dados", "Baby 1948, EDSAC 1949"]}
+  - {icon: rocket, title: "UNIVAC e IBM", items: ["UNIVAC I, 1951", "46 unidades", "IBM: nome de 1924"]}
+  - {icon: globe, title: "Zezinho do ITA", items: ["1961", "computador didático", "não executava computação"]}

@@ -1,0 +1,8 @@
+type: compare
+title: Calcular dá uma resposta; computar segue instruções trocáveis
+left: {title: "Calcular", icon: calculator, color: blue}
+right: {title: "Computar", icon: cpu, color: purple}
+rows:
+  - ["Pascalina: só soma", "Tear: o cartão muda o desenho"]
+  - ["Você gira as rodas a cada conta", "A máquina segue a fileira de furos"]
+  - ["Trocar a tarefa exige outra máquina", "Trocar a tarefa exige outros cartões"]

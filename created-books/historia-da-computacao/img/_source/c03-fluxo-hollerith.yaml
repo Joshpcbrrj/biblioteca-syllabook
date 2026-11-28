@@ -1,0 +1,8 @@
+type: flow
+title: Do formulário do censo ao número na tela do mostrador
+steps:
+  - {text: "Recenseador anota as respostas", note: "papel, casa por casa", kind: start}
+  - {text: "Funcionário perfura o cartão", note: "pantógrafo: ~500 cartões por dia"}
+  - {text: "Leitor de duas placas fecha sobre o cartão", note: "pinos atravessam os furos"}
+  - {text: "Pinos tocam mercúrio e fecham um circuito", note: "só onde há furo"}
+  - {text: "O mostrador avança uma unidade", note: "40 mostradores no tabulador de 1890", kind: end}

@@ -1,0 +1,103 @@
+# 14. Glossário
+
+> 🗺️ **Neste capítulo:** os termos do livro, em ordem alfabética, cada um com uma definição de uma frase e o capítulo que o explica. · ⏱️ consulta
+
+- **ábaco** (abacus): Superfície com marcadores móveis que guardam os números de uma conta enquanto ela é feita. [Capítulo 1](01-contar-antes-de-computar-do-abaco.md)
+- **aritmômetro** (arithmometer): Calculadora de quatro operações produzida a partir de 1820. [Capítulo 1](01-contar-antes-de-computar-do-abaco.md)
+- **ARPANET**: Rede de computadores ligada em outubro de 1969, ancestral da internet. [Capítulo 10](10-tudo-conectado-arpanet-web-e-celular.md)
+- **arquitetura de von Neumann** (von Neumann architecture): Organização de computador em que programa e dados ficam na mesma memória. [Capítulo 6](06-o-programa-vai-para-a-memoria-von-neumann.md)
+- **bit** (bit): Unidade de informação: uma escolha entre duas opções. [Capítulo 4](04-a-ideia-de-maquina-universal-boole-turing.md)
+- **cartão perfurado** (punched card): Cartão em que cada furo guarda uma informação: dados no censo, instruções no tear. [Capítulo 3](03-cartoes-censos-e-computadores-de-carne-e-osso.md)
+- **circuito integrado** (integrated circuit): Circuito completo feito num só pedaço de material. [Capítulo 7](07-do-transistor-ao-chip.md)
+- **Colossus**: Máquina de válvulas usada para atacar a cifra Lorenz, mantida em segredo até os anos 1970. [Capítulo 5](05-guerra-e-valvulas-zuse-colossus-e-eniac.md)
+- **compilador** (compiler): Programa que traduz uma linguagem de alto nível para instruções da máquina. [Capítulo 8](08-ensinar-a-maquina-a-entender-gente-o-nascimento-do-software.md)
+- **computador analógico** (analog computer): Máquina que representa quantidades por medidas contínuas, como o giro de um eixo. [Capítulo 3](03-cartoes-censos-e-computadores-de-carne-e-osso.md)
+- **computador humano** (human computer): Pessoa cuja profissão era calcular à mão. [Capítulo 3](03-cartoes-censos-e-computadores-de-carne-e-osso.md)
+- **computar** (to compute): Seguir instruções que podem ser trocadas, ao contrário de só calcular. [Capítulo 1](01-contar-antes-de-computar-do-abaco.md)
+- **engenharia de software** (software engineering): Área que trata de construir programas grandes de forma disciplinada. [Capítulo 8](08-ensinar-a-maquina-a-entender-gente-o-nascimento-do-software.md)
+- **ENIAC**: Máquina de válvulas de Mauchly e Eckert, programada por seis mulheres com fios e chaves. [Capítulo 5](05-guerra-e-valvulas-zuse-colossus-e-eniac.md)
+- **fato, interpretação e lenda**: As três camadas separadas ao checar uma história de origem. [Capítulo 2](02-babbage-e-lovelace-a-maquina-que-nao-ficou.md)
+- **interface gráfica** (graphical user interface, GUI): Uso de janelas, ícones e mouse para operar o computador. [Capítulo 9](09-um-computador-em-cada-mesa.md)
+- **invernos da IA** (AI winters): Nome dado depois a períodos de desânimo com a IA, como o que se seguiu ao relatório Lighthill (1972); as fontes do livro não trazem dados sobre cortes de verba. [Capítulo 11](11-maquinas-que-aprendem-a-longa-estrada.md)
+- **Lei de Moore** (Moore's law): Observação de que o número de componentes por chip dobra a cada cerca de dois anos. [Capítulo 7](07-do-transistor-ao-chip.md)
+- **lógica booleana** (Boolean logic): Contas com 0 e 1 e as operações E, OU e NÃO. [Capítulo 4](04-a-ideia-de-maquina-universal-boole-turing.md)
+- **mainframe** (mainframe): Computador grande, usado por empresas e governos, como os da linha System/360. [Capítulo 7](07-do-transistor-ao-chip.md)
+- **máquina analítica** (Analytical Engine): Projeto de Babbage de uso geral, com cartões, Store e Mill, nunca concluído. [Capítulo 2](02-babbage-e-lovelace-a-maquina-que-nao-ficou.md)
+- **máquina de Turing** (Turing machine): Modelo abstrato de computar com fita, cabeça e tabela de estados. [Capítulo 4](04-a-ideia-de-maquina-universal-boole-turing.md)
+- **máquina diferencial** (Difference Engine): Calculadora de tabelas de polinômios de Babbage, que usa só somas. [Capítulo 2](02-babbage-e-lovelace-a-maquina-que-nao-ficou.md)
+- **máquina universal** (universal machine): Máquina de Turing que lê a tabela de outra e faz o que ela faria. [Capítulo 4](04-a-ideia-de-maquina-universal-boole-turing.md)
+- **microprocessador** (microprocessor): Processador inteiro num único chip. [Capítulo 7](07-do-transistor-ao-chip.md)
+- **Patinho Feio**: Computador da Poli-USP (1972), base do G-10 e do MC 500 da Cobra. [Capítulo 7](07-do-transistor-ao-chip.md)
+- **programa armazenado** (stored program): Programa guardado na mesma memória que os dados. [Capítulo 6](06-o-programa-vai-para-a-memoria-von-neumann.md)
+- **redes neurais** (neural networks): Modelos de aprendizado de máquina que ajustam muitos números a partir de exemplos. [Capítulo 11](11-maquinas-que-aprendem-a-longa-estrada.md)
+- **relé** (relay): Chave eletromecânica, mais lenta que a válvula. [Capítulo 5](05-guerra-e-valvulas-zuse-colossus-e-eniac.md)
+- **reserva de mercado**: Nome dado depois às restrições da Lei 7.232, de 1984, que protegiam empresas nacionais de informática; a expressão não aparece no texto da lei. [Capítulo 9](09-um-computador-em-cada-mesa.md)
+- **sistema operacional** (operating system): Programa que gerencia os recursos do computador para os outros programas. [Capítulo 8](08-ensinar-a-maquina-a-entender-gente-o-nascimento-do-software.md)
+- **smartphone** (smartphone): Telefone que também é computador e aparelho de internet, popularizado pelo iPhone (2007). [Capítulo 10](10-tudo-conectado-arpanet-web-e-celular.md)
+- **TCP/IP** (TCP/IP): Conjunto de protocolos que liga redes diferentes, adotado pela ARPANET em 1983. [Capítulo 10](10-tudo-conectado-arpanet-web-e-celular.md)
+- **tear de Jacquard** (Jacquard loom): Tear controlado por cartões perfurados: trocar o cartão troca o desenho. [Capítulo 1](01-contar-antes-de-computar-do-abaco.md)
+- **Transformer** (Transformer): Arquitetura de rede neural baseada só em atenção, apresentada em 2017. [Capítulo 11](11-maquinas-que-aprendem-a-longa-estrada.md)
+- **transistor** (transistor): Chave de semicondutor, sem vidro e sem peça móvel, apresentada em 1947. [Capítulo 7](07-do-transistor-ao-chip.md)
+- **válvula** (vacuum tube): Chave eletrônica de vidro, mais rápida que o relé. [Capítulo 5](05-guerra-e-valvulas-zuse-colossus-e-eniac.md)
+- **web** (World Wide Web): Serviço de páginas com hiperlinks que funciona sobre a internet. [Capítulo 10](10-tudo-conectado-arpanet-web-e-celular.md)
+
+<!-- credit:start -->
+---
+
+📘 *Criado pela skill Claude Syllabook - Joshpcbrrj* · [github.com/Joshpcbrrj/syllabook](https://github.com/Joshpcbrrj/syllabook)
+<!-- credit:end -->
+
+<!-- nav:start -->
+---
+
+[◀ Capítulo anterior](13-simulado-final.md) · [Mapa do livro](../README.md)
+<!-- nav:end -->
+
+<!-- index:start -->
+## Índice remissivo
+
+- arquitetura de von Neumann: [6. O programa vai para a memória: von Neumann e os primeiros computadores à venda](06-o-programa-vai-para-a-memoria-von-neumann.md)
+- bit e teoria da informação: [4. A ideia de máquina universal: Boole, Turing e Shannon](04-a-ideia-de-maquina-universal-boole-turing.md)
+- calculadora mecânica: [1. Contar antes de computar: do ábaco às calculadoras mecânicas](01-contar-antes-de-computar-do-abaco.md)
+- calcular × computar: [1. Contar antes de computar: do ábaco às calculadoras mecânicas](01-contar-antes-de-computar-do-abaco.md)
+- cartão perfurado de dados: [3. Cartões, censos e computadores de carne e osso](03-cartoes-censos-e-computadores-de-carne-e-osso.md)
+- circuito integrado: [7. Do transistor ao chip](07-do-transistor-ao-chip.md)
+- Colossus e a quebra de códigos: [5. Guerra e válvulas: Zuse, Colossus e ENIAC](05-guerra-e-valvulas-zuse-colossus-e-eniac.md)
+- compilador: [8. Ensinar a máquina a entender gente: o nascimento do software](08-ensinar-a-maquina-a-entender-gente-o-nascimento-do-software.md)
+- computador analógico: [3. Cartões, censos e computadores de carne e osso](03-cartoes-censos-e-computadores-de-carne-e-osso.md)
+- computador comercial: [6. O programa vai para a memória: von Neumann e os primeiros computadores à venda](06-o-programa-vai-para-a-memoria-von-neumann.md)
+- computador pessoal: [9. Um computador em cada mesa](09-um-computador-em-cada-mesa.md)
+- computadores humanos: [3. Cartões, censos e computadores de carne e osso](03-cartoes-censos-e-computadores-de-carne-e-osso.md)
+- comutação de pacotes: [10. Tudo conectado: ARPANET, web e celular](10-tudo-conectado-arpanet-web-e-celular.md)
+- engenharia de software: [8. Ensinar a máquina a entender gente: o nascimento do software](08-ensinar-a-maquina-a-entender-gente-o-nascimento-do-software.md)
+- ENIAC: [5. Guerra e válvulas: Zuse, Colossus e ENIAC](05-guerra-e-valvulas-zuse-colossus-e-eniac.md)
+- grandes modelos de linguagem: [11. Máquinas que aprendem: a longa estrada da inteligência artificial](11-maquinas-que-aprendem-a-longa-estrada.md)
+- IA simbólica: [11. Máquinas que aprendem: a longa estrada da inteligência artificial](11-maquinas-que-aprendem-a-longa-estrada.md)
+- interface gráfica: [9. Um computador em cada mesa](09-um-computador-em-cada-mesa.md)
+- internet no Brasil: [10. Tudo conectado: ARPANET, web e celular](10-tudo-conectado-arpanet-web-e-celular.md)
+- invernos da IA: [11. Máquinas que aprendem: a longa estrada da inteligência artificial](11-maquinas-que-aprendem-a-longa-estrada.md)
+- Lei de Moore: [7. Do transistor ao chip](07-do-transistor-ao-chip.md)
+- linguagem de alto nível: [8. Ensinar a máquina a entender gente: o nascimento do software](08-ensinar-a-maquina-a-entender-gente-o-nascimento-do-software.md)
+- linha do tempo comentada: [12. Projeto final: seu museu da computação](12-projeto-final-seu-museu-da-computacao.md)
+- lógica booleana: [4. A ideia de máquina universal: Boole, Turing e Shannon](04-a-ideia-de-maquina-universal-boole-turing.md)
+- mainframe: [7. Do transistor ao chip](07-do-transistor-ao-chip.md)
+- microprocessador: [7. Do transistor ao chip](07-do-transistor-ao-chip.md)
+- máquina analítica: [2. Babbage e Lovelace: a máquina que não ficou pronta](02-babbage-e-lovelace-a-maquina-que-nao-ficou.md)
+- máquina de Turing: [4. A ideia de máquina universal: Boole, Turing e Shannon](04-a-ideia-de-maquina-universal-boole-turing.md)
+- máquina diferencial: [2. Babbage e Lovelace: a máquina que não ficou pronta](02-babbage-e-lovelace-a-maquina-que-nao-ficou.md)
+- máquina tabuladora: [3. Cartões, censos e computadores de carne e osso](03-cartoes-censos-e-computadores-de-carne-e-osso.md)
+- notas de Ada Lovelace: [2. Babbage e Lovelace: a máquina que não ficou pronta](02-babbage-e-lovelace-a-maquina-que-nao-ficou.md)
+- Patinho Feio: [7. Do transistor ao chip](07-do-transistor-ao-chip.md)
+- primeiros computadores no Brasil: [6. O programa vai para a memória: von Neumann e os primeiros computadores à venda](06-o-programa-vai-para-a-memoria-von-neumann.md)
+- programa armazenado: [6. O programa vai para a memória: von Neumann e os primeiros computadores à venda](06-o-programa-vai-para-a-memoria-von-neumann.md)
+- redes neurais e aprendizado de máquina: [11. Máquinas que aprendem: a longa estrada da inteligência artificial](11-maquinas-que-aprendem-a-longa-estrada.md)
+- relé e válvula: [5. Guerra e válvulas: Zuse, Colossus e ENIAC](05-guerra-e-valvulas-zuse-colossus-e-eniac.md)
+- reserva de mercado de informática: [9. Um computador em cada mesa](09-um-computador-em-cada-mesa.md)
+- sistema operacional: [8. Ensinar a máquina a entender gente: o nascimento do software](08-ensinar-a-maquina-a-entender-gente-o-nascimento-do-software.md)
+- smartphone: [10. Tudo conectado: ARPANET, web e celular](10-tudo-conectado-arpanet-web-e-celular.md)
+- software como produto: [9. Um computador em cada mesa](09-um-computador-em-cada-mesa.md)
+- TCP/IP: [10. Tudo conectado: ARPANET, web e celular](10-tudo-conectado-arpanet-web-e-celular.md)
+- tear de Jacquard: [1. Contar antes de computar: do ábaco às calculadoras mecânicas](01-contar-antes-de-computar-do-abaco.md)
+- transistor: [7. Do transistor ao chip](07-do-transistor-ao-chip.md)
+- World Wide Web: [10. Tudo conectado: ARPANET, web e celular](10-tudo-conectado-arpanet-web-e-celular.md)
+<!-- index:end -->

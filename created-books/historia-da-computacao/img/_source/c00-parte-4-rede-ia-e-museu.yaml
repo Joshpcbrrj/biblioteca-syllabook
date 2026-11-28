@@ -1,0 +1,12 @@
+type: cards
+title: "Parte 4: rede, inteligência artificial e museu (caps. 10 a 12)"
+cards:
+  - {icon: network, title: "Comutação de pacotes", items: ["mensagem em pacotes", "numerados e remontados", "caminhos diferentes"]}
+  - {icon: wifi, title: "ARPANET e TCP/IP", items: ["ligada em outubro de 1969", "TCP/IP em 1º/1/1983", "liga redes diferentes"]}
+  - {icon: globe, title: "Web", items: ["Berners-Lee, 1989", "liberada no CERN, 1991", "web ≠ internet"]}
+  - {icon: smartphone, title: "iPhone", items: ["anunciado em 9/1/2007", "telefone, iPod, internet", "celular vira computador"]}
+  - {icon: link, title: "Internet no Brasil", items: ["AlterNex, julho de 1989", "RNP e CGI.br (1995)", "internet comercial"]}
+  - {icon: message-circle, title: "Teste e Dartmouth", items: ["Turing, 1950", "Dartmouth, 31/8/1955", "invernos da IA"]}
+  - {icon: brain, title: "Deep Blue a AlphaGo", items: ["Deep Blue 1997", "rede de 2012: 18,9% de erro", "AlphaGo 4 a 1, 2016"]}
+  - {icon: sparkles, title: "Transformer", items: ["atenção, 2017", "ChatGPT, 2022", "AI Act em vigor 2024"]}
+  - {icon: map, title: "Museu", items: ["15 marcos com causa", "checar uma lenda", "2+ marcos brasileiros"]}

@@ -1,0 +1,8 @@
+type: compare
+title: A diferencial calcula tabelas; a analítica seguiria instruções
+left: {title: "Máquina Diferencial", icon: calculator, color: blue}
+right: {title: "Máquina Analítica", icon: cpu, color: purple}
+rows:
+  - ["Uma tarefa: tabelas de polinômios", "Uso geral, com instruções em cartões"]
+  - ["Só soma, pelo método das diferenças", "As quatro operações, com desvio e repetição"]
+  - ["Projeto de 1821; nº 2 em 1847–1849", "Concebida em 1834; nunca concluída"]

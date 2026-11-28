@@ -1,0 +1,12 @@
+type: cards
+title: "Parte 1: das contas à máquina universal (caps. 1 a 3)"
+cards:
+  - {icon: calculator, title: "Ábaco e Salamina", items: ["c. 300 a.C., mármore", "guarda números da conta", "quem calcula é a pessoa"]}
+  - {icon: settings, title: "Pascalina e Leibniz", items: ["Pascalina 1642, soma", "~50 feitas, ~15 vendidas", "tambor de Leibniz multiplica"]}
+  - {icon: file, title: "Tear de Jacquard", items: ["cartão perfurado, 1801", "trocar cartão, trocar desenho", "instruções trocáveis"]}
+  - {icon: cpu, title: "Máquina Diferencial", items: ["polinômios só com somas", "nº 1 inacabada", "nº 2 construída em 2002"]}
+  - {icon: database, title: "Máquina Analítica", items: ["Store e Mill", "cartões, 1834", "nunca concluída"]}
+  - {icon: notebook-pen, title: "Notas de Lovelace", items: ["publicadas em 1843", "Nota G: Bernoulli", "fato × interpretação × lenda"]}
+  - {icon: table, title: "Censo de 1890", items: ["63 milhões de pessoas", "Hollerith vence o concurso", "cartão guarda dados"]}
+  - {icon: users, title: "Computadores humanos", items: ["calculavam à mão", "Langley: equipe de mulheres", "profissão antes da máquina"]}
+  - {icon: chart-line, title: "Analisador de Bush", items: ["analógico, MIT, 1928", "eixos e engrenagens", "analógico × digital"]}

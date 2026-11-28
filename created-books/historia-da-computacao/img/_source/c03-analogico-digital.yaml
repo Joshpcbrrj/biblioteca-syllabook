@@ -1,0 +1,8 @@
+type: compare
+title: Analógico mede uma quantidade contínua; digital conta dígitos
+left: {title: "Analógico", color: blue}
+right: {title: "Digital", color: purple}
+rows:
+  - ["Analisador de Bush: o giro de eixos representa os números", "Máquinas de Babbage: uma roda por dígito, de 0 a 9"]
+  - ["Resolve equações de forma aproximada", "Só valores inteiros são válidos; a roda fora de posição trava"]
+  - ["Cada problema novo pede remontar eixos e conexões", "Os dados entram como números (e como furos em cartões)"]

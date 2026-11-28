@@ -1,0 +1,572 @@
+title: Das engrenagens à IA
+subtitle: 'Uma história da computação: máquinas, programas e pessoas'
+slug: historia-da-computacao
+origin: created
+language: pt-BR
+conversation_language: pt-BR
+profiles:
+- knowledge
+level:
+  start: iniciante
+  end: intermediário
+audience: Pessoas curiosas, sem formação em computação, que querem entender de onde vieram os computadores
+  e a IA de hoje
+goal: Contar, com datas e nomes certos, a história da computação das calculadoras mecânicas à IA generativa,
+  explicando as causas de cada virada e separando fato de lenda
+prerequisites:
+- nada
+reference_version: Estado da IA conferido em novembro de 2026
+review_by: 2027-11
+reviewed_on: ''
+editions: []
+notion_url: ''
+sources:
+- title: Timeline of Computer History (Computer History Museum)
+  url: https://www.computerhistory.org/timeline/computers/
+  checked: '2026-11-27'
+- title: 15-292 History of Computing, lectures (Carnegie Mellon University)
+  url: https://www.cs.cmu.edu/~tcortina/15292s17/lectures.html
+  checked: '2026-11-27'
+- title: STS.035 The History of Computing, syllabus (MIT)
+  url: https://web.mit.edu/STS.035/www/syllabus.htm
+  checked: '2026-11-27'
+- title: The Bug in the Computer Bug Story (JSTOR Daily)
+  url: https://daily.jstor.org/the-bug-in-the-computer-bug-story
+  checked: '2026-11-27'
+- title: 'Debugging the mythology: was Ada Lovelace really the first computer programmer? (Prospect)'
+  url: https://prospectmagazine.co.uk/ideas/technology/38160/debugging-the-mythology-was-ada-lovelace-really-the-first-computer-programmer
+  checked: '2026-11-27'
+- title: O legado do Patinho Feio (Revista Pesquisa FAPESP, dez. 2022)
+  url: https://revistapesquisa.fapesp.br/o-legado-do-patinho-feio/
+  checked: '2026-11-27'
+- title: 'José Ellis Ripper Filho: alternativas do saber (Revista Pesquisa FAPESP)'
+  url: https://revistapesquisa.fapesp.br/jos%C3%A9-ellis-ripper-filho-alternativas-do-saber/
+  checked: '2026-11-27'
+- title: Lei nº 7.232, de 29 de outubro de 1984, publicação original (Câmara dos Deputados)
+  url: https://www2.camara.leg.br/legin/fed/lei/1980-1987/lei-7232-29-outubro-1984-356182-publicacaooriginal-1-pl.html
+  checked: '2026-11-27'
+- title: Internet no Brasil (CGI.br, artigo de Carlos Alberto Afonso, 1996)
+  url: https://www.cgi.br/noticia/releases/internet-no-brasil/
+  checked: '2026-11-27'
+- title: Mechanical Calculation (Whipple Museum, University of Cambridge)
+  url: https://www.whipplemuseum.cam.ac.uk/node/158
+  checked: '2026-11-27'
+- title: Schickard's Calculator and The Pascaline (CHM Revolution)
+  url: https://www.computerhistory.org/revolution/calculators/1/47
+  checked: '2026-11-27'
+- title: Mass-Produced Calculators (CHM Revolution)
+  url: https://www.computerhistory.org/revolution/calculators/1/52
+  checked: '2026-11-27'
+- title: 'Sparking Innovation: The Jacquard Loom (The Henry Ford)'
+  url: https://www.thehenryford.org/explore/blog/sparking-innovation-the-jacquard-loom
+  checked: '2026-11-27'
+- title: 'The Abacus: A Brief History (Toronto Metropolitan University)'
+  url: https://www.ee.torontomu.ca/~elf/abacus/history.html
+  checked: '2026-11-27'
+- title: 'The Babbage Engine: Engines (Computer History Museum)'
+  url: https://www.computerhistory.org/babbage/engines/
+  checked: '2026-11-27'
+- title: Ada Lovelace (Computer History Museum)
+  url: https://www.computerhistory.org/babbage/adalovelace/
+  checked: '2026-11-27'
+- title: The Babbage Engine (Computer History Museum)
+  url: https://www.computerhistory.org/babbage/
+  checked: '2026-11-27'
+- title: 'Making Sense of the Census: Hollerith''s Punched Card Solution (CHM Revolution)'
+  url: https://www.computerhistory.org/revolution/story/2
+  checked: '2026-11-27'
+- title: The Hollerith Machine (US Census Bureau)
+  url: https://www.census.gov/about/history/bureau-history/census-innovations/technology/hollerith-machine.html
+  checked: '2026-11-27'
+- title: 'When the Computer Wore a Skirt: Langley''s Computers, 1935-1970 (NASA History)'
+  url: https://www.nasa.gov/history/when-the-computer-wore-a-skirt-langleys-computers-1935-1970/
+  checked: '2026-11-27'
+- title: Bush's Analog Solution (CHM Revolution)
+  url: https://www.computerhistory.org/revolution/story/143
+  checked: '2026-11-27'
+- title: Alan Turing (Stanford Encyclopedia of Philosophy)
+  url: https://plato.stanford.edu/entries/turing/
+  checked: '2026-11-27'
+- title: Deep Blue (IBM)
+  url: https://www.ibm.com/history/deep-blue
+  checked: '2026-11-27'
+- title: Attention Is All You Need (arXiv 1706.03762)
+  url: https://arxiv.org/abs/1706.03762
+  checked: '2026-11-27'
+approved_on: '2026-11-27'
+edition: '1.0'
+human_review: false
+choices:
+  images: real
+  reading: large
+concepts:
+- id: calcular-vs-computar
+  name: calcular × computar
+  chapter: 1
+  depends: []
+- id: calculadora-mecanica
+  name: calculadora mecânica
+  chapter: 1
+  depends:
+  - calcular-vs-computar
+- id: tear-jacquard
+  name: tear de Jacquard
+  chapter: 1
+  depends: []
+- id: maquina-diferencial
+  name: máquina diferencial
+  chapter: 2
+  depends:
+  - calculadora-mecanica
+- id: maquina-analitica
+  name: máquina analítica
+  chapter: 2
+  depends:
+  - maquina-diferencial
+  - tear-jacquard
+- id: notas-lovelace
+  name: notas de Ada Lovelace
+  chapter: 2
+  depends:
+  - maquina-analitica
+- id: cartao-perfurado
+  name: cartão perfurado de dados
+  chapter: 3
+  depends:
+  - tear-jacquard
+- id: tabuladora
+  name: máquina tabuladora
+  chapter: 3
+  depends:
+  - cartao-perfurado
+- id: computadores-humanos
+  name: computadores humanos
+  chapter: 3
+  depends:
+  - calcular-vs-computar
+- id: computador-analogico
+  name: computador analógico
+  chapter: 3
+  depends:
+  - calcular-vs-computar
+- id: logica-booleana
+  name: lógica booleana
+  chapter: 4
+  depends:
+  - calcular-vs-computar
+- id: maquina-de-turing
+  name: máquina de Turing
+  chapter: 4
+  depends:
+  - notas-lovelace
+- id: bit
+  name: bit e teoria da informação
+  chapter: 4
+  depends:
+  - logica-booleana
+- id: rele-e-valvula
+  name: relé e válvula
+  chapter: 5
+  depends:
+  - logica-booleana
+- id: colossus-enigma
+  name: Colossus e a quebra de códigos
+  chapter: 5
+  depends:
+  - rele-e-valvula
+- id: eniac
+  name: ENIAC
+  chapter: 5
+  depends:
+  - rele-e-valvula
+  - computadores-humanos
+- id: programa-armazenado
+  name: programa armazenado
+  chapter: 6
+  depends:
+  - eniac
+  - maquina-de-turing
+- id: arquitetura-von-neumann
+  name: arquitetura de von Neumann
+  chapter: 6
+  depends:
+  - programa-armazenado
+- id: computador-comercial
+  name: computador comercial
+  chapter: 6
+  depends:
+  - programa-armazenado
+  - tabuladora
+- id: primeiros-computadores-brasil
+  name: primeiros computadores no Brasil
+  chapter: 6
+  depends:
+  - programa-armazenado
+- id: transistor
+  name: transistor
+  chapter: 7
+  depends:
+  - rele-e-valvula
+- id: patinho-feio
+  name: Patinho Feio
+  chapter: 7
+  depends:
+  - primeiros-computadores-brasil
+  - circuito-integrado
+- id: circuito-integrado
+  name: circuito integrado
+  chapter: 7
+  depends:
+  - transistor
+- id: lei-de-moore
+  name: Lei de Moore
+  chapter: 7
+  depends:
+  - circuito-integrado
+- id: mainframe
+  name: mainframe
+  chapter: 7
+  depends:
+  - computador-comercial
+  - transistor
+- id: microprocessador
+  name: microprocessador
+  chapter: 7
+  depends:
+  - circuito-integrado
+  - arquitetura-von-neumann
+- id: compilador
+  name: compilador
+  chapter: 8
+  depends:
+  - programa-armazenado
+- id: linguagem-alto-nivel
+  name: linguagem de alto nível
+  chapter: 8
+  depends:
+  - compilador
+- id: sistema-operacional
+  name: sistema operacional
+  chapter: 8
+  depends:
+  - mainframe
+- id: engenharia-de-software
+  name: engenharia de software
+  chapter: 8
+  depends:
+  - linguagem-alto-nivel
+- id: computador-pessoal
+  name: computador pessoal
+  chapter: 9
+  depends:
+  - microprocessador
+  - sistema-operacional
+- id: interface-grafica
+  name: interface gráfica
+  chapter: 9
+  depends:
+  - computador-pessoal
+- id: software-como-produto
+  name: software como produto
+  chapter: 9
+  depends:
+  - computador-pessoal
+  - linguagem-alto-nivel
+- id: reserva-de-mercado
+  name: reserva de mercado de informática
+  chapter: 9
+  depends:
+  - patinho-feio
+  - computador-pessoal
+- id: comutacao-pacotes
+  name: comutação de pacotes
+  chapter: 10
+  depends:
+  - bit
+- id: tcp-ip
+  name: TCP/IP
+  chapter: 10
+  depends:
+  - comutacao-pacotes
+- id: web
+  name: World Wide Web
+  chapter: 10
+  depends:
+  - tcp-ip
+  - computador-pessoal
+- id: internet-no-brasil
+  name: internet no Brasil
+  chapter: 10
+  depends:
+  - tcp-ip
+  - reserva-de-mercado
+- id: smartphone
+  name: smartphone
+  chapter: 10
+  depends:
+  - web
+  - lei-de-moore
+  - interface-grafica
+- id: ia-simbolica
+  name: IA simbólica
+  chapter: 11
+  depends:
+  - maquina-de-turing
+  - linguagem-alto-nivel
+- id: invernos-da-ia
+  name: invernos da IA
+  chapter: 11
+  depends:
+  - ia-simbolica
+- id: redes-neurais
+  name: redes neurais e aprendizado de máquina
+  chapter: 11
+  depends:
+  - ia-simbolica
+  - lei-de-moore
+- id: modelos-de-linguagem
+  name: grandes modelos de linguagem
+  chapter: 11
+  depends:
+  - redes-neurais
+  - web
+- id: linha-do-tempo-comentada
+  name: linha do tempo comentada
+  chapter: 12
+  depends:
+  - modelos-de-linguagem
+  - smartphone
+  - internet-no-brasil
+chapters:
+- n: 1
+  title: 'Contar antes de computar: do ábaco às calculadoras mecânicas'
+  goal: Montar uma linha do tempo de 5 marcos, do ábaco ao tear de Jacquard, e explicar a diferença entre
+    calcular e computar
+  topics:
+  - ábaco e tabelas
+  - Pascalina e Leibniz
+  - aritmômetro
+  - tear de Jacquard
+  minutes: 40
+  sources_original: []
+- n: 2
+  title: 'Babbage e Lovelace: a máquina que não ficou pronta'
+  goal: Comparar a máquina diferencial e a analítica e avaliar, com fontes, o título de 'primeira programadora'
+  topics:
+  - máquina diferencial
+  - máquina analítica
+  - notas de Lovelace
+  - lenda × registro
+  minutes: 45
+  sources_original: []
+- n: 3
+  title: Cartões, censos e computadores de carne e osso
+  goal: Explicar como Hollerith acelerou o censo de 1890 e quem eram os 'computadores humanos'
+  topics:
+  - Hollerith e o censo
+  - origem da IBM
+  - computadoras humanas
+  - analisador diferencial de Bush
+  minutes: 45
+  sources_original: []
+- n: 4
+  title: 'A ideia de máquina universal: Boole, Turing e Shannon'
+  goal: Descrever com suas palavras o que uma máquina de Turing faz e por que o bit mudou tudo
+  topics:
+  - lógica de Boole
+  - Turing 1936
+  - Shannon e os circuitos
+  - bit
+  minutes: 50
+  sources_original: []
+- n: 5
+  title: 'Guerra e válvulas: Zuse, Colossus e ENIAC'
+  goal: Ordenar as primeiras máquinas eletrônicas e explicar a disputa sobre 'o primeiro computador'
+  topics:
+  - Zuse e o Z3
+  - Atanasoff-Berry
+  - Bletchley Park e Colossus
+  - ENIAC e suas programadoras
+  minutes: 50
+  sources_original: []
+- n: 6
+  title: 'O programa vai para a memória: von Neumann e os primeiros computadores à venda'
+  goal: Explicar o que é programa armazenado e por que ele permitiu a indústria de computadores
+  topics:
+  - EDVAC e o relatório de von Neumann
+  - Manchester Baby
+  - UNIVAC
+  - IBM entra no jogo
+  - 'Brasil: os primeiros computadores e o Zezinho do ITA (1961)'
+  minutes: 45
+  sources_original: []
+- n: 7
+  title: Do transistor ao chip
+  goal: Ligar transistor, circuito integrado e microprocessador numa cadeia de causa e efeito até o barateamento
+    dos computadores
+  topics:
+  - transistor (1947)
+  - circuito integrado
+  - System/360 e mainframes
+  - Lei de Moore
+  - Intel 4004
+  - 'Brasil: o Patinho Feio da Poli-USP (1972), o G-10 e a Cobra'
+  minutes: 50
+  sources_original: []
+- n: 8
+  title: 'Ensinar a máquina a entender gente: o nascimento do software'
+  goal: Explicar o que um compilador faz e reconhecer os marcos de FORTRAN, COBOL, Unix e da engenharia
+    de software
+  topics:
+  - Grace Hopper e o A-0
+  - FORTRAN e COBOL
+  - o mito do primeiro 'bug'
+  - Margaret Hamilton e a Apollo
+  - Unix e C
+  minutes: 50
+  sources_original: []
+- n: 9
+  title: Um computador em cada mesa
+  goal: Explicar por que o computador pessoal surgiu nos anos 1970 e quais ideias do Xerox PARC chegaram
+    até nós
+  topics:
+  - Altair e os clubes
+  - Apple II e IBM PC
+  - Xerox PARC e a interface gráfica
+  - Microsoft e o software vendido
+  - 'Brasil: CAPRE, SEI e a reserva de mercado (Lei 7.232/1984)'
+  minutes: 45
+  sources_original: []
+- n: 10
+  title: 'Tudo conectado: ARPANET, web e celular'
+  goal: Distinguir internet de web e traçar o caminho da ARPANET ao smartphone
+  topics:
+  - comutação de pacotes
+  - ARPANET e TCP/IP
+  - Berners-Lee e a web
+  - busca e redes sociais
+  - smartphone
+  - 'Brasil: AlterNex, RNP, CGI.br e a internet comercial (1995)'
+  minutes: 50
+  sources_original: []
+- n: 11
+  title: 'Máquinas que aprendem: a longa estrada da inteligência artificial'
+  goal: Contar as fases da IA, de Dartmouth aos grandes modelos de linguagem, e separar o que a IA atual
+    faz do que se diz dela
+  topics:
+  - teste de Turing e Dartmouth
+  - invernos da IA
+  - Deep Blue e AlphaGo
+  - aprendizado profundo
+  - transformers e IA generativa
+  minutes: 55
+  sources_original: []
+- n: 12
+  title: 'Projeto final: seu museu da computação'
+  goal: Montar uma linha do tempo comentada de 15 marcos, com uma causa por virada e um mito checado com
+    fonte
+  topics:
+  - escolher marcos
+  - causa e efeito
+  - checar uma lenda
+  - quem ficou de fora
+  - pelo menos 2 marcos brasileiros
+  minutes: 60
+  sources_original: []
+next_steps:
+- title: Como um computador funciona por dentro
+  why: Para entender na prática os bits, a lógica e a memória que este livro apresentou na história
+  topics:
+  - portas lógicas
+  - binário
+  - CPU e memória
+- title: História da internet e da cultura digital
+  why: Para aprofundar redes, web, redes sociais e seus efeitos na sociedade
+  topics:
+  - protocolos
+  - web 2.0
+  - privacidade
+- title: IA para curiosos
+  why: Para entender como funcionam e como usar com critério as IAs de hoje
+  topics:
+  - aprendizado de máquina
+  - modelos de linguagem
+  - limites e riscos
+covers:
+- historia-da-computacao
+- hardware-historico
+- historia-do-software
+- historia-da-ia
+progress:
+- n: 1
+  done: '2026-11-27'
+  reread: '2026-11-27'
+  summary: Ábaco e tábua de Salamina, Pascalina (vai um), tambor de Leibniz, aritmômetro, tear de Jacquard;
+    diferença calcular × computar; analogia da receita (máquina fixa, instruções trocáveis); fato × interpretação
+- n: 2
+  done: '2026-11-27'
+  reread: '2026-11-27'
+  summary: Máquina Diferencial (diferenças finitas, só somas; nº1 inacabada, nº2 construída em 2002),
+    Máquina Analítica (Store/Mill, cartões), notas de Lovelace e Nota G; fato × interpretação × lenda
+    sobre 'primeira programadora'; análise de fontes (CHM × Prospect); analogia da receita.
+- n: 3
+  done: '2026-11-27'
+  reread: '2026-11-27'
+  summary: 'Censo de 1890 e cartões de Hollerith (cartão de dados × instrução), tabuladora com pinos e
+    mercúrio, conta de dias de trabalho; computadores humanos (Langley/NACA); analisador diferencial de
+    Bush (analógico × digital). Analogia da receita: cartão como ingrediente. Fusão Hollerith→IBM adiada
+    ao cap. 6.'
+- n: 4
+  done: '2026-11-28'
+  reread: '2026-11-28'
+  summary: 'Boole (1847, 1854): lógica como contas com 0 e 1 (E, OU, NÃO). Turing 1936–37: máquina de
+    Turing e máquina universal, com simulador em Python. Shannon: tese do MIT sobre relés e álgebra booleana
+    (MIT registra 1940), meio-somador, artigo de 1948 e o bit. Fonte-desafio: datas divergentes da tese.
+    Analogia da receita.'
+- n: 5
+  done: '2026-11-28'
+  reread: '2026-11-28'
+  summary: Relé × válvula; Z3, ABC, Colossus, ENIAC e suas programadoras; 'primeiro computador' depende
+    da definição; exemplo em Python ordenando máquinas.
+- n: 6
+  done: '2026-11-28'
+  reread: '2026-11-28'
+  summary: Programa armazenado e EDVAC; Baby, EDSAC; UNIVAC e IBM (nome de 1924, 701 e 650); Zezinho do
+    ITA; mini-máquina em Python com instruções e dados na mesma lista.
+- n: 7
+  done: '2026-11-28'
+  reread: '2026-11-28'
+  summary: Transistor (1947), circuito integrado (Kilby/Noyce), System/360, Lei de Moore com simulação
+    em Python, Intel 4004, Patinho Feio/G-10/Cobra.
+- n: 8
+  done: '2026-11-28'
+  reread: '2026-11-28'
+  summary: 'Compilador (A-0 de Hopper, 1952, CHM) com compilador mínimo em Python para a máquina do cap.
+    6; FORTRAN (IBM, Backus, 1957), FLOW-MATIC, COBOL (1960); mito da mariposa de 1947 (JSTOR Daily: ''bug''
+    já existia, Edison 1878, jornal 1889); Margaret Hamilton e o software da Apollo (CHM); Atlas, sistema
+    operacional, Unix (1969) e C (1972). Não afirmado: ''cunhou software engineering'', papel de Hopper
+    no COBOL.'
+- n: 9
+  done: '2026-11-28'
+  reread: '2026-11-28'
+  summary: Altair 8800 e clubes; Xerox Alto e interface gráfica; Apple II, IBM PC, Macintosh com comparação
+    de preços em Python; software como produto; Lei 7.232/1984 e reserva de mercado.
+- n: 10
+  done: '2026-11-28'
+  reread: '2026-11-28'
+  summary: Comutação de pacotes (simulação em Python); ARPANET 1969 e TCP/IP 1983; web de Berners-Lee
+    (1989–91) e diferença entre internet e web; busca e redes sociais deixados como lacuna; iPhone 2007;
+    AlterNex, RNP, CGIB e crescimento de hosts em 1996.
+- n: 11
+  done: '2026-11-28'
+  reread: '2026-11-28'
+  summary: Teste de Turing e Dartmouth; damas de Samuel e relatório Lighthill; Deep Blue (força bruta);
+    rede de 2012 no ImageNet; AlphaGo; Transformer e ChatGPT com limitações; GPT-4 (mar/2023) e AI Act
+    (ago/2024) com lacuna declarada 2025-2026; marcos e erro top-5 em Python.
+- n: 12
+  done: '2026-11-28'
+  reread: '2026-11-28'
+  summary: 'Projeto final: museu de 15 marcos (5 campos) com verificador em Python; causa e efeito; checagem
+    de lenda (primeiro bug) por fato x interpretação x lenda; quem ficou de fora; 4 marcos brasileiros
+    (Zezinho, Patinho Feio, Lei 7.232, AlterNex).'
+changes: []

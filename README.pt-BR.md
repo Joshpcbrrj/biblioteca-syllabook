@@ -15,7 +15,7 @@ Achou um erro? Abra uma issue: toda correção ajuda o próximo leitor.
 
 | Pasta | Livros |
 | --- | --- |
-| [📗 Livros criados](created-books/README.pt-BR.md) | 1 |
+| [📗 Livros criados](created-books/README.pt-BR.md) | 2 |
 | [🔁 Materiais aprimorados](improved-materials/README.pt-BR.md) | 3 |
 | [🌐 Livros traduzidos](translated-books/README.pt-BR.md) | 0 |
 
@@ -23,4 +23,5 @@ Achou um erro? Abra uma issue: toda correção ajuda o próximo leitor.
 
 - **DevOps:** [Docker do zero](improved-materials/docker-do-zero/) ([Ler no site](https://joshpcbrrj.github.io/biblioteca-syllabook/improved-materials/docker-do-zero/) · [EPUB](https://github.com/Joshpcbrrj/biblioteca-syllabook/releases/download/epubs/docker-do-zero.epub)) → [Docker Compose na prática](created-books/docker-compose-na-pratica/) ([Ler no site](https://joshpcbrrj.github.io/biblioteca-syllabook/created-books/docker-compose-na-pratica/) · [EPUB](https://github.com/Joshpcbrrj/biblioteca-syllabook/releases/download/epubs/docker-compose-na-pratica.epub))
 - **Ferramentas do dev:** [WSL do zero](improved-materials/wsl-do-zero/) ([Ler no site](https://joshpcbrrj.github.io/biblioteca-syllabook/improved-materials/wsl-do-zero/) · [EPUB](https://github.com/Joshpcbrrj/biblioteca-syllabook/releases/download/epubs/wsl-do-zero.epub)) → [Git e GitHub essencial](improved-materials/git-e-github-essencial/) ([Ler no site](https://joshpcbrrj.github.io/biblioteca-syllabook/improved-materials/git-e-github-essencial/) · [EPUB](https://github.com/Joshpcbrrj/biblioteca-syllabook/releases/download/epubs/git-e-github-essencial.epub))
+- **Outros livros:** [Das engrenagens à IA](created-books/historia-da-computacao/) ([Ler no site](https://joshpcbrrj.github.io/biblioteca-syllabook/created-books/historia-da-computacao/) · [EPUB](https://github.com/Joshpcbrrj/biblioteca-syllabook/releases/download/epubs/historia-da-computacao.epub))
 <!-- tracks:end -->

@@ -1,0 +1,8 @@
+type: timeline
+title: Cinco marcos, de contar com pedras a programar um tear
+events:
+  - {when: "c. 300 a.C.", text: "Tábua de Salamina"}
+  - {when: "1642", text: "Pascalina soma"}
+  - {when: "anos 1670", text: "Leibniz e o tambor"}
+  - {when: "1801–1803", text: "Tear de Jacquard", highlight: true}
+  - {when: "1820", text: "Aritmômetro"}
